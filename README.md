@@ -2,7 +2,7 @@ Integrantes:
 Nombre: Juan Ignacio Leyes Schneider, 
 Edad: 34, 
 Residencia: Salta - Argentina, 
-Ocupación: Técnico Sup. en Programación.
+Ocupación: Estudiante en DigitalHouse,git 
 ---
 Nombre: Sebastian Gaudelli, 
 Edad: 30, 
