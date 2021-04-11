@@ -19,6 +19,12 @@ Edad: 36,
 Residencia: Madrid - España,
 Ocupación: Estudiante en Digital House.
 ---
+Nombre: Juan Manuel Iribarren Franzé,
+Edad: 39,
+Residencia: Buenos Aires - Argentina,
+Ocupación: Ingeniero en Informática y estudiante en Digital House,
+---
+
 Listado de Sitios de Referencia:
 
 + https://www.warbyparker.com/ ---> Nos atrajo la implementación de un quiz, donde las preguntas van apuntadas a conocer el perfil del usuario, a fin de ofrecerle una serie de productos que más se adapten a sus gustos y necesidades.
