@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/SebaGaude/grupo_1_oclockshop/issues"
   },
-  "homepage": "https://github.com/SebaGaude/grupo_1_oclockshop#readme"
+  "homepage": "https://github.com/SebaGaude/grupo_1_oclockshop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
