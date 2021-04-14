@@ -7,7 +7,7 @@ Ocupación: Técnico en programación. Estudiante en DigitalHouse,
 Nombre: Sebastian Gaudelli, 
 Edad: 30, 
 Residencia: Buenos Aires - Argentina, 
-Ocupación: Desempleado.
+Ocupación: Estudiante en Digital House.
 ---
 Nombre: Tomás Mersán,
 Edad: 32,
