@@ -6,6 +6,10 @@ body{
     font-size: 16px;
     line-height: 24px;
     background-color: #E2EBDC;
+    border-bottom: solid 3px #454D3E;
+}
+header{
+    border-bottom: solid 4px #454D3E;
 }
 .logo{
     width: 15%;
