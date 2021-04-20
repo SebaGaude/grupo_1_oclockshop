@@ -28,9 +28,8 @@ header{
 .enlaces{
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    width: 300px;
+    width: 230px;
     
 }
