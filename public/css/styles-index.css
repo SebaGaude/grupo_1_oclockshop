@@ -24,7 +24,10 @@ header{
     border-radius: 15px;
     background-color:#4D7BBD;
 }
-
+.barra-busqueda{
+    flex-grow: 0.20;
+    justify-self: center;
+}
 .enlaces{
     list-style: none;
     display: flex;
