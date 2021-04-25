@@ -69,14 +69,6 @@ header{
     align-self: flex-end;
 }
 
-.menu-cel{
-    margin-left: 2vw;
-}
-
-.menu-cel i{
-    font-size: 14px;
-}
-
 .desplegable{
     display: flex;
     justify-content: space-around;
