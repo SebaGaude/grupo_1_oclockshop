@@ -2,3 +2,28 @@
     box-sizing: border-box;
 }
 
+.logo{
+    width: 10%;
+    text-align: left;
+    padding: 5px;
+    border: solid 3px black;
+    border-radius: 15px;
+    background-color:#4D7BBD;
+}
+
+body{
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #E2EBDC;
+    border-bottom: solid 3px #454D3E;
+}
+.pregunta {
+margin: auto;
+}
+
+
+.opciones {
+    display: flex;
+    justify-content: space-around;
+}
