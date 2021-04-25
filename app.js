@@ -10,6 +10,10 @@ app.get("/", (req, res)=>{
     res.sendFile(path.resolve(__dirname,"./views/index.html"));
 });
 
+app.get("/producto1", (req, res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/productDetail.html"));
+});
+
 app.listen(3050, ()=>{
     console.log("Servidor corriendo en el puerto 3050");
 })
