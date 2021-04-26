@@ -13,39 +13,37 @@
     <header>
         <div class="top">
             <div class="top1">
-                <p><a href=""> Español </a> | <a href=""> English </a></p>
+                <p><a href=""> Español </a></p>|<p><a href=""> English </a></p>
             </div>
             <div class="contact-us">
                 <p>Contáctenos</p>
             </div>
         </div>
-            <div class="header1">
-                <div class="logo">
-                    <img src="img/logo-prueba.png" alt="Logo OclockShop">
-                </div>
-                <div class="menu">
-                    <div class="busqueda">
-                        <form action="/resultados-de-busqueda" method="GET" class="busqueda">
-                            <input type="text" placeholder="Buscar productos">
-                            <button><i class="fas fa-search"></i></button>
-                        </form>
+        <div class="header1">
+             <div class="logo">
+                 <img src="img/logo-prueba.png" alt="Logo OclockShop">
+            </div>
+            <div class="menu">
+                <form action="/resultados-de-busqueda" method="GET" class="busqueda">
+                    <input type="text" placeholder="Buscar productos">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+                <div class="mobile">
+                    <div class="burger-menu">
+                        <i class="fa fa-bars burger"></i>
                     </div>
-                    <div class="mobile">
-                        <div class="sign-in">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="carrito1">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
+                    <div class="carrito1">
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
                 </div>
             </div>
             <div class="desplegable">
-                <p>Colecciones</p>
-                <p>Mujer</p>
-                <p>Hombre</p>
-                <p>Ofertas</p>
-
+                <div class="fijo">
+                    <p>Colecciones</p>
+                    <p>Mujer</p>
+                    <p>Hombre</p>
+                    <p>Ofertas</p>
+                </div>
                 <div class="carrito">
                     <div class="registration">
                         <p>Registrate</p>
@@ -53,36 +51,86 @@
                     <div class="sign-in">
                         <p>Ingresá</p>
                     </div>
-                    <div class="carrito1">
+                    <div class="carro">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                 </div>
-
+            </div>
     </header>
-    <main>
-        <div class="principal">
-            <div class="imagenes-verticales">
-                <p>a</p>
-                <img src="" alt="">
+    <main class="principal">
+       <div class="imagenes-verticales">
+            <div class="imagen-pequeña">
+                <img src="img/Tag-Heuer1.jpg" alt="">
             </div>
-            <div>
-                <p>a</p> 
-                <img src="" alt="">
+            <div class="imagen-pequeña"> 
+                <img src="img/Tag-Heuer2.jpg" alt="">
             </div>
-            <div>
-                <p>a</p>
-                <img src="" alt="">
+            <div class="imagen-pequeña">
+                <img src="img/Tag-Heuer3.jpg" alt="">
             </div>
         </div>
         <div class="imagen-principal">
-            <p>a principal</p>
-            <img src="" alt="">
+            <img src="img/Tag-Heuer1.jpg" alt="">
         </div>
-        <div>
-            <p>descripccion general</p>
+        <div class=descripcion>
+            <h3>Tag Heuer Carrera</h3>
+            <p class="main-characteristics">Cronografo automatico - Diametro 44 mm</p>
+            <div class="precios">
+                <p class="precio-original">USD 5.100</p>
+                <p class="precio-descuento">USD 3.825</p>
+            </div>
+            <form action="/registro" method="GET">
+                <label for="cantidad">Seleccione la cantidad:</label>
+                <select name="cantidad" id="cantidad" class="cantidad-desp">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <div class="comprar">
+                    <label for="comprar"></label>
+                    <button type="submit" id="comprar">Comprar ¡YA!</button>
+                </div>
+                <div class="agregar-carrito">
+                    <label for="carrito"></label>
+                    <button type="submit" id="carrito">Agregar al carrito</button>
+                </div>
+            </form>
         </div>
     </main>
-
+    <div class="otros-productos">
+        <h4>Otros Productos</h4>
+        <div class="otros-ofrecidos">
+            <div class="otros">
+                <img src="img/Tag-Heuer11.jpg" alt="">
+            </div>
+            <div class="otros"> 
+                <img src="img/Tag-Heuer12.jpg" alt="">
+            </div>
+            <div class="otros">
+                <img src="img/Tag-Heuer13.jpg" alt="">
+            </div>
+            <div class="otros">
+                <img src="img/Tag-Heuer11.jpg" alt="">
+            </div>
+            <div class="otros"> 
+                <img src="img/Tag-Heuer12.jpg" alt="">
+            </div>
+            <div class="otros">
+                <img src="img/Tag-Heuer13.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="caracteristicas">
+        <h4>Características del producto</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sint incidunt placeat, quo sed necessitatibus facilis praesentium eum mollitia ullam laborum similique velit dolorum itaque dolor accusantium fuga suscipit ea.</p>
+    </div>
 </body>
 
 <footer>
