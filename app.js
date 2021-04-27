@@ -10,6 +10,10 @@ app.get("/", (req, res)=>{
     res.sendFile(path.resolve(__dirname,"./views/index.html"));
 });
 
+app.get("/quiz", (req, res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/quiz.html"));
+
+});    
 app.get("/producto1", (req, res)=>{
     res.sendFile(path.resolve(__dirname,"./views/productDetail.html"));
 });
