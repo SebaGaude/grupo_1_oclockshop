@@ -100,7 +100,6 @@ header{
 .carrito1{
     margin-left: 2vw;
 }
-
 .sign-in i{
     font-size: 14px;
 }
@@ -120,9 +119,47 @@ header{
         display: none;
     }
 }
-/*Fin Configuracion Header*/
+/*----------------------------- Fin configuraciones header ---------------------------------*/
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+.main{
+    display: flex;
+    border: solid 1px black;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #ffffff;
+}
+.carrusel{
+    flex-grow: 0.80;
+    margin: 5px 0;
+    background-image: url("/img/Tag-Heuer2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.quiz{
+    flex-grow: 0.20;
+    margin: 5px 8px;
+    align-self: center;
+    color: rgba(51, 5, 65, 0.753);
+    background-image: url("/img/reloj-estilo.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat; 
+    background-position: center;
+    text-align: center;
+    font-weight: bold;
+    
+}
+.button-quiz{
+    background-color: rgba(145, 142, 138, 0.788);
+    border-radius: 20px;
+    color: #ffffff;
+}
 
-/*Configuracion Footer*/
+
+/*----------------------------- Configuraciones footer -------------------------------------*/
 footer{
     background-color: rgb(196, 194, 204);
     font-size: 12px;
