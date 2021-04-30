@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="header1">
-             <div class="logo">
+            <div class="logo">
                  <a href="/"><img src="img/logo-prueba.png" alt="Logo OclockShop"></a>
             </div>
             <div class="menu">
@@ -39,21 +39,21 @@
             </div>
             <div class="desplegable">
                 <div class="fijo">
-                    <p>Colecciones</p>
-                    <p>Mujer</p>
-                    <p>Hombre</p>
-                    <p>Ofertas</p>
-                    <a href="/quiz"><p>Hazte un quiz</p></a>
+                    <a href=""><p>Colecciones</p></a>
+                    <a href=""><p>Mujer</p></a>
+                    <a href=""><p>Hombre</p></a>
+                    <a href=""><p>Ofertas</p></a>
+                    <a href="/quiz"><p>Haz un quiz</p></a>
                 </div>
                 <div class="carrito">
                     <div class="registration">
-                        <p>Registrate</p>
+                        <a href=""><p>Registrate</p></a>
                     </div>
                     <div class="sign-in">
-                        <p>Ingresá</p>
+                        <a href=""><p>Ingresá</p></a>
                     </div>
                     <div class="carro">
-                        <i class="fas fa-shopping-cart"></i>
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,10 @@
             <p class="main-characteristics">Cronografo automatico - Diametro 44 mm</p>
             <div class="precios">
                 <p class="precio-original">USD 5.100</p>
-                <p class="precio-descuento">USD 3.825</p>
+                <div class="descuento">
+                    <p class="precio-descuento">USD 3.825</p>
+                    <p class="discount">25% OFF!</p>
+                </div>    
             </div>
             <form action="/registro" method="GET">
                 <label for="cantidad">Seleccione la cantidad:</label>
@@ -96,13 +99,21 @@
                 </select>
                 <div class="comprar">
                     <label for="comprar"></label>
-                    <button type="submit" id="comprar">Comprar ¡YA!</button>
+                    <button type="submit" id="comprar">COMPRAR ¡YA!</button>
                 </div>
                 <div class="agregar-carrito">
                     <label for="carrito"></label>
-                    <button type="submit" id="carrito">Agregar al carrito</button>
+                    <button type="submit" id="carrito">AGREGAR AL CARRITO</button>
                 </div>
             </form>
+            <div class="envio">
+                <a href=""><i class="fas fa-truck"></i>
+                <p>Elige tu dirección de envío.</p></a>
+            </div>
+            <div class="devolucion">
+                <i class="fas fa-box"></i>
+                <p>Devolución gratis dentro de los 30 dias</p>
+            </div>
         </div>
     </main>
     <div class="otros-productos">
