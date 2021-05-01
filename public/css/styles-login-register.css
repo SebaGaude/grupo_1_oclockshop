@@ -247,21 +247,22 @@ header{
 {
     display: flex;
     padding: 10px;
+    margin: auto;
 }
 
 .terminos-condiciones label
 {
-    margin-left: 10px;
     text-align: justify;
     font-size: 10px;
     color: #adadad;
 }
 
-.terminos-condiciones input
+.checkbox
 {
-    margin: auto;
-    width: auto;
+    margin: 5px;
+    width: 10px;
     padding: 10px;
+    justify-self: right;
 }
 
 .boton-crear-cuenta
