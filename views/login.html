@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/46b0370ee7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles-login-register.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>OclockShop</title>
 </head>
 <body>
@@ -70,14 +72,10 @@
             Ingresá a tu cuenta
         </h2>
 
-        <div>
-            <input type="text" name="nombre" placeholder="Nombre">
-        </div>
-        
-        <div>
-            <input type="text" name="usuario" placeholder="Apellido">
-        </div>
-        
+        <h1> 
+            Completá con tus datos registrados
+        </h1>
+
         <div>
             <input type="email" name="email" placeholder="Correo electrónico">
         </div>       
@@ -86,17 +84,18 @@
             <input type="password" name="contraseña" placeholder="Contraseña">
         </div>
         
-        <div>
-            <input type="password" name="confirmar" placeholder="Confirmar contraseña">
-        </div>
+        <!-- Botón "continuar"-->
         
-        <!-- Botón "ingresar"-->
-        
-        <button type="submit" class="boton-ingresar">INGRESAR</button>
+        <button type="submit" class="boton-crear-cuenta">CONTINUAR</button>
                 
-        <div class="terminos-condiciones">
-            <input type="checkbox" name="nombre">
-            <label>Al crear esta cuenta, acepto los Términos y Condiciones y la Política de Privacidad de la tienda.</label>
+        <div class="recuperar-contraseña">
+            <p> <a href=""> ¿Olvidaste tu contraseña? </a></p>
+        </div>
+
+        <div class="registrar-cuenta">
+            <p>¿Todavía no tenés una cuenta?</p>
+        
+            <p><a href=""> ¡Registrate acá! </a></p>
         </div>
         
 </form>

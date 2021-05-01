@@ -199,13 +199,19 @@ header{
     font-family: 'Ubuntu', sans-serif;
     background-color: white;
     width: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     padding: 15px;
+    border-style: solid;
+    border-color:whitesmoke;
+    position: relative;
 }
 
 .form-register h2
 {
     font-family: 'Ubuntu', sans-serif;
-    text-align: center;  
+    text-align: center;
+    margin: auto;
 }
 
 .form-register h1
@@ -213,18 +219,28 @@ header{
     font-family: 'Ubuntu', sans-serif;
     text-align: center;  
     font-size: 14px;
+    color: #525252;
 }
 
 .form-register div
 {
     font-family: Helvetica, sans-serif;
     width: 100%;
-}
-
-.form-register div
-{
     padding: 5px;
     font-size: 12px;
+    border-radius: 5%;
+}
+
+.form-register div input
+{
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #adadad;
 }
 
 .terminos-condiciones
@@ -238,6 +254,7 @@ header{
     margin-left: 10px;
     text-align: justify;
     font-size: 10px;
+    color: #adadad;
 }
 
 .terminos-condiciones input
@@ -254,8 +271,45 @@ header{
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    font-size: 14px;
+    font-size: 12px;
+    position: relative;
+    left: 10%;
+    color: #525252;
+    border-style: none;
+    transition: 0.3s;
 }
+
+.boton-crear-cuenta:hover
+{
+    background-color: #525252;
+    color: whitesmoke;
+}
+
+.recuperar-contraseña
+{
+    margin-left: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #adadad;
+    font-family: Helvetica, sans-serif;
+    margin: auto;
+    border-bottom: #adadad;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5px;
+    border-radius: 0%;
+}
+
+.registrar-cuenta
+{
+    margin-left: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #adadad;
+    font-family: Helvetica, sans-serif;
+    margin: auto;
+}
+
+/* Fin estilo form register y login*/
 
 @media (max-width: 360px) {
     /*mobile*/
@@ -301,6 +355,15 @@ header{
     .burger-menu{
         display: block;
     }
+
+    .form-register div input
+{
+    font-size: 12px;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #adadad;
+}
 }
 
 @media (min-width: 769px) {
