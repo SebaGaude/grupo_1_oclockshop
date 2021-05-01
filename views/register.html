@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/46b0370ee7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles-login-register.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>OclockShop</title>
 </head>
 <body>
@@ -60,16 +62,50 @@
             </div>
     </header>
 
-    
-
     <main class="main">
         
-        <form action="" class="form-registro">
+        <!-- Formulario de Registro-->
 
+        <form action="/" method="GET" class="form-register">
+                
+            <h2> 
+                ¡Bienvenido a O'Clock Shop!
+            </h2>
 
+            <h1> 
+                Registrate completando tus datos
+            </h1>
 
+            <div>
+                <input type="text" name="nombre" placeholder="Nombre">
+            </div>
+            
+            <div>
+                <input type="text" name="usuario" placeholder="Apellido">
+            </div>
+            
+            <div>
+                <input type="email" name="email" placeholder="Correo electrónico">
+            </div>       
+    
+            <div>
+                <input type="password" name="contraseña" placeholder="Contraseña">
+            </div>
+            
+            <div>
+                <input type="password" name="confirmar" placeholder="Confirmar contraseña">
+            </div>
+            
+            <!-- Botón "enviar"-->
+
+            <button type="submit" class="boton-crear-cuenta">CREAR CUENTA</button>
+            
+            <div class="terminos-condiciones">
+                <input type="checkbox" name="nombre">
+                <label>Al crear esta cuenta, acepto los Términos y Condiciones y la Política de Privacidad de la tienda.</label>
+            </div>
+                
         </form>
-
 
     </main>
     

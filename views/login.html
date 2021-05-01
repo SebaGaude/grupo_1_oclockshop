@@ -59,38 +59,52 @@
                 </div>
             </div>
     </header>
+    
     <main class="main">
-        <div class="carrusel">
-            <div>
-                <img src="./img/smartwatch.jpg" alt="" width="80%">
-            </div>
-            <div class="titulos-carrusel">
-                <h4>¡OFERTAS IMPERDIBLES!</h4>
-                <H3>POR TIEMPO LIMITADO</H3>
-            </div> 
+    
+    <!-- Formulario de Registro-->
+
+    <form action="/" method="GET" class="form-register">
+                    
+        <h2> 
+            Ingresá a tu cuenta
+        </h2>
+
+        <div>
+            <input type="text" name="nombre" placeholder="Nombre">
         </div>
-        <div class="quiz">
-            <H4>¿Todavía no decidiste tu nuevo estilo?</H4>
-            <div>
-                <form action="/quiz" method="GET">
-                    <button type="button" class="button-quiz">Masculinos</button>
-                    <button type="button" class="button-quiz">Femeninos</button>
-                </form>
-            <div>
-                <a href="/quiz">Realizar quiz > </a>
-            </div>               
-            </div>
+        
+        <div>
+            <input type="text" name="usuario" placeholder="Apellido">
         </div>
-    </main>
-    <article class="contenedor-categ">
-        <div class="categorias">
-                <p><a href=""><img src="./img/categoria-1.jpg" alt="" class="img-cat">Categoría</a></p>
-                <p><a href=""><img src="./img/categoria-1.jpg" alt="" class="img-cat">Categoría</a></p>
-                <p><a href=""><img src="./img/categoria-1.jpg" alt="" class="img-cat">Categoría</a></p>
-                <p><a href=""><img src="./img/categoria-1.jpg" alt="" class="img-cat">Categoría</a></p>
-                <p><a href=""><img src="./img/categoria-1.jpg" alt="" class="img-cat">Categoría</a></p>
+        
+        <div>
+            <input type="email" name="email" placeholder="Correo electrónico">
+        </div>       
+
+        <div>
+            <input type="password" name="contraseña" placeholder="Contraseña">
         </div>
-    </article>
+        
+        <div>
+            <input type="password" name="confirmar" placeholder="Confirmar contraseña">
+        </div>
+        
+        <!-- Botón "ingresar"-->
+        
+        <button type="submit" class="boton-ingresar">INGRESAR</button>
+                
+        <div class="terminos-condiciones">
+            <input type="checkbox" name="nombre">
+            <label>Al crear esta cuenta, acepto los Términos y Condiciones y la Política de Privacidad de la tienda.</label>
+        </div>
+        
+</form>
+
+
+
+    </main>   
+    
     <footer>
         <div class="main-footer">
             <p>Conócenos</p>
