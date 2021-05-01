@@ -1,11 +1,10 @@
 *{
     width: 100%;
-}
-
-body{
     box-sizing: border-box;
+}
+body{
     width: 100vw;
-    overflow-x: hidden;
+    
 }
 
 /*Configuracion Header*/
@@ -16,6 +15,7 @@ header{
     font-family: 'Ubuntu', sans-serif;
     color: #454545;
     font-size: 16px;
+    overflow-x: hidden;
 }
 .top{
     display: flex;
@@ -265,6 +265,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: rgb(196, 194, 204);
+    width: 100%;
 }
 .carrusel{
     flex-grow: 0.80;
@@ -295,6 +296,7 @@ body{
     opacity: 0;
     transition: all 450ms;
     border-radius: 20px;
+    text-align: center;
 }
 .titulos-carrusel:hover{
     opacity: 1;
@@ -312,31 +314,47 @@ body{
     flex-direction: column;
     justify-content: space-between;  
 }
+.form_quiz{
+    border: 5px;
+}
 .button-quiz{
     background-color: rgba(145, 142, 138, 0.788);
     border-radius: 20px;
     color: #ffffff;
+    max-width: 100px;
 }
 .button-quiz:hover{
     background-color:rgba(99, 68, 139, 0.788);
 }
 .categorias{
+    font-size: 15px;
     display: flex;
-    flex-wrap: wrap;
-    font-size: 10px;
     justify-content: space-around;
-    flex-direction: row;
+    align-items: center;
+    margin: 15px;
+    padding: 0;
+    transition: all 450ms;
+    text-align: center;
+}
+.categorias a:hover{
+    transform: scale(1.2)
 
 }
 .img-cat{
-    border: solid 1px black;
+    border: solid 1px white;
     border-radius: 50px;
-    width: 50px;
+    width: 100%;
+    padding: 10px;
 }
-@media (min-width: 361px){
+@media(min-width: 361px){
     .main{
         flex-direction: row;
     }
+}
+@media(min-width: 769px){
+  .img-cat{
+      width: 80%;
+  }
 }
 
 
