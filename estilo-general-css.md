@@ -1,12 +1,16 @@
 -- O'CLOCK SHOP - Lineamientos generales para estilos CSS --
 
-+ Logo: (pendiente vectorización de logo enviado anteriormente)
++ Logo: actualizado y agregado logo en alta resolución (oclockshop-logo-alta.png)
+
++ Fuente: es necesario agregar el link de Google Fonts en los archivos HTML para poder utilizarla:
+    Link 1: <link rel="preconnect" href="https://fonts.gstatic.com">
+    Link 2: <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
 + Colores: 
     - Blanco: #FFFFFF
-    - Gris claro: #D1D1D1
-    - Gris medio: #9E9E9E
-    - Gris oscuro: #454545
+    - Gris claro: #whitesmoke
+    - Gris medio: #adadad
+    - Gris oscuro: #525252
 
 + Titulos:
     - Fuente: 'Ubuntu', sans-serif;
@@ -23,14 +27,14 @@
     - Ejemplo: "Rolex Explorer"
 
 + Descripción producto:
-    - Fuente: din-2014,helvetica,sans-serif
+    - Fuente: helvetica,sans-serif
     - Color: gris medio
     - Estilo: regular
     - Tamaño: 16px (o bien 14px)
     - Ejemplo: "El espíritu deportivo de TAG Heuer se expresa en una edición especial diseñada para los golfistas más exigentes."
 
 + Contenido general:
-    - Fuente: din-2014,helvetica,sans-serif
+    - Fuente: helvetica,sans-serif
     - Color: gris claro
     - Estilo: regular
     - Tamaño: 14px 
@@ -45,7 +49,7 @@
         - Ejemplo: "Inicio / Registrarse / Productos"
 
     - Contenido general:
-        - Fuente: din-2014,helvetica,sans-serif
+        - Fuente: helvetica,sans-serif
         - Color: blanco
         - Tamaño texto: 14px (o bien 12px)
         - "Categorías -> Deportivos / Clásicos / Casuales"
@@ -59,7 +63,7 @@
         - Ejemplo: "Términos y Condiciones / Política de Privacidad"
 
     - Contenido general:
-        - Fuente: din-2014,helvetica,sans-serif
+        - Fuente: helvetica,sans-serif
         - Color: blanco
         - Tamaño texto: 14px (o bien 12px)
         - Ejemplo: "Sobre Nosotros -> Historia / Empresa"

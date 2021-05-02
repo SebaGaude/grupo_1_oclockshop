@@ -9,11 +9,11 @@ body{
 
 /*Configuracion Header*/
 header{
-    background-color: #9E9E9E;
+    background-color: #adadad;
     width: 100vw;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    color: #454545;
+    color: #525252;
     font-size: 16px;
     overflow-x: hidden;
 }
@@ -192,6 +192,126 @@ header{
     transform: scale(1.5,1.5);
 }
 
+/* Estilo form register y login*/
+
+.form-register
+{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: white;
+    width: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 15px;
+    border-style: solid;
+    border-color:whitesmoke;
+    position: relative;
+}
+
+.form-register h2
+{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+.form-register h1
+{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;  
+    font-size: 14px;
+    color: #525252;
+}
+
+.form-register div
+{
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5%;
+}
+
+.form-register div input
+{
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #adadad;
+}
+
+.terminos-condiciones
+{
+    display: flex;
+    padding: 10px;
+    margin: auto;
+}
+
+.terminos-condiciones label
+{
+    text-align: justify;
+    font-size: 10px;
+    color: #adadad;
+}
+
+.checkbox
+{
+    margin: 5px;
+    width: 10px;
+    padding: 10px;
+    justify-self: right;
+}
+
+.boton-crear-cuenta
+{
+    padding: 5px;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    font-size: 12px;
+    position: relative;
+    left: 10%;
+    color: #525252;
+    border-style: none;
+    transition: 0.3s;
+}
+
+.boton-crear-cuenta:hover
+{
+    background-color: #525252;
+    color: whitesmoke;
+}
+
+.recuperar-contraseña
+{
+    margin-left: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #adadad;
+    font-family: Helvetica, sans-serif;
+    margin: auto;
+    border-bottom: #adadad;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5px;
+    border-radius: 0%;
+}
+
+.registrar-cuenta
+{
+    margin-left: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #adadad;
+    font-family: Helvetica, sans-serif;
+    margin: auto;
+}
+
+/* Fin estilo form register y login*/
+
 @media (max-width: 360px) {
     /*mobile*/
 
@@ -236,6 +356,15 @@ header{
     .burger-menu{
         display: block;
     }
+
+    .form-register div input
+{
+    font-size: 12px;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #adadad;
+}
 }
 
 @media (min-width: 769px) {
@@ -264,7 +393,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(196, 194, 204);
+    background-color: white;
     width: 100%;
 }
 .carrusel{
@@ -301,22 +430,18 @@ body{
 .titulos-carrusel:hover{
     opacity: 1;
 }
+
 .quiz{
-    margin: 0;
+    flex-grow: 0.20;
+    margin: 5px 8px;
     align-self: center;
     color: rgba(51, 5, 65, 0.753);
     text-align: center;
     font-weight: bold;
-    padding: 5px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    align-items: flex-end;
-      
-}
-.quiz h4{
-    border-bottom: solid 1px rgba(0,0,0,0.2);
+    justify-content: space-between;  
 }
 .form_quiz{
     border: 5px;
@@ -330,9 +455,6 @@ body{
 .button-quiz:hover{
     background-color:rgba(99, 68, 139, 0.788);
 }
-.link-quiz{
-    margin-top: 10px;
-}
 .categorias{
     font-size: 15px;
     display: flex;
@@ -343,104 +465,33 @@ body{
     transition: all 450ms;
     text-align: center;
 }
-.categorias p:hover{
+.categorias a:hover{
     transform: scale(1.2)
+
 }
 .img-cat{
     border: solid 1px white;
     border-radius: 50px;
-    width: 80%;
-    height: 80%;
-    padding: 10px;
-}
-.contenedor-articulo{
-    border-bottom: solid 2px #ebebeb;
-    position: relative;
-    transition: all 450ms;
     width: 100%;
-    align-self: center;
-}
-.contenedor-articulo img{
-    width: 80%;
-}
-.contenedor-articulo img:hover{
-    transform: scale(0.9);
-}
-.contenedor-articulo:hover .icono-articulo{
-    transform: scale(2, 2);
-}
-.contenedor-articulo h3{
-    text-align: center;
-    border-bottom: solid 2px #ebebeb;
-    background-color: rgba(145, 142, 138, 0.788);
-}
-.articulos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 15px;
-}
-.sub-articulo-x{
-    display: flex;
-    align-self: flex-end; 
-}
-.icono-articulo{
-    display: block ;
-    color: rgba(99, 68, 139, 0.788);
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgba(99, 68, 139, 0.788);
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-}
-.articulo-x{
-    border-top: solid 2px #ebebeb;
-    position: relative;
-    padding: 15px;
-    text-align: left;
-}
-.precio-anterior{
-    text-decoration: line-through;
-    color: red;
-}
-.precio-oferta{
-    font-weight: bold;
+    padding: 10px;
 }
 @media(min-width: 361px){
     .main{
         flex-direction: row;
-    }
-    .link-quiz{
-        margin-top: 30px;
-    }
-    .contenedor-articulo{
-        max-width: 40vw;
-
     }
 }
 @media(min-width: 769px){
   .img-cat{
       width: 80%;
   }
-  .quiz h4{
-    font-size: 28px;
-  }
-  .contenedor-articulo{
-      max-width: 20vw;
-  }
 }
 
 
 /*----------------------------- Configuraciones footer -------------------------------------*/
 footer{
-    background-color: rgb(196, 194, 204);
+    background-color: #adadad;
     font-size: 12px;
-    border-bottom: solid 1vh rgb(196, 194, 204);
+    border-bottom: solid 1vh #adadad;
     width: 100vw;
     box-sizing: border-box;
 }

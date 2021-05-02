@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/46b0370ee7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles-login-register.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>OclockShop</title>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="top1">
+                <p><a href=""> Español </a></p>|<p><a href=""> English </a></p>
+            </div>
+            <div class="contact-us">
+                <p>Contáctenos</p>
+            </div>
+        </div>
+        <div class="header1">
+            <div class="logo">
+                 <a href="/"><img src="img/oclockshop-logo-alta.png" alt="Logo OclockShop"></a>
+            </div>
+            <div class="menu">
+                <form action="/resultados-de-busqueda" method="GET" class="busqueda">
+                    <input type="text" placeholder="Buscar productos">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+                <div class="mobile">
+                    <div class="burger-menu">
+                        <i class="fa fa-bars burger"></i>
+                    </div>
+                    <div class="carrito1">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="desplegable">
+                <div class="fijo">
+                    <a href=""><p>Colecciones</p></a>
+                    <a href=""><p>Mujer</p></a>
+                    <a href=""><p>Hombre</p></a>
+                    <a href=""><p>Ofertas</p></a>
+                    <a href="/quiz"><p>Haz un quiz</p></a>
+                </div>
+                <div class="carrito">
+                    <div class="registration">
+                        <a href=""><p>Registrate</p></a>
+                    </div>
+                    <div class="sign-in">
+                        <a href=""><p>Ingresá</p></a>
+                    </div>
+                    <div class="carro">
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <main class="main">
+        
+        <!-- Formulario de Registro-->
+
+        <form action="/" method="GET" class="form-register">
+                
+            <h2> 
+                ¡Bienvenido a O'Clock Shop!
+            </h2>
+
+            <h1> 
+                Registrate completando tus datos
+            </h1>
+
+            <div>
+                <input type="text" name="nombre" placeholder="Nombre">
+            </div>
+            
+            <div>
+                <input type="text" name="usuario" placeholder="Apellido">
+            </div>
+            
+            <div>
+                <input type="email" name="email" placeholder="Correo electrónico">
+            </div>       
+    
+            <div>
+                <input type="password" name="contraseña" placeholder="Contraseña">
+            </div>
+            
+            <div>
+                <input type="password" name="confirmar" placeholder="Confirmar contraseña">
+            </div>
+            
+            <!-- Botón "enviar"-->
+
+            <button type="submit" class="boton-crear-cuenta">CREAR CUENTA</button>
+            
+            <div class="terminos-condiciones">
+                <input type="checkbox" name="nombre" class="checkbox">
+                <label>Al crear esta cuenta, acepto los <a href=""> Términos y Condiciones </a>  y la <a href=""> Política de Privacidad </a> de la tienda.</label>
+            </div>
+                
+        </form>
+
+    </main>
+    
+    <footer>
+        <div class="main-footer">
+            <p>Conócenos</p>
+            <p>Términos y condiciones</p>
+            <p>¡Seguinos!</p>
+            <p>¿Necesitas ayuda?</p>
+            <p>Trabajá con nosotros</p>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2021 OclockShop Inc. Todos los derechos reservados</p>
+        </div>
+    
+    </footer>
+</html>
