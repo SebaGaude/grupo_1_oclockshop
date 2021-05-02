@@ -301,18 +301,22 @@ body{
 .titulos-carrusel:hover{
     opacity: 1;
 }
-
 .quiz{
-    flex-grow: 0.20;
-    margin: 5px 8px;
+    margin: 0;
     align-self: center;
     color: rgba(51, 5, 65, 0.753);
     text-align: center;
     font-weight: bold;
-    padding: 20px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+      
+}
+.quiz h4{
+    border-bottom: solid 1px rgba(0,0,0,0.2);
 }
 .form_quiz{
     border: 5px;
@@ -326,6 +330,9 @@ body{
 .button-quiz:hover{
     background-color:rgba(99, 68, 139, 0.788);
 }
+.link-quiz{
+    margin-top: 10px;
+}
 .categorias{
     font-size: 15px;
     display: flex;
@@ -336,24 +343,95 @@ body{
     transition: all 450ms;
     text-align: center;
 }
-.categorias a:hover{
+.categorias p:hover{
     transform: scale(1.2)
-
 }
 .img-cat{
     border: solid 1px white;
     border-radius: 50px;
-    width: 100%;
+    width: 80%;
+    height: 80%;
     padding: 10px;
+}
+.contenedor-articulo{
+    border-bottom: solid 2px #ebebeb;
+    position: relative;
+    transition: all 450ms;
+    width: 100%;
+    align-self: center;
+}
+.contenedor-articulo img{
+    width: 80%;
+}
+.contenedor-articulo img:hover{
+    transform: scale(0.9);
+}
+.contenedor-articulo:hover .icono-articulo{
+    transform: scale(2, 2);
+}
+.contenedor-articulo h3{
+    text-align: center;
+    border-bottom: solid 2px #ebebeb;
+    background-color: rgba(145, 142, 138, 0.788);
+}
+.articulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px;
+}
+.sub-articulo-x{
+    display: flex;
+    align-self: flex-end; 
+}
+.icono-articulo{
+    display: block ;
+    color: rgba(99, 68, 139, 0.788);
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(99, 68, 139, 0.788);
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+.articulo-x{
+    border-top: solid 2px #ebebeb;
+    position: relative;
+    padding: 15px;
+    text-align: left;
+}
+.precio-anterior{
+    text-decoration: line-through;
+    color: red;
+}
+.precio-oferta{
+    font-weight: bold;
 }
 @media(min-width: 361px){
     .main{
         flex-direction: row;
     }
+    .link-quiz{
+        margin-top: 30px;
+    }
+    .contenedor-articulo{
+        max-width: 40vw;
+
+    }
 }
 @media(min-width: 769px){
   .img-cat{
       width: 80%;
+  }
+  .quiz h4{
+    font-size: 28px;
+  }
+  .contenedor-articulo{
+      max-width: 20vw;
   }
 }
 
