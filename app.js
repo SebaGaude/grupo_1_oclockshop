@@ -22,6 +22,10 @@ app.get("/quiz", (req, res)=>{
     res.sendFile(path.resolve(__dirname,"./views/quiz.html"));
 });
 
+app.get("/carrito", (req, res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/productCart.html"));
+});
+
 
 app.listen(3050, ()=>{
     console.log("Servidor corriendo en el puerto 3050");
