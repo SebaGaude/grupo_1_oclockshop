@@ -18,8 +18,9 @@ app.get("/producto1", (req, res)=>{
     res.sendFile(path.resolve(__dirname,"./views/productDetail.html"));
 });
 
-app.get("/quiz", (req, res)=>{
-    res.sendFile(path.resolve(__dirname,"./views/quiz.html"));
+
+app.get("/carrito", (req, res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/productCart.html"));
 });
 
 app.get("/register", (req, res)=>{
