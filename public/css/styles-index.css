@@ -15,7 +15,6 @@ header{
     font-family: 'Ubuntu', sans-serif;
     color: #454545;
     font-size: 16px;
-    overflow-x: hidden;
 }
 .top{
     display: flex;
