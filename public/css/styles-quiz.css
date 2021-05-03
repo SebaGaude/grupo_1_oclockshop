@@ -1,11 +1,10 @@
 *{
-    width: 100%;
+
     box-sizing: border-box;
 }
 body{
     width: 100vw;
-    
-}
+ }
 
 /*Configuracion Header*/
 header{
@@ -85,6 +84,7 @@ header{
     color: #666;
     box-sizing: content-box;
     border: none;
+    width: 100%;
 }
 .busqueda button{
     height: 16px;
@@ -297,17 +297,19 @@ body{
     padding: 20px 15px;
     margin: 2%;
     margin-top: 1%;
-    width: 60%;
+    width: 95%;
 
 }
 
 .control-formulario {
     margin-bottom: 15px; 
     margin-left: 1%;
+    width: 100%;
 }
 
 .control-formulario label {
     display: block;
+    width: 100%;
 }
 .preguntas-form {
     font-family: 'Ubuntu', sans-serif;
@@ -336,7 +338,7 @@ body{
     font-weight: bold;
     margin: 3%;
     color:#525252;
-
+    
 }
 
 body {
@@ -346,12 +348,14 @@ body {
 
 .clipboard {
     display: none;
+    width: 20%;
 }
 .boton-envio {
+    width: 45vw;
     background-color: #adadad;
     margin: 1%;
     border-radius: 40px;
-
+    
 }
 .boton-envio:hover {
     opacity: 50%;
@@ -359,6 +363,7 @@ body {
 }
 
 .boton-reset {
+    width: 45vw;
     background-color: #adadad;
     margin: 1%;
     border-radius: 40px;
@@ -369,6 +374,36 @@ body {
     transition: all 1s;
 }
 
+.mensaje-analizando {
+    display: none;
+    width: 300px;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #adadad;
+    padding: 5px;
+    border: dotted 2px #525252;    
+    animation: mensaje 2s infinite;
+}
+
+.relojes-quiz {
+    display: none;
+    width: 40%;
+}
+
+
+
+@keyframes mensaje {
+    0% {opacity: 50%;}
+    25% {opacity: 100%;}
+    50% {opacity: 50%;}
+    100% {opacity: 0%;} 
+}
+
+/* media querys */
+
+/* DESKTOP */
+
 @media (min-width: 769px) {
     .foto-reloj {
         display: none;
@@ -377,10 +412,48 @@ body {
         display: inline-flex;
         position: absolute;
         right: 70px;
-        top: 45%;
+        top: 38%;
     } 
     .clipboard:hover {
         transform: rotate(-360deg);
         transition: all 2s;
     }
+    .boton-envio,
+    .boton-reset {
+        max-width: 29%;
+    }
+    .botones {
+        display: flex;
+        /* flex-flow: column wrap; */
+    }
+    .label-quiz {
+        width: 60%;
+        text-align: justify;
+    }
+    
+    .mensaje-analizando {
+        display: inline-block;
+        position: absolute;
+        right: 10%;
+        top: 95%;
+        
+    }
+    
+    .relojes-quiz {
+        display: inline-block;
+        position: absolute;
+        right: 15%;
+        top: 90%;
+        z-index: -1;
+
+    }
+
+}
+
+
+/* dispositivos aun mas grandes */
+@media (min-width: 1100px) {
+}
+.mensaje-analizando {
+    display: none;
 }
