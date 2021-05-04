@@ -6,7 +6,6 @@ body{
     width: 100vw;
     
 }
-
 /*Configuracion Header*/
 header{
     background-color: #9E9E9E;
@@ -334,19 +333,16 @@ body{
     margin-top: 10px;
 }
 .categorias{
-    font-size: 15px;
+    font-size: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 15px;
+    margin: 15px 0px;
     padding: 0;
     transition: all 450ms;
     text-align: center;
 }
-.categorias p:hover{
-    transform: scale(1.2)
-}
-.img-cat{
+.img-categ{
     border: solid 1px white;
     border-radius: 50px;
     width: 80%;
@@ -359,9 +355,18 @@ body{
     transition: all 450ms;
     width: 100%;
     align-self: center;
+    background-color: rgba(145, 142, 138, 0.788);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0;
 }
 .contenedor-articulo img{
     width: 80%;
+    border-radius: 20px;
+    padding-top: 5px;
 }
 .contenedor-articulo img:hover{
     transform: scale(0.9);
@@ -369,20 +374,32 @@ body{
 .contenedor-articulo:hover .icono-articulo{
     transform: scale(2, 2);
 }
-.contenedor-articulo h3{
-    text-align: center;
-    border-bottom: solid 2px #ebebeb;
-    background-color: rgba(145, 142, 138, 0.788);
+.contenedor-articulo div h3{
+    background-color: rgba(0,0,0,0.3);
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 450ms;
+    border-radius: 20px;
+}
+.contenedor-articulo:hover div h3{
+    opacity: 1;
 }
 .articulos{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 15px;
-}
-.sub-articulo-x{
-    display: flex;
-    align-self: flex-end; 
+    justify-content: space-around;
+    margin: 15px 0px;
 }
 .icono-articulo{
     display: block ;
@@ -407,9 +424,13 @@ body{
 .precio-anterior{
     text-decoration: line-through;
     color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px;
 }
 .precio-oferta{
     font-weight: bold;
+    margin-left: 15px;
 }
 @media(min-width: 361px){
     .main{
@@ -420,7 +441,6 @@ body{
     }
     .contenedor-articulo{
         max-width: 40vw;
-
     }
 }
 @media(min-width: 769px){
