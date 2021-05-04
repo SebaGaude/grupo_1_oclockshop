@@ -3,24 +3,33 @@
     box-sizing: border-box;
 }
 body{
-    width: 100vw;
+    width: 100%;
     
 }
 /*Configuracion Header*/
+*{
+    width: 100%;
+}
+
+body{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*Configuracion Header*/
 header{
-    background-color: #9E9E9E;
-    width: 100vw;
+    background-color: #adadad;
+    width: 100%;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    color: #454545;
+    color: #525252;
     font-size: 16px;
-    overflow-x: hidden;
 }
 .top{
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px #9E9E9E;
-    width: 100vw;
+    border-bottom: solid 1px #adadad;
+    width: 100%;
     line-height: 1vh;
 }
 
@@ -31,22 +40,21 @@ header{
 }
 
 .top1 p{
-    margin: 0 2vw 0.5vw 1vw;
-    border-top: solid 0.5vw #9E9E9E;
+    margin: 0 2% 0.5% 1%;
+    border-top: solid 0.5vw #adadad;
     font-size: 12px;
     width: 80%;
     text-align: center;
 }
 .contact-us{
     box-sizing: border-box;
-    padding-right: 2vw;
     width: 50%;
     border-bottom: solid 0.5px black;
 }
 .contact-us p{
     box-sizing: border-box;
     margin: 0 0 0.5vw 0;
-    border-top: solid 0.5vw #9E9E9E;
+    border-top: solid 0.5vw #adadad;
     font-size: 12px;
     display: flex;
     justify-content: flex-end;
@@ -54,7 +62,7 @@ header{
 .header1{
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
 }
 
 .logo{
@@ -67,6 +75,7 @@ header{
 .menu{
     width: 85%;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -134,12 +143,14 @@ header{
 }
 
 .desplegable{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     /*border-top: solid 1px rgb(3,3,66);*/
     font-size: 16px; /*quizas 14px*/
+    background-color: rgb(187, 183, 183);
+
 }
 
 .desplegable p{
@@ -151,8 +162,7 @@ header{
 .fijo{
     display: flex;
     justify-content: space-around;
-    width: 250%;
-    background-color: rgb(187, 183, 183);
+    width: 70%;
 }
 
 .fijo a{
@@ -163,7 +173,7 @@ header{
 .carrito{
     display: flex;
     justify-content: flex-end;
-    background-color: rgb(187, 183, 183);
+    width: 25%;
 }
 
 .carrito a{
@@ -171,19 +181,19 @@ header{
     text-decoration: none;
 }
 
-.registration{
-    width: 40%;
+
+/*.registration{
+    width: 35%;
 }
 
 .sign-in{
-    width: 40%;
-}
+    width: 35%;
+}*/
 
 .carro{
     box-sizing: border-box;
     text-align: center;
-    padding: 0 3vw 0 0;
-    width: 20%;
+    /*width: 15%;*/
     transition: transform 0.5s;
 }
 
@@ -214,7 +224,7 @@ header{
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 361px) and (max-width: 768px) {
     /* tablet */
 
     .desplegable{
@@ -252,8 +262,8 @@ header{
     .logo{
         width: 8%;
     }
-
 }
+
 /*----------------------------- Fin configuraciones header ---------------------------------*/
 body{
     font-family: 'Ubuntu', sans-serif;
@@ -271,10 +281,11 @@ body{
     margin: 2px 0;
     position: relative;
     max-width: 830px;
-    padding-top: 20px;
 }
+
 .carrusel img{
-    border-radius: 10px;
+    border-radius: 20px;
+    padding: 5px;
 }
 
 .titulos-carrusel{
@@ -395,7 +406,9 @@ body{
 .contenedor-articulo:hover div h3{
     opacity: 1;
 }
+
 .articulos{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -432,7 +445,26 @@ body{
     font-weight: bold;
     margin-left: 15px;
 }
-@media(min-width: 361px){
+
+@media (max-width: 360px) {
+    /*.main{
+        flex-direction: row;
+    }*/
+    .link-quiz{
+        margin-top: 30px;
+    }
+    .contenedor-articulo{
+        max-width: 40vw;
+    }
+    .categorias p{
+        width: 25%;
+    }
+    .categorias img{
+        width: 100%;
+    }
+
+}
+@media (min-width: 361px) and (max-width: 768px) {
     .main{
         flex-direction: row;
     }
@@ -442,8 +474,18 @@ body{
     .contenedor-articulo{
         max-width: 40vw;
     }
+    .categorias p{
+        width: 25%;
+    }
+    .categorias img{
+        width: 100%;
+    }
+
 }
 @media(min-width: 769px){
+    .main{
+        flex-direction: row;
+    }
   .img-cat{
       width: 80%;
   }
@@ -453,6 +495,10 @@ body{
   .contenedor-articulo{
       max-width: 20vw;
   }
+
+  .categorias{
+      width: 100%;
+  }
 }
 
 
@@ -461,7 +507,7 @@ footer{
     background-color: rgb(196, 194, 204);
     font-size: 12px;
     border-bottom: solid 1vh rgb(196, 194, 204);
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
 }
 footer p{
@@ -470,6 +516,9 @@ footer p{
 .main-footer{
     display: flex;
     justify-content: space-around;
+}
+.text{
+    text-align: center;
 }
 .copyright p{
     width: 95%;

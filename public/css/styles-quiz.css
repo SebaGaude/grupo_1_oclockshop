@@ -1,55 +1,83 @@
-* {
+*{
     box-sizing: border-box;
 }
+body{
+    width: 100%;
+ }
 
 /*Configuracion Header*/
 header{
-    background-color: rgb(196, 194, 204);
+    background-color: #9E9E9E;
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: #454545;
+    font-size: 16px;
 }
 .top{
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px rgb(218, 210, 210);
+    border-bottom: solid 1px #9E9E9E;
+    width: 100vw;
+    line-height: 1vh;
 }
-.top1 p{
-    margin: 0 0 0.5vw 1vh;
-    border-top: solid 0.5vw rgb(196, 194, 204);
-    font-size: 12px;
+
+.top1{
     display: flex;
-    justify-content: flex-start;
+    width: 50%;
+    border-bottom: solid 0.5px black;
+}
+
+.top1 p{
+    margin: 0 2vw 0.5vw 1vw;
+    border-top: solid 0.5vw #9E9E9E;
+    font-size: 12px;
+    width: 80%;
+    text-align: center;
+}
+.contact-us{
+    box-sizing: border-box;
+    padding-right: 2vw;
+    width: 50%;
+    border-bottom: solid 0.5px black;
 }
 .contact-us p{
-    margin: 0 1vh 0.5vw 0;
-    border-top: solid 0.5vw rgb(196, 194, 204);
+    box-sizing: border-box;
+    margin: 0 0 0.5vw 0;
+    border-top: solid 0.5vw #9E9E9E;
     font-size: 12px;
     display: flex;
     justify-content: flex-end;
 }
 .header1{
     display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
 }
 
+.logo{
+    width: 15%;
+}
 .logo img{
-    width: 15vw;
+    width: 100%;
+    height: 100%;
 }
 
 .menu{
-    width: 100%;
-}
-
-.menu p{
-    margin: 0
+    width: 85%;
+    display: flex;
+    align-items: center;
 }
 
 .busqueda{
+    width: 85%;
+    margin-left: 2%;
     display: flex;
-    justify-content:center ;
-    position: relative;
+    justify-content: center;
 }
 .busqueda input{
     height: 16px;
     text-align: center;
-    margin-top: 3vh;
     padding: 2px;
     border-radius: 5px 0 0 5px;
     color: #666;
@@ -59,26 +87,59 @@ header{
 }
 .busqueda button{
     height: 16px;
-    text-align: right;
-    margin-top: 3vh;
+    text-align: left;
     border-top: solid 6px white;
     border-bottom: solid 6px white;
     border-radius: 0 5px 5px 0;
     color: #666;
     background-color: white;
     box-sizing: content-box;
-    position:relative;
     border: none;
-    padding: 2px;
-    align-self: flex-end;
+    padding: 2px 1vw;
+    width: 4vw;
+}
+
+.mobile{
+    display: flex;
+    justify-content: center;
+    width: 15%;
+}
+
+.burger-menu{
+    text-align: center;
+    display: none;
+    width: 50%;
+    font-size: 14px; 
+}
+
+.burger-menu i{
+    text-align: center;
+    padding: 1vw;
+    color: black;
+    width: 50%;
+}
+
+.carrito1{
+    text-align: center;
+    display: none;
+    justify-content: center;
+    width: 50%;
+    font-size: 14px;
+}
+
+.carrito1 i{
+    text-align: center;
+    padding: 1vw;
+    width: 50%;
 }
 
 .desplegable{
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    border-top: solid 1px rgb(3,3,66);
-    font-size: 14px;
+    /*border-top: solid 1px rgb(3,3,66);*/
+    font-size: 16px; /*quizas 14px*/
 }
 
 .desplegable p{
@@ -87,50 +148,121 @@ header{
     margin: 0;
 }
 
-.mobile{
+.fijo{
     display: flex;
-    justify-content: flex-end;
-    margin: 1vh 5vh 1vh 5vh;
+    justify-content: space-around;
+    width: 250%;
+    background-color: rgb(187, 183, 183);
+}
+
+.fijo a{
+    color: #454545;
+    text-decoration: none;
 }
 
 .carrito{
     display: flex;
     justify-content: flex-end;
-    margin: 0 0 0 7vh;
-}   
-.sign-in{
-    margin-left: 2vw;
-}
-.carrito1{
-    margin-left: 2vw;
+    background-color: rgb(187, 183, 183);
 }
 
-.sign-in i{
-    font-size: 14px;
+.carrito a{
+    color: #454545;
+    text-decoration: none;
 }
-.carrito1 i{
-    font-size: 14px;
+
+.registration{
+    width: 40%;
 }
-@media (max-width: 450px) {
+
+.sign-in{
+    width: 40%;
+}
+
+.carro{
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 3vw 0 0;
+    width: 20%;
+    transition: transform 0.5s;
+}
+
+.carro:hover{
+    transform: scale(1.5,1.5);
+}
+
+@media (max-width: 360px) {
+    /*mobile*/
+
     .desplegable{
         display: none;
-}}
+    }
+    .busqueda{
+        width: 70%;
+    }
+    .mobile{
+        margin: 0.5vw;
+    }
+    .sign-in{
+        margin: 0;
+    }
+    .carrito1{
+        display: block;
+    }
+    .burger-menu{
+        display: block;
+    }
+}
 
-@media(min-width: 450px) {
+@media (max-width: 768px) {
+    /* tablet */
+
+    .desplegable{
+        display: none;
+    }
+    .busqueda{
+        width: 70%;
+    }
+    .mobile{
+        margin: 0.5vw;
+    }
+    .sign-in{
+        margin: 0;
+    }
+    .carrito1{
+        display: block;
+    }
+    .burger-menu{
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    /* desktop */
+
     .mobile{
         display: none;
     }
     .menu-cel{
         display: none;
     }
+    .top1 p{
+        width: 20%;
+    }
+    .logo{
+        width: 8%;
+    }
+
 }
 /*Fin Configuracion Header*/
 
 /*Configuracion Footer*/
 footer{
-    background-color: rgb(196, 194, 204);
+    background-color: #adadad;
     font-size: 12px;
-    border-bottom: solid 1vh rgb(196, 194, 204);
+    border-bottom: solid 1vh #adadad;
+    width: 100%;
+    box-sizing: border-box;
 }
 footer p{
     margin: 2vh 0;
@@ -139,10 +271,17 @@ footer p{
     display: flex;
     justify-content: space-around;
 }
+.text{
+    text-align: center;
+}
 .copyright p{
+    width: 95%;
     margin: 1vw;
 }
 /* fin configuraion footer */
+
+/* -------configuraciones propias quiz--------------------------------------------------------------- */
+
 body{
     color: black;
     font-size: 15px;
@@ -158,24 +297,32 @@ body{
 
 .formulario {
     padding: 20px 15px;
+    margin: 2%;
+    margin-top: 1%;
+    width: 95%;
+
 }
 
 .control-formulario {
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
     margin-left: 1%;
+    width: 100%;
 }
 
 .control-formulario label {
     display: block;
+    width: 100%;
 }
-
 .preguntas-form {
-    margin-top: 2%;
-    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
     font-weight: bold;
+    margin-top: 2%;
 }
 
 .aclaracion-pregunta {
+    font-family: helvetica,sans-serif;
+    font-size: 16px;
     font-style: italic;
     margin-top: 0%;
     margin-bottom: 1%;
@@ -187,9 +334,128 @@ body{
 }
 
 .label-quiz {
-    margin: 3%;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 30px;
+    line-height: 38px;
     font-weight: bold;
-    color:black;
-    text-align: center;    
+    margin: 3%;
+    color:#525252;
+    
+}
+
+body {
+    background-color: white;
+    width: 100%;
+}
+
+.clipboard {
+    display: none;
+    width: 20%;
+}
+.boton-envio {
+    width: 45vw;
+    background-color: #adadad;
+    margin: 1%;
+    border-radius: 40px;
+    
+}
+.boton-envio:hover {
+    opacity: 50%;
+    transition: all 1s;
+}
+
+.boton-reset {
+    width: 45vw;
+    background-color: #adadad;
+    margin: 1%;
+    border-radius: 40px;
+}
+
+.boton-reset:hover {
+    opacity: 50%;
+    transition: all 1s;
+}
+
+.mensaje-analizando {
+    display: none;
+    width: 300px;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #adadad;
+    padding: 5px;
+    border: dotted 2px #525252;    
+    animation: mensaje 2s infinite;
+}
+
+.relojes-quiz {
+    display: none;
+    width: 40%;
+}
+
+
+
+@keyframes mensaje {
+    0% {opacity: 50%;}
+    25% {opacity: 100%;}
+    50% {opacity: 50%;}
+    100% {opacity: 0%;} 
+}
+
+/* media querys */
+
+/* DESKTOP */
+
+@media (min-width: 769px) {
+    .foto-reloj {
+        display: none;
+    }
+    .clipboard {
+        display: inline-flex;
+        position: absolute;
+        right: 70px;
+        top: 38%;
+    } 
+    .clipboard:hover {
+        transform: rotate(-360deg);
+        transition: all 2s;
+    }
+    .boton-envio,
+    .boton-reset {
+        max-width: 29%;
+    }
+    .botones {
+        display: flex;
+        /* flex-flow: column wrap; */
+    }
+    .label-quiz {
+        width: 60%;
+        text-align: justify;
+    }
+    
+    .mensaje-analizando {
+        display: inline-block;
+        position: absolute;
+        right: 10%;
+        top: 95%;
+        
+    }
+    
+    .relojes-quiz {
+        display: inline-block;
+        position: absolute;
+        right: 15%;
+        top: 90%;
+        z-index: -1;
+
+    }
+
+}
+
+
+/* dispositivos aun mas grandes */
+@media (min-width: 1100px) {
+}
+.mensaje-analizando {
+    display: none;
 }

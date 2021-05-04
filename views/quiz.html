@@ -8,133 +8,186 @@
     <script src="https://kit.fontawesome.com/46b0370ee7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles-quiz.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Haz un quiz!</title>
 </head>
+
 <body>
     <header>
         <div class="top">
             <div class="top1">
-                <p><a href=""> Español </a> | <a href=""> English </a></p>
+                <p><a href=""> Español </a></p>|<p><a href=""> English </a></p>
             </div>
             <div class="contact-us">
                 <p>Contáctenos</p>
             </div>
         </div>
-            <div class="header1">
-                <div class="logo">
-                    <a href="/"><img src="img/logo-prueba.png" alt="Logo OclockShop"></a>
-                </div>
-                <div class="menu">
-                    <div class="busqueda">
-                        <form action="/resultados-de-busqueda" method="GET" class="busqueda">
-                            <input type="text" placeholder="Buscar productos">
-                            <button><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                    <div class="mobile">
-                        <div class="sign-in">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="carrito1">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                    </div>
-                </div>
+        <div class="header1">
+            <div class="logo">
+                <a href="/"><img src="img/logo-prueba.png" alt="Logo OclockShop"></a>
             </div>
-            <div class="desplegable">
-                <p>Colecciones</p>
-                <p>Mujer</p>
-                <p>Hombre</p>
-                <p>Ofertas</p>
-                <a href="/quiz"><p>Hazte un quiz</p></a>
-                <div class="carrito">
-                    <div class="registration">
-                        <p>Registrate</p>
-                    </div>
-                    <div class="sign-in">
-                        <p>Ingresá</p>
+            <div class="menu">
+                <form action="/resultados-de-busqueda" method="GET" class="busqueda">
+                    <input type="text" placeholder="Buscar productos">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+                <div class="mobile">
+                    <div class="burger-menu">
+                        <i class="fa fa-bars burger"></i>
                     </div>
                     <div class="carrito1">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                 </div>
-
+            </div>
+            <div class="desplegable">
+                <div class="fijo">
+                    <a href="">
+                        <p>Colecciones</p>
+                    </a>
+                    <a href="">
+                        <p>Mujer</p>
+                    </a>
+                    <a href="">
+                        <p>Hombre</p>
+                    </a>
+                    <a href="">
+                        <p>Ofertas</p>
+                    </a>
+                    <a href="/quiz">
+                        <p>Haz un quiz</p>
+                    </a>
+                </div>
+                <div class="carrito">
+                    <div class="registration">
+                        <a href="/register">
+                            <p>Registrate</p>
+                        </a>
+                    </div>
+                    <div class="sign-in">
+                        <a href="/login">
+                            <p>Ingresá</p>
+                        </a>
+                    </div>
+                    <div class="carro">
+                        <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
     </header>
     <main>
-        <div class="label-quiz">
-            <label > Haz este quiz para que te podamos conocer y recomendarte los mejores relojes de acuerdo a tu personalidad</label>
-        </div>
         <section class="foto-reloj" alt="foto-reloj">
             <img src="/img/banner-reloj.jpg" alt="relojes">
         </section>
         <section>
-            <form class="formulario" action="/resultado.html" method="POST"></form>
-                <div class="control-formulario">
-                    <label class="preguntas-form">¿Usas reloj generalmente?</label>
-                    <label class="aclaracion-pregunta">Por favor elige una opción</label>
-                    <label><input type="radio" name="reloj" value="reloj" > Si </label>
-                    <label><input type="radio" name="reloj" value="reloj" > No </label>
-                    <label><input type="radio" name="reloj" value="reloj" > A veces </label>
-                </div>
-                <div class="control-formulario">
-                    <label class="preguntas-form">¿Para qué usarías el reloj?</label>
-                    <label class="aclaracion-pregunta">Por favor elige una opción</label>
-                    <label><input type="radio" name="uso-reloj" value="uso-reloj"> Para ver la hora todos los dias </label>
-                    <label><input type="radio" name="uso-reloj" value="uso-reloj"> Para hacer deporte </label>
-                    <label><input type="radio" name="uso-reloj" value="uso-reloj"> Para lucir ocasionalmente </label>
-                </div>
-                <div class="control-formulario">
-                    <label class="preguntas-form">¿Que formas te gustan más?</label>
-                    <label class="aclaracion-pregunta">Podes elegir todas las que quieras</label>
-                    <label><input type="checkbox" name="formas-reloj" value="formas-reloj"> Diseños grandes </label>
-                    <label><input type="checkbox" name="formas-reloj" value="formas-reloj"> Diseños pequeños </label>
-                    <label><input type="checkbox" name="formas-reloj" value="formas-reloj"> Formas innovadores </label>
-                    <label><input type="checkbox" name="formas-reloj" value="formas-reloj"> Algo mas clasico </label>
-                    <label><input type="checkbox" name="formas-reloj" value="formas-reloj"> No tengo preferencia </label>
-                </div>
-                <div class="control-formulario">
-                    <label class="preguntas-form">¿Qué colores te gustan?</label>
-                    <label class="aclaracion-pregunta">Podes elegir todos las que quieras</label>
-                    <label><input type="checkbox" name="color-reloj" value="color-reloj"> Brillantes </label>
-                    <label><input type="checkbox" name="color-reloj" value="color-reloj"> Neutro </label>
-                    <label><input type="checkbox" name="color-reloj" value="color-reloj"> Negro </label>
-                    <label><input type="checkbox" name="color-reloj" value="color-reloj"> Blanco </label>
-                    <label><input type="checkbox" name="color-reloj" value="color-reloj"> No tengo preferencia </label>
-                </div>
-                <div class="control-formulario">
-                    <label class="preguntas-form">¿Qué materiales te gustan?</label>
-                    <label class="aclaracion-pregunta">Podes elegir todos las que quieras</label>
-                    <label><input type="checkbox" name="material-reloj" value="material-reloj"> Metal </label>
-                    <label><input type="checkbox" name="material-reloj" value="material-reloj"> Cuero </label>
-                    <label><input type="checkbox" name="material-reloj" value="material-reloj"> Crystal </label>
-                    <label><input type="checkbox" name="material-reloj" value="material-reloj"> Plastico </label>
-                    <label><input type="checkbox" name="material-reloj" value="material-reloj"> No tengo preferencia </label>
-                </div>
-                <div class="control-formulario">
-                    <label class="preguntas-form">¿Cuánto dinero estas dispuesto a gastar en un reloj?</label>
-                    <label class="aclaracion-pregunta">Por favor escoge un rango</label>
-                    <label><input type="radio" name="rango-precio" value="rango-precio" > Menos de $5000 </label>
-                    <label><input type="radio" name="rango-precio" value="rango-precio" > Entre $5000 y $10000 </label>
-                    <label><input type="radio" name="rango-precio" value="rango-precio" > Mas de $10000 </label>
-                </div>
-                <div class="control-formulario">
-                    <label class="preguntas-form">¿Querés que te enviemos el resultado por e-mail?</label>
-                    <label class="aclaracion-pregunta">Ademas podremos avisarte cuando alguno de tus relojes este en oferta</label>
-                    <input type="email" name="email" placeholder="Escribe tu email aqui" class="email">
-                </div>
+            <div class="label-quiz">
+                <label> Haz este quiz para que te podamos conocer y recomendarte los mejores relojes de acuerdo a tu
+                    personalidad</label>
+            </div>
+            <section>
+                <form class="formulario" action="/resultado.html" method="POST">
+                    <div class="control-formulario">
+                        <label class="preguntas-form">¿Usas reloj generalmente?</label>
+                        <label class="aclaracion-pregunta">Por favor elige una opción</label>
+                        <label><input type="radio" name="reloj" value="reloj" class="ticks"> No </label>
+                        <label><input type="radio" name="reloj" value="reloj" class="ticks"> A veces </label>
+                        <label><input type="radio" name="reloj" value="reloj" class="ticks"> Si </label>
+                    </div>
+                    <div class="control-formulario">
+                        <label class="preguntas-form">¿Para qué usarías el reloj?</label>
+                        <label class="aclaracion-pregunta">Por favor elige una opción</label>
+                        <label><input type="radio" name="uso-reloj" value="uso-reloj" class="ticks"> Para ver la hora todos
+                            los dias </label>
+                        <label><input type="radio" name="uso-reloj" value="uso-reloj" class="ticks"> Para hacer deporte
+                        </label>
+                        <label><input type="radio" name="uso-reloj" value="uso-reloj" class="ticks"> Para lucir
+                            ocasionalmente </label>
+                    </div>
+                    <div class="control-formulario">
+                        <label class="preguntas-form">¿Que diseños te gustan más?</label>
+                        <label class="aclaracion-pregunta">Podes elegir todas las que quieras</label>
+                        <label><input type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks"> Diseños
+                            grandes </label>
+                        <label><input type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks"> Diseños
+                            pequeños </label>
+                        <label><input type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks"> Formas
+                            innovadores </label>
+                        <label><input type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks"> Algo mas
+                            clasico </label>
+                        <label><input type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks"> No tengo
+                            preferencia </label>
+                    </div>
+                    <div class="control-formulario">
+                        <label class="preguntas-form">¿Qué colores te gustan?</label>
+                        <label class="aclaracion-pregunta">Podes elegir todos las que quieras</label>
+                        <label><input type="checkbox" name="color-reloj" value="color-reloj" class="ticks"> Brillantes
+                        </label>
+                        <label><input type="checkbox" name="color-reloj" value="color-reloj" class="ticks"> Neutro </label>
+                        <label><input type="checkbox" name="color-reloj" value="color-reloj" class="ticks"> Negro </label>
+                        <label><input type="checkbox" name="color-reloj" value="color-reloj" class="ticks"> Blanco </label>
+                        <label><input type="checkbox" name="color-reloj" value="color-reloj" class="ticks"> No tengo
+                            preferencia </label>
+                    </div>
+                    <div class="control-formulario">
+                        <label class="preguntas-form">¿Qué materiales te gustan?</label>
+                        <label class="aclaracion-pregunta">Podes elegir todos las que quieras</label>
+                        <label><input type="checkbox" name="material-reloj" value="material-reloj" class="ticks"> Metal
+                        </label>
+                        <label><input type="checkbox" name="material-reloj" value="material-reloj" class="ticks"> Cuero
+                        </label>
+                        <label><input type="checkbox" name="material-reloj" value="material-reloj" class="ticks"> Crystal
+                        </label>
+                        <label><input type="checkbox" name="material-reloj" value="material-reloj" class="ticks"> Plastico
+                        </label>
+                        <label><input type="checkbox" name="material-reloj" value="material-reloj" class="ticks"> No tengo
+                            preferencia </label>
+                    </div>
+                    <div class="control-formulario">
+                        <label class="preguntas-form">¿Cuánto dinero estas dispuesto a gastar en un reloj?</label>
+                        <label class="aclaracion-pregunta">Por favor escoge un rango</label>
+                        <label><input type="radio" name="rango-precio" value="rango-precio" class="ticks"> Menos de $5000
+                        </label>
+                        <label><input type="radio" name="rango-precio" value="rango-precio" class="ticks"> Entre $5000 y
+                            $10000 </label>
+                        <label><input type="radio" name="rango-precio" value="rango-precio" class="ticks"> Mas de $10000
+                        </label>
+                    </div>
+                    <div class="control-formulario">
+                        <label class="preguntas-form">¿Querés que te enviemos el resultado por e-mail?</label>
+                        <label class="aclaracion-pregunta">Ademas podremos avisarte cuando alguno de tus relojes este en
+                            oferta</label>
+                        <input type="email" name="email" placeholder="Escribe tu email aqui" class="email">
+                    </div>
+                    <div class="botones">
+                        <button type="submit" class="boton-envio">OBTENER RESULTADOS</button>
+                        <button type="reset" class="boton-reset">Comenzar de nuevo</button>
+                    </div>
+                </section>
+                <aside>
+                    <div class="mensaje-analizando">
+                        <p>Buscando el mejor reloj para usted en nuestra base de datos...</p>
+                    </div>
+                </aside>
+                <aside>
+                    <img src="/img/clipboard.jpg" alt="clipboard" class="clipboard">
+                    <img src="/img/relojes-quiz.jpg" alt="relojes-quiz" class="relojes-quiz">
+                </aside>
+        </form>
         </section>
     </main>
     <footer>
         <div class="main-footer">
-            <p>Conócenos</p>
-            <p>Términos y condiciones</p>
-            <p>¡Seguinos!</p>
-            <p>¿Necesitas ayuda?</p>
-            <p>Trabajá con nosotros</p>
+            <p class="text">Conócenos</p>
+            <p class="text">Términos y condiciones</p>
+            <p class="text">¡Seguinos!</p>
+            <p class="text">¿Necesitas ayuda?</p>
+            <p class="text">Trabajá con nosotros</p>
         </div>
         <div class="copyright">
             <p>Copyright © 2021 OclockShop Inc. Todos los derechos reservados</p>
         </div>
+
     </footer>
 </body>
 
