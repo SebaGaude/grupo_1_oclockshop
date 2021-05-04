@@ -1,9 +1,8 @@
 *{
-
     box-sizing: border-box;
 }
 body{
-    width: 100vw;
+    width: 100%;
  }
 
 /*Configuracion Header*/
@@ -259,10 +258,10 @@ header{
 
 /*Configuracion Footer*/
 footer{
-    background-color: rgb(196, 194, 204);
+    background-color: #adadad;
     font-size: 12px;
-    border-bottom: solid 1vh rgb(196, 194, 204);
-    width: 100vw;
+    border-bottom: solid 1vh #adadad;
+    width: 100%;
     box-sizing: border-box;
 }
 footer p{
@@ -271,6 +270,9 @@ footer p{
 .main-footer{
     display: flex;
     justify-content: space-around;
+}
+.text{
+    text-align: center;
 }
 .copyright p{
     width: 95%;

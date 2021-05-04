@@ -3,25 +3,24 @@
     box-sizing: border-box;
 }
 body{
-    width: 100vw;
+    width: 100%;
     
 }
 
 /*Configuracion Header*/
 header{
-    background-color: #9E9E9E;
-    width: 100vw;
+    background-color: #adadad;
+    width: 100%;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    color: #454545;
+    color: #525252;
     font-size: 16px;
-    overflow-x: hidden;
 }
 .top{
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px #9E9E9E;
-    width: 100vw;
+    border-bottom: solid 1px #adadad;
+    width: 100%;
     line-height: 1vh;
 }
 
@@ -32,22 +31,21 @@ header{
 }
 
 .top1 p{
-    margin: 0 2vw 0.5vw 1vw;
-    border-top: solid 0.5vw #9E9E9E;
+    margin: 0 2% 0.5% 1%;
+    border-top: solid 0.5vw #adadad;
     font-size: 12px;
     width: 80%;
     text-align: center;
 }
 .contact-us{
     box-sizing: border-box;
-    padding-right: 2vw;
     width: 50%;
     border-bottom: solid 0.5px black;
 }
 .contact-us p{
     box-sizing: border-box;
     margin: 0 0 0.5vw 0;
-    border-top: solid 0.5vw #9E9E9E;
+    border-top: solid 0.5vw #adadad;
     font-size: 12px;
     display: flex;
     justify-content: flex-end;
@@ -55,7 +53,7 @@ header{
 .header1{
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
 }
 
 .logo{
@@ -68,6 +66,7 @@ header{
 .menu{
     width: 85%;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -135,12 +134,14 @@ header{
 }
 
 .desplegable{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     /*border-top: solid 1px rgb(3,3,66);*/
     font-size: 16px; /*quizas 14px*/
+    background-color: rgb(187, 183, 183);
+
 }
 
 .desplegable p{
@@ -152,8 +153,7 @@ header{
 .fijo{
     display: flex;
     justify-content: space-around;
-    width: 250%;
-    background-color: rgb(187, 183, 183);
+    width: 70%;
 }
 
 .fijo a{
@@ -164,7 +164,7 @@ header{
 .carrito{
     display: flex;
     justify-content: flex-end;
-    background-color: rgb(187, 183, 183);
+    width: 25%;
 }
 
 .carrito a{
@@ -172,19 +172,18 @@ header{
     text-decoration: none;
 }
 
-.registration{
-    width: 40%;
+/*.registration{
+    width: 35%;
 }
 
 .sign-in{
-    width: 40%;
-}
+    width: 35%;
+}*/
 
 .carro{
     box-sizing: border-box;
     text-align: center;
-    padding: 0 3vw 0 0;
-    width: 20%;
+    /*width: 15%;*/
     transition: transform 0.5s;
 }
 
@@ -360,10 +359,10 @@ body{
 
 /*----------------------------- Configuraciones footer -------------------------------------*/
 footer{
-    background-color: rgb(196, 194, 204);
+    background-color: #adadad;
     font-size: 12px;
-    border-bottom: solid 1vh rgb(196, 194, 204);
-    width: 100vw;
+    border-bottom: solid 1vh #adadad;
+    width: 100%;
     box-sizing: border-box;
 }
 footer p{
@@ -373,10 +372,12 @@ footer p{
     display: flex;
     justify-content: space-around;
 }
+.text{
+    text-align: center;
+}
 .copyright p{
     width: 95%;
     margin: 1vw;
-
 }
 
 
@@ -438,7 +439,7 @@ footer p{
 .articulos{
     
     background-color: #ebebeb;
-    width: 100vw;
+    width: 100%;
 
 }
 
@@ -446,7 +447,7 @@ footer p{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     border-bottom: 2px solid #454545;
 }
@@ -455,7 +456,7 @@ footer p{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     border-bottom: 2px solid #454545;
 }
@@ -532,6 +533,7 @@ section nav ul li a{
 
 
 .titulo{
+    width: 90%;
     font-size: 20px;
     margin-top: 20px;
     margin-left: 10px;

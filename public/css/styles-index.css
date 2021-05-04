@@ -3,23 +3,33 @@
     box-sizing: border-box;
 }
 body{
-    width: 100vw;
+    width: 100%;
     
 }
 
 /*Configuracion Header*/
+*{
+    width: 100%;
+}
+
+body{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*Configuracion Header*/
 header{
-    background-color: #9E9E9E;
+    background-color: #adadad;
     width: 100%;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    color: #454545;
+    color: #525252;
     font-size: 16px;
 }
 .top{
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px #9E9E9E;
+    border-bottom: solid 1px #adadad;
     width: 100%;
     line-height: 1vh;
 }
@@ -32,7 +42,7 @@ header{
 
 .top1 p{
     margin: 0 2% 0.5% 1%;
-    border-top: solid 0.5vw #9E9E9E;
+    border-top: solid 0.5vw #adadad;
     font-size: 12px;
     width: 80%;
     text-align: center;
@@ -45,7 +55,7 @@ header{
 .contact-us p{
     box-sizing: border-box;
     margin: 0 0 0.5vw 0;
-    border-top: solid 0.5vw #9E9E9E;
+    border-top: solid 0.5vw #adadad;
     font-size: 12px;
     display: flex;
     justify-content: flex-end;
