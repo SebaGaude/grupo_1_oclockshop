@@ -1,14 +1,16 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
-const productController = require("../controllers/productsController");
 const productsController = require("../controllers/productsController");
+
 
 const app = express();
 
-app.get("/producto1", productController.productDetail);
+const publicPath = path.resolve(__dirname, "./public");
+app.use(express.static(publicPath));
 
+router.get("/producto1", productsController.productDetail);
 
-app.get("/carrito", productController.productCart);
+router.get("/carrito", productsController.productCart);
 
 module.exports = router;

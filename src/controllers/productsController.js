@@ -1,11 +1,11 @@
-let productController = {
+let productsController = {
     productDetail: function(req, res){
-        res.sendFile(path.resolve(__dirname,"./views/productDetail.html"));
+        res.render("productDetail");
     },
     productCart: function(req, res){
-        res.sendFile(path.resolve(__dirname,"./views/productCart.html"));
+        res.render("productCart");
     },
 
 };
 
-module.exports = productController;
+module.exports = productsController;
