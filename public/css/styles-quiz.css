@@ -438,7 +438,7 @@ body {
         position: absolute;
         right: 10%;
         top: 95%;
-        
+        z-index: 2;
     }
     
     .relojes-quiz {
