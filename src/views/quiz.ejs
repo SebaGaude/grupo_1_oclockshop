@@ -12,70 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Haz un quiz!</title>
 </head>
-
 <body>
-    <header>
-        <div class="top">
-            <div class="top1">
-                <p><a href=""> Español </a></p>|<p><a href=""> English </a></p>
-            </div>
-            <div class="contact-us">
-                <p>Contáctenos</p>
-            </div>
-        </div>
-        <div class="header1">
-            <div class="logo">
-                <a href="/"><img src="img/logo-prueba.png" alt="Logo OclockShop"></a>
-            </div>
-            <div class="menu">
-                <form action="/resultados-de-busqueda" method="GET" class="busqueda">
-                    <input type="text" placeholder="Buscar productos">
-                    <button><i class="fas fa-search"></i></button>
-                </form>
-                <div class="mobile">
-                    <div class="burger-menu">
-                        <i class="fa fa-bars burger"></i>
-                    </div>
-                    <div class="carrito1">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="desplegable">
-                <div class="fijo">
-                    <a href="">
-                        <p>Colecciones</p>
-                    </a>
-                    <a href="">
-                        <p>Mujer</p>
-                    </a>
-                    <a href="">
-                        <p>Hombre</p>
-                    </a>
-                    <a href="">
-                        <p>Ofertas</p>
-                    </a>
-                    <a href="/quiz">
-                        <p>Haz un quiz</p>
-                    </a>
-                </div>
-                <div class="carrito">
-                    <div class="registration">
-                        <a href="/register">
-                            <p>Registrate</p>
-                        </a>
-                    </div>
-                    <div class="sign-in">
-                        <a href="/login">
-                            <p>Ingresá</p>
-                        </a>
-                    </div>
-                    <div class="carro">
-                        <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-            </div>
-    </header>
+    <%- include("partials/header.ejs") %>
     <main>
         <section class="foto-reloj" alt="foto-reloj">
             <img src="/img/banner-reloj.jpg" alt="relojes">
@@ -176,19 +114,7 @@
         </form>
         </section>
     </main>
-    <footer>
-        <div class="main-footer">
-            <p class="text">Conócenos</p>
-            <p class="text">Términos y condiciones</p>
-            <p class="text">¡Seguinos!</p>
-            <p class="text">¿Necesitas ayuda?</p>
-            <p class="text">Trabajá con nosotros</p>
-        </div>
-        <div class="copyright">
-            <p>Copyright © 2021 OclockShop Inc. Todos los derechos reservados</p>
-        </div>
-
-    </footer>
+<%- include("partials/footer.ejs") %>
 </body>
 
 </html>
