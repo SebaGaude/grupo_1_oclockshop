@@ -5,6 +5,12 @@ let productsController = {
     productCart: function(req, res){
         res.render("productCart");
     },
+    newProduct: function(req, res){
+        res.render("newProduct");
+    },
+    editProduct: function(req, res){
+        res.render("editProduct");
+    },
 
 };
 
