@@ -1,4 +1,7 @@
 let productsController = {
+    products: function(req, res){
+        res.render("products");
+    },
     productDetail: function(req, res){
         res.render("productDetail");
     },

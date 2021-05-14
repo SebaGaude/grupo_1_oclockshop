@@ -9,6 +9,8 @@ const app = express();
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
 
+router.get("/", productsController.products);
+
 router.get("/producto1", productsController.productDetail);
 
 router.get("/carrito", productsController.productCart);
@@ -16,7 +18,6 @@ router.get("/carrito", productsController.productCart);
 router.get("/new", productsController.newProduct);
 
 router.get("/edit", productsController.editProduct);
-
 
 
 module.exports = router;
