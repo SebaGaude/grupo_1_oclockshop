@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/46b0370ee7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles-quiz.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Haz un quiz!</title>
@@ -28,68 +28,122 @@
                     <div class="control-formulario">
                         <label class="preguntas-form">¿Usas reloj generalmente?</label>
                         <label class="aclaracion-pregunta">Por favor elige una opción</label>
-                        <label><input type="radio" name="reloj" value="reloj" class="ticks"> No </label>
-                        <label><input type="radio" name="reloj" value="reloj" class="ticks"> A veces </label>
-                        <label><input type="radio" name="reloj" value="reloj" class="ticks"> Si </label>
+                        <div class="linea-input">
+                            <input for="No" type="radio" name="reloj" value="reloj" class="ticks">
+                            <label id="No"> No </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="A-veces" type="radio" name="reloj" value="reloj" class="ticks">
+                            <label id="A-veces"> A veces </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="Si" type="radio" name="reloj" value="reloj" class="ticks">
+                            <label id="Si"> Si </label>
+                        </div>
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form">¿Para qué usarías el reloj?</label>
                         <label class="aclaracion-pregunta">Por favor elige una opción</label>
-                        <label><input type="radio" name="uso-reloj" value="uso-reloj" class="ticks"> Para ver la hora todos
-                            los dias </label>
-                        <label><input type="radio" name="uso-reloj" value="uso-reloj" class="ticks"> Para hacer deporte
-                        </label>
-                        <label><input type="radio" name="uso-reloj" value="uso-reloj" class="ticks"> Para lucir
-                            ocasionalmente </label>
+                        <div class="linea-input">
+                            <input for="Todos-los-dias" type="radio" name="uso-reloj" value="uso-reloj" class="ticks">
+                            <label id="Todos-los-dias"> Para ver la hora todos los dias </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="Deporte" type="radio" name="uso-reloj" value="uso-reloj" class="ticks">
+                            <label id="Deporte"> Para hacer deporte </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="Ocasionalmente" type="radio" name="uso-reloj" value="uso-reloj" class="ticks">
+                            <label id="Ocasionalmente"> Para lucir ocasionalmente </label>
+                        </div>
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form">¿Que diseños te gustan más?</label>
                         <label class="aclaracion-pregunta">Podes elegir todas las que quieras</label>
-                        <label><input type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks"> Diseños
-                            grandes </label>
-                        <label><input type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks"> Diseños
-                            pequeños </label>
-                        <label><input type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks"> Formas
-                            innovadores </label>
-                        <label><input type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks"> Algo mas
-                            clasico </label>
-                        <label><input type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks"> No tengo
-                            preferencia </label>
+                        <div class="linea-input">
+                            <input for="Diseños-grandes" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks">
+                            <label id="Diseños-grandes"> Diseños grandes </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="Diseños-pequeños" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks">
+                            <label id="Diseños-pequeños"> Diseños pequeños </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="innovadores" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks">
+                            <label id="innovadores"> Formas innovadores </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="clasico" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks">
+                            <label id="clasico"> Algo mas clasico </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="sin-preferencia" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks">
+                            <label id="sin-preferencia"> No tengo preferencia </label>
+                        </div>
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form">¿Qué colores te gustan?</label>
                         <label class="aclaracion-pregunta">Podes elegir todos las que quieras</label>
-                        <label><input type="checkbox" name="color-reloj" value="color-reloj" class="ticks"> Brillantes
-                        </label>
-                        <label><input type="checkbox" name="color-reloj" value="color-reloj" class="ticks"> Neutro </label>
-                        <label><input type="checkbox" name="color-reloj" value="color-reloj" class="ticks"> Negro </label>
-                        <label><input type="checkbox" name="color-reloj" value="color-reloj" class="ticks"> Blanco </label>
-                        <label><input type="checkbox" name="color-reloj" value="color-reloj" class="ticks"> No tengo
-                            preferencia </label>
-                    </div>
+                        <div class="linea-input">
+                            <input for="brillantes" type="checkbox" name="color-reloj" value="color-reloj" class="ticks">
+                            <label id="brillantes"> Brillantes</label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="neutro" type="checkbox" name="color-reloj" value="color-reloj" class="ticks">
+                            <label id="neutro"> Neutro </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="negro" type="checkbox" name="color-reloj" value="color-reloj" class="ticks">
+                            <label id="negro"> Negro </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="blanco" type="checkbox" name="color-reloj" value="color-reloj" class="ticks">
+                            <label id="blanco"> Blanco </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="no-preference" type="checkbox" name="color-reloj" value="color-reloj" class="ticks">
+                            <label id="no-preference"> No tengo preferencia </label>
+                        </div>
+                    </div>    
                     <div class="control-formulario">
                         <label class="preguntas-form">¿Qué materiales te gustan?</label>
                         <label class="aclaracion-pregunta">Podes elegir todos las que quieras</label>
-                        <label><input type="checkbox" name="material-reloj" value="material-reloj" class="ticks"> Metal
-                        </label>
-                        <label><input type="checkbox" name="material-reloj" value="material-reloj" class="ticks"> Cuero
-                        </label>
-                        <label><input type="checkbox" name="material-reloj" value="material-reloj" class="ticks"> Crystal
-                        </label>
-                        <label><input type="checkbox" name="material-reloj" value="material-reloj" class="ticks"> Plastico
-                        </label>
-                        <label><input type="checkbox" name="material-reloj" value="material-reloj" class="ticks"> No tengo
-                            preferencia </label>
+                        <div class="linea-input">
+                            <input for="metal" type="checkbox" name="material-reloj" value="material-reloj" class="ticks">
+                            <label id="metal"> Metal </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="cuero" type="checkbox" name="material-reloj" value="material-reloj" class="ticks">
+                            <label id="cuero"> Cuero </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="crystal" type="checkbox" name="material-reloj" value="material-reloj" class="ticks">
+                            <label id="crystal"> Crystal </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="plastico" type="checkbox" name="material-reloj" value="material-reloj" class="ticks">
+                            <label id="plastico"> Plastico </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="sin-preferencia" type="checkbox" name="material-reloj" value="material-reloj" class="ticks">
+                            <label id="sin-preferencia"> No tengo preferencia </label>
+                        </div>
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form">¿Cuánto dinero estas dispuesto a gastar en un reloj?</label>
                         <label class="aclaracion-pregunta">Por favor escoge un rango</label>
-                        <label><input type="radio" name="rango-precio" value="rango-precio" class="ticks"> Menos de $5000
-                        </label>
-                        <label><input type="radio" name="rango-precio" value="rango-precio" class="ticks"> Entre $5000 y
-                            $10000 </label>
-                        <label><input type="radio" name="rango-precio" value="rango-precio" class="ticks"> Mas de $10000
-                        </label>
+                        <div class="linea-input">
+                            <input for="menos-de" type="radio" name="rango-precio" value="rango-precio" class="ticks">
+                            <label id="menos-de"> Menos de $5000</label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="entre" type="radio" name="rango-precio" value="rango-precio" class="ticks">
+                            <label id="entre"> Entre $5000 y$10000 </label>
+                        </div>
+                        <div class="linea-input">
+                            <input for="mas-de" type="radio" name="rango-precio" value="rango-precio" class="ticks">
+                            <label id="mas-de"> Mas de $10000</label>
+                        </div>
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form">¿Querés que te enviemos el resultado por e-mail?</label>
