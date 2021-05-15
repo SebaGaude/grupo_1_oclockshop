@@ -2,7 +2,7 @@
   "name": "grupo_1_oclockshop",
   "version": "1.0.0",
   "description": "Integrantes:\r Nombre: Juan Ignacio Leyes Schneider, \r Edad: 34, \r Residencia: Salta - Argentina, \r Ocupación: Estudiante en DigitalHouse,\r ---\r Nombre: Sebastian Gaudelli, \r Edad: 30, \r Residencia: Buenos Aires - Argentina, \r Ocupación: Desempleado.\r ---",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "nodemon ./app.js"
   },
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/SebaGaude/grupo_1_oclockshop#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }

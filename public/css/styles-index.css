@@ -379,9 +379,6 @@ body{
     border-radius: 20px;
     padding-top: 5px;
 }
-.contenedor-articulo img:hover{
-    transform: scale(0.9);
-}
 .contenedor-articulo:hover .icono-articulo{
     transform: scale(2, 2);
 }
@@ -406,9 +403,7 @@ body{
 .contenedor-articulo:hover div h3{
     opacity: 1;
 }
-
 .articulos{
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -446,7 +441,7 @@ body{
     margin-left: 15px;
 }
 
-@media (max-width: 360px) {
+@media (min-width: 360px) {
     /*.main{
         flex-direction: row;
     }*/

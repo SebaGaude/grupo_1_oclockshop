@@ -1,80 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-    
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/57cb23e7a3.js" crossorigin="anonymous"></script>
-    <link href="css/styles-product.css" rel="stylesheet">
+    <link href="../css/styles-product.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Detalle Del Producto</title>
 </head>
 <body>
-    <header>
-        <div class="top">
-            <div class="top1">
-                <p><a href=""> Español </a></p>|<p><a href=""> English </a></p>
-            </div>
-            <div class="contact-us">
-                <p>Contáctenos</p>
-            </div>
-        </div>
-        <div class="header1">
-            <div class="logo">
-                 <a href="/"><img src="img/oclockshop-logo-alta.png" alt="Logo OclockShop"></a>
-            </div>
-            <div class="menu">
-                <form action="/resultados-de-busqueda" method="GET" class="busqueda">
-                    <input type="text" placeholder="Buscar productos">
-                    <button><i class="fas fa-search"></i></button>
-                </form>
-                <div class="mobile">
-                    <div class="burger-menu">
-                        <i class="fa fa-bars burger"></i>
-                    </div>
-                    <div class="carrito1">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="desplegable">
-                <div class="fijo">
-                    <a href=""><p>Colecciones</p></a>
-                    <a href=""><p>Mujer</p></a>
-                    <a href=""><p>Hombre</p></a>
-                    <a href=""><p>Ofertas</p></a>
-                    <a href="/quiz"><p>Haz un quiz</p></a>
-                </div>
-                <div class="carrito">
-                    <div class="registration">
-                        <a href="/register"><p>Registrate</p></a>
-                    </div>
-                    <div class="sign-in">
-                        <a href="/login"><p>Ingresá</p></a>
-                    </div>
-                    <div class="carro">
-                        <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-            </div>
-    </header>
+    <%- include("partials/header.ejs") %>
     <main class="principal">
        <div class="imagenes-verticales">
             <div class="imagen-pequeña">
-                <img src="img/Tag-Heuer1.jpg" alt="">
+                <img src="../img/Tag-Heuer1.jpg" alt="imagen 1">
             </div>
             <div class="imagen-pequeña"> 
-                <img src="img/Tag-Heuer2.jpg" alt="">
+                <img src="../img/Tag-Heuer2.jpg" alt="imagen 2">
             </div>
             <div class="imagen-pequeña">
-                <img src="img/Tag-Heuer3.jpg" alt="">
+                <img src="../img/Tag-Heuer3.jpg" alt="imagen 3">
             </div>
         </div>
         <div class="imagen-principal">
-            <img src="img/Tag-Heuer1.jpg" alt="">
+            <img src="../img/Tag-Heuer1.jpg" alt="imagen elegida">
         </div>
         <div class=descripcion>
             <h3>Tag Heuer Carrera</h3>
@@ -129,22 +81,22 @@
         <h4>Otros Productos</h4>
         <div class="otros-ofrecidos">
             <div class="otros">
-                <img src="img/Tag-Heuer11.jpg" alt="">
+                <img src="../img/Tag-Heuer11.jpg" alt="">
             </div>
             <div class="otros"> 
-                <img src="img/Tag-Heuer12.jpg" alt="">
+                <img src="../img/Tag-Heuer12.jpg" alt="">
             </div>
             <div class="otros">
-                <img src="img/Tag-Heuer13.jpg" alt="">
+                <img src="../img/Tag-Heuer13.jpg" alt="">
             </div>
             <div class="otros">
-                <img src="img/Tag-Heuer11.jpg" alt="">
+                <img src="../img/Tag-Heuer11.jpg" alt="">
             </div>
             <div class="otros"> 
-                <img src="img/Tag-Heuer12.jpg" alt="">
+                <img src="../img/Tag-Heuer12.jpg" alt="">
             </div>
             <div class="otros">
-                <img src="img/Tag-Heuer13.jpg" alt="">
+                <img src="../img/Tag-Heuer13.jpg" alt="">
             </div>
         </div>
     </div>
@@ -169,18 +121,5 @@
         </div>
     </div>-->
 </body>
-
-<footer>
-    <div class="main-footer">
-        <p class="text">Conócenos</p>
-        <p class="text">Términos y condiciones</p>
-        <p class="text">¡Seguinos!</p>
-        <p class="text">¿Necesitas ayuda?</p>
-        <p class="text">Trabajá con nosotros</p>
-    </div>
-    <div class="copyright">
-        <p>Copyright © 2021 OclockShop Inc. Todos los derechos reservados</p>
-    </div>
-
-</footer>
+<%- include("partials/footer.ejs") %>
 </html>
