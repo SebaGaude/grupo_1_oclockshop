@@ -270,7 +270,7 @@ body{
 
 h2{
     color: #525252;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .main{
@@ -406,20 +406,24 @@ h2{
     border-color: whitesmoke;
 }
 
-.contenedor-articulo img{
-    width: 80%;
-    border-radius: 1%;
-    padding-top: 5px;
-    padding: 1px;
-    border: 10px;
+.contenedor-imagen-articulo{
+    width: 100%;
+    margin: auto;
 }
 
-.contenedor-articulo div h3{
+.contenedor-imagen-articulo img{
+    width: 80%;
+    padding: 5px; 
+    border: none;
+    display: block;
+    margin: auto;
+}
+
+.contenedor-imagen-articulo h3{
     background-color: #525252;
     color: #ffffff;
     font-size: 20px;
-    padding: 15px;
-    margin: 0;
+    margin: auto;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -434,7 +438,7 @@ h2{
 }
 
 .contenedor-articulo:hover .icono-articulo{
-    transform: scale(2, 2);
+    transform: scale(1.2, 1.2);
 }
 
 .contenedor-articulo:hover div h3{
@@ -459,8 +463,13 @@ h2{
     background-color: #FFF;
     border-radius: 50%;
     position: absolute;
-    right: 20px;
+    right: 25px;
     top: -15px;
+}
+
+.icono-articulo i{
+    position: relative;
+    right: 2px;
 }
 
 .articulo-x{
@@ -476,13 +485,17 @@ h2{
     color: #adadad;
     font-size: 18px;
     font-weight: bold;
-    margin-left: 15px;
+    margin-left: 20px;
+    margin-bottom: 5px;
 }
 
 .precio-oferta{
     font-weight: bold;
+    font-size: 18px;
     margin-left: 15px;
     color: #525252;
+    margin-left: 20px;
+    margin-top: 5px;
 }
 
 @media (min-width: 360px) {
@@ -512,7 +525,7 @@ h2{
         width: 25%;
     }
     .categorias img{
-        width: 100%;
+        width: 80%;
     }
 
 }
@@ -520,12 +533,13 @@ h2{
     .main{
         flex-direction: row;
     }
-  .img-cat{
-      width: 80%;
-  }
+    .categorias img{
+        width: 80%;
+    }
+  
   .quiz h4{
     font-size: 28px;
-  }
+    }
   .contenedor-articulo{
       max-width: 22%;
   }
@@ -545,6 +559,7 @@ footer{
     width: 100%;
     box-sizing: border-box;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 footer p{
@@ -563,6 +578,7 @@ footer p{
 }
 .copyright p{
     width: 95%;
-    padding-left: 10px;
+    padding-left: 5px;
     font-size: 10px;
+    color: #adadad;
 }
