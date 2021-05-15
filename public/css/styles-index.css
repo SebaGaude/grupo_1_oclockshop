@@ -356,8 +356,7 @@ body{
 .img-categ{
     border: solid 1px white;
     border-radius: 50px;
-    width: 80%;
-    height: 80%;
+    width: 200px;
     padding: 10px;
 }
 .contenedor-articulo{
@@ -455,11 +454,11 @@ body{
         width: 25%;
     }
     .categorias img{
-        width: 100%;
+        width: 50%;
     }
 
 }
-@media (min-width: 361px) and (max-width: 768px) {
+@media (min-width: 361px) {
     .main{
         flex-direction: row;
     }
@@ -467,7 +466,7 @@ body{
         margin-top: 30px;
     }
     .contenedor-articulo{
-        max-width: 40vw;
+        max-width: 40%;
     }
     .categorias p{
         width: 25%;
@@ -488,7 +487,7 @@ body{
     font-size: 28px;
   }
   .contenedor-articulo{
-      max-width: 20vw;
+      max-width: 22%;
   }
 
   .categorias{
