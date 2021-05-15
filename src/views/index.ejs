@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("partials/head.ejs") %>
+<%- include("partials/head", {styles: "/css/styles-index.css"}) %>
 <body>
-    <%- include("partials/header.ejs") %>
+    <%- include("partials/header") %>
     <main class="main">
         <div class="carrusel">
-            <div>
-                <img src="./img/smartwatch.jpg" alt="" width="80%">
+            <div class="contenedor-imagen-carrusel">
+                <img src="./img/relojes-index.jpeg" alt="">
             </div>
             <div class="titulos-carrusel">
                 <h4>¡OFERTAS IMPERDIBLES!</h4>
@@ -14,37 +14,52 @@
             </div> 
         </div>
         <div class="quiz">
-            <H4>¿Todavía no decidiste tu nuevo estilo?</H4>
-            <div>
+            <h4>¿No sabés por dónde empezar?</h4>
+            <h5>¡Contestá algunas preguntas y te ayudamos con la búsqueda!</h5>
+            <!-- <div>
                 <form action="/quiz" method="GET">
                     <button type="button" class="button-quiz">Masculinos</button>
                     <button type="button" class="button-quiz">Femeninos</button>
                 </form>
+            -->
             <div class="link-quiz">
                 <a href="/quiz">Realizar quiz > </a>
             </div>               
             </div>
         </div>
     </main>
+
     <article class="contenedor-categ">
+
+        <h2> CATEGORÍAS </h2>
+        
         <div class="categorias">
-                <p><a href=""><img src="./img/categoria-1.jpg" alt="" class="img-categ">Categoría</a></p>
-                <p><a href=""><img src="./img/categoria-1.jpg" alt="" class="img-categ">Categoría</a></p>
-                <p><a href=""><img src="./img/categoria-1.jpg" alt="" class="img-categ">Categoría</a></p>
-                <p><a href=""><img src="./img/categoria-1.jpg" alt="" class="img-categ">Categoría</a></p>
-                <p><a href=""><img src="./img/categoria-1.jpg" alt="" class="img-categ">Categoría</a></p>
+                <p><img src="./img/premium-rolex.webp" alt="" class="img-categ"> <a href="">Premium</a></p>
+                <p><img src="./img/analogico.jpeg" alt="" class="img-categ"> <a href="">Analógico</a></p>
+                <p><img src="./img/digital.png" alt="" class="img-categ"> <a href="">Digital</a></p>
+                <p><img src="./img/swatch-sport.jpeg" alt="" class="img-categ"> <a href="">Sport</a></p>
         </div>
     </article>
+
     <article>
         <div class="articulos">
-            <div class="contenedor-articulo">
-                <div>
+
+            <h2> LOS MÁS VISTOS </h2>
+            
+            <div class="contenedor-articulo" >
+
+                <div class="contenedor-imagen-articulo">
+
                     <h3>Tommy Hilfiger</h3>
+                    <img src="./img/reloj-tommy-hilfiger.jpg" alt="">
+
                 </div>
-                <img src="./img/reloj-tommy-hilfiger.jpg" alt="">
+                
                 <div class="articulo-x">
                     <div class="icono-articulo">
-                        <i class="fas fa-bomb"></i>
+                        <!-- <a href="../productDetail"> -->
+                            <i class="fas fa-shopping-cart"></i>
+                        <!--</a> -->
                     </div>
                 </div>
                 <div class="sub-articilo-x">
@@ -52,14 +67,19 @@
                     <p class="precio-oferta">$23.000</p>
                 </div>
             </div>
+
             <div class="contenedor-articulo">
-                <div>
+                
+                <div class="contenedor-imagen-articulo">
+
                     <h3>Galaxy Watch Active2</h3>
+                    <img src="./img/samsung-galaxy-watch-active2.jpg" alt="">
+                
                 </div>
-                <img src="./img/samsung-galaxy-watch-active2.jpg" alt="">
+                
                 <div class="articulo-x">
                     <div class="icono-articulo">
-                        <i class="fas fa-bomb"></i>
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
                 </div>
                 <div class="sub-articilo-x">
@@ -67,20 +87,49 @@
                     <p class="precio-oferta">$28.000</p>
                 </div>
             </div>
+
             <div class="contenedor-articulo">
-                <div>
+                
+                <div class="contenedor-imagen-articulo">
+
                     <h3>Swatch Rostfrey</h3>
+                    <img src="./img/Swatch_Rostfrei.png" alt="">
+
                 </div>
-                <img src="./img/Swatch_Rostfrei.png" alt="">
+                
                 <div class="articulo-x">
                     <div class="icono-articulo">
-                        <i class="fas fa-bomb"></i>
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
                 </div>
+
                 <div class="sub-articilo-x">
                     <p class="precio-anterior">$14.800</p>
                     <p class="precio-oferta">$11.000</p>
                 </div>
+
+            </div>
+
+            <div class="contenedor-articulo">
+
+                <div class="contenedor-imagen-articulo">
+    
+                    <h3>Swatch Rostfrey</h3>
+                    <img src="./img/Swatch_Rostfrei.png" alt="">
+
+                </div>
+                
+                <div class="articulo-x">
+                    <div class="icono-articulo">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                
+                <div class="sub-articilo-x">
+                    <p class="precio-anterior">$14.800</p>
+                    <p class="precio-oferta">$11.000</p>
+                </div>
+                
             </div>
         </div>
     </article>
