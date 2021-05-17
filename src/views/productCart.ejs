@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+<%- include("partials/head") %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/46b0370ee7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles-productCart.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <title>OclockShop</title>
-</head>
 <body>
-    <%- include("partials/header.ejs") %> 
+
+    <%- include("partials/header") %> 
+
     <main class="main">
         <section>
             <div class="titulo">CARRITO DE COMPRAS</div>
@@ -76,5 +69,5 @@
                 <button class="btnComprar" type="submit">COMPRAR</button> 
         </section>
     </main>
-<%- include("partials/footer.ejs") %>
+<%- include("partials/footer") %>
 </html>

@@ -3,7 +3,6 @@ const router = express.Router();
 const path = require("path");
 const productsController = require("../controllers/productsController");
 
-
 const app = express();
 
 const publicPath = path.resolve(__dirname, "./public");
