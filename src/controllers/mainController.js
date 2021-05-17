@@ -1,4 +1,3 @@
-//const path = require("path");
 let mainController = {
     //mostrar página principal----------------------
     index: function (req, res){

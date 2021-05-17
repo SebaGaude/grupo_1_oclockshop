@@ -79,6 +79,7 @@ header{
 
 .logo{
     width: 15%;
+    padding-left: 10px;
 }
 
 .logo img{
@@ -86,7 +87,7 @@ header{
 }
 
 .menu{
-    width: 85%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;

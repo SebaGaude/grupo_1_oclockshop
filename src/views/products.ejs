@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("partials/head", {styles: "/css/styles-index.css"}) %>
+<%- include("partials/head") %>
 
 <body>
     
@@ -23,7 +23,7 @@
         <div class="articulos">
 
             <h2> PRODUCTOS </h2>
-            
+            <a href="./products/producto1">
             <div class="contenedor-articulo" >
 
                 <div class="contenedor-imagen-articulo">
@@ -35,7 +35,7 @@
                 
                 <div class="articulo-x">
                     <div class="icono-articulo">
-                        <!-- <a href="../productDetail"> -->
+                        <!-- <a href="..products/productDetail"> -->
                             <i class="fas fa-shopping-cart"></i>
                         <!--</a> -->
                     </div>
@@ -45,6 +45,7 @@
                     <p class="precio-oferta">$23.000</p>
                 </div>
             </div>
+            </a>
 
             <div class="contenedor-articulo">
                 
@@ -202,6 +203,6 @@
 
     </article>
 
-<%- include("partials/footer.ejs") %>
+<%- include("partials/footer") %>
 
 </html>
