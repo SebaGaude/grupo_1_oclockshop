@@ -1,53 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("partials/head", {styles: "/css/styles-index.css"}) %>
+
+<%- include("partials/head") %>
+
 <body>
+
     <%- include("partials/header") %>
     <main class="main">
-
         <div class="carrusel">
-
             <div class="contenedor-imagen-carrusel">
-
                 <img src="./img/relojes-index.jpeg" alt="">
-            
-                <div class="titulos-carrusel">
-                
-                    <h4>¡OFERTAS IMPERDIBLES!</h4>
-    
-                    <H3>POR TIEMPO LIMITADO</H3>
-                
+                <div class="titulos-carrusel">              
+                    <h4>¡OFERTAS IMPERDIBLES!</h4> 
+                    <H3>POR TIEMPO LIMITADO</H3>              
                 </div> 
-            </div>
-            
-            
-        
+            </div>     
         </div>
-        
-        <div class="quiz">
-            
-            <h4>¿No sabés por dónde empezar?</h4>
-            
-            <h5>¡Contestá algunas preguntas y te ayudamos con la búsqueda!</h5>
-            
+        <div class="carrusel2">
+            <div class="contenedor-imagen-carrusel">
+                <img src="./img/relojes-index2.jpeg" alt="">
+                <div class="titulos-carrusel">              
+                    <h4>¡OFERTAS IMPERDIBLES!</h4> 
+                    <H3>POR TIEMPO LIMITADO</H3>              
+                </div> 
+            </div>     
+        </div>
+        <div class="quiz">         
+            <h4>¿No sabés por dónde empezar?</h4>        
+            <h5>¡Contestá algunas preguntas y te ayudamos con la búsqueda!</h5>        
             <div class= "contenedor-boton-quiz">
                 <form action="/quiz" method="GET">
-                    <button type="button" class="button-quiz">Ir a quiz</button>
+                   <a href="./quiz"><button type="button" class="button-quiz">Ir a quiz</button></a>
                 </form>
-            
-            <!--<div class="link-quiz">
-                <a href="/quiz">Realizar quiz > </a>
-            </div>-->    
-
             </div>
         </div>
-
     </main>
 
     <article class="contenedor-categ">
-
-        <h2> CATEGORÍAS </h2>
-        
+        <h2> CATEGORÍAS </h2>   
         <div class="categorias">
                 <p><img src="./img/premium-rolex.webp" alt="" class="img-categ"> Premium</p>
                 <p><img src="./img/analogico.jpeg" alt="" class="img-categ"> Analógico</p>
@@ -58,23 +48,16 @@
 
     <article>
         <div class="articulos">
-
             <h2> LOS MÁS VISTOS </h2>
             
-            <div class="contenedor-articulo" >
-
+            <div class="contenedor-articulo" >    
                 <div class="contenedor-imagen-articulo">
-
-                    <h3>Tommy Hilfiger</h3>
+                    <a href="./products/producto1"><h3>Tommy Hilfiger</h3></a>
                     <img src="./img/reloj-tommy-hilfiger.jpg" alt="">
-
-                </div>
-                
+                </div>           
                 <div class="articulo-x">
                     <div class="icono-articulo">
-                        <!-- <a href="../productDetail"> -->
-                            <i class="fas fa-shopping-cart"></i>
-                        <!--</a> -->
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
                 </div>
                 <div class="sub-articilo-x">
@@ -82,16 +65,12 @@
                     <p class="precio-oferta">$23.000</p>
                 </div>
             </div>
-
-            <div class="contenedor-articulo">
-                
+           
+            <div class="contenedor-articulo">   
                 <div class="contenedor-imagen-articulo">
-
-                    <h3>Galaxy Watch Active2</h3>
-                    <img src="./img/samsung-galaxy-watch-active2.jpg" alt="">
-                
-                </div>
-                
+                    <a href="./products/producto1"><h3>Galaxy Watch Active2</h3></a>
+                    <img src="./img/samsung-galaxy-watch-active2.jpg" alt="">              
+                </div>             
                 <div class="articulo-x">
                     <div class="icono-articulo">
                         <i class="fas fa-shopping-cart"></i>
@@ -103,50 +82,38 @@
                 </div>
             </div>
 
-            <div class="contenedor-articulo">
-                
+            <div class="contenedor-articulo">   
                 <div class="contenedor-imagen-articulo">
-
-                    <h3>Swatch Rostfrey</h3>
+                    <a href="./products/producto1"> <h3>Swatch Rostfrey</h3></a>
                     <img src="./img/Swatch_Rostfrei.png" alt="">
-
-                </div>
-                
+                </div>               
                 <div class="articulo-x">
                     <div class="icono-articulo">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                 </div>
-
                 <div class="sub-articilo-x">
                     <p class="precio-anterior">$14.800</p>
                     <p class="precio-oferta">$11.000</p>
                 </div>
-
             </div>
-
-            <div class="contenedor-articulo">
-
-                <div class="contenedor-imagen-articulo">
-    
-                    <h3>Swatch Rostfrey</h3>
+            
+            <div class="contenedor-articulo">       
+                <div class="contenedor-imagen-articulo">   
+                    <a href="./products/producto1"><h3>Swatch Rostfrey</h3></a>
                     <img src="./img/Swatch_Rostfrei.png" alt="">
-
-                </div>
-                
+                </div>               
                 <div class="articulo-x">
                     <div class="icono-articulo">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
-                </div>
-                
+                </div>              
                 <div class="sub-articilo-x">
                     <p class="precio-anterior">$14.800</p>
                     <p class="precio-oferta">$11.000</p>
                 </div>
-
             </div>
         </div>
     </article>
-<%- include("partials/footer.ejs") %>
+<%- include("partials/footer") %>
 </html>

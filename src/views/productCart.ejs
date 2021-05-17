@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+<%- include("partials/head") %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/46b0370ee7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles-productCart.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <title>OclockShop</title>
-</head>
 <body>
-    <%- include("partials/header.ejs") %> 
+
+    <%- include("partials/header") %> 
+
     <main class="main">
         <section>
             <div class="titulo">CARRITO DE COMPRAS</div>
@@ -26,24 +19,33 @@
                     <li><a href="#">Cantidad</a></li>
                     <li><a href="#">Subtotal</a></li>
                 </ul>
-            
             </nav>
             <div class="articulos">
                 <div class="articulo1">
-                <img src="/img/reloj1.jpg" width="20%">                    
+                <img class="imagenReloj"src="/img/reloj1.jpg">                    
+                        <div class="tablet">
                         <div class="precioDesc">Modelo Reloj</div>
                         <div class="precios">$6.770</div>
                         <div class="desc">cantidad</div>
                         <div class="desc">$$$$$$</div>
+                        <div class="eliminarCarrito">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                    </div>    
                 </div>
                 <div class="articulo2">
-                        <img src="/img/reloj1.jpg" width="20%">                    
+                        <img class="imagenReloj" src="/img/reloj1.jpg">                    
+                        <div class="tablet">
                         <div class="precioDesc">Modelo Reloj</div>
                         <div class="precios">$6.770</div>
                         <div class="desc">cantidad</div>
                         <div class="desc">$$$$$$</div>
-                </div>        
-                    
+                        <div class="eliminarCarrito">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                    </div>
+                        
+                </div>
                     </div>
 
                    <div class="detalleIVA">
@@ -63,8 +65,9 @@
                         <div class="TOTAL">total</div>
                     </div>
                 </div> <!--cierre detalleCompra-->
+                <div class="botonComprar">
                 <button class="btnComprar" type="submit">COMPRAR</button> 
         </section>
     </main>
-<%- include("partials/footer.ejs") %>
+<%- include("partials/footer") %>
 </html>

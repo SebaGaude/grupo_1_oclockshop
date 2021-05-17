@@ -235,6 +235,9 @@ header{
     .burger-menu{
         display: block;
     }
+
+   
+
 }
 
 @media (min-width: 769px) {
@@ -380,6 +383,9 @@ footer p{
     margin: 1vw;
 }
 
+/*-----------------------------------------------*/
+/* HASTA ACA EL CSS GENERAL*/
+/*-----------------------------------------------*/
 
 
 /*----------------CSS MAIN PRODUCTCART----------*/
@@ -421,16 +427,14 @@ footer p{
     width: 10px;
 }
 
-
-
-.contenedorNav{
-    
+.botonComprar{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    border-bottom: 2px solid #454545;
-    
-    }
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
 
 
 
@@ -450,6 +454,7 @@ footer p{
     width: 100%;
     text-align: center;
     border-bottom: 2px solid #454545;
+    flex-direction: column;
 }
 
 .articulo2{
@@ -459,7 +464,9 @@ footer p{
     width: 100%;
     text-align: center;
     border-bottom: 2px solid #454545;
+    flex-direction: column;
 }
+
 
 
 .precioDesc{
@@ -493,31 +500,22 @@ footer p{
 }
 
 .btnComprar{
-    margin-top: 15px;
+    margin-top: 15px;   
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px;
     width: 50%;
     background-color: #9E9E9E;
     color: black;
-    margin-left: 260px;
-
-    }
-
-.nombreProducto{
     
-        display: flex;
-        justify-content:space-between;
-        flex-wrap:nowrap;
-        flex-grow: 0.3;
-        width: 80%;
-        }
-
-
-.atributosProducto{
-    display: flex;
-    justify-content:space-between;
-    flex-wrap:nowrap;
-    flex-grow: 0.7;
 }
+
+
+.eliminarCarrito{
+    text-align: center;
+}
+
 
 
 section nav ul li { /*con esto saque el icono*/
@@ -540,7 +538,104 @@ section nav ul li a{
     margin-bottom: 15px;
 }
 
+.tablet{
+   
+    flex-direction: row;
+} 
 
-/*Gris claro: #D1D1D1
-    - Gris medio: #9E9E9E
-    - Gris oscuro: #454545*/
+.imagenReloj{
+    width: 50%;
+    margin-top: 20px;
+}
+
+.contenedorNav{
+    display: none;  
+  }
+
+
+
+
+@media(min-width: 361px){ /*tablet*/
+   
+
+    .articulo1{
+        flex-direction: row;
+    }
+
+    .articulo2{
+        flex-direction: row;
+    }
+
+    .contenedorNav{
+      display: none;  
+    }
+
+    .imagenReloj{
+        width: 30%;
+        margin-top: 20px;
+    }
+
+
+
+.tablet{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+} 
+
+}
+@media(min-width: 769px){/*desktop*/
+ 
+    .contenedorNav{
+    
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        border-bottom: 2px solid #454545;
+        
+        }
+
+.nombreProducto{
+    
+            display: flex;
+            justify-content:space-between;
+            flex-wrap:nowrap;
+            
+            width: 50%;
+            }
+    
+    
+.atributosProducto{
+        display: flex;
+        justify-content:space-between;
+        flex-wrap:nowrap;
+        margin-right: 25px;
+       
+    }
+
+
+.imagenReloj{
+    
+    width: 20%;
+    margin-top: 20px;
+}
+
+
+
+.articulo1{
+    flex-direction: row;
+}
+
+.articulo2{
+    flex-direction: row;
+}
+
+.tablet{
+    display: flex;
+    flex-direction:row;
+    width:100%;
+}
+
+
+
+}
