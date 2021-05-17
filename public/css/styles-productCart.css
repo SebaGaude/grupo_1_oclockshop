@@ -427,7 +427,12 @@ footer p{
     width: 10px;
 }
 
-
+.botonComprar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 
 
 
@@ -495,15 +500,21 @@ footer p{
 }
 
 .btnComprar{
-    margin-top: 15px;
+    margin-top: 15px;   
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px;
     width: 50%;
     background-color: #9E9E9E;
     color: black;
-    margin-left: 100px;
+    
+}
 
-    }
 
+.eliminarCarrito{
+    text-align: center;
+}
 
 
 
@@ -564,9 +575,7 @@ section nav ul li a{
         margin-top: 20px;
     }
 
-.btnComprar{
-    margin-left: 50px;
-}
+
 
 .tablet{
     display: flex;
@@ -592,7 +601,7 @@ section nav ul li a{
             justify-content:space-between;
             flex-wrap:nowrap;
             
-            width: 77%;
+            width: 50%;
             }
     
     
@@ -600,7 +609,7 @@ section nav ul li a{
         display: flex;
         justify-content:space-between;
         flex-wrap:nowrap;
-      
+        margin-right: 25px;
        
     }
 
@@ -611,9 +620,7 @@ section nav ul li a{
     margin-top: 20px;
 }
 
-.btnComprar{
-    margin-left: 100px;
-}
+
 
 .articulo1{
     flex-direction: row;
