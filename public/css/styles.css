@@ -1443,6 +1443,12 @@ section nav ul li a{
     margin-left: 10px;
     margin-bottom: 15px;
 }
+/* ---------------------CONFIGURACION CREACION Y EDICION DE PRODUCTOS-------------------------------- */
+
+
+.ticks {
+    width: 80%;
+}
 
 
 /*Gris claro: #D1D1D1

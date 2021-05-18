@@ -3,63 +3,66 @@
 
 <%- include("partials/head") %>
 
-<body>
+    <body>
 
-    <%- include("partials/header.ejs") %>
+        <%- include("partials/header.ejs") %>
 
-    <main class="main">
-        
-        <!-- Formulario de edicion del producto-->
+            <main class="main">
 
-        <form action="/" method="GET" class="form-register">
-                
-            <h1> 
-                Edicion de producto
-            </h1>
+                <!-- Formulario de edicion del producto-->
 
-            <div>
-                <input type="text" name="articulo" value="ej: Reloj suizo enchapado en oro" required>
-            </div>
-            
-            <div>
-                <input type="textarea" name="descripcion" value="reloj aguja de pulsera" required>
-            </div>
-            
-            <div>
-                <input type="file" name="foto-del-producto"accept=".jpg, .png" multiple>
-            </div>       
-    
-           
-            <div>
-                <label><input type="radio" name="categoria-1" >Categoria 1</label>
-                <label><input type="radio" name="categoria-2" >Categoria 2</label>
-                <label><input type="radio" name="categoria-3" >Categoria 3</label>
-                <label><input type="radio" name="categoria-4" >Categoria 4</label>
-            </div>
-            <div>
-                <input type="number" name="stock" placeholder="cantidad..." required>
-            </div>
-            <div>
-                <input type="text" name="marca" placeholder="marca del articulo" required>
-            </div>
-            <div>
-                <input type="text" name="precio" placeholder="preciodel articulo" required>
-            </div>
-            
-            <!-- Botón "enviar"-->
+                <form action="/" method="GET" class="formulario-edicion-creacion">
 
-            <button type="submit" class="boton-crear-cuenta">Guardar cambios</button>
-            <button type="reset" class="boton-borrar-cuenta">Borrar todo</button>
+                    <h1>
+                        Edicion de producto
+                    </h1>
 
-            <!-- ----------- -->
+                    <div class="control-formulario">
+                        <label class="preguntas-form"> Nombre del artículo </label>
+                        <input type="text" name="articulo" value="ej: Reloj suizo enchapado en oro" class="ticks"
+                            required>
+                    </div>
 
-            <div class="terminos-condiciones">
-                <input type="checkbox" name="nombre" class="checkbox" required>
-                <label>Al crear esta cuenta, acepto los <a href=""> Términos y Condiciones </a>  y la <a href=""> Política de Privacidad </a> de la tienda.</label>
-            </div>
-                
-        </form>
+                    <div class="control-formulario">
+                        <label class="preguntas-form"> Ingrese una nueva descripcion del artiículo si desea
+                            modificarla</label>
+                        <input type="textarea" name="descripcion" value="reloj aguja de pulsera" class="ticks" required>
+                    </div>
 
-    </main>
-<%- include("partials/footer.ejs") %>
+                    <div class="control-formulario">
+                        <label class="preguntas-form"> Nueva/s imagen/es del producto </label>
+                        <input type="file" name="foto-del-producto" accept=".jpg, .png" multiple>
+                    </div>
+
+
+                    <div class="control-formulario">
+                        <label class="preguntas-form"> Ingrese la nueva categoria si desea modificarla</label>
+                        <input type="text" name="categoria" placeholder="deportivo/digital/lujo.." class="ticks">
+                    </div>
+                    <div class="control-formulario">
+                        <label class="preguntas-form"> Ingrese nueva cantidad en stock si asi lo desea</label>
+                        <input type="number" name="stock" placeholder="cantidad..." class="ticks">
+                    </div>
+                    <div class="control-formulario">
+                        <label class="preguntas-form"> Ingrese nueva marca y modelo del articulo si desea
+                            modificarlo</label>
+                        <input type="text" name="marca" placeholder="marca del articulo" class="ticks">
+                    </div>
+                    <div class="control-formulario">
+                        <label class="preguntas-form">Ingrese el nuevo precio del articulo si desea modificarla</label>
+                        <input type="text" name="precio" placeholder="$$$" class="ticks" required>
+                    </div>
+
+                    <!-- Botón "enviar"-->
+                    <div>
+                        <button type="submit" class="boton-envio">Guardar cambios</button>
+                        <button type="reset" class="boton-reset">Borrar todo</button>
+                    </div>
+                    <!-- ----------- -->
+
+                </form>
+
+            </main>
+            <%- include("partials/footer.ejs") %>
+
 </html>

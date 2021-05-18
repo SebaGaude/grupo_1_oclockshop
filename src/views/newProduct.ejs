@@ -3,63 +3,62 @@
 
 <%- include("partials/head") %>
 
-<body>
+    <body>
 
-    <%- include("partials/header") %>
+        <%- include("partials/header") %>
 
-    <main class="main">
-        
-        <!-- Formulario de Creacion de producto-->
+            <main class="main">
 
-        <form action="/" method="GET" class="form-register">
-                
-            <h1> 
-                Alta de producto
-            </h1>
+                <!-- Formulario de Creacion de producto-->
+                <section class="contenedor-form-ec">
+                    <form action="/" method="GET" class="formulario-edicion-creacion">
 
-            <div>
-                <input type="text" name="articulo" placeholder="ej: Reloj suizo enchapado en oro" required>
-            </div>
-            
-            <div>
-                <input type="text" name="descripcion" placeholder="descripcion del articulo" required>
-            </div>
-            
-            <div>
-                <input type="file" name="foto-del-producto"accept=".jpg, .png" multiple>
-            </div>       
-    
-           
-            <div class="cat1">
-                <label id="cat1" >Categoria 1</label>
-                <input type="radio" for="cat1" name="categoria-1" >
-            </div>
-            <div>
-                <label><input type="radio" name="categoria-2" >Categoria 2</label>
-                <label><input type="radio" name="categoria-3" >Categoria 3</label>
-                <label><input type="radio" name="categoria-4" >Categoria 4</label>
-            </div>
-            <div>
-                <input type="number" name="stock" placeholder="cantidad..." required>
-            </div>
-            <div>
-                <input type="text" name="marca" placeholder="marca del articulo" required>
-            </div>
-            
-            <!-- Botón "enviar"-->
+                        <h1>
+                            Alta de producto
+                        </h1>
 
-            <button type="submit" class="boton-crear-cuenta">Crear articulo</button>
-            <button type="reset" class="boton-borrar-cuenta">Borrar todo</button>
+                        <div class="control-formulario">
+                            <label class="preguntas-form"> Nombre del artículo </label>
+                            <input type="text" name="articulo" placeholder=" ej: Reloj suizo enchapado en oro" class="ticks" required>
+                        </div>
 
-            <!-- ----------- -->
+                        <div class="control-formulario">
+                            <label class="preguntas-form"> Descripcion del artiículo</label>
+                            <input type="text" name="descripcion" placeholder=" descripcion del articulo" class="ticks" >
+                        </div>
 
-            <div class="terminos-condiciones">
-                <input type="checkbox" name="nombre" class="checkbox" required>
-                <label>Al crear esta cuenta, acepto los <a href=""> Términos y Condiciones </a>  y la <a href=""> Política de Privacidad </a> de la tienda.</label>
-            </div>
-                
-        </form>
+                        <div class="control-formulario">
+                            <label class="preguntas-form"> Imagen/es del producto </label>
+                            <input type="file" name="foto-del-producto" accept=".jpg, .png" class="clase-ecf" multiple>
+                        </div>
 
-    </main>
-<%- include("partials/footer") %>
+
+                        <div class="control-formulario">
+                            <label class="preguntas-form"> A que categoría pertenece el artículo</label>
+                            <input type="text" name="categoria" placeholder="deportivo/digital/lujo.." class="ticks" >
+                        </div>
+                        <div class="control-formulario">
+                            <label class="preguntas-form"> Ingrese cantidad en stock</label>
+                            <input type="number" name="stock" placeholder="cantidad..." class="ticks" >
+                        </div>
+                        <div class="control-formulario">
+                            <label class="preguntas-form"> Ingrese la marca y modelo del articulo</label>
+                            <input type="text" name="marca" placeholder="marca del articulo" class="ticks" >
+                        </div>
+                        <div class="control-formulario">
+                            <label class="preguntas-form">Ingrese el precio del articulo</label>
+                            <input type="text" name="precio" placeholder="$$$" class="ticks" required>
+                        </div>
+                        <!-- Botón "enviar"-->
+                        <div>
+                            <button type="submit" class="boton-envio">Crear articulo</button>
+                            <button type="reset" class="boton-reset">Borrar todo</button>
+                        </div>
+                </section>
+                <!-- ----------- -->
+                </form>
+
+            </main>
+            <%- include("partials/footer") %>
+
 </html>
