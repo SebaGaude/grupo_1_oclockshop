@@ -1,3 +1,17 @@
+/*
+ORDEN DE ESTILOS:
+1- Configuraciones generales
+2- Header
+3- Footer
+4- Producto
+5- Register y Login
+6- Quiz
+7- Index
+8- Carrito
+9- Creacion y edicion productos
+10- @Media Queries
+*/
+
 /*Configuraciones generales */
 
 *{
@@ -187,69 +201,6 @@ header{
 
 .carro:hover{
     transform: scale(1.5,1.5);
-}
-
-@media (max-width: 360px) {
-    /* Vista mobile header */
-
-    .desplegable{
-        display: none;
-    }
-    .busqueda{
-        width: 70%;
-    }
-    .mobile{
-        margin: 0.5vw;
-    }
-    .sign-in{
-        margin: 0;
-    }
-    .carrito1{
-        display: block;
-    }
-    .burger-menu{
-        display: block;
-    }
-}
-
-@media (min-width: 361px) and (max-width: 768px) {
-    /* Vista tablet header */
-
-    .desplegable{
-        display: none;
-    }
-    .busqueda{
-        width: 70%;
-    }
-    .mobile{
-        margin: 0.5vw;
-    }
-    .sign-in{
-        margin: 0;
-    }
-    .carrito1{
-        display: block;
-    }
-    .burger-menu{
-        display: block;
-    }
-}
-
-@media (min-width: 769px) {
-    /* Vista desktop header */
-
-    .mobile{
-        display: none;
-    }
-    .menu-cel{
-        display: none;
-    }
-    .top1 p{
-        width: 20%;
-    }
-    .logo{
-        width: 8%;
-    }
 }
 
 /* ---------------------------------------Fin Configuracion Header-------------------------------------------*/
@@ -515,91 +466,6 @@ h3{
     color: #454545;
 }
 
-@media (max-width: 360px){
-    /* Configuracion mobile producto */
-
-    .imagenes-verticales{
-        display: none;
-    }
-    .descripcion{
-        box-sizing: border-box;
-        width: 95vw;
-        margin: auto;
-        text-align: center;
-    }
-    .descripcion p{
-        width: 90%;
-        margin: 3vw;
-        }
-    .imagen-principal{
-        width: 95vw;
-    }
-    .imagen-principal img{
-        width: 95vw;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 450px;
-    }
-    .otros-productos{
-        display: none;
-    }
-}
-
-@media (min-width: 361px) and (max-width: 768px){
-    /* Configuracion tablet producto */
-    .imagenes-verticales{
-        display: none;
-    }
-    .descripcion{
-        box-sizing: border-box;
-        width: 98vw;
-        text-align: center;
-    }
-    .descripcion p{
-        box-sizing: border-box;
-        }
-    .imagen-principal{
-        width: 95vw;
-    }
-    .imagen-principal img{
-        width: 95vw;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 450px;
-    }
-    .otros-productos{
-        display: none;
-    }
-    .precio-original{
-        box-sizing: border-box;
-        font-size: 20px;
-        margin: 2vw 0;
-    }
-    .precio-descuento{
-        box-sizing: border-box;
-        text-align: right;
-        font-size: 24px;
-        margin: 2vw;
-    }
-    .discount{
-        box-sizing: border-box;
-        text-align: left;
-        font-size: 24px;
-        margin: 2vw;
-    }
-    h3{
-        font-size: 30px
-    }
-    .main-characteristics{
-        box-sizing: border-box;
-        text-align: center;
-        font-size: 16px;
-        margin: 2vw 0 3vw 0;
-    }
-}
-
 /* -----------------------------------------Fin configuracion producto------------------------------------------------*/
 
 /* ----------------------------------------Estilo form register y login-----------------------------------------------*/
@@ -639,7 +505,7 @@ h3{
 
 .form-login-register div{
     font-family: Helvetica, sans-serif;
-    width: 100%;
+    width: 95%;
     padding: 5px;
     font-size: 12px;
     border-radius: 5%;
@@ -647,13 +513,13 @@ h3{
 
 .form-login-register div input{
     font-family: Helvetica, sans-serif;
-    width: 100%;
     padding: 5px;
     font-size: 12px;
     border-radius: 5%;
     border-style: solid;
     border-width: 1px;
     border-color: #adadad;
+
 }
 
 .terminos-condiciones{
@@ -663,16 +529,41 @@ h3{
 }
 
 .terminos-condiciones label{
-    text-align: justify;
+    text-align: center;
     font-size: 10px;
     color: #adadad;
+    align-self: center;
 }
 
 .checkbox{
     margin: 5px;
-    width: 10px;
+    width: 3%;
     padding: 10px;
     justify-self: right;
+    margin-left: 15%;
+}
+
+.recordar-contraseña{
+    display: flex;
+    padding: 10px;
+    margin: auto;
+    align-self: center;
+}
+
+.recordar-contraseña label{
+    text-align: justify;
+    font-size: 10px;
+    color: #adadad;
+    width: 100%;
+    align-self: center;
+    margin-left: 1%
+}
+
+.checkbox1{
+    margin: 5px;
+    width: 7%;
+    padding: 10px;
+    margin-left: 43%;
 }
 
 .boton-crear-cuenta{
@@ -715,80 +606,6 @@ h3{
     font-family: Helvetica, sans-serif;
     margin: auto;
 }
-
-@media (max-width: 360px) {
-    /* Configuracion mobile login/registro */
-
-    .desplegable{
-        display: none;
-    }
-    .busqueda{
-        width: 70%;
-    }
-    .mobile{
-        margin: 0.5vw;
-    }
-    .sign-in{
-        margin: 0;
-    }
-    .carrito1{
-        display: block;
-    }
-    .burger-menu{
-        display: block;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Configuracion tablet login/registro */
-
-    .desplegable{
-        display: none;
-    }
-    .busqueda{
-        width: 70%;
-    }
-    .mobile{
-        margin: 0.5vw;
-    }
-    .sign-in{
-        margin: 0;
-    }
-    .carrito1{
-        display: block;
-    }
-    .burger-menu{
-        display: block;
-    }
-
-    .form-register div input
-{
-    font-size: 12px;
-    border-radius: 5%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #adadad;
-}
-}
-
-@media (min-width: 769px) {
-    /* Configuracion desktop login/registro */
-
-    .mobile{
-        display: none;
-    }
-    .menu-cel{
-        display: none;
-    }
-    .top1 p{
-        width: 20%;
-    }
-    .logo{
-        width: 8%;
-    }
-
-}
-
 /* -------------------------------------Fin configuracion login/registro ------------------------------------------ */
 
 /* -------------------------------------------Configuracion quiz--------------------------------------------------- */ 
@@ -909,49 +726,7 @@ h3{
     100% {opacity: 0%;} 
 }
 
-@media (min-width: 769px) {
-    /* Configuracion Desktop Quiz */
-    .foto-reloj {
-        display: none;
-    }
-    .clipboard {
-        display: inline-flex;
-        position: absolute;
-        right: 70px;
-        top: 38%;
-    } 
-    .clipboard:hover {
-        transform: rotate(-360deg);
-        transition: all 2s;
-    }
-    .boton-envio,
-    .boton-reset {
-        max-width: 29%;
-    }
-    .botones {
-        display: flex;
-    }
-    .label-quiz {
-        width: 60%;
-        text-align: justify;
-    }
-    .mensaje-analizando {
-        display: inline-block;
-        position: absolute;
-        right: 10%;
-        top: 95%;
-        z-index: 2;
-    }
-    .relojes-quiz {
-        display: inline-block;
-        position: absolute;
-        right: 15%;
-        top: 90%;
-        z-index: -1;
-    }
-
-}
-
+/* --------------------------------------Fin configuraciones Quiz ------------------------------------------------*/ 
 /*--------------------------------------- Configuraciones index -------------------------------------------------*/
 
 h2{
@@ -1206,91 +981,31 @@ h2{
     margin-top: 5px;
 }
 
-@media (min-width: 360px) {
-    /* Configuracion index mobile */
-
-    .link-quiz{
-        margin-top: 30px;
-    }
-    .contenedor-articulo{
-        max-width: 80%;
-    }
-    .categorias p{
-        width: 25%;
-    }
-
-}
-@media (min-width: 361px) and (max-width: 768px){
-    /* Configuracion index tablet */
-    .main{
-        flex-direction: row;
-    }
-    .link-quiz{
-        margin-top: 30px;
-    }
-    .contenedor-articulo{
-        max-width: 40%;
-    }
-    .categorias p{
-        width: 25%;
-    }
-    .categorias img{
-        width: 80%;
-    }
-
-}
-@media(min-width: 769px){
-    /* Configuracion index desktop */
-    .main{
-        flex-direction: row;
-    }
-    .categorias img{
-        width: 80%;
-    }
-  
-  .quiz h4{
-    font-size: 28px;
-    }
-  .contenedor-articulo{
-      max-width: 22%;
-  }
-
-  .categorias{
-      width: 100%;
-  }
-}
-
 /* --------------------------------------------Fin configuracion index --------------------------------------------*/
 
-/*-----------------------------------------------CSS MAIN PRODUCTCART----------------------------------------------*/
+/*-----------------------------------------------Configuracion Carrito----------------------------------------------*/
 
 .detalleIVA{
-    
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     background-color: #9E9E9E;
-    
-    }
+}
 
-    .detalleCompra{
-    
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        background-color: #9E9E9E;
-        
-        }
+.detalleCompra{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: #9E9E9E;
+}
 
-    .detalle{
-    
-        display: flex;
-        justify-content: space-between;
-        flex-wrap:nowrap;
-        background-color: black;
-        width: 250px;
-        
-        }   
+.detalle{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+    background-color: black;
+    width: 250px;
+}   
 
 .IVA{
     width: 100%;
@@ -1308,17 +1023,11 @@ h2{
     width: 100%;
 }
 
-
-
-
-
 /*Articulos----------------------------*/
 
 .articulos{
-    
     background-color: #ebebeb;
     width: 100%;
-
 }
 
 .articulo1{
@@ -1341,11 +1050,8 @@ h2{
     flex-direction: column;
 }
 
-
-
 .precioDesc{
     font-size: 18px;
-    
 }
 
 .precios{
@@ -1360,7 +1066,6 @@ h2{
 .colorLetra{
     color:darkgrey;
 }
-
 
 .IVA {
     text-align: center;
@@ -1381,28 +1086,22 @@ h2{
     padding: 10px;
     width: 50%;
     background-color: #9E9E9E;
-    color: black;
-    
+    color: black;  
 }
-
 
 .eliminarCarrito{
     text-align: center;
 }
 
-
-
-section nav ul li { /*con esto saque el icono*/
+section div ul li { /*con esto saque el icono*/
     list-style-type: none;
-
 }
 
-section nav ul li a{
+section div ul li a{
     text-decoration:none;
     color: #000;
     font-size: 16px;
 }
-
 
 .titulo{
     width: 90%;
@@ -1413,7 +1112,6 @@ section nav ul li a{
 }
 
 .tablet{
-   
     flex-direction: row;
 } 
 
@@ -1424,91 +1122,8 @@ section nav ul li a{
 
 .contenedorNav{
     display: none;  
-  }
-
-
-
-
-@media(min-width: 361px){ /*tablet*/
-   
-
-    .articulo1{
-        flex-direction: row;
-    }
-
-    .articulo2{
-        flex-direction: row;
-    }
-
-    .contenedorNav{
-      display: none;  
-    }
-
-    .imagenReloj{
-        width: 30%;
-        margin-top: 20px;
-    }
-
-
-
-.tablet{
-    display: flex;
-    flex-direction: column;
-    width:50%;
-} 
-
-}
-@media(min-width: 769px){/*desktop*/
- 
-    .contenedorNav{
-    
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        border-bottom: 2px solid #454545;
-        
-        }
-
-.nombreProducto{
-    
-            display: flex;
-            justify-content:space-between;
-            flex-wrap:nowrap;
-            
-            width: 50%;
-            }
-    
-    
-.atributosProducto{
-        display: flex;
-        justify-content:space-between;
-        flex-wrap:nowrap;
-        margin-right: 25px;
-       
-    }
-
-
-.imagenReloj{
-    
-    width: 20%;
-    margin-top: 20px;
 }
 
-
-
-.articulo1{
-    flex-direction: row;
-}
-
-.articulo2{
-    flex-direction: row;
-}
-
-.tablet{
-    display: flex;
-    flex-direction:row;
-    width:100%;
-}}
 /* --------------------------------------------Fin configuracion carrito --------------------------------------------*/
 
 /* ------------------------------------CONFIGURACION CREACION Y EDICION DE PRODUCTOS-------------------------------- */
@@ -1524,3 +1139,366 @@ section nav ul li a{
 /*Gris claro: #D1D1D1
     - Gris medio: #9E9E9E
     - Gris oscuro: #454545 */
+
+
+/* ------------------------------------------ @media queries ---------------------------------------------------------*/
+
+/* MOBILE */
+
+@media (max-width: 360px) {
+    /* Vista mobile header */
+
+    .desplegable{
+        display: none;
+    }
+    .busqueda{
+        width: 70%;
+    }
+    .mobile{
+        margin: 0.5vw;
+    }
+    .sign-in{
+        margin: 0;
+    }
+    .carrito1{
+        display: block;
+    }
+    .burger-menu{
+        display: block;
+    }
+
+    /* Vista mobile producto */
+
+    .imagenes-verticales{
+        display: none;
+    }
+    .descripcion{
+        box-sizing: border-box;
+        width: 95vw;
+        margin: auto;
+        text-align: center;
+    }
+    .descripcion p{
+        width: 90%;
+        margin: 3vw;
+        }
+    .imagen-principal{
+        width: 95vw;
+    }
+    .imagen-principal img{
+        width: 95vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 450px;
+    }
+    .otros-productos{
+        display: none;
+    }
+
+    /* Vista mobile login/registro */
+
+    .desplegable{
+            display: none;
+    }
+    .busqueda{
+        width: 70%;
+    }
+    .mobile{
+         margin: 0.5vw;
+    }
+    .sign-in{
+        margin: 0;
+    }
+    .carrito1{
+        display: block;
+    }
+    .burger-menu{
+        display: block;
+    }
+
+    /* Vista index mobile */
+
+    .link-quiz{
+        margin-top: 30px;
+    }
+    .contenedor-articulo{
+        max-width: 80%;
+    }
+    .categorias p{
+        width: 25%;
+    }
+}
+
+/* TABLET */
+
+@media (min-width: 361px) and (max-width: 768px) {
+    /* Vista tablet header */
+
+    .desplegable{
+        display: none;
+    }
+    .busqueda{
+        width: 70%;
+    }
+    .mobile{
+        margin: 0.5vw;
+    }
+    .sign-in{
+        margin: 0;
+    }
+    .carrito1{
+        display: block;
+    }
+    .burger-menu{
+        display: block;
+    }
+
+    /* Vista tablet producto */
+    
+    .imagenes-verticales{
+        display: none;
+    }
+    .descripcion{
+        box-sizing: border-box;
+        width: 98vw;
+        text-align: center;
+    }
+    .descripcion p{
+        box-sizing: border-box;
+        }
+    .imagen-principal{
+        width: 95vw;
+    }
+    .imagen-principal img{
+        width: 95vw;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 450px;
+    }
+    .otros-productos{
+        display: none;
+    }
+    .precio-original{
+        box-sizing: border-box;
+        font-size: 20px;
+        margin: 2vw 0;
+    }
+    .precio-descuento{
+        box-sizing: border-box;
+        text-align: right;
+        font-size: 24px;
+        margin: 2vw;
+    }
+    .discount{
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 24px;
+        margin: 2vw;
+    }
+    h3{
+        font-size: 30px
+    }
+    .main-characteristics{
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 16px;
+        margin: 2vw 0 3vw 0;
+    }
+
+    /* Vista tablet login/registro */
+
+    .desplegable{
+        display: none;
+    }
+    .busqueda{
+        width: 70%;
+    }
+    .mobile{
+        margin: 0.5vw;
+    }
+    .sign-in{
+        margin: 0;
+    }
+    .carrito1{
+        display: block;
+    }
+    .burger-menu{
+        display: block;
+    }
+    .form-register div input{
+    font-size: 12px;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #adadad;
+    }
+
+    /* Vista tablet index */
+
+    .main{
+        flex-direction: row;
+    }
+    .link-quiz{
+        margin-top: 30px;
+    }
+    .contenedor-articulo{
+        max-width: 40%;
+    }
+    .categorias p{
+        width: 25%;
+    }
+    .categorias img{
+        width: 80%;
+    }
+
+    /* Vista tablet carrito */
+    
+    .articulo1{
+        flex-direction: row;
+    }
+    .articulo2{
+        flex-direction: row;
+    }
+    .contenedorNav{
+    display: none;  
+    }
+    .imagenReloj{
+        width: 30%;
+        margin-top: 20px;
+    }
+    .tablet{
+        display: flex;
+        flex-direction: column;
+        width:50%;
+    }    
+}
+
+/* DESKTOP */
+
+@media (min-width: 769px) {
+    /* Vista desktop header */
+
+    .mobile{
+        display: none;
+    }
+    .menu-cel{
+        display: none;
+    }
+    .top1 p{
+        width: 20%;
+    }
+    .logo{
+        width: 8%;
+    }
+
+    /* Configuracion desktop login/registro */
+
+    .mobile{
+        display: none;
+    }
+    .menu-cel{
+        display: none;
+    }
+    .top1 p{
+        width: 20%;
+    }
+    .logo{
+        width: 8%;
+    }
+
+    /* Configuracion Desktop Quiz */
+
+    .foto-reloj {
+        display: none;
+    }
+    .clipboard {
+        display: inline-flex;
+        position: absolute;
+        right: 70px;
+        top: 38%;
+    } 
+    .clipboard:hover {
+        transform: rotate(-360deg);
+        transition: all 2s;
+    }
+    .boton-envio,
+    .boton-reset {
+        max-width: 29%;
+    }
+    .botones {
+        display: flex;
+    }
+    .label-quiz {
+        width: 60%;
+        text-align: justify;
+    }
+    .mensaje-analizando {
+        display: inline-block;
+        position: absolute;
+        right: 10%;
+        top: 95%;
+        z-index: 2;
+    }
+    .relojes-quiz {
+        display: inline-block;
+        position: absolute;
+        right: 15%;
+        top: 90%;
+        z-index: -1;
+    }
+
+    /* Configuracion index desktop */
+
+    .main{
+        flex-direction: row;
+    }
+    .categorias img{
+        width: 80%;
+    }
+    .quiz h4{
+        font-size: 28px;
+    }
+    .contenedor-articulo{
+        max-width: 22%;
+    }
+    .categorias{
+        width: 100%;
+    }
+
+    /* Vista desktop carrito */
+ 
+    .contenedorNav{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        border-bottom: 2px solid #454545;
+    }
+    .nombreProducto{
+        display: flex;
+        justify-content:space-between;
+        flex-wrap:nowrap;
+        width: 50%;
+    }   
+    .atributosProducto{
+        display: flex;
+        justify-content:space-between;
+        flex-wrap:nowrap;
+        margin-right: 25px;
+    }
+    .imagenReloj{
+        width: 20%;
+        margin-top: 20px;
+    }
+    .articulo1{
+        flex-direction: row;
+    }
+    .articulo2{
+        flex-direction: row;
+    }
+    .tablet{
+        display: flex;
+        flex-direction:row;
+        width:100%;
+    }}
