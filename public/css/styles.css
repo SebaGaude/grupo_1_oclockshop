@@ -163,6 +163,7 @@ header{
     align-items: flex-end;
     font-size: 16px; /*quizas 14px*/
     background-color: rgb(187, 183, 183);
+    color: white;
 }
 
 .desplegable p{
