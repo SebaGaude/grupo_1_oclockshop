@@ -11,22 +11,22 @@
 
                 <!-- Formulario de edicion del producto-->
 
-                <form action="/" method="GET" class="formulario-edicion-creacion">
+                <form action="/products/<%= product.id %>?_method=PUT " method="POST" class="formulario-edicion-creacion">
 
                     <h1>
-                        Edicion de producto
+                        Edicion de producto: <%=  %> 
                     </h1>
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Nombre del artículo </label>
-                        <input type="text" name="articulo" value="ej: Reloj suizo enchapado en oro" class="ticks"
+                        <input type="text" name="articulo" value= <%= products.articulo %>  class="ticks"
                             required>
                     </div>
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese una nueva descripcion del artiículo si desea
                             modificarla</label>
-                        <input type="textarea" name="descripcion" value="reloj aguja de pulsera" class="ticks" required>
+                        <input type="textarea" name="descripcion" value= <%= products.descripcion %>  class="ticks" required>
                     </div>
 
                     <div class="control-formulario">
@@ -37,7 +37,7 @@
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese la nueva categoria si desea modificarla</label>
-                        <input type="text" name="categoria" placeholder="deportivo/digital/lujo.." class="ticks">
+                        <input type="text" name="categoria" placeholder= <%= products.categoria %>  class="ticks">
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese nueva cantidad en stock si asi lo desea</label>
@@ -46,7 +46,7 @@
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese nueva marca y modelo del articulo si desea
                             modificarlo</label>
-                        <input type="text" name="marca" placeholder="marca del articulo" class="ticks">
+                        <input type="text" name="marca" placeholder= <%= products.marca %>  class="ticks">
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form">Ingrese el nuevo precio del articulo si desea modificarla</label>

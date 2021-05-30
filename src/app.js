@@ -3,6 +3,9 @@ const path = require("path");
 const routesMain = require("./routes/main");
 const routesProducts = require("./routes/products");
 
+const methodOverride = require('method-override');
+
+app.use(methodOverride('_method'));
 const app = express();
 
 const { start } = require("repl");
