@@ -11,12 +11,16 @@ const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
  
 
-app.listen(3050, ()=>{
-    console.log("Servidor corriendo en el puerto 3050");
-})
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json);
+
 app.use("/", routesMain);
 app.use("/products", routesProducts);
+
+
+app.listen(3050, ()=>{
+    console.log("Servidor corriendo en el puerto 3050");
+})

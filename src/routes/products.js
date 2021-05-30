@@ -15,6 +15,8 @@ router.get("/producto1", productsController.productDetail);
 router.get("/carrito", productsController.productCart);
 
 router.get("/new", productsController.newProduct);
+router.post("/new", productsController.store);
+
 
 router.get("/edit", productsController.editProduct);
 
