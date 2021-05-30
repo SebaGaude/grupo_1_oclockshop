@@ -19,7 +19,7 @@ router.post("/new", productsController.store);
 
 
 router.get("/edit/:id", productsController.editProduct); // vista de la edicion
-router.put("/edit(:id", productsController.updateProduct); // logica de la edicion
+router.put("/edit/:id", productsController.updateProduct); // logica de la edicion
 
 
 router.delete('/:id', productsController.destroy);

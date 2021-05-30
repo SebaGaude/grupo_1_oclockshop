@@ -5,7 +5,6 @@ const routesProducts = require("./routes/products");
 
 const methodOverride = require('method-override');
 
-app.use(methodOverride('_method'));
 const app = express();
 
 const { start } = require("repl");
@@ -20,6 +19,7 @@ app.listen(3050, ()=>{
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 
