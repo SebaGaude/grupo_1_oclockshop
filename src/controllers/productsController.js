@@ -28,7 +28,7 @@ let productsController = {
         }
         const lastID = () => {
             let ultimo = 0;
-            products.foreach(oneProduct => {
+            products.forEach(oneProduct => {
                 if (ultimo < oneProduct.id) {
                     ultimo = oneProduct.id;
                 }
@@ -51,7 +51,7 @@ let productsController = {
         products = JSON.stringify(products, null, 4);
         fs.writeFileSync(path.join(__dirname, "../data/productsDataBase.json"), products);
 
-        res.redirect("/");
+        res.redirect("/products");
 
     },
     editProduct: function(req, res){

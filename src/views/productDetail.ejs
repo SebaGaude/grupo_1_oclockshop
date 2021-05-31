@@ -23,13 +23,13 @@
             <img src="../img/Tag-Heuer1.jpg" alt="imagen elegida">
         </div>
         <div class=descripcion>
-            <h3><%= products.articulo %> </h3>  Tag Heuer Carrera
+            <h3><%= product.articulo %> </h3>  Tag Heuer Carrera
             <p class="main-characteristics"> <%= products.descripcion %> </p>Cronografo automatico - Diametro 44 mm
             <div class="precios">
-                <p class="precio-original"><%= products.precio %> </p>USD 5.100
+                <p class="precio-original"><%= product.precio %> </p>USD 5.100
                 <div class="descuento">
-                    <p class="precio-descuento"> <%= products.precio - (products.precio*products.descuento)/100 %></p> USD 3.825
-                    <p class="discount"><%= products.descuento %> % OFF </p>
+                    <p class="precio-descuento"> <%= product.precio - (products.precio*products.descuento)/100 %></p> USD 3.825
+                    <p class="discount"><%= product.descuento %> % OFF </p>
                 </div>    
             </div>
             <form action="/registro" method="GET">
