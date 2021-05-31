@@ -6,10 +6,11 @@ let productsController = {
         res.render("products");
     },
     productDetail: function (req, res) {
-        let products = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
-        products = JSON.parse(products)
-        products = products.find(product => product.id == req.params.id);
-        res.render("productDetail", {products});
+        id = req.params.id;
+        let archivoJSON = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
+        products = JSON.parse(archivoJSON)
+        oneProduct = products.find(product => id == product.id);
+        res.render("productDetail", {"product": oneProduct});
     },
     productCart: function (req, res) {
         res.render("productCart");

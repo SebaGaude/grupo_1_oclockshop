@@ -10,7 +10,7 @@ app.use(express.static(publicPath));
 
 router.get("/", productsController.products);
 
-router.get("/detail/:1", productsController.productDetail);
+router.get("/detail/:id", productsController.productDetail);
 
 router.get("/carrito", productsController.productCart);
 
