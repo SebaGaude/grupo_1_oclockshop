@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "articulo": "asdasdasd",
+        "descripcion": "asdasdasdasd",
+        "categoria": "asdasdasd",
+        "stock": "4",
+        "marca": "asdasdad",
+        "precio": "2000"
+    },
+    {
+        "id": 2,
+        "articulo": "asdasdasd",
+        "descripcion": "asdasdasdasd",
+        "categoria": "asdasdasd",
+        "stock": "3",
+        "marca": "asdasdad",
+        "precio": "2000"
+    },
+    {
+        "id": 3,
+        "articulo": "asdasdasd",
+        "descripcion": "asdasdasdasd",
+        "categoria": "asdasdasd",
+        "stock": "3",
+        "marca": "asdasdad",
+        "precio": "48"
+    },
+    {
+        "id": 4,
+        "articulo": "asdasdasd",
+        "descripcion": "asdasdasdasd",
+        "categoria": "asdasdasd",
+        "stock": "6",
+        "marca": "asdasdad",
+        "precio": "5000"
+    }
+]
