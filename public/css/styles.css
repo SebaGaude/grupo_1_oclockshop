@@ -1132,6 +1132,12 @@ section div ul li a{
 
 .ticks {
     width: 80%;
+    border-radius: 5px;
+
+
+}
+.titulo-new-edit {
+    text-align: center;
 }
 
 

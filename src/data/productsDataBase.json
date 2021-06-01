@@ -1,38 +1,38 @@
 [
     {
         "id": 1,
-        "articulo": "asdasdasd",
-        "descripcion": "asdasdasdasd",
-        "categoria": "asdasdasd",
+        "articulo": "Reloj Suizo",
+        "descripcion": "Reloj directamente traido de Suiza",
+        "categoria": "Lujo",
         "stock": "4",
-        "marca": "asdasdad",
+        "marca": "Peringuito",
         "precio": "2000"
     },
     {
         "id": 2,
-        "articulo": "asdasdasd",
-        "descripcion": "asdasdasdasd",
-        "categoria": "asdasdasd",
+        "articulo": "Reloj Checho",
+        "descripcion": "Reloj directamente traido de Republica Checa",
+        "categoria": "Deportivo",
         "stock": "3",
-        "marca": "asdasdad",
+        "marca": "Chiquiriqui",
         "precio": "2000"
     },
     {
         "id": 3,
-        "articulo": "asdasdasd",
-        "descripcion": "asdasdasdasd",
-        "categoria": "asdasdasd",
+        "articulo": "Reloj Chino",
+        "descripcion": "Reloj directamente traido de China",
+        "categoria": "Deportivo",
         "stock": "3",
-        "marca": "asdasdad",
+        "marca": "Chiwewencha",
         "precio": "48"
     },
     {
         "id": 4,
-        "articulo": "asdasdasd",
-        "descripcion": "asdasdasdasd",
-        "categoria": "asdasdasd",
+        "articulo": "Reloj Brasilero",
+        "descripcion": "Reloj directamente traido de Brasil",
+        "categoria": "Conga",
         "stock": "6",
-        "marca": "asdasdad",
+        "marca": "Ipanema",
         "precio": "5000"
     }
 ]
