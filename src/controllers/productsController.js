@@ -45,6 +45,7 @@ let productsController = {
             descripcion: req.body.descripcion,
             categoria: req.body.categoria,
             stock: req.body.stock,
+            imagen: req.file.filename,
             marca: req.body.marca,
             precio: req.body.precio
         }
@@ -54,7 +55,7 @@ let productsController = {
         products = JSON.stringify(products, null, 4);
         fs.writeFileSync(path.join(__dirname, "../data/productsDataBase.json"), products);
 
-        res.redirect("/products");
+        res.redirect("/");
 
     },
     editProduct: function(req, res){
