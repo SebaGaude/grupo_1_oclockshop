@@ -2,9 +2,12 @@ const fs = require("fs");
 const path = require("path");
 
 let productsController = {
+  
     products: function (req, res) {
         res.render("products");
     },
+   
+   
     productDetail: function (req, res) {
         id = req.params.id;
         let archivoJSON = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
@@ -57,6 +60,7 @@ let productsController = {
         res.redirect("/products");
 
     },
+   
     editProduct: function(req, res){
         let products = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
         products = JSON.parse(products)
