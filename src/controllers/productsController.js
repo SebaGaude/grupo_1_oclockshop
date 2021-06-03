@@ -9,9 +9,9 @@ let productsController = {
    
    
     productDetail: function (req, res) {
-        id = req.params.id;
-        let archivoJSON = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
-        products = JSON.parse(archivoJSON)
+       
+        let productsDatabase = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
+        products = JSON.parse(productsDatabase);
         oneProduct = products.find(product => id == product.id);
         res.render("productDetail", {"product": oneProduct});
     },
@@ -63,6 +63,7 @@ let productsController = {
     },
    
     editProduct: function(req, res){
+        
         let products = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
         products = JSON.parse(products)
         products = products.find(product => product.id == req.params.id);
@@ -71,10 +72,28 @@ let productsController = {
    
    
     updateProduct: function(req, res){
-        let products = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
-        products = JSON.parse(products)
-        products = products.find(product => product.id == req.params.id);
-        res.render("editProduct", {products});
+       
+        
+        let idProduct = req.params.id;
+        let productsDatabase = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
+        let products=JSON.parse(productsDatabase);
+        
+         products.forEach(product =>{
+            if(product.id == idProduct){
+                product.articulo = req.body.articulo;
+                product.descripcion = req.body.descripcion;
+                product.categoria = req.body.categoria;
+                product.stock = req.body.stock;
+                product.marca = req.body.marca;
+                product.precio = req.body.precio;
+            }
+        });
+            console.log(products);
+
+        let newList = JSON.stringify(products, null, 4);
+        fs.writeFileSync(path.join(__dirname, "../data/productsDataBase.json"), newList);
+        
+        res.render("/");
     },
 
     
