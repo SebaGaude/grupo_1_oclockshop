@@ -11,22 +11,25 @@
 
                 <!-- Formulario de edicion del producto-->
 
-                <form action="/products/edit/<%= products.id %>" method="GET" class="formulario-edicion-creacion">
+               
 
+                <form action="/products/<%= product.id %>?_method=PUT"method="POST" class="formulario-edicion-creacion">
+
+                   
                     <h1 class="titulo-new-edit">
-                        Edicion de producto: <%= products.articulo %> 
+                        Edicion de producto: <%= product.articulo %> 
                     </h1>
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Nombre del artículo </label>
-                        <input type="text" name="articulo" value= "<%= products.articulo %>"  class="ticks"
+                        <input type="text" name="articulo" value= "<%= product.articulo %>"  class="ticks"
                             required>
                     </div>
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese una nueva descripcion del artiículo si desea
                             modificarla</label>
-                        <input type="textarea" name="descripcion" value= "<%= products.descripcion%>"  class="ticks" required>
+                        <input type="textarea" name="descripcion" value= "<%= product.descripcion%>"  class="ticks" required>
                     </div>
 
                     <div class="control-formulario">
@@ -37,7 +40,7 @@
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese la nueva categoria si desea modificarla</label>
-                        <input type="text" name="categoria" value= "<%= products.categoria %>"  class="ticks">
+                        <input type="text" name="categoria" value= "<%= product.categoria %>"  class="ticks">
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese nueva cantidad en stock si asi lo desea</label>
@@ -46,18 +49,18 @@
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese nueva marca y modelo del articulo si desea
                             modificarlo</label>
-                        <input type="text" name="marca" value= "<%= products.marca %>" class="ticks">
+                        <input type="text" name="marca" value= "<%= product.marca %>" class="ticks">
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form">Ingrese el nuevo precio del articulo si desea modificarla</label>
-                        <input type="text" name="precio" placeholder="<%= products.precio %>" class="ticks" required>
+                        <input type="text" name="precio" placeholder="<%= product.precio %>" class="ticks" required>
                     </div>
 
                     <!-- Botón "enviar"-->
                     <div>
-                        <form action="/products/<%= products.id %>?_method=PUT" method="POST" style="display: inline-flex">
+                        
                         <button type="submit" class="boton-envio">Guardar cambios</button>
-                        </form>
+                        
                         <button type="reset" class="boton-reset">Borrar todo</button>
                     </div>
                     <!-- ----------- -->

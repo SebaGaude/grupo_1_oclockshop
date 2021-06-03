@@ -66,8 +66,8 @@ let productsController = {
         
         let products = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
         products = JSON.parse(products)
-        products = products.find(product => product.id == req.params.id);
-        res.render("editProduct", {products});
+        let product = products.find(product => product.id == req.params.id);
+        res.render("editProduct", {product});
     },
    
    
@@ -93,7 +93,7 @@ let productsController = {
         let newList = JSON.stringify(products, null, 4);
         fs.writeFileSync(path.join(__dirname, "../data/productsDataBase.json"), newList);
         
-        res.render("/");
+        res.redirect("/");
     },
 
     

@@ -2,11 +2,11 @@
     {
         "id": 1,
         "articulo": "Reloj Suizo",
-        "descripcion": "Reloj directamente traido de Suiza",
+        "descripcion": "Reloj directamente traido de Japon",
         "categoria": "Lujo",
-        "stock": "4",
+        "stock": "100",
         "marca": "Peringuito",
-        "precio": "2000"
+        "precio": "3000"
     },
     {
         "id": 2,
