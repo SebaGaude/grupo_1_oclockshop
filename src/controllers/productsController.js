@@ -90,7 +90,7 @@ let productsController = {
                 product.precio = req.body.precio;
             }
         });
-            console.log(products);
+            // console.log(products);
 
         let newList = JSON.stringify(products, null, 4);
         fs.writeFileSync(path.join(__dirname, "../data/productsDataBase.json"), newList);

@@ -30,7 +30,7 @@ router.get("/edit/:id", productsController.editProduct); // vista de la edicion
 router.put("/:id", productsController.updateProduct); // logica de la edicion
 
 
-router.delete('edit/:id', productsController.destroy); // lógica de delete
+router.delete('/delete/:id', productsController.destroy); // lógica de delete
 
 
 module.exports = router;
