@@ -1161,6 +1161,10 @@ section div ul li a{
     .busqueda{
         width: 70%;
     }
+    .busqueda-input {
+        outline: none;
+        
+    }
     .mobile{
         margin: 0.5vw;
     }

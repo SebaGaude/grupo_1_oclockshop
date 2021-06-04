@@ -11,11 +11,11 @@
     {
         "id": 2,
         "articulo": "Reloj Checho",
-        "descripcion": "Reloj directamente traido de Republica Checa",
-        "categoria": "Deportivo",
-        "stock": "3",
+        "descripcion": "Reloj directamente traido de Republica Checa, esta vez mejorado.",
+        "categoria": "Deportivo ",
+        "stock": "",
         "marca": "Chiquiriqui",
-        "precio": "2000"
+        "precio": "10000"
     },
     {
         "id": 3,
@@ -54,5 +54,15 @@
         "imagen": "product-1622675956881.png",
         "marca": "samsung",
         "precio": "5000"
+    },
+    {
+        "id": 7,
+        "articulo": "Reloj nuevo mejoradazo",
+        "descripcion": "Este reloj es una prueba de que el boton de crear funciona",
+        "categoria": "animado",
+        "stock": "",
+        "imagen": "product-1622838739056.jpg",
+        "marca": "WB",
+        "precio": "250"
     }
 ]
