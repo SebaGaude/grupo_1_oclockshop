@@ -39,12 +39,12 @@
     },
     {
         "id": 7,
-        "articulo": "Reloj nuevo mejoradazo",
-        "descripcion": "Este reloj es una prueba de que el boton de crear funciona",
-        "categoria": "animado",
-        "stock": "",
-        "imagen": "product-1622838739056.jpg",
-        "marca": "WB",
-        "precio": "250"
+        "articulo": "reloj madrileño",
+        "descripcion": "hecho por dami a mano",
+        "categoria": "de lujo",
+        "stock": "100",
+        "imagen": "product-1622850014800.png",
+        "marca": "capullo",
+        "precio": "500"
     }
 ]
