@@ -25,3 +25,16 @@ Sprint 2
 4. Hacer menos: avanzar en el proyecto sin coordinar el trabajo que podría hacerse en conjunto. En este sprint en particular tuvimos que crear varias hojas de estilo, cuando lo ideal hubiera sido crear solo una que aplica a todas las vistas. Identificar estas situaciones a futuro para evitarlas.
 
 5. Dejar de hacer: en la medida en que avanza el aprendizaje de las herramientas a ser aplicadas en el proyecto, vamos identificando en el camino quién podría ser el responsable de cada segmento entregable. Idealmente deberíamos asignar una o varias personas responsables de antemano para ganar tiempo en la organización.
+
+---
+Sprint 3
+---
+1. Comenzar a hacer: uniformar ciertos criterios de estilo para que todos los views tengan un diseño homogéneo a lo largo del sitio. Aplicar el mismo concepto a las estructuras de programación en las distintas vistas, para que el código quede más ordenado y entendible para todo el equipo y para terceros. 
+
+2. Hacer más: poner foco a la organización de las reuniones para dividir el trabajo de manera ordenada.
+
+3. Continuar haciendo: continuar con la comunicación fluida, y con las reuniones periódicas (aunque no estén todos presentes) para compartir avances y discutirlos.
+
+4. Hacer menos: avanzar en el proyecto sin organizar las tareas. Dependiendo del sprint, en algunos casos los entregables se vuelven más complejos, con lo cual se requiere el trabajo de más de una persona. Intentar coordinar el esfuerzo en estos escenarios.
+
+5. Dejar de hacer: no incluir los componentes de los demás sprints a los actuales. Es decir, evitar concentrarse solo en los entregables de los sprints, sin tener presente los anteriores (que se van vinculando con los actuales) o incluso con las potenciales herramientas a ser utilizadas en el avance del curso. 
