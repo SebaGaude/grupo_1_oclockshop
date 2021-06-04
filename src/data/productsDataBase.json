@@ -1,14 +1,5 @@
 [
     {
-        "id": 1,
-        "articulo": "Reloj Suizo",
-        "descripcion": "Reloj directamente traido de Japon",
-        "categoria": "Lujo",
-        "stock": "100",
-        "marca": "Peringuito",
-        "precio": "3000"
-    },
-    {
         "id": 2,
         "articulo": "Reloj Checho",
         "descripcion": "Reloj directamente traido de Republica Checa, esta vez mejorado.",
@@ -25,15 +16,6 @@
         "stock": "3",
         "marca": "Chiwewencha",
         "precio": "48"
-    },
-    {
-        "id": 4,
-        "articulo": "Reloj Brasilero",
-        "descripcion": "Reloj directamente traido de Brasil",
-        "categoria": "Conga",
-        "stock": "6",
-        "marca": "Ipanema",
-        "precio": "5000"
     },
     {
         "id": 5,

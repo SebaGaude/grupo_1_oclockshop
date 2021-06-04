@@ -61,14 +61,14 @@
                     <div>
 
                         <button type="submit" class="boton-envio">Guardar cambios</button>
-                        <form method="POST" action="/products/delete/<%= product.id%>?_method=DELETE">
-                            <button type="submit" class="boton-reset">Borrar articulo</button>
-                        </form>
                     </div>
                     <!-- ----------- -->
-
+                    
                 </form>
-
+                
+                <form method="POST" action="/products/delete/<%= product.id%>?_method=DELETE">
+                    <button type="submit" class="boton-reset">Borrar articulo</button>
+                </form>
             </main>
             <%- include("partials/footer.ejs") %>
 
