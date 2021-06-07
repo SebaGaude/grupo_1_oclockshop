@@ -1136,6 +1136,17 @@ section div ul li a{
 
 
 }
+.main_edit{
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    background-color: white;
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: whitesmoke;
+    padding: 0px;
+}
 .titulo-new-edit {
     text-align: center;
 }
@@ -1160,6 +1171,7 @@ section div ul li a{
     }
     .busqueda{
         width: 70%;
+        outline: none;
     }
     .busqueda-input {
         outline: none;
@@ -1434,9 +1446,14 @@ section div ul li a{
         transform: rotate(-360deg);
         transition: all 2s;
     }
-    .boton-envio,
+    .boton-envio {
+        max-width: 29%;
+        background-color: greenyellow;
+    }
     .boton-reset {
         max-width: 29%;
+        background-color:red;
+
     }
     .botones {
         display: flex;
