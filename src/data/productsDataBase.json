@@ -34,5 +34,25 @@
         "stock": "6",
         "marca": "Ipanema",
         "precio": "5000"
+    },
+    {
+        "id": 5,
+        "articulo": "Reloj ",
+        "descripcion": "reloj",
+        "categoria": "lujo",
+        "stock": "3",
+        "imagen": "product-1622675787876.jpg",
+        "marca": "Rolex",
+        "precio": "48000"
+    },
+    {
+        "id": 6,
+        "articulo": "Reloj ",
+        "descripcion": "reloj",
+        "categoria": "deportivo",
+        "stock": "3",
+        "imagen": "product-1622675956881.png",
+        "marca": "samsung",
+        "precio": "5000"
     }
 ]
