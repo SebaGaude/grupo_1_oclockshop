@@ -12,9 +12,11 @@ let productsController = {
        
         let productsDatabase = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
         products = JSON.parse(productsDatabase);
-        oneProduct = products.find(product => id == product.id);
+        oneProduct = products.find(product => req.params.id == product.id);
         res.render("productDetail", {"product": oneProduct});
     },
+    
+    
     productCart: function (req, res) {
         res.render("productCart");
     },
@@ -66,8 +68,8 @@ let productsController = {
         
         let products = fs.readFileSync(path.join(__dirname, "../data/productsDataBase.json"), { encoding: "utf-8" });
         products = JSON.parse(products)
-        products = products.find(product => product.id == req.params.id);
-        res.render("editProduct", {products});
+        let product = products.find(product => product.id == req.params.id);
+        res.render("editProduct", {product});
     },
    
    
@@ -88,12 +90,12 @@ let productsController = {
                 product.precio = req.body.precio;
             }
         });
-            console.log(products);
+            // console.log(products);
 
         let newList = JSON.stringify(products, null, 4);
         fs.writeFileSync(path.join(__dirname, "../data/productsDataBase.json"), newList);
         
-        res.render("/");
+        res.redirect("/");
     },
 
     

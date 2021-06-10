@@ -7,3 +7,9 @@ Pero mas importante fue haber aprovechado ese tiempo para quitarnos dudas entre 
 - Segunda reunion
 Ya mas entrados en el tema, con un tablero en Trello actualizado, pudimos poner en comun, punto por punto, lo que se habia realizado y lo que aun faltaba hacer. 
 Cada miembro del grupo que se encargo de alguna tarea se explayo sobre la misma. Detallando si estaba terminada o no, como se habia hecho y, de ser necesario, como se iba a finalizar.
+
+------------------------------------
+Entrega sprint 4 (Viernes 04/06)
+
+- Las reuniones fueron una puesta en común sobre los conocimientos que cada participante podía aportar para la resoluciones de las consignas. Llevamos a cabo una peer coding, donde cada integrante se encargó de codear e implementar el tramo en el que se sentía mas confiado, y el resto observaba y aportaba ideas y posibles soluciones. Entre todos avanzamos con las consignas y reforzamos los conocimientos que teniamos individualmente de manera colectiva.
+

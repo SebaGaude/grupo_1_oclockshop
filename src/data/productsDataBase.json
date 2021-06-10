@@ -1,21 +1,12 @@
 [
     {
-        "id": 1,
-        "articulo": "Reloj Suizo",
-        "descripcion": "Reloj directamente traido de Suiza",
-        "categoria": "Lujo",
-        "stock": "4",
-        "marca": "Peringuito",
-        "precio": "2000"
-    },
-    {
         "id": 2,
         "articulo": "Reloj Checho",
-        "descripcion": "Reloj directamente traido de Republica Checa",
-        "categoria": "Deportivo",
-        "stock": "3",
+        "descripcion": "Reloj directamente traido de Republica Checa, esta vez mejorado.",
+        "categoria": "Deportivo ",
+        "stock": "",
         "marca": "Chiquiriqui",
-        "precio": "2000"
+        "precio": "10000"
     },
     {
         "id": 3,
@@ -25,15 +16,6 @@
         "stock": "3",
         "marca": "Chiwewencha",
         "precio": "48"
-    },
-    {
-        "id": 4,
-        "articulo": "Reloj Brasilero",
-        "descripcion": "Reloj directamente traido de Brasil",
-        "categoria": "Conga",
-        "stock": "6",
-        "marca": "Ipanema",
-        "precio": "5000"
     },
     {
         "id": 5,
@@ -54,5 +36,15 @@
         "imagen": "product-1622675956881.png",
         "marca": "samsung",
         "precio": "5000"
+    },
+    {
+        "id": 7,
+        "articulo": "reloj madrileño",
+        "descripcion": "hecho por dami a mano",
+        "categoria": "de lujo",
+        "stock": "100",
+        "imagen": "product-1622850014800.png",
+        "marca": "capullo",
+        "precio": "500"
     }
 ]
