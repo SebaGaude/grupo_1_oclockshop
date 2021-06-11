@@ -1,9 +1,10 @@
 const express = require('express');
+const path = require("path");
 const router = express.Router();
+const usersController = require("../controllers/usersController");
 /*const guestMiddleware = require('../../middlewares/guestMiddleware');*/
 // el guestMiddleeare verifica si el usuario esta logueado para redirigirlo o no.
 /*const authMiddleware = require ('../../middlewares/authMiddleware');*/
-const path = require('path');
 const multer = require('multer');
 const { body } = require('express-validator');
 
@@ -19,23 +20,50 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage });
 
+//-------VALIDACIONES---------
+const validateUserRegister = [
+    body("nombre").notEmpty().withMessage("Debes completar el campo nombre"),
+    body("usuario").notEmpty().withMessage("Debes completar el campo usuario"),
+    body("email").notEmpty().withMessage("Debes completar con un email").bail().isEmail().withMessage("Debes completar un formato de email válido"),
+    body("contraseña").notEmpty().withMessage("Debes elegir una contraseña"),
+    body("confirmar").notEmpty().withMessage("Debes completar nuevamente la contraseña elegida"),
+    body("avatar").custom((value, {req})=>{
+        let file = req.file;
+        let acceptedExtensions = [".jpg", ".png", ".gif"];
+        
+        if(!file){
+            throw new Error("Tienes que subir una imágen");
+        }else{
+            let fileExtension = path.extname(file.originalname);
+            if(!acceptedExtensions.includes(fileExtension)){
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`);
+
+        }
+
+
+        }
+        return true;
+    })
+]
+
+
 // Formulario de registro
-router.get('/register',guestMiddleware, usersController.register);
+router.get('/register', usersController.register);
 
 // Procesar el registro
-router.post('/register', /*uploadFile.single('avatar'),*/ validations, usersController.processRegister);
+router.post('/register', uploadFile.single('avatar'), usersController.processRegister);
 
 // Formulario de login
-router.get('/login',guestMiddleware, usersController.login);
+router.get('/login', usersController.login);
 
 // Procesar el login
-router.post('/login', usersController.loginProcess);
+//router.post('/login', usersController.loginProcess);
 
 
 // Perfil de Usuario
-router.get('/profile/',authMiddleware, usersController.profile);
+//router.get('/profile/', usersController.profile);
 
 // Logout
-router.get('/logout/', usersController.logout);
+//router.get('/logout/', usersController.logout);
 
 module.exports = router;

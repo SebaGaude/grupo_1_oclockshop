@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "nombre": "Luisito",
+        "usuario": "Crescente",
+        "email": "un@email.com",
+        "avatar": "1623370796222_img.jpg",
+        "contraseña": "$2a$10$spoPu2/v7Grc.vC8m8uKbukNOU6Cp0QaT1leD1TfYk2bdmoWwR0QS"
+    },
+    {
+        "id": 2,
+        "nombre": "",
+        "usuario": "",
+        "email": "",
+        "avatar": "1623370848621_img.jpg",
+        "contraseña": "$2a$10$18zXCT9EiMcsVqmebyCHg.Qbyw5s3F27oaAXY2DDDpExahLjnNcWu"
+    }
+]
