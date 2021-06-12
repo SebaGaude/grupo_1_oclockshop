@@ -37,7 +37,7 @@ let usersControllers = {
             let user = {
                 id: lastID()+1,
                 nombre: req.body.nombre,
-                usuario: req.body.usuario,
+                apellido: req.body.apellido,
                 email: req.body.email,
                 avatar: req.file.filename,
                 contraseña: bcrypt.hashSync(req.body.contraseña, 10),
@@ -52,7 +52,7 @@ let usersControllers = {
 
         }else{
         res.render("register", {
-            errors: resultValidation.mapped(),
+            errors: errors.mapped(),
             oldData: req.body
         });
        }

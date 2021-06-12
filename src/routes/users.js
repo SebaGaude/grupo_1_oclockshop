@@ -5,12 +5,12 @@ const usersController = require("../controllers/usersController");
 /*const guestMiddleware = require('../../middlewares/guestMiddleware');*/
 // el guestMiddleeare verifica si el usuario esta logueado para redirigirlo o no.
 /*const authMiddleware = require ('../../middlewares/authMiddleware');*/
-const multer = require('multer');
 const { body } = require('express-validator');
+const multer = require('multer');
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-		cb(null, './public/img/users');
+		cb(null, path.join(__dirname, "../../public/img/users"));
 	},
 	filename: (req, file, cb) => {
 		let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
@@ -23,7 +23,7 @@ const uploadFile = multer({ storage });
 //-------VALIDACIONES---------
 const validateUserRegister = [
     body("nombre").notEmpty().withMessage("Debes completar el campo nombre"),
-    body("usuario").notEmpty().withMessage("Debes completar el campo usuario"),
+    body("apellido").notEmpty().withMessage("Debes completar el campo apellido"),
     body("email").notEmpty().withMessage("Debes completar con un email").bail().isEmail().withMessage("Debes completar un formato de email válido"),
     body("contraseña").notEmpty().withMessage("Debes elegir una contraseña"),
     body("confirmar").notEmpty().withMessage("Debes completar nuevamente la contraseña elegida"),

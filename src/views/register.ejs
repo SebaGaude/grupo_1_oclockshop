@@ -32,20 +32,30 @@
             </div>
             
             <div>
-                <input type="text" name="usuario" placeholder="Apellido" value="<%= locals.oldData ? oldData.usuario : null %>">
-                <% if (locals.errors && errors.usuario) { %>
+                <input type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                <% if (locals.errors && errors.apellido) { %>
                     <div class="errorMsg">
-                        <%= errors.usuario.msg %> 
+                        <%= errors.apellido.msg %> 
                     </div>
                 <% } %>
             </div>
             
             <div>
-                <input type="email" name="email" placeholder="Correo electrónico">
+                <input type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="errorMsg">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
             </div>
             <div>
                 <label>Ingresá una foto</label>
                 <input type="file" name="avatar">
+                <% if (locals.errors && errors.avatar) { %>
+                    <div class="errorMsg">
+                        <%= errors.avatar.msg %> 
+                    </div>
+                <% } %>
             </div>       
     
             <div>
