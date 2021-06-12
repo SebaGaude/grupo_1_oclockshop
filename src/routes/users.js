@@ -9,16 +9,16 @@ const { body } = require('express-validator');
 const multer = require('multer');
 
 const storage = multer.diskStorage({
-	destination: (req, file, cb) => {
-		cb(null, path.join(__dirname, "../../public/img/users"));
-	},
-	filename: (req, file, cb) => {
-		let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
-		cb(null, fileName);
-	}
-})
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, "../../public/img/users"));
 
-const uploadFile = multer({ storage });
+    },
+    filename: (req, file, cb) => {
+        const fileName = "user-" + Date.now() + path.extname(file.originalname);
+        cb(null, fileName);
+    }
+})
+const uploadFile = multer({ storage: storage });
 
 //-------VALIDACIONES---------
 const validateUserRegister = [
@@ -51,7 +51,7 @@ const validateUserRegister = [
 router.get('/register', usersController.register);
 
 // Procesar el registro
-router.post('/register', uploadFile.single('avatar'), usersController.processRegister);
+router.post('/register', uploadFile.single('avatar'), validateUserRegister, usersController.processRegister);
 
 // Formulario de login
 router.get('/login', usersController.login);
