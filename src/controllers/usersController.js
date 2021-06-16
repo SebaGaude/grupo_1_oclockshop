@@ -80,10 +80,19 @@ let usersControllers = {
                 }
             }
             if(usuarioALoguearse == undefined){
-                console.log(usuarioALoguearse);
+              /*  console.log(usuarioALoguearse);
                 return res.render("login", {errors: [
                     {msg: "Credenciales inválidas"}
-                ]});
+                ]});*/
+           
+                return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales son inválidas'
+                        }
+                    }
+                });
+           
             }
             req.session.usuarioLogueado =  usuarioALoguearse;
 
