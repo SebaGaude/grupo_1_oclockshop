@@ -80,6 +80,7 @@ let usersControllers = {
                 }
             }
             if(usuarioALoguearse == undefined){
+                console.log(usuarioALoguearse);
                 return res.render("login", {errors: [
                     {msg: "Credenciales inválidas"}
                 ]});
@@ -91,10 +92,13 @@ let usersControllers = {
 
             }
 
-            res.render("/");
+            res.redirect("/");
 
         }else{
-            res.render("login", {errors: errors.errors})
+            res.render("login", {
+                errors: errors.mapped(),
+                oldData: req.body
+            });
         }
 
     },
