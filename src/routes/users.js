@@ -26,7 +26,7 @@ const validateUserRegister = [
     body("apellido").notEmpty().withMessage("Debes completar el campo apellido"),
     body("email").notEmpty().withMessage("Debes completar con un email").bail().isEmail().withMessage("Debes completar un formato de email válido"),
     body("contraseña").notEmpty().withMessage("Debes elegir una contraseña"),
-    body("confirmar").notEmpty().withMessage("Debes completar nuevamente la contraseña elegida"),
+    //body("confirmar").notEmpty().withMessage("Debes completar nuevamente la contraseña elegida"),
     body("avatar").custom((value, {req})=>{
         let file = req.file;
         let acceptedExtensions = [".jpg", ".png", ".gif"];
@@ -45,6 +45,11 @@ const validateUserRegister = [
         return true;
     })
 ]
+const validateUserLogin = [
+    body("email").notEmpty().withMessage("Debes completar con un email").bail().isEmail().withMessage("Debes completar un formato de email válido"),
+    body("contraseña").notEmpty().withMessage("Debes elegir una contraseña"),
+    //body("confirmar").notEmpty().withMessage("Debes completar nuevamente la contraseña elegida"),
+]
 
 
 // Formulario de registro
@@ -57,7 +62,7 @@ router.post('/register', uploadFile.single('avatar'), usersController.processReg
 router.get('/login', usersController.login);
 
 // Procesar el login
-//router.post('/login', usersController.loginProcess);
+router.post('/login', validateUserLogin, usersController.processLogin);
 
 
 // Perfil de Usuario
