@@ -7,10 +7,12 @@ let usersControllers = {
 
     //mostrar formulario login------------
     login: function(req, res){
+           
         res.render("login");
     },
     //mostrar formulario register------------
     register: function (req, res){
+       
         res.render("register");
     },
     //Procesar la ruta POST del register
@@ -59,6 +61,8 @@ let usersControllers = {
     },
     //Procesar la ruta POST del login
     processLogin: function(req, res){
+       
+        
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
