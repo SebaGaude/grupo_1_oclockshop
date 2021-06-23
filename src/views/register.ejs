@@ -11,7 +11,7 @@
         
         <!-- Formulario de Registro-->
 
-        <form action="/" method="GET" class="form-login-register">
+        <form action="../users/register" method="POST" class="form-login-register" enctype="multipart/form-data">
                 
             <h2> 
                 ¡Bienvenido a O'Clock Shop!
@@ -22,31 +22,61 @@
             </h1>
 
             <div>
-                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+                <% if (locals.errors && errors.nombre) { %>
+                    <div class="errorMsg">
+                        <%= errors.nombre.msg %> 
+                    </div>
+                <% } %>
+            </div>
             </div>
             
             <div>
-                <input type="text" name="usuario" placeholder="Apellido" required>
+                <input type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                <% if (locals.errors && errors.apellido) { %>
+                    <div class="errorMsg">
+                        <%= errors.apellido.msg %> 
+                    </div>
+                <% } %>
             </div>
             
             <div>
-                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="errorMsg">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+            </div>
+            <div>
+                <label>Ingresá una foto</label>
+                <input type="file" name="avatar">
+                <% if (locals.errors && errors.avatar) { %>
+                    <div class="errorMsg">
+                        <%= errors.avatar.msg %> 
+                    </div>
+                <% } %>
             </div>       
     
             <div>
-                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <input type="password" name="contraseña" placeholder="Contraseña">
+                <% if (locals.errors && errors.contraseña) { %>
+                    <div class="errorMsg">
+                        <%= errors.contraseña.msg %> 
+                    </div>
+                <% } %>
             </div>
             
-            <div>
-                <input type="password" name="confirmar" placeholder="Confirmar contraseña" required>
-            </div>
+            <!--<div>
+                <input type="password" name="confirmar" placeholder="Confirmar contraseña">
+            </div> -->
             
             <!-- Botón "enviar"-->
 
             <button type="submit" class="boton-crear-cuenta">CREAR CUENTA</button>
             
             <div class="terminos-condiciones">
-                <input type="checkbox" name="nombre" class="checkbox" required>
+                <input type="checkbox" name="nombre" class="checkbox">
                 <label>Al crear esta cuenta, acepto los <a href=""> Términos y Condiciones </a>  y la <a href=""> Política de Privacidad </a> de la tienda.</label>
             </div>
                 

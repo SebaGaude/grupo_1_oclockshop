@@ -607,6 +607,12 @@ h3{
     font-family: Helvetica, sans-serif;
     margin: auto;
 }
+.errorMsg{
+    color:#f3600b;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 1px;
+}
 /* -------------------------------------Fin configuracion login/registro ------------------------------------------ */
 
 /* -------------------------------------------Configuracion quiz--------------------------------------------------- */ 
