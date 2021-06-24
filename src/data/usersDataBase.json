@@ -17,10 +17,18 @@
     },
     {
         "id": 3,
+<<<<<<< HEAD
         "nombre": "Juan",
         "apellido": "Iribarren",
         "email": "jm@gmail.com",
         "avatar": "user-1624405798783.jpg",
         "contraseña": "$2a$10$S3p3lK4uE7D9fvZRU.pAsuG/XkTyrK/lea06P/1c4Q.u7wuIdkpUm"
+=======
+        "nombre": "Juancito",
+        "apellido": "Tapia",
+        "email": "un@email2.com",
+        "avatar": "user-1624481499701.jpg",
+        "contraseña": "$2a$10$SplkNRr2Bagr1BrS.MARO.zOvKipIPH.qru00bOw05hXM9mwsaNKq"
+>>>>>>> 8bc133b1379d0808b5cb18785dfd504c67e745f1
     }
 ]
