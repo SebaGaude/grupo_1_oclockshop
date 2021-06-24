@@ -16,6 +16,7 @@ let usersControllers = {
         res.render("register");
     },
     //Procesar la ruta POST del register
+   
     processRegister: function(req, res){
         let errors = validationResult(req);
 
@@ -60,6 +61,7 @@ let usersControllers = {
        }
     },
     //Procesar la ruta POST del login
+    
     processLogin: function(req, res){
        
         
@@ -94,9 +96,12 @@ let usersControllers = {
                 });
            
             }
-            req.session.usuarioLogueado =  usuarioALoguearse;
+            
+            //req.session.usuarioLogueado =  usuarioALoguearse;
 
-            if(req.body.recordame != undefined){
+            if(req.body.recordarme){
+               
+                
                 res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000 });
 
             }

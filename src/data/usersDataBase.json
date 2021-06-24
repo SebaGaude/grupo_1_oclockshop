@@ -14,5 +14,13 @@
         "email": "",
         "avatar": "1623370848621_img.jpg",
         "contraseña": "$2a$10$18zXCT9EiMcsVqmebyCHg.Qbyw5s3F27oaAXY2DDDpExahLjnNcWu"
+    },
+    {
+        "id": 3,
+        "nombre": "Juan",
+        "apellido": "Iribarren",
+        "email": "jm@gmail.com",
+        "avatar": "user-1624405798783.jpg",
+        "contraseña": "$2a$10$S3p3lK4uE7D9fvZRU.pAsuG/XkTyrK/lea06P/1c4Q.u7wuIdkpUm"
     }
 ]
