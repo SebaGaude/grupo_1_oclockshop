@@ -97,7 +97,7 @@ let usersControllers = {
            
             }
             
-            //req.session.usuarioLogueado =  usuarioALoguearse;
+            req.session.usuarioLogueado =  usuarioALoguearse;
 
             if(req.body.recordarme){
                
