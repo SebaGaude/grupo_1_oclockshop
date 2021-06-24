@@ -17,13 +17,10 @@
     },
     {
         "id": 3,
-        "nombre": [
-            "sebastian",
-            "on"
-        ],
-        "apellido": "gaudelli",
-        "email": "gaudellisebastian@yahoo.com",
-        "avatar": "user-1624569978620.jpg",
-        "contraseña": "$2a$10$hCGZisHx3pHVoI1jMGqAzO8wzLPy0imkDWaoLh/DR5nbq7xtDzOxS"
+        "nombre": "Juancito",
+        "apellido": "Tapia",
+        "email": "un@email2.com",
+        "avatar": "user-1624481499701.jpg",
+        "contraseña": "$2a$10$SplkNRr2Bagr1BrS.MARO.zOvKipIPH.qru00bOw05hXM9mwsaNKq"
     }
 ]
