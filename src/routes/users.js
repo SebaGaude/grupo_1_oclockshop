@@ -66,7 +66,7 @@ router.post('/login', validateUserLogin, usersController.processLogin);
 
 
 // Perfil de Usuario
-//router.get('/profile/', usersController.profile);
+router.get('/profile/', usersController.profile);
 
 // Logout
 //router.get('/logout/', usersController.logout);

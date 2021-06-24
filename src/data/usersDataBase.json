@@ -14,5 +14,16 @@
         "email": "",
         "avatar": "1623370848621_img.jpg",
         "contraseña": "$2a$10$18zXCT9EiMcsVqmebyCHg.Qbyw5s3F27oaAXY2DDDpExahLjnNcWu"
+    },
+    {
+        "id": 3,
+        "nombre": [
+            "sebastian",
+            "on"
+        ],
+        "apellido": "gaudelli",
+        "email": "gaudellisebastian@yahoo.com",
+        "avatar": "user-1624569978620.jpg",
+        "contraseña": "$2a$10$hCGZisHx3pHVoI1jMGqAzO8wzLPy0imkDWaoLh/DR5nbq7xtDzOxS"
     }
 ]

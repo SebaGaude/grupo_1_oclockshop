@@ -111,6 +111,11 @@ let usersControllers = {
         }
 
     },
+    profile: function(req, res){
+        return res.render('userProfile', {
+			user: req.session.usuarioLogueado
+		});
+    }
 
 
 }
