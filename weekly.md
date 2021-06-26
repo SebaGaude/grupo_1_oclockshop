@@ -11,5 +11,11 @@ Cada miembro del grupo que se encargo de alguna tarea se explayo sobre la misma.
 ------------------------------------
 Entrega sprint 4 (Viernes 04/06)
 
-- Las reuniones fueron una puesta en común sobre los conocimientos que cada participante podía aportar para la resoluciones de las consignas. Llevamos a cabo una peer coding, donde cada integrante se encargó de codear e implementar el tramo en el que se sentía mas confiado, y el resto observaba y aportaba ideas y posibles soluciones. Entre todos avanzamos con las consignas y reforzamos los conocimientos que teniamos individualmente de manera colectiva.
+- Las reuniones fueron una puesta en común sobre los conocimientos que cada participante podía aportar para la resoluciones de las consignas. Llevamos a cabo una pair coding, donde cada integrante se encargó de codear e implementar el tramo en el que se sentía mas confiado, y el resto observaba y aportaba ideas y posibles soluciones. Entre todos avanzamos con las consignas y reforzamos los conocimientos que teniamos individualmente de manera colectiva.
 
+------------------------------------
+Entrega sprint 5 (MArtes 29/06)
+
+- Seguimos avanzando con el pair coding, para poner en comun los conocimientos que todos tenemos sobre los temas demandados para el sprint.
+  Luego de la primer reunion, concluimos con que habia que reforzar un poco los temas vistos para poder avanzar sobre la resolución, asi que luego de intentar por un rato, concluimos con que era mejor pactar una nueva reunion, a la cual acudiríamos habiendo vuelto a ver el proyecto creado por Javi del proceso de login y alta de usuario.
+  Ya habiendo repasado eso, pudimos avanzar en el desarrollo del proyecto.
