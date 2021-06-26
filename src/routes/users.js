@@ -51,6 +51,12 @@ const validateUserLogin = [
     //body("confirmar").notEmpty().withMessage("Debes completar nuevamente la contraseña elegida"),
 ];
 
+// Middlewares
+
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+
+
 
 // Formulario de registro
 router.get('/register', usersController.register);
@@ -59,14 +65,14 @@ router.get('/register', usersController.register);
 router.post('/register', uploadFile.single('avatar'), validateUserRegister, usersController.processRegister);
 
 // Formulario de login
-router.get('/login', usersController.login);
+router.get('/login',guestMiddleware, usersController.login);
 
 // Procesar el login
 router.post('/login', validateUserLogin, usersController.processLogin);
 
 
 // Perfil de Usuario
-//router.get('/profile/', usersController.profile);
+router.get('/profile/', usersController.profile);
 
 // Logout
 //router.get('/logout/', usersController.logout);
