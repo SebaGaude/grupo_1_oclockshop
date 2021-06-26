@@ -61,7 +61,7 @@ const validateUserRegister = require('../middlewares/validateUserRegister');
 const validateUserLogin = require('../middlewares/validateUserLogin');
 
 // Formulario de registro
-router.get('/register', usersController.register);
+router.get('/register',guestMiddleware, usersController.register);
 
 // Procesar el registro
 router.post('/register', uploadFile.single('avatar'), validateUserRegister, usersController.processRegister);
@@ -74,9 +74,9 @@ router.post('/login', validateUserLogin, usersController.processLogin);
 
 
 // Perfil de Usuario
-router.get('/profile/', usersController.profile);
+router.get('/profile', authMiddleware,usersController.profile);
 
 // Logout
-//router.get('/logout/', usersController.logout);
+router.get('/logout', usersController.logout);
 
 module.exports = router;

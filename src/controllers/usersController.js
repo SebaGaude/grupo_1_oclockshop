@@ -97,7 +97,9 @@ let usersControllers = {
            
             }
             
+            /*el usuario logueado con todos sus datos queda en req.session.usuarioLogueado */
             req.session.usuarioLogueado =  usuarioALoguearse;
+            console.log(req.session);
 
             if(req.body.recordarme){
                
@@ -106,7 +108,8 @@ let usersControllers = {
 
             }
 
-            res.redirect("/");
+            /*si esta bien logueado va al profile*/
+            res.redirect("/users/profile");
 
         }else{
             res.render("login", {
@@ -116,11 +119,19 @@ let usersControllers = {
         }
 
     },
+    
     profile: function(req, res){
         return res.render('userProfile', {
 			user: req.session.usuarioLogueado
 		});
-    }
+    },
+
+    logout: function(req, res){
+		//res.clearCookie('userEmail');
+		req.session.destroy(); /*borra todo lo que esta en SESSION*/
+        console.log(req.session);
+		res.redirect('/');
+	}
 
 
 }
