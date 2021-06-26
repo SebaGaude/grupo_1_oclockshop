@@ -10,7 +10,6 @@ const methodOverride = require("method-override");
 
 const app = express();
 
-const { start } = require("repl");
 
 const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
