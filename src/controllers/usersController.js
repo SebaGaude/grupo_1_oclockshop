@@ -16,6 +16,7 @@ let usersControllers = {
         res.render("register");
     },
     //Procesar la ruta POST del register
+   
     processRegister: function(req, res){
         let errors = validationResult(req);
 
@@ -60,6 +61,7 @@ let usersControllers = {
        }
     },
     //Procesar la ruta POST del login
+    
     processLogin: function(req, res){
        
         
@@ -94,14 +96,20 @@ let usersControllers = {
                 });
            
             }
+            
+            /*el usuario logueado con todos sus datos queda en req.session.usuarioLogueado */
             req.session.usuarioLogueado =  usuarioALoguearse;
+            console.log(req.session);
 
-            if(req.body.recordame != undefined){
+            if(req.body.recordarme){
+               
+                
                 res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000 });
 
             }
 
-            res.redirect("/");
+            /*si esta bien logueado va al profile*/
+            res.redirect("/users/profile");
 
         }else{
             res.render("login", {
@@ -111,6 +119,19 @@ let usersControllers = {
         }
 
     },
+    
+    profile: function(req, res){
+        return res.render('userProfile', {
+			user: req.session.usuarioLogueado
+		});
+    },
+
+    logout: function(req, res){
+		//res.clearCookie('userEmail');
+		req.session.destroy(); /*borra todo lo que esta en SESSION*/
+        console.log(req.session);
+		res.redirect('/');
+	}
 
 
 }

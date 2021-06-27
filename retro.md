@@ -38,3 +38,15 @@ Sprint 3
 4. Hacer menos: avanzar en el proyecto sin organizar las tareas. Dependiendo del sprint, en algunos casos los entregables se vuelven más complejos, con lo cual se requiere el trabajo de más de una persona. Intentar coordinar el esfuerzo en estos escenarios.
 
 5. Dejar de hacer: no incluir los componentes de los demás sprints a los actuales. Es decir, evitar concentrarse solo en los entregables de los sprints, sin tener presente los anteriores (que se van vinculando con los actuales) o incluso con las potenciales herramientas a ser utilizadas en el avance del curso. 
+---
+Sprint 4
+---
+1. Comenzar a hacer: luego de las reuniones periódicas y el "pair coding" entre todos, limpiar las inconsistencias y pulir el código para que quede más ordenado y legible. 
+
+2. Hacer más: revisar todas las consignas, con detenimiento, al iniciar el sprint, para evitar problemas de organización durante el camino.
+
+3. Continuar haciendo: el "pair coding", en el se genera una buena sinergia de equipo, tanto en términos de trabajo y avance del proyecto, como en términos de aprendizaje recíproco entre los miembros.
+
+4. Hacer menos: dejar algunas consignas o entregables para los últimos días del sprint. Idealmente, los últimos días deberían ser solo para pulir detalles.
+
+5. Dejar de hacer: ir organizando el trabajo en la medida que avanza el sprint, dependiendo de cómo vayamos desarrollando el contenido de cada entregable. Esto, muchas veces, nos saca eficiencia como equipo. 

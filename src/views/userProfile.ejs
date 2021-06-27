@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head'); %>
+<body>
+    <%- include('partials/header'); %>
+	
+	<!-- Container -->
+	<div class="container">
+		<div>
+			<div>
+				<div class="sign-in"> <a href="/users/logout">Logout</div>
+                    
+				<h2>Hola <%= user.fullName %> </h2>
+				<img src="/img/users/<%= user.avatar %> ">
+				<br>
+				<br>
+				<div><%= user.email %> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //Container -->
+	
+	<%- include('partials/footer'); %>
+</body>
+</html>
+
