@@ -22,6 +22,7 @@ body{
     box-sizing: border-box;
     width: 100%;
     font-family: 'Ubuntu', sans-serif;
+
 }
 /* ----------------------------------------------Configuracion Header-----------------------------------------------*/
 
@@ -85,7 +86,7 @@ header{
 }
 
 .menu{
-    width: 85%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,6 +107,7 @@ header{
     color: #666;
     box-sizing: content-box;
     border: none;
+    outline: none
 }
 
 .busqueda button{
@@ -120,6 +122,24 @@ header{
     border: none;
     padding: 2px 1vw;
     width: 4vw;
+}
+
+.container-header{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.container-header span{
+    font-size: 12px;
+    margin: auto 0;
+}
+
+.container-header img{
+    margin: 1vh 0.5vw;
+    width: 40%;
+    border-radius: 5px;
 }
 
 .mobile{
@@ -210,9 +230,11 @@ header{
 footer{
     background-color: #adadad;
     font-size: 12px;
+    margin-top: 2vh;
     border-bottom: solid 1vh #adadad;
     width: 100%;
     box-sizing: border-box;
+
 }
 
 footer p{
@@ -1536,3 +1558,28 @@ section div ul li a{
         flex-direction:row;
         width:100%;
     }}
+
+
+/* --------------------------------------------Fin configuracion Queries --------------------------------------------*/
+
+/* --------------------------------------------- Configuracion Profile -------------------------------------------- */
+
+.logout{
+    text-align: right;
+    margin-top: 1vh;
+}
+
+.logout a{
+    margin-right: 3vw;
+}
+
+.container img{
+    margin: 1vh 2vw;
+    width: 15%;
+    border-radius: 5px;
+}
+
+.user-mail{
+    margin-left: 2vw;
+    margin-bottom: 20vh;
+}
