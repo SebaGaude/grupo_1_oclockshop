@@ -99,8 +99,7 @@ let usersControllers = {
             
             /*el usuario logueado con todos sus datos queda en req.session.usuarioLogueado */
             req.session.usuarioLogueado =  usuarioALoguearse;
-            console.log(req.session);
-
+            
             if(req.body.recordarme){
                
                 

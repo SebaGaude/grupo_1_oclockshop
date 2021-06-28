@@ -1,7 +1,9 @@
 <header>
     <div class="top">
         <nav class="top1">
-            <p class="español"> Español </p> <p> | </p> <p class="ingles"> English </p>
+            <p class="español"> Español </p>
+            <p> | </p>
+            <p class="ingles"> English </p>
         </nav>
         <nav class="contact-us">
             <p>Contactanos</p>
@@ -9,10 +11,10 @@
     </div>
     <div class="header1">
         <nav class="logo">
-             <a href="/"><img src="/img/oclockshop-logo-alta.png" alt="Logo OclockShop"></a>
-            </nav>
-             <nav class="menu">
-                 <form action="/resultados-de-busqueda" method="GET" class="busqueda">
+            <a href="/"><img src="/img/oclockshop-logo-alta.png" alt="Logo OclockShop"></a>
+        </nav>
+        <nav class="menu">
+            <form action="/resultados-de-busqueda" method="GET" class="busqueda">
                 <input type="text" placeholder="Buscar productos" class="busqueda-input">
                 <button><i class="fas fa-search"></i></button>
             </form>
@@ -31,20 +33,34 @@
         <nav class="desplegable">
             <nav class="fijo">
                 <p><a href="../products">Productos</a></p>
-                <a href=""><p>Categorías</p></a>
-                <a href=""><p>Ofertas</p></a>
-                <a href="/quiz"><p>Quiz</p></a>
+                <a href="">
+                    <p>Categorías</p>
+                </a>
+                <a href="">
+                    <p>Ofertas</p>
+                </a>
             </nav>
             <nav class="carrito">
-                <div class="registration">
-                    <a href="/users/register"><p>Registrate</p></a>
-                </div>
-                <div class="sign-in">
-                    <a href="/users/login"><p>Ingresá</p></a>
-                </div>
-                <div class="carro">
-                    <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
-                </div>
+                <% if (locals.isLogged) { %>
+                    <div>
+                        <img src="/img/users/<%= locals.usuarioLogueado.avatar %>" width="40" style="border-radius: 100%;">
+                        Hola <%= locals.usuarioLogueado.nombre %>
+                    </div>
+                    <% } else { %>
+                        <div class="registration">
+                            <a href="/users/register">
+                                <p>Registrate</p>
+                            </a>
+                        </div>
+                        <div class="sign-in">
+                            <a href="/users/login">
+                                <p>Ingresá</p>
+                            </a>
+                        </div>
+                        <% } %>
+                            <div class="carro">
+                                <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
+                            </div>
             </nav>
         </nav>
     </div>
