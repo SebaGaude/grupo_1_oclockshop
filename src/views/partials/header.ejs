@@ -42,9 +42,9 @@
             </nav>
             <nav class="carrito">
                 <% if (locals.isLogged) { %>
-                    <div>
-                        <img src="/img/users/<%= locals.usuarioLogueado.avatar %>" width="40" style="border-radius: 100%;">
-                        Hola <%= locals.usuarioLogueado.nombre %>
+                    <div class="header-user">
+                        <img src="/img/users/<%= locals.usuarioLogueado.avatar %>"  class = "imagen-header">
+                        <a href="/users/profile"> Hola,  <%= locals.usuarioLogueado.nombre %></a>
                     </div>
                     <% } else { %>
                         <div class="registration">

@@ -207,6 +207,7 @@ header{
     display: flex;
     justify-content: flex-end;
     width: 25%;
+    align-items: flex-end;
 }
 
 .carrito a{
@@ -218,10 +219,23 @@ header{
     box-sizing: border-box;
     text-align: center;
     transition: transform 0.5s;
+    
 }
 
 .carro:hover{
     transform: scale(1.5,1.5);
+}
+
+.header-user {
+    display: flex;
+}
+.header-user a {
+    text-align: center;
+}
+
+.imagen-header {
+    width: 40px;
+    border-radius: 100%;
 }
 
 /* ---------------------------------------Fin Configuracion Header-------------------------------------------*/
