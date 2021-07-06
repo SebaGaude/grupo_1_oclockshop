@@ -128,7 +128,6 @@ let usersControllers = {
     logout: function(req, res){
 		//res.clearCookie('userEmail');
 		req.session.destroy(); /*borra todo lo que esta en SESSION*/
-        console.log(req.session);
 		res.redirect('/');
 	}
 
