@@ -3,31 +3,33 @@ module.exports = function (sequelize, datatypes) {
 
     let cols = {
         id: {
-
+            type = dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
         }, 
 
         articulo: {
-
+            type: dataTypes.STRING(255)
         },
 
         descripcion: {
-
+            type: dataTypes.STRING(255)
         }, 
 
         id_categoria: {
-
+            type = dataTypes.INTEGER,
         }, 
 
         id_marca: {
-
+            type = dataTypes.INTEGER,
         },
 
         stock: {
-
+            type = dataTypes.INTEGER,
         }, 
 
         precio: {
-            
+            type = dataTypes.DECIMAL(10,2),
         }
     };
     

@@ -10,11 +10,12 @@ module.exports = function (sequelize, dataTypes) {
         },
         
         nombre: {
-
+            type: dataTypes.STRING(255),
+            allowNull: false
         },
 
         descripcion: {
-
+            type: dataTypes.TEXT(10000),
         },
     };
 

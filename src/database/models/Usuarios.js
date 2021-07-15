@@ -10,23 +10,28 @@ module.exports = function (sequelize, dataTypes) {
         },
         
         nombre: {
-
+            type = dataTypes.STRING(255),
+            allowNull: false
         },
 
         apellido: {
-
+            type = dataTypes.STRING(255),
+            allowNull: false
         }, 
 
         email: {
-
+            type = dataTypes.STRING(255),
+            allowNull: false,
+            unique: true
         },
 
         imagen: {
-
+            type = dataTypes.STRING(255)
         }, 
 
         contrasenia: {
-
+            type = dataTypes.STRING(255),
+            allowNull: false
         }
     };
 

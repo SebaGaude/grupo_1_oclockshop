@@ -6,19 +6,20 @@ module.exports = function (sequelize, dataTypes) {
         id: {
             type = dataTypes.INTEGER,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true, 
         },
         
         fecha: {
-
+            type = dataTypes.DATE,
         },
 
         total: {
-
+            type = dataTypes.DECIMAL(10,2),
         },
 
         id_usuario: {
-
+            type = dataTypes.INTEGER,
         },
     };
 
@@ -30,6 +31,7 @@ module.exports = function (sequelize, dataTypes) {
     let Venta = define.sequelize(alias, cols, config);
 
     Venta.associate = function(modelos) {
+
         Venta.hasMany(modelos.Usuario, {
             as: "usuarios",
             foreignKey: "id_usuario_idx"
