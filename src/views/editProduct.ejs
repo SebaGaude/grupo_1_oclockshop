@@ -41,16 +41,51 @@
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese la nueva categoria si desea modificarla</label>
-                        <input type="text" name="categoria" value="<%= product.categoria %>" class="ticks">
+                        <select name="categoria" class="ticks">
+                            <% for (let i=0; i<categorias.length; i++)  {%>
+                      
+                                <% if (marcas[i].id == product.id_categoria){ %>
+
+                                    <option value="<%=categorias[i].id %>" selected>
+                                     <%=marcas[i].nombre%>
+                                 </option>
+
+                                <% }   else {%>
+                                    <option value="<%=categorias[i].id %>">
+                                     <%=categorias[i].nombre%>
+                                 </option>
+
+                                    <% }  %>
+                                
+                                 <%} %>
+                       </select>         
+                    
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese nueva cantidad en stock si asi lo desea</label>
                         <input type="number" name="stock" placeholder="cantidad..." class="ticks">
                     </div>
                     <div class="control-formulario">
-                        <label class="preguntas-form"> Ingrese nueva marca y modelo del articulo si desea
+                        <label class="preguntas-form"> Ingrese nueva marca del articulo si desea
                             modificarlo</label>
-                        <input type="text" name="marca" value="<%= product.marca %>" class="ticks">
+                            <select name="marca" class="ticks">
+                                <% for (let i=0; i<marcas.length; i++)  {%>
+                          
+                                    <% if (marcas[i].id == product.id_marca){ %>
+
+                                        <option value="<%=marcas[i].id %>" selected>
+                                         <%=marcas[i].nombre%>
+                                     </option>
+
+                                    <% }   else {%>
+                                        <option value="<%=marcas[i].id %>">
+                                         <%=marcas[i].nombre%>
+                                     </option>
+
+                                        <% }  %>
+                                    
+                                     <%} %>
+                           </select>         
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form">Ingrese el nuevo precio del articulo si desea modificarla</label>

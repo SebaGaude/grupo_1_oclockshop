@@ -59,14 +59,42 @@ let productsController = {
    
     editProduct: function(req, res){
         
+        let listadoCategorias = db.Categoria.findAll();
+        let listadorMarcas = db.Marca.findAll();
+        let productoId = db.Producto.findByPk(req.params.id)
+
+        Promise.all([listadoCategorias, listadorMarcas, productoId])
         
-        res.render("editProduct", {product});
+        .then(function([categorias, marcas, product]){
+        
+            res.render("editProduct", {categorias, marcas, product});
+            
+        })
+        
+        
+
+
+        
+        
     },
    
    
     updateProduct: function(req, res){
        
-         res.redirect("/");
+        db.Producto.update ({
+            articulo: req.body.articulo,
+            descripcion: req.body.descripcion,
+            id_categoria: req.body.categoria,
+            stock: req.body.stock,
+            //imagen: req.file.filename,
+            id_marca: req.body.marca,
+            precio: req.body.precio
+        },{ where: {
+            id: req.params.id}
+        
+        });
+
+         return res.redirect("/");
     },
 
     
