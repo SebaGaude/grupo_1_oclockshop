@@ -23,10 +23,14 @@ let productsController = {
     
     newProduct: function (req, res) {
         
-        categorias= db.Categoria.findAll()
-        .then(function(categorias){
+        let listadoCategorias = db.Categoria.findAll();
+        let listadorMarcas = db.Marca.findAll();
         
-        res.render("newProduct", {categorias : categorias}  );
+        Promise.all([listadoCategorias, listadorMarcas])
+        
+        .then(function([categorias, marcas]){
+        
+        res.render("newProduct", {categorias , marcas});
             
         })
         

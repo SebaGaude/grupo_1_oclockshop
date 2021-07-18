@@ -19,12 +19,12 @@ module.exports = function (sequelize, dataTypes) {
         },
     };
 
-    let config = {
-        tablename: "categoria",
+    const config = {
+        tableName: "categoria",
         timestamps: false,
     };
 
-    let Categoria = sequelize.define (alias, cols, config);
+    const Categoria = sequelize.define (alias, cols, config);
     
     Categoria.associate = function(modelos) {
         Categoria.hasMany(modelos.Producto, {

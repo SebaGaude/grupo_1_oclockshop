@@ -50,7 +50,14 @@
                         </div>
                         <div class="control-formulario">
                             <label class="preguntas-form"> Ingrese la marca del articulo</label>
-                            <input type="text" name="marca" placeholder="marca del articulo" class="ticks" >
+                            <select name="marca" class="ticks">
+                                <% for (let i=0; i<marcas.length; i++)  {%>
+                          
+                                     <option value="<%=marcas[i].id %>">
+                                         <%=marcas[i].nombre%>
+                                     </option>
+                                     <%} %>
+                           </select>                       
                         </div>
                         <div class="control-formulario">
                             <label class="preguntas-form">Ingrese el precio del articulo</label>

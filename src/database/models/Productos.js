@@ -33,31 +33,34 @@ module.exports = function (sequelize, dataTypes) {
         }
     };
     
-    let config = {
+    const config = {
 
         tableName:'producto',
         timestamps: false
 
     };
 
-    let Producto = sequelize.define(alias, cols, config);
+    const Producto = sequelize.define(alias, cols, config);
 
     Producto.associate = function(modelos) {
+        
         Producto.belongsTo(modelos.Categoria, {
-            as: "categorias",
+            as: "categoria",
             foreignKey: "id_categoria"
         })
+        
         Producto.belongsTo(modelos.Marca, {
-            as: "marcas",
+            as: "marca",
             foreignKey: "id_marca"
-        });
+        })
+       
         Producto.belongsToMany(modelos.Venta, {
             as: "ventas",
             through: "detalle_venta",
             foreignKey: "id_venta",
             otherKey: "id_producto", 
             timestamps: false,
-        });
+        })
     }
 
     return Producto;
