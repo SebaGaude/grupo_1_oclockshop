@@ -4,7 +4,7 @@ module.exports = function (sequelize, dataTypes) {
 
     let cols = {
         id: {
-            type = dataTypes.INTEGER,
+            type : dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true, 
         },
@@ -19,11 +19,11 @@ module.exports = function (sequelize, dataTypes) {
     };
 
     let config = {
-        tablename: "marcas",
+        tablename: "marca",
         timestamps: false,
     };
     
-    let Marca = define.sequelize(alias, cols, config);
+    let Marca = sequelize.define (alias, cols, config);
 
     Marca.associate = function(modelos) {
         Marca.belongsTo(modelos.Producto, {

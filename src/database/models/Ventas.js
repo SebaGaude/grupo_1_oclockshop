@@ -4,31 +4,31 @@ module.exports = function (sequelize, dataTypes) {
 
     let cols = {
         id: {
-            type = dataTypes.INTEGER,
+            type : dataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true, 
         },
         
         fecha: {
-            type = dataTypes.DATE,
+            type : dataTypes.DATE,
         },
 
         total: {
-            type = dataTypes.DECIMAL(10,2),
+            type : dataTypes.DECIMAL(10,2),
         },
 
         id_usuario: {
-            type = dataTypes.INTEGER,
+            type : dataTypes.INTEGER,
         },
     };
 
     let config = {
-        tablename: "ventas",
+        tablename: "venta",
         timestamps: false,
     };
     
-    let Venta = define.sequelize(alias, cols, config);
+    let Venta = sequelize.define(alias, cols, config);
 
     Venta.associate = function(modelos) {
 

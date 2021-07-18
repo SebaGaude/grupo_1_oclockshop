@@ -1,9 +1,9 @@
-module.exports = function (sequelize, datatypes) {
+module.exports = function (sequelize, dataTypes) {
     let alias = 'Producto';
 
     let cols = {
         id: {
-            type = dataTypes.INTEGER,
+            type : dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         }, 
@@ -17,30 +17,33 @@ module.exports = function (sequelize, datatypes) {
         }, 
 
         id_categoria: {
-            type = dataTypes.INTEGER,
+            type : dataTypes.INTEGER,
         }, 
 
         id_marca: {
-            type = dataTypes.INTEGER,
+            type : dataTypes.INTEGER,
         },
 
         stock: {
-            type = dataTypes.INTEGER,
+            type : dataTypes.INTEGER,
         }, 
 
         precio: {
-            type = dataTypes.DECIMAL(10,2),
+            type : dataTypes.DECIMAL(10,2),
         }
     };
     
     let config = {
+
+        tableName:'producto',
+        timestamps: false
 
     };
 
     let Producto = sequelize.define(alias, cols, config);
 
     Producto.associate = function(modelos) {
-        Producto.hasMany(modelos.Categoria, {
+        Producto.belongsTo(modelos.Categoria, {
             as: "categorias",
             foreignKey: "id_categoria"
         })

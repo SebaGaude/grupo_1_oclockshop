@@ -1,5 +1,90 @@
-const fs = require("fs");
+const db = require ("../database/models")
+
+
+
+let productsController = {
+  
+    products: function (req, res) {
+        res.render("products");
+    },
+   
+   
+    productDetail: function (req, res) {
+       
+        
+        res.render("productDetail", {"product": oneProduct});
+    },
+    
+    
+    productCart: function (req, res) {
+        res.render("productCart");
+    },
+    
+    
+    newProduct: function (req, res) {
+        
+       categorias= db.Categoria.findAll()
+            .then(function(categorias){
+            
+            res.render("newProduct", {categorias : categorias}  );
+                
+            })
+        
+        },
+    
+    store: function (req, res) {
+
+        db.Producto.create({
+
+      
+            
+            articulo: req.body.articulo,
+            descripcion: req.body.descripcion,
+            id_categoria: req.body.categoria,
+            stock: req.body.stock,
+            //imagen: req.file.filename,
+            id_marca: req.body.marca,
+            precio: req.body.precio
+        
+        })
+       
+
+        res.redirect("/");
+
+    },
+   
+    editProduct: function(req, res){
+        
+        
+        res.render("editProduct", {product});
+    },
+   
+   
+    updateProduct: function(req, res){
+       
+         res.redirect("/");
+    },
+
+    
+    destroy: function (req, res){
+      
+        
+      res.redirect('/');
+    }
+
+};
+
+module.exports = productsController;
+
+
+
+
+
+/*productsController con JSON*/
+
+/*const fs = require("fs");
 const path = require("path");
+
 
 let productsController = {
   
@@ -112,4 +197,4 @@ let productsController = {
 
 };
 
-module.exports = productsController;
+module.exports = productsController;*/
