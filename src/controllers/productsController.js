@@ -23,12 +23,12 @@ let productsController = {
     
     newProduct: function (req, res) {
         
-       categorias= db.Categoria.findAll()
-            .then(function(categorias){
+        categorias= db.Categoria.findAll()
+        .then(function(categorias){
+        
+        res.render("newProduct", {categorias : categorias}  );
             
-            res.render("newProduct", {categorias : categorias}  );
-                
-            })
+        })
         
         },
     

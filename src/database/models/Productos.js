@@ -47,7 +47,7 @@ module.exports = function (sequelize, dataTypes) {
             as: "categorias",
             foreignKey: "id_categoria"
         })
-        Producto.hasMany(modelos.Marca, {
+        Producto.belongsTo(modelos.Marca, {
             as: "marcas",
             foreignKey: "id_marca"
         });
