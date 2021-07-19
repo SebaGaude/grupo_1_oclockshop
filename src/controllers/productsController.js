@@ -11,8 +11,17 @@ let productsController = {
    
     productDetail: function (req, res) {
        
+        let listadoCategorias = db.Categoria.findAll();
+        let listadorMarcas = db.Marca.findAll();
+        let productoId = db.Producto.findByPk(req.params.id)
+
+        Promise.all([listadoCategorias, listadorMarcas, productoId])
         
-        res.render("productDetail", {"product": oneProduct});
+        .then(function([categorias, marcas, product]){
+        
+            res.render("productDetail", {categorias, marcas, product});
+        
+        })
     },
     
     
