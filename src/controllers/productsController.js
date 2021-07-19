@@ -99,11 +99,13 @@ let productsController = {
 
     
     destroy: function (req, res){
-      
-        
-      res.redirect('/');
-    }
 
+        db.Producto.destroy ({
+            where: {
+                id: req.params.id}
+      
+         })
+    return res.redirect('/');}
 };
 
 module.exports = productsController;
