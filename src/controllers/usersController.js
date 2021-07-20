@@ -2,6 +2,7 @@ const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
+const db = require ("../database/models");
 
 let usersControllers = {
 
@@ -124,7 +125,32 @@ let usersControllers = {
 			user: req.session.usuarioLogueado
 		});
     },
+    editProfile: function(req, res){
+        
+        let userId = db.Usuario.findByPk(req.params.id)
 
+        // Promise.all(userId)
+        
+        .then(function(user){
+        
+            res.render("editUserProfile", {user: user});
+            
+        })        
+        
+    },
+    updateProfile: function(req, res){
+       
+        db.Usuario.update ({
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+        },{ where: {
+            id: req.params.id}
+        
+        });
+
+         return res.redirect("/");
+    },
+    
     logout: function(req, res){
 		res.clearCookie('userEmail');
 		req.session.destroy(); /*borra todo lo que esta en SESSION*/
