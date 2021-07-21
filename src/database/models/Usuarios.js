@@ -29,23 +29,23 @@ module.exports = function (sequelize, dataTypes) {
             type : dataTypes.STRING(255)
         }, 
 
-        contrasenia: {
+        contraseña: {
             type : dataTypes.STRING(255),
             allowNull: false
         }
     };
 
     let config = {
-        tablename: "usuario",
+        tableName: "usuario",
         timestamps: false,
     };
 
     let Usuario = sequelize.define(alias, cols, config);
 
     Usuario.associate = function(modelos) {
-        Usuario.belongsTo(modelos.Venta, {
-            as: "ventas",
-            foreignKey: "id_usuario_idx"
+        Usuario.hasMany(modelos.Venta, {
+            as: "Ventas",
+            foreignKey: "id_usuario"
         })
     }
     

@@ -7,8 +7,9 @@ const validateUserRegister = [
     body("email").notEmpty().withMessage("Debes completar con un email").bail().isEmail().withMessage("Debes completar un formato de email válido"),
     body("contraseña").notEmpty().withMessage("Debes elegir una contraseña"),
     //body("confirmar").notEmpty().withMessage("Debes completar nuevamente la contraseña elegida"),
+   
     body("avatar").custom((value, {req})=>{
-        let file = req.file;
+       let file = req.file;
         let acceptedExtensions = [".jpg", ".png", ".gif"];
         
         if(!file){
@@ -16,12 +17,12 @@ const validateUserRegister = [
         }else{
             let fileExtension = path.extname(file.originalname);
             if(!acceptedExtensions.includes(fileExtension)){
-                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`);
+         throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`);
 
-        }
+      }
 
 
-        }
+      }
         return true;
     })
 ]

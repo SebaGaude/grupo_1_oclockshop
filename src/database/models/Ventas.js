@@ -32,9 +32,9 @@ module.exports = function (sequelize, dataTypes) {
 
     Venta.associate = function(modelos) {
 
-        Venta.hasMany(modelos.Usuario, {
-            as: "usuarios",
-            foreignKey: "id_usuario_idx"
+        Venta.belongsTo(modelos.Usuario, {
+            as: "usuario",
+            foreignKey: "id_usuario"
         })
         Venta.belongsToMany(modelos.Producto, {
             as: "productos",

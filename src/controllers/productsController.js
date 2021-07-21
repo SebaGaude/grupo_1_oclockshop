@@ -78,12 +78,7 @@ let productsController = {
         
             res.render("editProduct", {categorias, marcas, product});
             
-        })
-        
-        
-
-
-        
+        })   
         
     },
    

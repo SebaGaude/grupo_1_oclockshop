@@ -30,7 +30,7 @@ const validateUserLogin = require('../middlewares/validateUserLogin');
 router.get('/register',guestMiddleware, usersController.register);
 
 // Procesar el registro
-router.post('/register', uploadFile.single('avatar'), validateUserRegister, usersController.processRegister);
+router.post('/register', uploadFile.single('imagen'), validateUserRegister, usersController.processRegister);
 
 // Formulario de login
 router.get('/login',guestMiddleware, usersController.login);
