@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head") %>
+
+    <body>
+
+        <%- include("partials/header.ejs") %>
+
+            <main class="main_edit">
+
+                <!-- Formulario de edicion del usuario-->
+
+
+
+                <form action="/profile/edit<%= usuarioLogueado.id %>?_method=PUT" method="POST"
+                    class="formulario-edicion-creacion">
+
+
+                    <h1 class="titulo-new-edit">
+                        Edicion de usuario: <%= usuarioLogueado.nombre + '' + usuarioLogueado.apellido %>
+                    </h1>
+
+                    <div class="control-formulario">
+                        <label class="preguntas-form"> Nombre </label>
+                        <input type="text" name="nombre" value="<%= usuarioLogueado.nombre %>" class="ticks" required>
+                    </div>
+                    <div class="control-formulario">
+                        <label class="preguntas-form"> Apellido </label>
+                        <input type="text" name="apellido" value="<%= usuarioLogueado.apellido %>" class="ticks" required>
+                    </div>
+
+                    
+                    <!-- <div class="control-formulario">
+                        <label class="preguntas-form"> Nueva/s imagen/es del producto </label>
+                        <input type="file" name="foto-del-producto" accept=".jpg, .png" multiple>
+                    </div> -->
+
+
+                    
+                    <!-- Boton de edit -->
+                    <div>
+
+                        <button type="submit" class="boton-envio">Guardar cambios</button>
+                    </div>
+                    <!-- ----------- -->
+                    
+                </form>
+                
+            </main>
+            <%- include("partials/footer.ejs") %>
+
+</html>

@@ -7,6 +7,7 @@
 	<!-- Container -->
 <div class="container">
 	<p class="logout"> 
+		<a href="/users/editProfile/<%= user.id %>">Editar Perfil</a>
 		<a href="/users/logout">Logout</a>
 	</p>
                     
@@ -14,6 +15,7 @@
 	<img src="/img/users/<%= user.avatar %> ">
 	<p class="user-mail"><%= user.email %> </p>
 </div>
+
 	<!-- //Container -->
 	
 	<%- include('partials/footer'); %>
