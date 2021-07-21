@@ -2,6 +2,9 @@ const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const db = require ("../database/models")
 
+const fs = require("fs")
+const path = require("path");
+
 let usersControllers = {
 
     //mostrar formulario login------------
@@ -44,19 +47,21 @@ let usersControllers = {
     },
     //Procesar la ruta POST del login
     
-    processLogin: function(req, res){
+     processLogin: function(req, res){
        
         
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
-            let usersJson = fs.readFileSync(path.join(__dirname, "../data/usersDatabase.json"), {encoding: "utf-8"});
-            let users;
-            if(usersJson == ""){
-                users = [];
-            }else{
-                users = JSON.parse(usersJson);
-            }
+            // let usersJson = fs.readFileSync(path.join(__dirname, "../data/usersDatabase.json"), {encoding: "utf-8"});
+            // let users;
+            // if(usersJson == ""){
+            //     users = [];
+            // }else{
+            //     users = JSON.parse(usersJson);
+            // }
+            
+
             let usuarioALoguearse;
             
             for(let i = 0; i<users.length; i++){
@@ -100,6 +105,62 @@ let usersControllers = {
         }
 
     },
+    // processLogin: function(req, res){
+       
+        
+    //     let errors = validationResult(req);
+
+    //     if(errors.isEmpty()){
+    //         let usersJson = fs.readFileSync(path.join(__dirname, "../data/usersDatabase.json"), {encoding: "utf-8"});
+    //         let users;
+    //         if(usersJson == ""){
+    //             users = [];
+    //         }else{
+    //             users = JSON.parse(usersJson);
+    //         }
+    //         let usuarioALoguearse;
+            
+    //         for(let i = 0; i<users.length; i++){
+    //             if(users[i].email == req.body.email){
+    //                 if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña)){
+    //                     usuarioALoguearse = users[i];
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //         if(usuarioALoguearse == undefined){
+           
+    //             return res.render('login', {
+    //                 errors: {
+    //                     email: {
+    //                         msg: 'Las credenciales son inválidas'
+    //                     }
+    //                 }
+    //             });
+           
+    //         }
+            
+    //         /*el usuario logueado con todos sus datos queda en req.session.usuarioLogueado */
+    //         req.session.usuarioLogueado =  usuarioALoguearse;
+            
+    //         if(req.body.recordarme){
+               
+                
+    //             res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000 });
+
+    //         }
+
+    //         /*si esta bien logueado va al profile*/
+    //         res.redirect("/users/profile");
+
+    //     }else{
+    //         res.render("login", {
+    //             errors: errors.mapped(),
+    //             oldData: req.body
+    //         });
+    //     }
+
+    // },
     
     profile: function(req, res){
         return res.render('userProfile', {
@@ -114,7 +175,7 @@ let usersControllers = {
 	}
 
 
-}
+};
 
     module.exports = usersControllers;
 
