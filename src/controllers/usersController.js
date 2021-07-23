@@ -23,8 +23,6 @@ let usersControllers = {
         
         let errors = validationResult(req);
 
-        console.log(errors)
-
        if(errors.isEmpty()){
            
                 db.Usuario.create({
@@ -45,134 +43,51 @@ let usersControllers = {
         });
        }
     },
-    //Procesar la ruta POST del login
-    
+    //*******************Procesar la ruta POST del login******************** 
      processLogin: function(req, res){
        
-        
         let errors = validationResult(req);
 
-        if(errors.isEmpty()){
+        if(errors.isEmpty()){       
 
-            let userToLogin = db.Usuario.findAll({
-                where: {
-                    email: req.body.email
-                }
+            let usuarioALoguearse = db.Usuario.findAll()
+                .then((users) =>{ 
+                    for(let i = 0; i<users.length; i++){
+                        if(users[i].email == req.body.email){
+                        if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña)){
+                            usuarioALoguearse = users[i];
+                            user=usuarioALoguearse;
+                             break;         
+                            }
+                        }
+                    }
+                    if(user == undefined){
+                        return res.render('login', {
+                            errors: {
+                                email: {
+                                    msg: 'Las credenciales son inválidas'
+                                }
+                            }
+                        });
+                    }
+                    req.session.usuarioLogueado =  user;
                 
-            })
+                    if(req.body.recordarme){
+                    res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000 })
+                    }
+                
+                    res.render('userProfile', {user})
 
-
+                });
+    
+        }else{
+            res.render("login", {
+                errors: errors.mapped(),
+                oldData: req.body
+            });
         }
 
-        }
-            // let usersJson = fs.readFileSync(path.join(__dirname, "../data/usersDatabase.json"), {encoding: "utf-8"});
-            // let users;
-            // if(usersJson == ""){
-            //     users = [];
-            // }else{
-            //     users = JSON.parse(usersJson);
-            // }
-            
-
-            // let usuarioALoguearse;
-            
-            // for(let i = 0; i<users.length; i++){
-            //     if(users[i].email == req.body.email){
-            //         if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña)){
-            //             usuarioALoguearse = users[i];
-            //             break;
-            //         }
-            //     }
-            // }
-            // if(usuarioALoguearse == undefined){
-           
-            //     return res.render('login', {
-            //         errors: {
-            //             email: {
-            //                 msg: 'Las credenciales son inválidas'
-            //             }
-            //         }
-            //     });
-           
-            // }
-            
-            /*el usuario logueado con todos sus datos queda en req.session.usuarioLogueado */
-            // req.session.usuarioLogueado =  usuarioALoguearse;
-            
-            // if(req.body.recordarme){
-               
-                
-            //     res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000 });
-
-            // }
-
-            /*si esta bien logueado va al profile*/
-           //res.redirect("/users/profile");
-
-    //     }else{
-    //         res.render("login", {
-    //             errors: errors.mapped(),
-    //             oldData: req.body
-    //         });
-    //     }
-
-    // },
-    // processLogin: function(req, res){
-       
-        
-    //     let errors = validationResult(req);
-
-    //     if(errors.isEmpty()){
-    //         let usersJson = fs.readFileSync(path.join(__dirname, "../data/usersDatabase.json"), {encoding: "utf-8"});
-    //         let users;
-    //         if(usersJson == ""){
-    //             users = [];
-    //         }else{
-    //             users = JSON.parse(usersJson);
-    //         }
-    //         let usuarioALoguearse;
-            
-    //         for(let i = 0; i<users.length; i++){
-    //             if(users[i].email == req.body.email){
-    //                 if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña)){
-    //                     usuarioALoguearse = users[i];
-    //                     break;
-    //                 }
-    //             }
-    //         }
-    //         if(usuarioALoguearse == undefined){
-           
-    //             return res.render('login', {
-    //                 errors: {
-    //                     email: {
-    //                         msg: 'Las credenciales son inválidas'
-    //                     }
-    //                 }
-    //             });
-           
-    //         }
-            
-    //         /*el usuario logueado con todos sus datos queda en req.session.usuarioLogueado */
-    //         req.session.usuarioLogueado =  usuarioALoguearse;
-            
-    //         if(req.body.recordarme){
-               
-                
-    //             res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000 });
-
-    //         }
-
-    //         /*si esta bien logueado va al profile*/
-    //         res.redirect("/users/profile");
-
-    //     }else{
-    //         res.render("login", {
-    //             errors: errors.mapped(),
-    //             oldData: req.body
-    //         });
-    //     }
-
-    // },
+    },
     
     profile: function(req, res){
         return res.render('userProfile', {
@@ -267,6 +182,7 @@ let usersControllers = {
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
+            
             let usersJson = fs.readFileSync(path.join(__dirname, "../data/usersDatabase.json"), {encoding: "utf-8"});
             let users;
             if(usersJson == ""){
@@ -274,6 +190,7 @@ let usersControllers = {
             }else{
                 users = JSON.parse(usersJson);
             }
+            
             let usuarioALoguearse;
             
             for(let i = 0; i<users.length; i++){
@@ -307,7 +224,7 @@ let usersControllers = {
             }
 
             /*si esta bien logueado va al profile*/
-        /*    res.redirect("/users/profile");
+            /*    res.redirect("/users/profile");
 
         }else{
             res.render("login", {
