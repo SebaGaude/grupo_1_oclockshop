@@ -5,13 +5,14 @@ let productsController = {
   
     products: function (req, res) {
         let listadoCategorias = db.Categoria.findAll();
-        let listadorMarcas = db.Marca.findAll();
+        let listadoMarcas = db.Marca.findAll();
+        let listadoProductos = db.Producto.findAll();
 
-        Promise.all([listadoCategorias, listadorMarcas])
+        Promise.all([listadoCategorias, listadoMarcas, listadoProductos])
 
-        .then(function([categorias, marcas]){
+        .then(function([categorias, marcas, productos]){
         
-            res.render("products", {categorias, marcas});
+            res.render("products", {categorias, marcas, productos});
         
         })
           
@@ -65,7 +66,7 @@ let productsController = {
             descripcion: req.body.descripcion,
             id_categoria: req.body.categoria,
             stock: req.body.stock,
-            //imagen: req.file.filename,
+            imagen: req.file.filename,
             id_marca: req.body.marca,
             precio: req.body.precio
         

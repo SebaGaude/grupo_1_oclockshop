@@ -8,7 +8,7 @@ const validateUserRegister = [
     body("contraseña").notEmpty().withMessage("Debes elegir una contraseña"),
     //body("confirmar").notEmpty().withMessage("Debes completar nuevamente la contraseña elegida"),
    
-    body("avatar").custom((value, {req})=>{
+    body("imagen").custom((value, {req})=>{
        let file = req.file;
         let acceptedExtensions = [".jpg", ".png", ".gif"];
         

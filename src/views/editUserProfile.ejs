@@ -14,8 +14,7 @@
 
 
                 <form action="/users/profile/edit/<%= user.id %>?_method=PUT" method="POST"
-                    class="formulario-edicion-creacion">
-
+                    class="formulario-edicion-creacion" enctype="multipart/form-data">
 
                     <h1 class="titulo-new-edit">
                         Hola, <%= user.nombre + ' ' + user.apellido %>, aquí podes editar tu perfil!
@@ -33,8 +32,17 @@
                     
                      <div class="control-formulario container">
                         <img src="/img/users/<%= user.imagen %> ">
+                        <!-- -------------------------------- -- -->
+
+
+                        <!-- ----------------------------- -->
                         <label class="preguntas-form"> Cambiar imágen del perfil </label>
-                        <input type="file" name="foto-usuario" accept=".jpg, .png">
+                        <input type="file" name="imagen" accept=".jpg, .png">
+                        <% if (locals.errors && errors.imagen) { %>
+                            <div class="errorMsg">
+                                <%= errors.imagen.msg %> 
+                            </div>
+                        <% } %>
                     </div> 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Cambiar contraseña </label>
@@ -53,10 +61,11 @@
 
                         <button type="submit" class="boton-envio">Guardar cambios</button>
                     </div>
-                    <!-- ----------- -->
-                    
+                    <!-- ----------- -->                                       
                 </form>
-                
+                <form method="POST" action="/users/delete/<%= user.id%>?_method=DELETE">
+                    <button type="submit" class="boton-reset">Eliminar Cuenta</button>
+                </form>
             </main>
             <%- include("partials/footer.ejs") %>
 

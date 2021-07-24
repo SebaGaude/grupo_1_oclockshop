@@ -99,6 +99,28 @@ let usersControllers = {
         
     },
 
+    updateProfile: function(req, res){
+           db.Usuario.update ({
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            imagen: req.file.filename,
+            contraseña: bcrypt.hashSync(req.body.contraseña, 10),
+        },{ where: {
+            id: req.params.id}
+        
+        });
+
+         return res.redirect("/");
+    },
+    destroy: function(req, res){
+        db.Usuario.destroy ({
+            where: {id: req.params.id}
+        })
+        res.clearCookie('userEmail');
+		req.session.destroy(); /*borra todo lo que esta en SESSION*/
+        res.redirect('/');
+    },
+ 
     logout: function(req, res){
 		res.clearCookie('userEmail');
 		req.session.destroy(); /*borra todo lo que esta en SESSION*/

@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
         cb(null, fileName);
     }
 })
-const uploadFile = multer({ storage: storage });
+const fileUpload = multer({ storage: storage });
 
 // Middlewares
 
@@ -30,7 +30,7 @@ const validateUserLogin = require('../middlewares/validateUserLogin');
 router.get('/register',guestMiddleware, usersController.register);
 
 // Procesar el registro
-router.post('/register', uploadFile.single('imagen'), validateUserRegister, usersController.processRegister);
+router.post('/register', fileUpload.single('imagen'), validateUserRegister, usersController.processRegister);
 
 // Formulario de login
 router.get('/login',guestMiddleware, usersController.login);
@@ -44,7 +44,10 @@ router.get('/profile', authMiddleware,usersController.profile);
 
 // Edicion de Usuario
 router.get('/profile/edit/:id', usersController.editProfile); // vista edicion del usuario
-// router.post ('/profile/edit/:id', usersController.updateProfile); // logica edicion del usuario
+router.put ('/profile/edit/:id', fileUpload.single("imagen"), validateUserRegister, usersController.updateProfile); // logica edicion del usuario
+
+// Borrar usuario
+router.delete('/delete/:id', usersController.destroy); // lógica de delete
 
 // Logout
 router.get('/logout', usersController.logout);

@@ -30,6 +30,9 @@ module.exports = function (sequelize, dataTypes) {
 
         precio: {
             type : dataTypes.DECIMAL(10,2),
+        },
+        imagen: {
+            type: dataTypes.STRING(255)
         }
     };
     

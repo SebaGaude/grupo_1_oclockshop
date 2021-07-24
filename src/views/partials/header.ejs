@@ -43,7 +43,7 @@
             <nav class="carrito">
                 <% if (locals.isLogged) { %>
                     <div class="header-user">
-                        <img src="/img/users/<%= locals.usuarioLogueado.avatar %>"  class = "imagen-header">
+                        <img src="/img/users/<%= locals.usuarioLogueado.imagen %>"  class = "imagen-header">
                         <a href="/users/profile"> Hola,  <%= locals.usuarioLogueado.nombre %></a>
                     </div>
                     <% } else { %>
