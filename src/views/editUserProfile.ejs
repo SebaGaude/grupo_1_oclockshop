@@ -13,28 +13,38 @@
 
 
 
-                <form action="/profile/edit<%= usuarioLogueado.id %>?_method=PUT" method="POST"
+                <form action="/users/profile/edit/<%= user.id %>?_method=PUT" method="POST"
                     class="formulario-edicion-creacion">
 
 
                     <h1 class="titulo-new-edit">
-                        Edicion de usuario: <%= usuarioLogueado.nombre + '' + usuarioLogueado.apellido %>
+                        Hola, <%= user.nombre + ' ' + user.apellido %>, aquí podes editar tu perfil!
                     </h1>
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Nombre </label>
-                        <input type="text" name="nombre" value="<%= usuarioLogueado.nombre %>" class="ticks" required>
+                        <input type="text" name="nombre" value="<%= user.nombre %>" class="ticks" required>
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form"> Apellido </label>
-                        <input type="text" name="apellido" value="<%= usuarioLogueado.apellido %>" class="ticks" required>
+                        <input type="text" name="apellido" value="<%= user.apellido %>" class="ticks" required>
                     </div>
 
                     
-                    <!-- <div class="control-formulario">
-                        <label class="preguntas-form"> Nueva/s imagen/es del producto </label>
-                        <input type="file" name="foto-del-producto" accept=".jpg, .png" multiple>
-                    </div> -->
+                     <div class="control-formulario container">
+                        <img src="/img/users/<%= user.imagen %> ">
+                        <label class="preguntas-form"> Cambiar imágen del perfil </label>
+                        <input type="file" name="foto-usuario" accept=".jpg, .png">
+                    </div> 
+                    <div class="control-formulario">
+                        <label class="preguntas-form"> Cambiar contraseña </label>
+                        <input type="password" name="contraseña" placeholder= "******">
+                        <% if (locals.errors && errors.contraseña) { %>
+                            <div class="errorMsg">
+                                <%= errors.contraseña.msg %> 
+                            </div>
+                        <% } %>
+                    </div>
 
 
                     

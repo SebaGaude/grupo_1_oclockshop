@@ -5,7 +5,7 @@ lo redirecciona al PERFIL sin la posibilidad de ingresar al
 
 
 function guestMiddleware(req, res, next) {
-	console.log(req.session.usuarioLogueado);
+
 	if (req.session.usuarioLogueado) {
 		return res.redirect('/users/profile');
 	}

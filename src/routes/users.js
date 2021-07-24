@@ -43,7 +43,7 @@ router.post('/login', validateUserLogin, usersController.processLogin);
 router.get('/profile', authMiddleware,usersController.profile);
 
 // Edicion de Usuario
-// router.get('/profile/edit/:id', usersController.editProfile); // vista edicion del usuario
+router.get('/profile/edit/:id', usersController.editProfile); // vista edicion del usuario
 // router.post ('/profile/edit/:id', usersController.updateProfile); // logica edicion del usuario
 
 // Logout

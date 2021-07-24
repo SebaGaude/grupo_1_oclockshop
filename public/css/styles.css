@@ -1588,7 +1588,8 @@ section div ul li a{
 }
 
 .container img{
-    margin: 1vh 2vw;
+    margin-left: auto;
+    margin-right: auto;
     width: 15%;
     border-radius: 5px;
 }

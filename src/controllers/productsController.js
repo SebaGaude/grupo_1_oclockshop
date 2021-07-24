@@ -4,7 +4,18 @@ const db = require ("../database/models");
 let productsController = {
   
     products: function (req, res) {
-        res.render("products");
+        let listadoCategorias = db.Categoria.findAll();
+        let listadorMarcas = db.Marca.findAll();
+
+        Promise.all([listadoCategorias, listadorMarcas])
+
+        .then(function([categorias, marcas]){
+        
+            res.render("products", {categorias, marcas});
+        
+        })
+          
+
     },
    
    

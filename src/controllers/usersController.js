@@ -49,7 +49,7 @@ let usersControllers = {
         let errors = validationResult(req);
 
         if(errors.isEmpty()){       
-
+            let user;
             let usuarioALoguearse = db.Usuario.findAll()
                 .then((users) =>{ 
                     for(let i = 0; i<users.length; i++){
@@ -93,6 +93,10 @@ let usersControllers = {
         return res.render('userProfile', {
 			user: req.session.usuarioLogueado
 		});
+    },
+    editProfile: function(req, res){
+        return res.render("editUserProfile", {user: req.session.usuarioLogueado})
+        
     },
 
     logout: function(req, res){
