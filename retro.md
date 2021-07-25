@@ -50,3 +50,15 @@ Sprint 4
 4. Hacer menos: dejar algunas consignas o entregables para los últimos días del sprint. Idealmente, los últimos días deberían ser solo para pulir detalles.
 
 5. Dejar de hacer: ir organizando el trabajo en la medida que avanza el sprint, dependiendo de cómo vayamos desarrollando el contenido de cada entregable. Esto, muchas veces, nos saca eficiencia como equipo. 
+---
+Sprint 5
+---
+1. Comenzar a hacer: empezar a trabajar en la continuidad y el funcionamiento íntegro del proyecto. Las piezas que fuimos armando en muchas partes están aisladas del resto. Tenemos que unificar la dinámica de todo el sitio. 
+
+2. Hacer más: tratar de anticipar lo que se vendrá en los próximos sprints para ganar tiempo con algunos aspectos del sitio.
+
+3. Continuar haciendo: seguir apostando al "pair coding", que funcionó bastante bien en los sprints anteriores. Aunque a veces resulta complicado tener a todo el equipo presente, la sinergia de colaboración, el desarrollo del proyecto y el aprendizaje colectivo son sumamente productivos; sin contar con los beneficios que se generan en términos de trabajo en equipo.
+
+4. Hacer menos: dejar dudas o consultas que se podían haber aclarado al inicio del sprint, para el final. Esto retrasa algunos puntos (a veces claves) para la culminación exitosa del sprint.
+
+5. Dejar de hacer: avanzar con los entregables sin organización interna entre los miembros del equipo. Pese a que todos tenemos habilidades técnicas distintas (algunos con más conocimientos y otros con menos), creemos que estaría bueno asignar ciertos roles en razón de los entregables, para que la estructura de trabajo esté mejor compuesta y organizada.
