@@ -100,6 +100,7 @@ let usersControllers = {
     },
 
     updateProfile: function(req, res){
+
            db.Usuario.update ({
             nombre: req.body.nombre,
             apellido: req.body.apellido,

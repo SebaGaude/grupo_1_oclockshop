@@ -5,7 +5,7 @@ const validateUserRegister = [
     body("nombre").notEmpty().withMessage("Debes completar el campo nombre"),
     body("apellido").notEmpty().withMessage("Debes completar el campo apellido"),
     body("email").notEmpty().withMessage("Debes completar con un email").bail().isEmail().withMessage("Debes completar un formato de email válido"),
-    body("contraseña").notEmpty().withMessage("Debes elegir una contraseña"),
+    body("contraseña").notEmpty().withMessage("Debes elegir una contraseña").bail().isLength({min:8}).withMessage("Deben ser como mínimo 8 caracteres"),
     //body("confirmar").notEmpty().withMessage("Debes completar nuevamente la contraseña elegida"),
    
     body("imagen").custom((value, {req})=>{
