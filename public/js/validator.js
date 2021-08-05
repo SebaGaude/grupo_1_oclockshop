@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
 
     
 
-    nombre.addEventListener("focus", function(){
+    nombre.addEventListener("blur", function(){
         nombre.classList.add("is-invalid");
     })
 
