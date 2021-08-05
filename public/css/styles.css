@@ -1626,3 +1626,12 @@ section div ul li a{
     margin-left: 2vw;
     margin-bottom: 20vh;
 }
+
+.is-invalid{
+    color: #842029;
+    border: solid 3px #842029;
+}
+.is-valid{
+    color: #198754;
+    border: solid 3px #198754;
+}
