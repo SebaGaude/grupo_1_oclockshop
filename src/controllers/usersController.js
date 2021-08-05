@@ -115,7 +115,9 @@ let usersControllers = {
         
         });
 
-         return res.redirect("/");
+        return res.redirect("/");
+    
+
     },
     destroy: function(req, res){
         db.Usuario.destroy ({
