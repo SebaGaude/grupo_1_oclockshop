@@ -1,27 +1,24 @@
 window.addEventListener("load", function(){
 
-    let form = document.querySelector("form");
-    let nombre = document.querySelector("#nombre");
-    let apellido = document.querySelector("#apellido")
-    let email = document.querySelector("#email");
-    let imagen = document.querySelector("#imagen");
-    let contraseña = document.querySelector("#contraseña");
+    let form = document.querySelector(".form-login-register");
 
+    let errors = [];
     let errorNombre = document.querySelector("#error-nombre")
+ 
+    //nombre.addEventListener("focus", function(){
+    //    nombre.classList.add("is-invalid");
+    //})
 
 
-    
-
-    nombre.addEventListener("focus", function(){
-        nombre.classList.add("is-invalid");
-    })
-
-
-    form.nombre.focus();
+    //form.nombre.focus();
 
     form.addEventListener("submit", function(e){
+        let nombre = document.querySelector("#nombre");
+        let apellido = document.querySelector("#apellido")
+        let email = document.querySelector("#email");
+        let imagen = document.querySelector("#imagen");
+        let contraseña = document.querySelector("#contraseña");
 
-        let errors = [];
 
         if(nombre.value.length < 1){
             nombre.classList.add("is-invalid");
@@ -37,8 +34,8 @@ window.addEventListener("load", function(){
         if(errors.length > 0){
             e.preventDefault();
             let msjError = document.querySelector("#error-nombre");
-            msjError.classList.add("alert-warning");
-            msjError.innerHTML = "";
+            //msjError.classList.add("alert-warning");
+            //msjError.innerHTML = "";
             for (let i = 0; i < errors.length; i++) {
                 msjError.innerHTML += `<li>${errors[i]}</li>`   
             }
