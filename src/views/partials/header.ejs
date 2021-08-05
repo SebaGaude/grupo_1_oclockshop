@@ -15,12 +15,9 @@
         </nav>
         <nav class="menu">
             <form action="/resultados-de-busqueda" method="GET" class="busqueda">
-                <input type="text" placeholder="Buscar productos" class="busqueda-input">
+                <input type="text" placeholder="Buscar productos..." class="busqueda-input">
                 <button><i class="fas fa-search"></i></button>
             </form>
-
-
-
             <nav class="mobile">
                 <div class="burger-menu">
                     <i class="fa fa-bars burger"></i>
@@ -30,38 +27,38 @@
                 </div>
             </nav>
         </nav>
-        <nav class="desplegable">
-            <nav class="fijo">
-                <p><a href="../products">Productos</a></p>
-                <a href="">
-                    <p>Categorías</p>
-                </a>
-                <a href="">
-                    <p>Ofertas</p>
-                </a>
-            </nav>
-            <nav class="carrito">
-                <% if (locals.isLogged) { %>
-                    <div class="header-user">
-                        <img src="/img/users/<%= locals.usuarioLogueado.imagen %>"  class = "imagen-header">
-                        <a href="/users/profile"> Hola,  <%= locals.usuarioLogueado.nombre %></a>
+    </div>    
+    <nav class="desplegable">
+        <nav class="fijo">
+            <p><a href="../products">Productos</a></p>
+            <a href="">
+                <p>Categorías</p>
+            </a>                
+            <a href="">
+                <p>Ofertas</p>
+            </a>
+        </nav>
+        <nav class="carrito">
+            <% if (locals.isLogged) { %>
+                <div class="header-user">
+                    <img src="/img/users/<%= locals.usuarioLogueado.imagen %>"  class = "imagen-header">
+                    <a href="/users/profile"> Hola,  <%= locals.usuarioLogueado.nombre %></a>
+                </div>
+                <% } else { %>
+                    <div class="registration">
+                        <a href="/users/register">
+                            <p>Registrate</p>
+                        </a>
                     </div>
-                    <% } else { %>
-                        <div class="registration">
-                            <a href="/users/register">
-                                <p>Registrate</p>
-                            </a>
+                    <div class="sign-in">
+                        <a href="/users/login">
+                            <p>Ingresá</p>
+                        </a>
+                    </div>
+                    <% } %>
+                        <div class="carro">
+                            <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
                         </div>
-                        <div class="sign-in">
-                            <a href="/users/login">
-                                <p>Ingresá</p>
-                            </a>
-                        </div>
-                        <% } %>
-                            <div class="carro">
-                                <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
-                            </div>
             </nav>
         </nav>
-    </div>
 </header>

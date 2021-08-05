@@ -33,6 +33,12 @@ header{
     font-family: 'Ubuntu', sans-serif;
     color: #525252;
     font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: "linea1 linea1 linea1 linea1 linea1 linea1 linea1 linea1 linea1 linea1"
+                         "centro centro centro centro centro centro centro centro centro centro"
+                         "nav nav nav nav nav nav nav nav nav nav";
 }
 
 .top{
@@ -41,6 +47,7 @@ header{
     border-bottom: solid 1px #adadad;
     width: 100%;
     line-height: 1vh;
+    grid-area: linea1;
 }
 
 .top1{
@@ -76,11 +83,14 @@ header{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    grid-area: centro;
 }
 
 .logo{
     width: 15%;
+    grid-area: logo;
 }
+
 .logo img{
     height: 100%
 }
@@ -90,6 +100,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-area: centro;
 }
 
 .busqueda{
@@ -184,6 +195,7 @@ header{
     font-size: 16px; /*quizas 14px*/
     background-color: rgb(187, 183, 183);
     color: white;
+    grid-area: nav;
 }
 
 .desplegable p{
@@ -518,7 +530,7 @@ h3{
 
 .form-login-register{
     font-family: 'Ubuntu', sans-serif;
-    background-color: white;
+    background: linear-gradient(35deg, #CCFFFF, #267979);   
     width: 50%;
     margin-top: 10%;
     margin-bottom: 10%;
@@ -772,9 +784,16 @@ h3{
 /* --------------------------------------Fin configuraciones Quiz ------------------------------------------------*/ 
 /*--------------------------------------- Configuraciones index -------------------------------------------------*/
 
+body.body{
+    background-color: #ebebeb;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 h2{
     color: #525252;
     margin-left: 20px;
+    width: 90%;
 }
 
 .main{
@@ -788,6 +807,7 @@ h2{
     border-width: 2px;
     border-color: whitesmoke;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 .carrusel{
@@ -838,7 +858,7 @@ h2{
     color: rgba(51, 5, 65, 0.753);
     text-align: center;
     font-weight: bold;
-    padding: 5px;
+    padding: 5px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -896,6 +916,9 @@ h2{
     margin: 15px 0px;
     transition: all 0.3s;
     text-align: center;
+    border: white 2px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .categorias p{
@@ -924,11 +947,12 @@ h2{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-radius: 1%;
+    border-radius: 5%;
     margin: 5px;
     border-style: solid;
     border-width: 1px;
     border-color: whitesmoke;
+
 }
 
 .contenedor-imagen-articulo{
@@ -1022,6 +1046,10 @@ h2{
     color: #525252;
     margin-left: 20px;
     margin-top: 5px;
+}
+
+.img-categ{
+    background-color: white;
 }
 
 /* --------------------------------------------Fin configuracion index --------------------------------------------*/
