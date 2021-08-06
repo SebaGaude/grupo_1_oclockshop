@@ -101,17 +101,23 @@ let usersControllers = {
 
     updateProfile: function(req, res){
 
-            db.Usuario.update ({
+       console.log(req.file.filename)
+        
+        db.Usuario.update ({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
-            imagen: req.file.filename,
+           
+            imagen: req.body.filename,
+            
             contraseña: bcrypt.hashSync(req.body.contraseña, 10),
         },{ where: {
             id: req.params.id}
         
         });
 
-         return res.redirect("/");
+        return res.redirect("/");
+    
+
     },
     destroy: function(req, res){
         db.Usuario.destroy ({
