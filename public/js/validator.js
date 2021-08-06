@@ -2,7 +2,7 @@ window.addEventListener("load", function(){
 
     let form = document.querySelector(".form-login-register");
 
-    let errors = [];
+    
     let errorNombre = document.querySelector("#error-nombre")
  
     //nombre.addEventListener("focus", function(){
@@ -13,6 +13,7 @@ window.addEventListener("load", function(){
     //form.nombre.focus();
 
     form.addEventListener("submit", function(e){
+        let errors = [];
         let nombre = document.querySelector("#nombre");
         let apellido = document.querySelector("#apellido")
         let email = document.querySelector("#email");
@@ -35,7 +36,7 @@ window.addEventListener("load", function(){
             e.preventDefault();
             let msjError = document.querySelector("#error-nombre");
             //msjError.classList.add("alert-warning");
-            //msjError.innerHTML = "";
+            msjError.innerHTML = "";
             for (let i = 0; i < errors.length; i++) {
                 msjError.innerHTML += `<li>${errors[i]}</li>`   
             }
