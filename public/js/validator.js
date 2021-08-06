@@ -22,12 +22,39 @@ window.addEventListener("load", function(){
 
 
         if(nombre.value.length < 1){
-            nombre.classList.add("is-invalid");
-            errors.push("Este campo debe estar completo");  
+            nombre.style.border = "solid 3px #842029";
+            nombre.style.color = "#842029";
+            errors.push("Completá tu nombre");  
         }else{
-            nombre.classList.remove("is-invalid");
-            nombre.classList.add("is-valid");
-            form.apellido.focus();
+            apellido.focus();
+        }
+        if(apellido.value.length < 1){
+            apellido.style.border = "solid 3px #842029";
+            apellido.style.color = "#842029";
+            errors.push("Completá tu apellido");  
+        }else{
+            email.focus();
+        }
+        if(email.value.length < 1){
+            email.style.border = "solid 3px #842029";
+            email.style.color = "#842029";
+            errors.push("Completá tu email");  
+        }else{
+            imagen.focus();
+        }
+        if(imagen.value.length < 1){
+            imagen.style.border = "solid 3px #842029";
+            imagen.style.color = "#842029";
+            errors.push("Elegí una imágen");  
+        }else{
+            contraseña.focus();
+        }
+        if(contraseña.value.length < 1){
+            contraseña.style.border = "solid 3px #842029";
+            contraseña.style.color = "#842029";
+            errors.push("Ingresá una contraseña");  
+        }else{
+            contraseña.focus();
         }
 
         //Determinar si hay o no errores - Mostrarlos al usuario
