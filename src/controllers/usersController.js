@@ -101,7 +101,7 @@ let usersControllers = {
 
     updateProfile: function(req, res){
 
-           db.Usuario.update ({
+            db.Usuario.update ({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             imagen: req.file.filename,
