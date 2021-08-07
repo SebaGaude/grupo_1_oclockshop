@@ -101,7 +101,7 @@ let productsController = {
             descripcion: req.body.descripcion,
             id_categoria: req.body.categoria,
             stock: req.body.stock,
-            //imagen: req.file.filename,
+            // imagen: req.file.filename,
             id_marca: req.body.marca,
             precio: req.body.precio
         },{ where: {
