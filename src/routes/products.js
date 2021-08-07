@@ -27,7 +27,7 @@ router.post("/", fileUpload.single("imagen") ,productsController.store); // lóg
 
 
 router.get("/edit/:id", productsController.editProduct); // vista de la edicion
-router.put("/:id", productsController.updateProduct); // logica de la edicion
+router.put("/:id", fileUpload.single("imagen"), productsController.updateProduct); // logica de la edicion
 
 
 router.delete('/delete/:id', productsController.destroy); // lógica de delete
