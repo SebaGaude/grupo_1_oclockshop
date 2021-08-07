@@ -93,22 +93,27 @@ let productsController = {
         
     },
    
-   
     updateProduct: function(req, res){
-       
-        db.Producto.update ({
-            articulo: req.body.articulo,
-            descripcion: req.body.descripcion,
-            id_categoria: req.body.categoria,
-            stock: req.body.stock,
-            // imagen: req.file.filename,
-            id_marca: req.body.marca,
-            precio: req.body.precio
-        },{ where: {
-            id: req.params.id}
-        
-        });
-
+        let image;
+        db.Producto.findByPk(req.params.id)
+          .then(producto => {
+              image = producto.imagen;
+              if (req.file) {
+                  image = req.file.filename;
+              }
+              db.Producto.update ({
+                 articulo: req.body.articulo,
+                 descripcion: req.body.descripcion,
+                 id_categoria: req.body.categoria,
+                 stock: req.body.stock,
+                 imagen: image,
+                 id_marca: req.body.marca,
+                 precio: req.body.precio
+              },{ where: {
+                   id: req.params.id}
+              });
+         }).catch(e => console.log(e))
+          
          return res.redirect("/");
     },
 
