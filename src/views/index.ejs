@@ -26,33 +26,40 @@
             </div>     
         </div>
         <div class="quiz">         
-            <h4>¿No sabés por dónde empezar?</h4>        
-            <h5>¡Contestá algunas preguntas y te ayudamos con la búsqueda!</h5>        
+            <h3>¿No sabés por dónde empezar?</h3>        
+            <h4>¡Contestá algunas preguntas y te ayudamos con la búsqueda!</h4>        
             <div class= "contenedor-boton-quiz">
                 <form action="/quiz" method="GET">
-                   <a href="./quiz" target=”_blank”><button type="button" class="button-quiz">Ir a quiz</button></a>
+                   <a href="./quiz" target=”_blank”><button type="button" class="button-quiz">Ir al quiz</button></a>
                 </form>
             </div>
         </div>
     </main>
 
     <section class="contenedor-categ">
-        <h2> CATEGORÍAS </h2>   
+        <h2 class="titulo-categ" id="categ-id"> CATEGORÍAS </h2>   
         <div class="categorias">
-                <p><img src="./img/premium-rolex.webp" alt="" class="img-categ">Premium</p>
-                <p><img src="./img/analogico.jpeg" alt="" class="img-categ">Analógico</p>
-                <p><img src="./img/digital.png" alt="" class="img-categ">Digital</p>
-                <p><img src="./img/swatch-sport.jpeg" alt="" class="img-categ">Sport</p>
+            <div>    
+                <img src="./img/premium-rolex.webp" alt="" class="img-categ"><p>Premium</p>
+            </div>
+            <div>    
+                <img src="./img/analogico.jpeg" alt="" class="img-categ"><p>Analógico</p>
+            </div>    
+            <div>    
+                <img src="./img/digital.png" alt="" class="img-categ"><p>Digital</p>
+            </div>    
+            <div>    
+                <img src="./img/swatch-sport.jpeg" alt="" class="img-categ"><p>Sport</p>
+            </div>
         </div>
     </section>
 
-    <section>
-        <div class="articulos">
-            <h2> LOS MÁS VISTOS </h2>
-            
+    <section class="vistos">
+        <h2 class="titulo-categ second"> LOS MÁS VISTOS </h2>
+        <div class="articulos">          
             <div class="contenedor-articulo" >    
                 <div class="contenedor-imagen-articulo">
-                    <a href="./products/producto1"><h3>Tommy Hilfiger</h3></a>
+                    <a href="./products/detail/5"><h3>Tommy Hilfiger</h3></a>
                     <img src="./img/reloj-tommy-hilfiger.jpg" alt="">
                 </div>           
                 <div class="articulo-x">
@@ -68,7 +75,7 @@
            
             <div class="contenedor-articulo">   
                 <div class="contenedor-imagen-articulo">
-                    <a href="./products/producto1"><h3>Galaxy Watch Active2</h3></a>
+                    <a href="./products/detail/6"><h3>Galaxy Watch Active2</h3></a>
                     <img src="./img/samsung-galaxy-watch-active2.jpg" alt="">              
                 </div>             
                 <div class="articulo-x">
@@ -84,7 +91,7 @@
 
             <div class="contenedor-articulo">   
                 <div class="contenedor-imagen-articulo">
-                    <a href="./products/producto1"> <h3>Swatch Rostfrey</h3></a>
+                    <a href="./products/detail/4"> <h3>Swatch Rostfrey</h3></a>
                     <img src="./img/Swatch_Rostfrei.png" alt="">
                 </div>               
                 <div class="articulo-x">
@@ -100,7 +107,7 @@
             
             <div class="contenedor-articulo">       
                 <div class="contenedor-imagen-articulo">   
-                    <a href="./products/productDetail"><h3>Swatch Rostfrey</h3></a>
+                    <a href="./products/detail/3"><h3>Swatch Rostfrey</h3></a>
                     <img src="./img/Swatch_Rostfrei.png" alt="">
                 </div>               
                 <div class="articulo-x">

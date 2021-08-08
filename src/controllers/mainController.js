@@ -15,6 +15,14 @@ let mainController = {
     quiz: function(req, res){
         res.render("quiz");
     },
+    //mostrar terminos y condiciones----------------------
+    terminos: function(req, res){
+        res.render("terminos");
+    },
+    //mostrar politica de privacidad----------------------
+    privacidad: function(req, res){
+        res.render("privacidad");
+    },
 };
 
 module.exports = mainController;
