@@ -20,4 +20,9 @@ router.get("/terminos", mainController.terminos);
 
 router.get("/privacidad", mainController.privacidad);
 
+/*ruta para mostrar categorias*/
+
+//router.get("/categories/:id", mainController.categories); // vista listado de categorias
+
+
 module.exports = router;

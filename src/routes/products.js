@@ -18,6 +18,7 @@ const fileUpload = multer({ storage: storage });
 
 router.get("/", productsController.products); // vista listado de productos
 
+
 router.get("/detail/:id", productsController.productDetail); // vista de detalle
 
 router.get("/carrito", productsController.productCart);
@@ -27,10 +28,11 @@ router.post("/", fileUpload.single("imagen") ,productsController.store); // lóg
 
 
 router.get("/edit/:id", productsController.editProduct); // vista de la edicion
-router.put("/:id", fileUpload.single("imagen"), productsController.updateProduct); // logica de la edicion
+router.put("/:id",fileUpload.single("imagen"), productsController.updateProduct); // logica de la edicion
 
 
 router.delete('/delete/:id', productsController.destroy); // lógica de delete
+
 
 
 module.exports = router;

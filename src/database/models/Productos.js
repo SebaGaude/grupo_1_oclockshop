@@ -32,8 +32,13 @@ module.exports = function (sequelize, dataTypes) {
             type : dataTypes.DECIMAL(10,2),
         },
         imagen: {
+            type: dataTypes.STRING(255),
+        },
+        oferta: {
             type: dataTypes.STRING(255)
         }
+
+
     };
     
     const config = {

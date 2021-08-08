@@ -44,10 +44,10 @@
                         <select name="categoria" class="ticks">
                             <% for (let i=0; i<categorias.length; i++)  {%>
                       
-                                <% if (marcas[i].id == product.id_categoria){ %>
+                                <% if (categorias[i].id == product.id_categoria){ %>
 
                                     <option value="<%=categorias[i].id %>" selected>
-                                     <%=marcas[i].nombre%>
+                                     <%=categorias[i].nombre%>
                                  </option>
 
                                 <% }   else {%>

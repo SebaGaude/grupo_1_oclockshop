@@ -1,7 +1,27 @@
 let mainController = {
     //mostrar página principal----------------------
     index: function (req, res){
-        res.render("index");
+
+        let categoriaId = db.Categoria.findByPk(req.params.id)
+        let listadoProductos = db.Producto.findAll(
+            {
+            where: {id_categoria: req.params.id}
+       
+            
+       
+        });
+        
+
+        Promise.all([categoriaId, listadoProductos])
+        
+        .then(function([categoria, productos]){
+        
+            res.render("index", {categoria, productos});
+        
+        })
+
+
+      
     },
     //mostrar formulario de login----------------------
     login: function(req, res){
@@ -23,6 +43,9 @@ let mainController = {
     privacidad: function(req, res){
         res.render("privacidad");
     },
+
+    
+
 };
 
 module.exports = mainController;
