@@ -1,12 +1,12 @@
 <header>
     <div class="top">
         <nav class="top1">
-            <p class="español"> Español </p>
-            <p> | </p>
-            <p class="ingles"> English </p>
+            <p class="español-ingles"> Español </p>
+            <p class="separacion"> | </p>
+            <p class="español-ingles"> English </p>
         </nav>
         <nav class="contact-us">
-            <p>Contactanos</p>
+            <a href="mailto:contactenos@oclockshop.com?Subject=Contacto"><p>Contactanos</p></a>
         </nav>
     </div>
     <div class="header1">
@@ -15,7 +15,7 @@
         </nav>
         <nav class="menu">
             <form action="/resultados-de-busqueda" method="GET" class="busqueda">
-                <input type="text" placeholder="Buscar productos..." class="busqueda-input">
+                <input type="text" placeholder="Buscar productos, marcas..." class="busqueda-input">
                 <button><i class="fas fa-search"></i></button>
             </form>
             <nav class="mobile">
@@ -30,18 +30,18 @@
     </div>    
     <nav class="desplegable">
         <nav class="fijo">
-            <p><a href="../products">Productos</a></p>
-            <a href="">
+            <a class="botonera" href="../products"><p>Productos</p></a>
+            <a class="botonera" href="">
                 <p>Categorías</p>
             </a>                
-            <a href="">
+            <a class="botonera" href="">
                 <p>Ofertas</p>
             </a>
         </nav>
         <nav class="carrito">
             <% if (locals.isLogged) { %>
                 <div class="header-user">
-                    <img src="/img/users/<%= locals.usuarioLogueado.imagen %>"  class = "imagen-header">
+                    <img src="/img/users/<%= locals.usuarioLogueado.imagen %>"  class="imagen-header">
                     <a href="/users/profile"> Hola,  <%= locals.usuarioLogueado.nombre %></a>
                 </div>
                 <% } else { %>

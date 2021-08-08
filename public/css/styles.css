@@ -12,7 +12,7 @@ ORDEN DE ESTILOS:
 10- @Media Queries
 */
 
-/*Configuraciones generales */
+/* ------------------------------------------Configuraciones generales---------------------------------------------- */
 
 *{
     width: 100%;
@@ -27,72 +27,77 @@ body{
 /* ----------------------------------------------Configuracion Header-----------------------------------------------*/
 
 header{
-    background-color: #adadad;
     width: 100%;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
     color: #525252;
     font-size: 16px;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 1fr 5fr 1fr;
-    grid-template-areas: "linea1 linea1 linea1 linea1 linea1 linea1 linea1 linea1 linea1 linea1"
-                         "centro centro centro centro centro centro centro centro centro centro"
-                         "nav nav nav nav nav nav nav nav nav nav";
+    background-color: rgb(3, 3, 44);
+    color: white;
 }
 
 .top{
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px #adadad;
     width: 100%;
-    line-height: 1vh;
-    grid-area: linea1;
+    line-height: 3vh;
+    background-color: rgb(3, 3, 44);
 }
 
 .top1{
     display: flex;
     width: 50%;
-    border-bottom: solid 0.5px black;
 }
 
 .top1 p{
-    margin: 0 2% 0.5% 1%;
-    border-top: solid 0.5vw #adadad;
+    margin: 0 2%;
     font-size: 12px;
-    width: 80%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header div.top nav.top1 p.separacion{
+    width: 5%;
+    margin: 0;
+}
+
+header div.top nav.top1 p.español-ingles{
+    width: 10%;
 }
 
 .contact-us{
     box-sizing: border-box;
     width: 50%;
-    border-bottom: solid 0.5px black;
+    margin: 0 2%;
+
 }
 
 .contact-us p{
     box-sizing: border-box;
-    margin: 0 0 0.5vw 0;
-    border-top: solid 0.5vw #adadad;
     font-size: 12px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    margin: 0;
 }
 
+.contact-us a{
+    text-decoration: none;
+    color: white;
+}
 .header1{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    grid-area: centro;
 }
 
 .logo{
     width: 15%;
-    grid-area: logo;
 }
-
 .logo img{
-    height: 100%
+    height: 100%;
+    margin-left: 15%;
 }
 
 .menu{
@@ -100,39 +105,50 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-area: centro;
 }
 
 .busqueda{
-    width: 85%;
+    width: 50%;
     margin-left: 2%;
     display: flex;
     justify-content: center;
 }
 
+.busqueda:hover{
+    border: solid 2px rgb(255, 136, 0);
+    border-radius: 8px;
+}
+
+.busqueda:focus-within{
+    border: solid 2px rgb(255, 136, 0);
+    border-radius: 8px;
+}
+
 .busqueda input{
-    height: 16px;
+    height: 25px;
     text-align: center;
     padding: 2px;
     border-radius: 5px 0 0 5px;
-    color: #666;
+    color: black;
     box-sizing: content-box;
     border: none;
     outline: none
 }
 
 .busqueda button{
-    height: 16px;
-    text-align: left;
+    height: 25px;
+    text-align: center;
     border-top: solid 6px white;
     border-bottom: solid 6px white;
     border-radius: 0 5px 5px 0;
-    color: #666;
+    color: rgb(3, 3, 44);
+    font-size: 19px;
     background-color: white;
     box-sizing: content-box;
     border: none;
     padding: 2px 1vw;
     width: 4vw;
+    background-color: rgb(255, 136, 0);
 }
 
 .container-header{
@@ -191,51 +207,76 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
     font-size: 16px; /*quizas 14px*/
-    background-color: rgb(187, 183, 183);
-    color: white;
-    grid-area: nav;
+    background-color: rgb(3, 3, 44);
+    line-height: 4vh;
+    border-top: solid 1px rgb(4, 4, 192);
 }
 
 .desplegable p{
-    box-sizing: content-box;
+    box-sizing: border-box;
     text-align: center;
-    margin: 0;
+    margin: auto;
+    color: white;
+    line-height: 3.5vh;
+}
+
+
+.desplegable p:hover{
+    background-color: rgba(255, 136, 0, 0.884);
+    box-sizing: border-box;
+    border: rgb(255, 136, 0) solid 1px;
+    color: rgb(3, 3, 44);
+    font-weight: bold;
 }
 
 .fijo{
     display: flex;
-    justify-content: space-around;
-    width: 70%;
+    justify-content: flex-start;
+    width: 45%;
+    margin-left: 7.5%;
 }
 
 .fijo a{
-    color: #454545;
     text-decoration: none;
+    width: 80%;
+}
+
+a.botonera{
+    width: 40%;
 }
 
 .carrito{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 25%;
-    align-items: flex-end;
+    margin-left: 10%;
 }
 
 .carrito a{
-    color: #454545;
+    color: white;
     text-decoration: none;
+}
+
+.carrito p{
+    text-align: center;
 }
 
 .carro{
     box-sizing: border-box;
     text-align: center;
     transition: transform 0.5s;
-    
+    width: 50%;
 }
 
 .carro:hover{
     transform: scale(1.5,1.5);
+    
+}
+
+.carrito a:hover{
+    color: rgba(255, 136, 0, 0.884);
 }
 
 .header-user {
@@ -249,18 +290,23 @@ header{
     width: 40px;
     border-radius: 100%;
 }
+.registration .sign-in{
+    width: 50%;
+}
+
+
 
 /* ---------------------------------------Fin Configuracion Header-------------------------------------------*/
 
 /* ---------------------------------------Configuracion Footer----------------------------------------------*/
 footer{
-    background-color: #adadad;
+    background-color: rgb(3, 3, 44);
     font-size: 12px;
     margin-top: 2vh;
-    border-bottom: solid 1vh #adadad;
+    border-bottom: solid 1vh rgb(3, 3, 44);
     width: 100%;
     box-sizing: border-box;
-
+    color: white;
 }
 
 footer p{
@@ -274,6 +320,11 @@ footer p{
 
 .text{
     text-align: center;
+}
+
+.main-footer a{
+    text-decoration: none;
+    color: white;
 }
 
 .copyright p{
@@ -530,26 +581,27 @@ h3{
 
 .form-login-register{
     font-family: 'Ubuntu', sans-serif;
-    background: linear-gradient(35deg, #CCFFFF, #267979);   
+    background: linear-gradient(35deg, rgb(3, 3, 44), #56a7a7, #56a7a7, rgb(3, 3, 44));   
     width: 50%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     padding: 15px;
     border-style: solid;
     border-color:whitesmoke;
     position: relative;
 }
 
-.form-login-register h3{
+.form-login-register h1{
     font-family: 'Ubuntu', sans-serif;
     text-align: center;  
-    color: #525252;
+    color: #000000;
 }
 
-.form-login-register h5{
+.form-login-register h2{
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
     margin: auto;
+    color: rgba(0, 0, 0, 0.658);
 }
 
 .form-login-register div{
@@ -568,9 +620,29 @@ h3{
     border-style: solid;
     border-width: 1px;
     border-color: #adadad;
-
+    
 }
 
+.form-login-register input:hover{
+    border: solid 2px rgb(255, 136, 0);
+}
+
+.form-login-register input:focus-within{
+    border: solid 2px rgb(255, 136, 0);
+}
+
+.recordar-contraseña input:hover{
+    border: solid 2px rgb(255, 136, 0);
+}
+
+#recordar{
+    color: black;
+    font-size: 12px;
+}
+
+.registrar-cuenta p{
+    color: black;
+}
 .terminos-condiciones{
     display: flex;
     padding: 10px;
@@ -580,7 +652,7 @@ h3{
 .terminos-condiciones label{
     text-align: center;
     font-size: 10px;
-    color: #adadad;
+    color: #000000;
     align-self: center;
 }
 
@@ -630,7 +702,7 @@ h3{
 }
 
 .boton-crear-cuenta:hover{
-    background-color: #525252;
+    background-color: rgba(255, 136, 0, 0.719);
     color: whitesmoke;
 }
 
@@ -803,11 +875,8 @@ h2{
     justify-content: center;
     background-color: white;
     width: 100%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: whitesmoke;
+    margin-bottom: 3vh;
     padding: 0px;
-    box-sizing: border-box;
 }
 
 .carrusel{
@@ -844,12 +913,26 @@ h2{
     align-items: center;
     opacity: 0;
     transition: all 450ms;
-    border-radius: 20px;
     text-align: center;
 }
 
+.titulos-carrusel h4{
+    font-size: 25px;
+    color: black;
+    padding: 5px;
+    background-color: rgb(255, 136, 0);
+    width: 50%;
+}
+
+.titulos-carrusel h3{
+    font-size: 20px;
+    color: white;
+    width: 35%;
+}
+
 .titulos-carrusel:hover{
-    opacity: 1;
+    background-color: rgba(3, 3, 44, 0.753);
+    opacity: 0.8;
 }
 
 .quiz{
@@ -867,16 +950,18 @@ h2{
       
 }
 
-.quiz h4{
+.quiz h3{
     color: #525252;
-    font-size: 14px;
-    margin-bottom: 8px;
+    font-size: 24px;
+    margin-bottom: 4vh;
+    font-weight: bold;
 }
 
-.quiz h5{
+.quiz h4{
     color: #525252;
     font-size: 12px;
     margin-bottom: 5px;
+    font-weight: normal;
 }
 
 .form_quiz{
@@ -889,19 +974,28 @@ h2{
 }
 
 .button-quiz{
-    background-color: rgba(145, 142, 138, 0.788);
+    background-color: rgb(3, 3, 44);
     border-radius: 20px;
-    color: #ffffff;
-    max-width: 100px;
-    font-size: 12px;
+    color: rgb(255, 187, 0);
+    width: 25%;
+    line-height: 3.5vh;
+    font-size: 16px;
     transition: 0.3s;
+    border: solid 2px rgba(0, 0, 0, 0.527);
 }
 
 .button-quiz:hover{
-    background-color: whitesmoke;
-    color: #525252;
+    background-color: rgb(255, 136, 0);
+    color: rgb(3, 3, 44);
+    font-weight: bold;
+    border: solid 2px rgb(255, 136, 0);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.336) ;
+
 }
 
+.contenedor-categ{
+    margin-top: 5vh;
+}
 .link-quiz{
     margin-top: 10px;
     color: whitesmoke;
@@ -913,20 +1007,34 @@ h2{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 15px 0px;
+    margin: 1vh 0px;
     transition: all 0.3s;
     text-align: center;
-    border: white 2px solid;
-    border-radius: 5px;
+    border-bottom: white 2px solid;
     box-sizing: border-box;
 }
 
-.categorias p{
-    color: #525252;
-    transition: 0.3s;
+.categorias div{
+    margin: 2vh 0;
 }
 
-.categorias p:hover{
+.titulo-categ{
+    margin: 2vh 0 1vh 3vw;
+    text-align: left;
+    color: rgb(3, 3, 44);
+}
+
+section.vistos{
+    margin-top: 5vh;
+}
+
+.categorias div p{
+    color: rgb(3, 3, 44);
+    transition: 0.3s;
+    margin: 0;
+}
+
+.categorias div p:hover{
     color: #adadad;
 }
 
@@ -988,6 +1096,8 @@ h2{
 
 .contenedor-articulo:hover .icono-articulo{
     transform: scale(1.2, 1.2);
+    color: rgb(255, 136, 0, 0.8);
+    border: 1px solid rgba(255, 136, 0);
 }
 
 .contenedor-articulo:hover div h3{
@@ -998,17 +1108,18 @@ h2{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 15px 0px;
+    margin: 1vh 0px;
+
 }
 
 .icono-articulo{
     display: block ;
-    color: green;
+    color: rgb(3, 3, 44);
     font-size: 16px;
     padding: 5px;
     width: 17px;
     height: 17px;
-    border: 1px solid green;
+    border: 1px solid rgb(3, 3, 44);
     background-color: #FFF;
     border-radius: 50%;
     position: absolute;
@@ -1556,7 +1667,7 @@ section div ul li a{
         width: 80%;
     }
     .quiz h4{
-        font-size: 28px;
+        font-size: 20px;
     }
     .contenedor-articulo{
         max-width: 22%;
@@ -1627,11 +1738,106 @@ section div ul li a{
     margin-bottom: 20vh;
 }
 
-.is-invalid{
-    color: #842029;
-    border: solid 3px #842029;
+.terminos{
+    width: 50%;
+    box-sizing: border-box;
+    border: rgb(3, 3, 44) solid 2px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.is-valid{
-    color: #198754;
-    border: solid 3px #198754;
+
+.terminos p{
+    text-align: justify;
+    margin: 6% auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    font-family: sans-serif;
+}
+
+.tit-term{
+    text-align: center;
+}
+
+.terminos h4{
+    text-align: left;
+    margin-left: 5.2%;
+}
+
+.terminos h5{
+    text-align: left;
+    margin-left: 5.2%;
+}
+
+.privacidad{
+    width: 55%;
+    box-sizing: border-box;
+    border: rgb(3, 3, 44) solid 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.privacidad p{
+    text-align: justify;
+    margin: 4% auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    font-family: sans-serif;
+}
+
+
+.privacidad h1{
+    text-align: left;
+    margin-left: 5.2%;
+    color: rgb(3, 3, 44);
+    font-family: sans-serif;
+
+}
+.privacidad h2{
+    text-align: left;
+    margin-left: 5.2%;
+    color: rgba(3, 3, 44, 0.815);
+    font-family: sans-serif;
+
+}
+.privacidad h3{
+    text-align: left;
+    margin-left: 5.2%;
+    color: rgba(3, 3, 44, 0.815);
+    width: 90%;
+    margin-bottom: 3vh;
+    font-family: sans-serif;
+
+}
+.privacidad h4{
+    text-align: left;
+    margin-left: 5.2%;
+    color: rgba(3, 3, 44, 0.815);
+    font-family: sans-serif;
+
+}
+
+.privacidad h5{
+    text-align: left;
+    margin-left: 5.2%;
+    color: rgba(3, 3, 44, 0.815);
+    font-family: sans-serif;
+
+}
+
+.title-priv{
+    margin-bottom: 6vh;
+}
+
+.privacidad li{
+    margin-left: 2%;
+    width: 88%;
+    font-family: sans-serif;
+    text-align: justify;
+
+}
+
+.privacidad ul{
+    margin-bottom: 6vh;
 }

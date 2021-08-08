@@ -26,6 +26,8 @@ window.addEventListener("load", function(){
             nombre.style.color = "#842029";
             errors.push("Completá tu nombre");  
         }else{
+            nombre.style.border = "solid 3px #198754";
+            nombre.style.color = "#198754";
             apellido.focus();
         }
         if(apellido.value.length < 1){

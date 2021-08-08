@@ -13,13 +13,13 @@
 
     <form action="../users/login" method="POST" class="form-login-register">
                     
-        <h3> 
+        <h1> 
             Ingresá a tu cuenta
-        </h3>
+        </h1>
 
-        <h5> 
+        <h2> 
             Completá con tus datos registrados
-        </h5>
+        </h2>
   
         <div class="correo-contraseña">
             <input type="email" name="email" placeholder="Correo electrónico"  value="<%= locals.oldData ? oldData.email : null %>">
@@ -41,7 +41,7 @@
         
         <div class="recordar-contraseña">
             <input for="recordar" type="checkbox" name="recordarme" class="checkbox1">
-            <label id="recordar"> Recordarme </label>
+            <label id="recordar">Recordarme</label>
         </div>
 
         <!-- Botón "continuar"-->

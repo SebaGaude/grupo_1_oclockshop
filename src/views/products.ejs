@@ -3,96 +3,34 @@
 
 <%- include("partials/head") %>
 
-<body>
+<body class="body">
     
     <%- include("partials/header") %>
    
-    <article class="contenedor-categ">
-        <h2> CATEGORÍAS </h2>
-        
+    <section class="contenedor-categ">
+        <h2 class="titulo-categ "> CATEGORÍAS </h2>   
         <div class="categorias">
-                <p><img src="./img/premium-rolex.webp" alt="" class="img-categ"> Premium</p>
-                <p><img src="./img/analogico.jpeg" alt="" class="img-categ"> Analógico</p>
-                <p><img src="./img/digital.png" alt="" class="img-categ"> Digital</p>
-                <p><img src="./img/swatch-sport.jpeg" alt="" class="img-categ"> Sport</p>
-        </div>
-    </article>
-
-    <article>
-        <div class="articulos">
-            <h2> PRODUCTOS </h2>  
-
-            <div class="contenedor-articulo" >  
-                <div class="contenedor-imagen-articulo">
-                    <a href="./products/producto1"><h3>Tommy Hilfiger</h3></a>
-                    <img src="./img/reloj-tommy-hilfiger.jpg" alt="">
-                </div>           
-                <div class="articulo-x">
-                    <div class="icono-articulo">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-                <div class="sub-articilo-x">
-                    <p class="precio-anterior">$28.000</p>
-                    <p class="precio-oferta">$23.000</p>
-                </div>
+            <div>    
+                <img src="./img/premium-rolex.webp" alt="" class="img-categ"><p>Premium</p>
             </div>
-           
-            <div class="contenedor-articulo">   
-                <div class="contenedor-imagen-articulo">
-                    <a href="./products/producto1"><h3>Galaxy Watch Active2</h3></a>
-                    <img src="./img/samsung-galaxy-watch-active2.jpg" alt="">              
-                </div>             
-                <div class="articulo-x">
-                    <div class="icono-articulo">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-                <div class="sub-articilo-x">
-                    <p class="precio-anterior">$34.000</p>
-                    <p class="precio-oferta">$28.000</p>
-                </div>
-            </div>
-
-            <div class="contenedor-articulo">   
-                <div class="contenedor-imagen-articulo">
-                    <a href="./products/producto1"> <h3>Swatch Rostfrey</h3></a>
-                    <img src="./img/Swatch_Rostfrei.png" alt="">
-                </div>               
-                <div class="articulo-x">
-                    <div class="icono-articulo">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-                <div class="sub-articilo-x">
-                    <p class="precio-anterior">$14.800</p>
-                    <p class="precio-oferta">$11.000</p>
-                </div>
-            </div>
-            
-            <div class="contenedor-articulo">       
-                <div class="contenedor-imagen-articulo">   
-                    <a href="./products/producto1"><h3>Swatch Rostfrey</h3></a>
-                    <img src="./img/Swatch_Rostfrei.png" alt="">
-                </div>               
-                <div class="articulo-x">
-                    <div class="icono-articulo">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>              
-                <div class="sub-articilo-x">
-                    <p class="precio-anterior">$14.800</p>
-                    <p class="precio-oferta">$11.000</p>
-                </div>
+            <div>    
+                <img src="./img/analogico.jpeg" alt="" class="img-categ"><p>Analógico</p>
+            </div>    
+            <div>    
+                <img src="./img/digital.png" alt="" class="img-categ"><p>Digital</p>
+            </div>    
+            <div>    
+                <img src="./img/swatch-sport.jpeg" alt="" class="img-categ"><p>Sport</p>
             </div>
         </div>
+    </section>
 
-        <div class="articulos">
-            <h2> PRODUCTOS </h2>  
-
+    <section class="vistos">
+        <h2 class="titulo-categ second"> PRODUCTOS </h2>
+        <div class="articulos">          
             <div class="contenedor-articulo" >    
                 <div class="contenedor-imagen-articulo">
-                    <a href="./products/producto1"><h3>Tommy Hilfiger</h3></a>
+                    <a href="./products/detail/5"><h3>Tommy Hilfiger</h3></a>
                     <img src="./img/reloj-tommy-hilfiger.jpg" alt="">
                 </div>           
                 <div class="articulo-x">
@@ -108,7 +46,7 @@
            
             <div class="contenedor-articulo">   
                 <div class="contenedor-imagen-articulo">
-                    <a href="./products/producto1"><h3>Galaxy Watch Active2</h3></a>
+                    <a href="./products/detail/6"><h3>Galaxy Watch Active2</h3></a>
                     <img src="./img/samsung-galaxy-watch-active2.jpg" alt="">              
                 </div>             
                 <div class="articulo-x">
@@ -124,7 +62,7 @@
 
             <div class="contenedor-articulo">   
                 <div class="contenedor-imagen-articulo">
-                    <a href="./products/producto1"> <h3>Swatch Rostfrey</h3></a>
+                    <a href="./products/detail/4"> <h3>Swatch Rostfrey</h3></a>
                     <img src="./img/Swatch_Rostfrei.png" alt="">
                 </div>               
                 <div class="articulo-x">
@@ -140,7 +78,7 @@
             
             <div class="contenedor-articulo">       
                 <div class="contenedor-imagen-articulo">   
-                    <a href="./products/producto1"><h3>Swatch Rostfrey</h3></a>
+                    <a href="./products/detail/3"><h3>Swatch Rostfrey</h3></a>
                     <img src="./img/Swatch_Rostfrei.png" alt="">
                 </div>               
                 <div class="articulo-x">
@@ -154,7 +92,7 @@
                 </div>
             </div>
         </div>
-    </article>
+    </section>
 
 <%- include("partials/footer") %>
 
