@@ -19,6 +19,8 @@ let productsController = {
 
     },
    
+    
+
    
     productDetail: function (req, res) {
        
@@ -126,6 +128,8 @@ let productsController = {
       
          })
     return res.redirect('/');}
+
+
 };
 
 module.exports = productsController;
