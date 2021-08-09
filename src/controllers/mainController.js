@@ -4,11 +4,10 @@ const db = require ("../database/models");
 let mainController = {
     //mostrar página principal----------------------
     index: function (req, res){
-        db.Producto
+        db.Categoria
         .findAll()
-        .then(productos =>{
-            console.log(productos);
-            return res.render("index", {productos})
+        .then(categorias =>{
+            return res.render("index", {categorias})
         })     
     },
 
@@ -34,7 +33,7 @@ let mainController = {
     },
     //mostrar la vista de categorías
     categories: function(req, res){
-        let listadoCategorias = db.Categoria.findAll();
+        let listadoCategorias = db.Categoria.findByPk(req.params.id);
         let listadorMarcas = db.Marca.findAll();
         let listadoProductos = db.Producto.findAll();
 
