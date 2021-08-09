@@ -18,10 +18,6 @@ let productsController = {
           
 
     },
-   
-    
-
-   
     productDetail: function (req, res) {
        
         let listadoCategorias = db.Categoria.findAll();
@@ -36,13 +32,11 @@ let productsController = {
         
         })
     },
-    
-    
+
     productCart: function (req, res) {
         res.render("productCart");
     },
-    
-    
+
     newProduct: function (req, res) {
         
         let listadoCategorias = db.Categoria.findAll();
@@ -61,8 +55,6 @@ let productsController = {
     store: function (req, res) {
 
         db.Producto.create({
-
-      
             
             articulo: req.body.articulo,
             descripcion: req.body.descripcion,
@@ -74,7 +66,6 @@ let productsController = {
         
         })
        
-
         res.redirect("/");
 
     },
@@ -127,7 +118,8 @@ let productsController = {
                 id: req.params.id}
       
          })
-    return res.redirect('/');}
+    return res.redirect('/');
+}
 
 
 };
