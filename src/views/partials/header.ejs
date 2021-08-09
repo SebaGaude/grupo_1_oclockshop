@@ -1,62 +1,75 @@
-<header>
-    <div class="top">
-        <nav class="top1">
-            <p class="español-ingles"> Español </p>
-            <p class="separacion"> | </p>
-            <p class="español-ingles"> English </p>
-        </nav>
-        <nav class="contact-us">
-            <a href="mailto:contactenos@oclockshop.com?Subject=Contacto"><p>Contactanos</p></a>
-        </nav>
-    </div>
-    <div class="header1">
-        <nav class="logo">
-            <a href="/"><img src="/img/oclockshop-logo-alta.png" alt="Logo OclockShop"></a>
-        </nav>
-        <nav class="menu">
-            <form action="/resultados-de-busqueda" method="GET" class="busqueda">
-                <input type="text" placeholder="Buscar productos, marcas..." class="busqueda-input">
-                <button><i class="fas fa-search"></i></button>
-            </form>
-            <nav class="mobile">
-                <div class="burger-menu">
-                    <i class="fa fa-bars burger"></i>
-                </div>
-                <div class="carrito1">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
+<html>    
+    <header>
+        <div class="top">
+            <nav class="top1">
+                <p class="español-ingles"> Español </p>
+                <p class="separacion"> | </p>
+                <p class="español-ingles"> English </p>
             </nav>
-        </nav>
-    </div>    
-    <nav class="desplegable">
-        <nav class="fijo">
-            <a class="botonera" href="../products"><p>Productos</p></a>
-            <a class="botonera" href="/#categ-id">
-                <p>Categorías</p>
-            </a>                
-           
-        </nav>
-        <nav class="carrito">
-            <% if (locals.isLogged) { %>
-                <div class="header-user">
-                    <img src="/img/users/<%= locals.usuarioLogueado.imagen %>"  class="imagen-header">
-                    <a href="/users/profile"> Hola,  <%= locals.usuarioLogueado.nombre %></a>
-                </div>
-                <% } else { %>
-                    <div class="registration">
-                        <a href="/users/register">
-                            <p>Registrate</p>
-                        </a>
+            <nav class="contact-us">
+                <a href="mailto:contactenos@oclockshop.com?Subject=Contacto"><p>Contactanos</p></a>
+            </nav>
+        </div>
+        <div class="header1">
+            <nav class="logo">
+                <a href="/"><img src="/img/oclockshop-logo-alta.png" alt="Logo OclockShop"></a>
+            </nav>
+            <nav class="menu">
+                <form action="/resultados-de-busqueda" method="GET" class="busqueda">
+                    <input type="text" placeholder="Buscar productos, marcas..." class="busqueda-input">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+                <nav class="mobile">
+                    <div class="burger-menu">
+                        <i class="fa fa-bars burger"></i>
                     </div>
-                    <div class="sign-in">
-                        <a href="/users/login">
-                            <p>Ingresá</p>
-                        </a>
+                    <div class="carrito1">
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
-                    <% } %>
-                        <div class="carro">
-                            <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
+                </nav>
+            </nav>
+        </div>    
+        <nav class="desplegable">
+            <nav class="fijo">
+                <a class="botonera" href="../products"><p>Productos</p></a>
+                <a class="botonera categorias" href="/#categ-id">
+                    <p>Categorías</p>
+                </a>                
+            
+            </nav>
+            <nav class="carrito">
+                <% if (locals.isLogged) { %>
+                    <div class="header-user">
+                        <img src="/img/users/<%= locals.usuarioLogueado.imagen %>"  class="imagen-header">
+                        <a href="/users/profile"> Hola,  <%= locals.usuarioLogueado.nombre %></a>
+                    </div>
+                    <% } else { %>
+                        <div class="registration">
+                            <a href="/users/register">
+                                <p>Registrate</p>
+                            </a>
                         </div>
+                        <div class="sign-in">
+                            <a href="/users/login">
+                                <p>Ingresá</p>
+                            </a>
+                        </div>
+                        <% } %>
+                            <div class="carro">
+                                <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                </nav>
             </nav>
-        </nav>
-</header>
+            <nav class="desplegable-front">
+                <div class="div-desplegable">
+                    <ul class="list-desplegable">
+                        <a href="" class="desplegable-li"><li>Digital</li></a>
+                        <a href="" class="desplegable-li"><li>Analogico</li></a>
+                        <a href="" class="desplegable-li"><li>Smart</li></a>
+                        <a href="" class="desplegable-li"><li>Lujo</li></a>
+                    </ul>
+                </div>
+            </nav>
+            <script src="../../js/header.js"></script>
+    </header>
+</html>
