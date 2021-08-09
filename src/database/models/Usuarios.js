@@ -32,7 +32,13 @@ module.exports = function (sequelize, dataTypes) {
         contraseña: {
             type : dataTypes.STRING(255),
             allowNull: false
-        }
+        },
+   
+        perfil: {
+            type : dataTypes.STRING(255)
+        }, 
+   
+   
     };
 
     let config = {

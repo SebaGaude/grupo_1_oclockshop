@@ -1,8 +1,17 @@
+const db = require ("../database/models");
+
+
 let mainController = {
     //mostrar página principal----------------------
     index: function (req, res){
-        res.render("index");
+        db.Producto
+        .findAll()
+        .then(productos =>{
+            console.log(productos);
+            return res.render("index", {productos})
+        })     
     },
+
     //mostrar formulario de login----------------------
     login: function(req, res){
         res.render("login");
@@ -23,6 +32,22 @@ let mainController = {
     privacidad: function(req, res){
         res.render("privacidad");
     },
+    //mostrar la vista de categorías
+    categories: function(req, res){
+        let listadoCategorias = db.Categoria.findAll();
+        let listadorMarcas = db.Marca.findAll();
+        let listadoProductos = db.Producto.findAll();
+
+        Promise.all([listadoCategorias, listadorMarcas, listadoProductos])
+        
+        .then(function([categorias, marcas, productos]){
+        
+            res.render("categories", {categorias, marcas, productos});
+            
+        })   
+
+    }
+
 };
 
 module.exports = mainController;

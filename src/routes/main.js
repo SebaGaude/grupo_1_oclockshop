@@ -20,4 +20,7 @@ router.get("/terminos", mainController.terminos);
 
 router.get("/privacidad", mainController.privacidad);
 
+router.get("/categories/:id", mainController.categories);
+
+
 module.exports = router;

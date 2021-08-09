@@ -7,31 +7,17 @@
     
     <%- include("partials/header") %>
    
-    <section class="contenedor-categ">
-        <h2 class="titulo-categ "> CATEGORÍAS </h2>   
-        <div class="categorias">
-            <div>    
-                <img src="./img/premium-rolex.webp" alt="" class="img-categ"><p>Premium</p>
-            </div>
-            <div>    
-                <img src="./img/analogico.jpeg" alt="" class="img-categ"><p>Analógico</p>
-            </div>    
-            <div>    
-                <img src="./img/digital.png" alt="" class="img-categ"><p>Digital</p>
-            </div>    
-            <div>    
-                <img src="./img/swatch-sport.jpeg" alt="" class="img-categ"><p>Sport</p>
-            </div>
-        </div>
-    </section>
 
     <section class="vistos">
         <h2 class="titulo-categ second"> PRODUCTOS </h2>
+        <% for( let i = 0; i< productos.length; i++ ) { %>
+        
+        
         <div class="articulos">          
             <div class="contenedor-articulo" >    
                 <div class="contenedor-imagen-articulo">
-                    <a href="./products/detail/5"><h3>Tommy Hilfiger</h3></a>
-                    <img src="./img/reloj-tommy-hilfiger.jpg" alt="">
+                    <a href="./products/detail/<%=productos[i].id  %> "><h3><%=productos[i].articulo%> </h3></a>
+                    <img src="./img/<%=productos[i].imagen  %> " alt="">
                 </div>           
                 <div class="articulo-x">
                     <div class="icono-articulo">
@@ -39,59 +25,12 @@
                     </div>
                 </div>
                 <div class="sub-articilo-x">
-                    <p class="precio-anterior">$28.000</p>
-                    <p class="precio-oferta">$23.000</p>
+                    <p class="precio-anterior"><%= productos[i].precio %> </p>
+                    <p class="precio-oferta"><%= productos[i].precio %></p>
                 </div>
-            </div>
-           
-            <div class="contenedor-articulo">   
-                <div class="contenedor-imagen-articulo">
-                    <a href="./products/detail/6"><h3>Galaxy Watch Active2</h3></a>
-                    <img src="./img/samsung-galaxy-watch-active2.jpg" alt="">              
-                </div>             
-                <div class="articulo-x">
-                    <div class="icono-articulo">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-                <div class="sub-articilo-x">
-                    <p class="precio-anterior">$34.000</p>
-                    <p class="precio-oferta">$28.000</p>
-                </div>
-            </div>
-
-            <div class="contenedor-articulo">   
-                <div class="contenedor-imagen-articulo">
-                    <a href="./products/detail/4"> <h3>Swatch Rostfrey</h3></a>
-                    <img src="./img/Swatch_Rostfrei.png" alt="">
-                </div>               
-                <div class="articulo-x">
-                    <div class="icono-articulo">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-                <div class="sub-articilo-x">
-                    <p class="precio-anterior">$14.800</p>
-                    <p class="precio-oferta">$11.000</p>
-                </div>
-            </div>
-            
-            <div class="contenedor-articulo">       
-                <div class="contenedor-imagen-articulo">   
-                    <a href="./products/detail/3"><h3>Swatch Rostfrey</h3></a>
-                    <img src="./img/Swatch_Rostfrei.png" alt="">
-                </div>               
-                <div class="articulo-x">
-                    <div class="icono-articulo">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>              
-                <div class="sub-articilo-x">
-                    <p class="precio-anterior">$14.800</p>
-                    <p class="precio-oferta">$11.000</p>
-                </div>
-            </div>
+            </div>         
         </div>
+        <% } %>
     </section>
 
 <%- include("partials/footer") %>

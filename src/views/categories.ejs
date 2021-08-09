@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head") %>
+
+<body class="body">
+    
+    <%- include("partials/header") %>
+   
+
+    <section class="vistos">
+        <h2 class="titulo-categ second"> PRODUCTOS DE LA CATEGORIA <%=categorias.nombre %>  </h2>
+        <% for( let i = 0; i< productos.length; i++ ) { %>
+        <div class="articulos">          
+            <div class="contenedor-articulo" >    
+                <div class="contenedor-imagen-articulo">
+                    <a href="./products/detail/<%=productos[i].id  %> "><h3><%=productos[i].articulo%> </h3></a>
+                    <img src="./img/<%=productos[i].imagen  %> " alt="">
+                </div>           
+                <div class="articulo-x">
+                    <div class="icono-articulo">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <div class="sub-articilo-x">
+                    <p class="precio-anterior"><%= productos[i].precio %> </p>
+                    <p class="precio-oferta"><%= productos[i].precio %></p>
+                </div>
+            </div>         
+        </div>
+        <% } %>
+    </section>
+
+<%- include("partials/footer") %>
+
+</html>
