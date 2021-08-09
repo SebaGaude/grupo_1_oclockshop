@@ -3,28 +3,13 @@ const db = require ("../database/models");
 let mainController = {
     //mostrar página principal----------------------
     index: function (req, res){
-
-        let categoriaId = db.Categoria.findByPk(req.params.id)
-        let listadoProductos = db.Producto.findAll(
-            {
-            where: {id_categoria: req.params.id}
-       
-            
-       
-        });
-        
-
-        Promise.all([categoriaId, listadoProductos])
-        
-        .then(function([categoria, productos]){
-        
-            res.render("index", {categoria, productos});
-        
-        })
-
-
-      
+        db.Categoria
+        .findAll()
+        .then(categorias =>{
+            return res.render("index", {categorias})
+        })     
     },
+
     //mostrar formulario de login----------------------
     login: function(req, res){
         res.render("login");
@@ -45,8 +30,21 @@ let mainController = {
     privacidad: function(req, res){
         res.render("privacidad");
     },
+    //mostrar la vista de categorías
+    categories: function(req, res){
+        let listadoCategorias = db.Categoria.findByPk(req.params.id);
+        let listadorMarcas = db.Marca.findAll();
+        let listadoProductos = db.Producto.findAll();
 
-    
+        Promise.all([listadoCategorias, listadorMarcas, listadoProductos])
+        
+        .then(function([categorias, marcas, productos]){
+        
+            res.render("categories", {categorias, marcas, productos});
+            
+        })   
+
+    }
 
 };
 

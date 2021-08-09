@@ -32,7 +32,6 @@ header{
     font-family: 'Ubuntu', sans-serif;
     color: #525252;
     font-size: 16px;
-    background-color: rgb(3, 3, 44);
     color: white;
 }
 
@@ -90,6 +89,8 @@ header div.top nav.top1 p.español-ingles{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    background-color: rgb(3, 3, 44);
+
 }
 
 .logo{
@@ -219,7 +220,7 @@ header div.top nav.top1 p.español-ingles{
     text-align: center;
     margin: auto;
     color: white;
-    line-height: 3.5vh;
+    line-height: 5vh;
 }
 
 
@@ -241,10 +242,17 @@ header div.top nav.top1 p.español-ingles{
 .fijo a{
     text-decoration: none;
     width: 80%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 a.botonera{
     width: 40%;
+}
+
+a.botonera p{
+    line-height: 4vh;
+
 }
 
 .carrito{
@@ -268,6 +276,11 @@ a.botonera{
     text-align: center;
     transition: transform 0.5s;
     width: 50%;
+}
+
+
+.carro i{
+    line-height: 5vh;
 }
 
 .carro:hover{
@@ -294,8 +307,48 @@ a.botonera{
     width: 50%;
 }
 
+.desplegable-front{
+    width: 18%;
+    background-color: rgb(3, 3, 44);
+    margin: 0 0 0 28.54%;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+}
 
 
+.desplegable-front div.div-desplegable ul.list-desplegable{
+    margin: 0;
+    border-top: 10px solid rgb(3, 3, 44);
+    border-bottom: 10px solid rgb(3, 3, 44);
+    padding: 0
+}
+
+.desplegable-front div.div-desplegable ul.list-desplegable a li{
+    list-style-type: none;
+    padding: 0;
+    line-height: 4vh;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.desplegable-front div.div-desplegable ul.list-desplegable a{
+    text-decoration: none;
+    color: white;
+}
+
+.categorias{
+    border-bottom:0;
+}
+
+.list-desplegable a li:hover{
+    background-color: rgba(255, 136, 0, 0.884);
+    box-sizing: border-box;
+    border: rgb(255, 136, 0) solid 1px;
+    color: rgb(3, 3, 44);
+    font-weight: 700;
+}
 /* ---------------------------------------Fin Configuracion Header-------------------------------------------*/
 
 /* ---------------------------------------Configuracion Footer----------------------------------------------*/
@@ -1840,4 +1893,72 @@ section div ul li a{
 
 .privacidad ul{
     margin-bottom: 6vh;
+}
+
+/* --------------------------------------------- Configuracion Productos -------------------------------------------- */
+
+.all-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.article-container{
+    width: 30vw;
+    position: relative;
+    transition: all 450ms;
+    width: 100%;
+    align-self: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5%;
+    margin: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+}
+
+.articles{
+    width: 30vw;
+}
+
+.img-container img{
+    height: auto;
+    width: 100%;
+    padding: 5px; 
+    border: none;
+    display: block;
+    margin: auto;
+}
+
+
+.img-container h3{
+    background-color: #525252;
+    color: #ffffff;
+    font-size: 20px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 450ms;
+    border-radius: 1%;
+}
+
+.article-container:hover .icono-articulo{
+    transform: scale(1.2, 1.2);
+    color: rgb(255, 136, 0, 0.8);
+    border: 1px solid rgba(255, 136, 0);
+}
+
+.article-container:hover div h3{
+    opacity: 0.8;
 }

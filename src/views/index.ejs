@@ -37,29 +37,60 @@
     </main>
 
     <section class="contenedor-categ">
-        <h2 class="titulo-categ" id="categ-id"> CATEGORÍAS </h2>   
-        <div class="categorias">
-            <div>
-                <a href='./categories/categories'>
-                <img src="./img/premium-rolex.webp" alt="" class="img-categ"><p>Premium</p>
-                </a>  
-            </div>
-            <div>   
-                <a href='./products/categories'>
-                <img src="./img/analogico.jpeg" alt="" class="img-categ"><p>Analógico</p>
-                </a> 
-            </div>    
-            <div>   
-                <a href='./products/categories'> 
-                <img src="./img/digital.png" alt="" class="img-categ"><p>Digital</p>
-                </a>
-            </div>         
-            <div> 
-                <a href='./products/categories'>  
-                <img src="./img/swatch-sport.jpeg" alt="" class="img-categ"><p>Sport</p>
-                </a>
-            </div>     
-        </div>
+        <h2 class="titulo-categ" id="categ-id"> CATEGORÍAS </h2>
+        <% for( let i = 0; i < categorias.length; i++ ) { %>
+            <% if (categorias[i].id === 1) { %>
+                <div class="categorias">
+                    <div>
+                        <a href='./categories/<%= categorias[i].id %> '>
+                            <img src="./img/premium-rolex.webp" alt="" class="img-categ"><p><%= categorias[i].nombre %> </p>
+                        </a>  
+                    </div>
+            <% } %>
+            <% if (categorias[i].id === 2) { %>
+                <div class="categorias">
+                    <div>
+                        <a href='./categories/<%= categorias[i].id %> '>
+                            <img src="./img/analogico.jpeg" alt="" class="img-categ"><p><%= categorias[i].nombre %> </p>
+                        </a>  
+                    </div>
+            <% } %>
+            <% if (categorias[i].id === 3) { %>
+                <div class="categorias">
+                    <div>
+                        <a href='./categories/<%= categorias[i].id %> '>
+                            <img src="./img/categoria-3.jpg" alt="" class="img-categ"><p><%= categorias[i].nombre %></p>
+                        </a>  
+                    </div>
+            <% } %>
+            <% if (categorias[i].id === 4) { %>
+                <div class="categorias">
+                    <div>
+                        <a href='./categories/<%= categorias[i].id %> '>
+                            <img src="./img/deportivo.jpg" alt="" class="img-categ"><p><%= categorias[i].nombre %></p>
+                        </a>  
+                    </div>
+            <% } %>
+
+        <% } %>
+        
+                     
+                <!-- <div>   
+                    <a href='./products/categories'>
+                        <img src="./img/analogico.jpeg" alt="" class="img-categ"><p>Analógico</p>
+                    </a> 
+                </div>    
+                <div>   
+                    <a href='./products/categories'> 
+                        <img src="./img/digital.png" alt="" class="img-categ"><p>Smart</p>
+                    </a>
+                </div>         
+                <div> 
+                    <a href='./products/categories'>  
+                        <img src="./img/swatch-sport.jpeg" alt="" class="img-categ"><p>Sport</p>
+                    </a>
+                </div>     
+            </div> -->
     </section>
 
     <section class="vistos">
