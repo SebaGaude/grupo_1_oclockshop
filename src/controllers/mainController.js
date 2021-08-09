@@ -1,3 +1,5 @@
+const db = require ("../database/models");
+
 let mainController = {
     //mostrar página principal----------------------
     index: function (req, res){
