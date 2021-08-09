@@ -1,6 +1,6 @@
 window.addEventListener("load", function(){
 
-    let desplegable = document.querySelector(".categorias");
+    let desplegable = document.querySelector(".categoria");
     let uldesplegable = this.document.querySelector(".desplegable-front")
 
     desplegable.addEventListener("mouseover", function(){

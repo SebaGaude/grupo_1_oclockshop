@@ -41,35 +41,39 @@
         <% for( let i = 0; i < categorias.length; i++ ) { %>
             <% if (categorias[i].id === 1) { %>
                 <div class="categorias">
-                    <div>
+                    <div class="categ-index">
                         <a href='./categories/<%= categorias[i].id %> '>
                             <img src="./img/premium-rolex.webp" alt="" class="img-categ"><p><%= categorias[i].nombre %> </p>
                         </a>  
                     </div>
+                </div>
             <% } %>
             <% if (categorias[i].id === 2) { %>
                 <div class="categorias">
-                    <div>
+                    <div class="categ-index">
                         <a href='./categories/<%= categorias[i].id %> '>
                             <img src="./img/analogico.jpeg" alt="" class="img-categ"><p><%= categorias[i].nombre %> </p>
                         </a>  
                     </div>
+                </div>
             <% } %>
             <% if (categorias[i].id === 3) { %>
                 <div class="categorias">
-                    <div>
+                    <div class="categ-index">
                         <a href='./categories/<%= categorias[i].id %> '>
                             <img src="./img/categoria-3.jpg" alt="" class="img-categ"><p><%= categorias[i].nombre %></p>
                         </a>  
                     </div>
+                </div>
             <% } %>
             <% if (categorias[i].id === 4) { %>
                 <div class="categorias">
-                    <div>
+                    <div class="categ-index">
                         <a href='./categories/<%= categorias[i].id %> '>
                             <img src="./img/deportivo.jpg" alt="" class="img-categ"><p><%= categorias[i].nombre %></p>
                         </a>  
                     </div>
+                </div>
             <% } %>
 
         <% } %>

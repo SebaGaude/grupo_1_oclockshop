@@ -338,9 +338,6 @@ a.botonera p{
     color: white;
 }
 
-.categorias{
-    border-bottom:0;
-}
 
 .list-desplegable a li:hover{
     background-color: rgba(255, 136, 0, 0.884);
@@ -349,6 +346,8 @@ a.botonera p{
     color: rgb(3, 3, 44);
     font-weight: 700;
 }
+
+
 /* ---------------------------------------Fin Configuracion Header-------------------------------------------*/
 
 /* ---------------------------------------Configuracion Footer----------------------------------------------*/
@@ -1048,7 +1047,11 @@ h2{
 
 .contenedor-categ{
     margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
+
 .link-quiz{
     margin-top: 10px;
     color: whitesmoke;
@@ -1065,6 +1068,7 @@ h2{
     text-align: center;
     border-bottom: white 2px solid;
     box-sizing: border-box;
+    width: 20%;
 }
 
 .categorias div{
@@ -1214,6 +1218,7 @@ section.vistos{
 
 .img-categ{
     background-color: white;
+    width: 20%;
 }
 
 /* --------------------------------------------Fin configuracion index --------------------------------------------*/
@@ -1726,7 +1731,7 @@ section div ul li a{
         max-width: 22%;
     }
     .categorias{
-        width: 100%;
+        width: 25%;
     }
 
     /* Vista desktop carrito */
