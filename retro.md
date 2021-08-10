@@ -62,3 +62,15 @@ Sprint 5
 4. Hacer menos: dejar dudas o consultas que se podían haber aclarado al inicio del sprint, para el final. Esto retrasa algunos puntos (a veces claves) para la culminación exitosa del sprint.
 
 5. Dejar de hacer: avanzar con los entregables sin organización interna entre los miembros del equipo. Pese a que todos tenemos habilidades técnicas distintas (algunos con más conocimientos y otros con menos), creemos que estaría bueno asignar ciertos roles en razón de los entregables, para que la estructura de trabajo esté mejor compuesta y organizada.
+---
+Sprint 6
+---
+1. Comenzar a hacer: cubrir detalles finales que abarquen la totalidad del sitio: funcionalidad de la página de inicio a fin, estética, links header y footer.
+
+2. Hacer más: revisar aspectos no cubiertos específicamente por sprints pero que se adecuan al funcionamiento íntegro de la página y las características del proyecto.
+
+3. Continuar haciendo: fuera del trabajo individual de cada uno, seguir coordinando -y realizando en conjunto- el trabajo en las reuniones periódicas para revisar todos los aspectos de la página.
+
+4. Hacer menos: obviar asuntos no indicados específicamente en las instrucciones del sprint, pero que guardan relación con la integridad del proyecto.
+
+5. Dejar de hacer: dejar ciertas tareas para futuros sprints, dado que esto puede provocar la acumulación de trabajo para la etapa final del proyecto.
