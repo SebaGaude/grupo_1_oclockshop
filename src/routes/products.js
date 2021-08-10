@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const productsController = require("../controllers/productsController");
+
+// middlewares
+const createEditProductMiddleware = require("../middlewares/createEditProductMiddleware");
+
 const multer = require("multer");
 
 //---------------MULTER-----------------------
