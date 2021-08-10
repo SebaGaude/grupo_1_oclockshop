@@ -100,24 +100,26 @@ let usersControllers = {
     },
 
     updateProfile: function(req, res){
-
-       console.log(req.file.filename)
-        
+                let image;
+                db.Usuario.findByPk(req.params.id)
+          .then(usuario => {
+              image = usuario.imagen;
+              if (req.file) {
+                  image = req.file.filename;
+              }
+              
         db.Usuario.update ({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
-           
-            imagen: req.body.filename,
-            
+            imagen: image,
             contraseña: bcrypt.hashSync(req.body.contraseña, 10),
         },{ where: {
             id: req.params.id}
-        
         });
 
         return res.redirect("/");
     
-
+    }).catch(e => console.log(e))
     },
     destroy: function(req, res){
         db.Usuario.destroy ({
