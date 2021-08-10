@@ -4,19 +4,14 @@ function recordameMiddleware (req, res, next){
     next();
     
     if(req.cookies.recordame != undefined && req.session.usuarioLogueado == undefined){
-
-        let user = 
-        db.Usuario
-        .findall()
-        .then(unUsuario=>{
-            
+        let usersDatabase = db.Usuario.findOne({
+            where: {email : req.cookies.recordame}
         })
-
-
-
-        req.session.usuarioLogueado =  usuarioALoguearse;
-        
+        .then(
+            usuarioALoguearse = usersDatabase
+        )
     }
+    req.session.usuarioLogueado =  usuarioALoguearse;
 }
 
 module.exports = recordameMiddleware;
