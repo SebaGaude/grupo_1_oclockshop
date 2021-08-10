@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const productsController = require("../controllers/productsController");
+
+// middlewares
+const createEditProductMiddleware = require("../middlewares/createEditProductMiddleware");
+
 const multer = require("multer");
 
 //---------------MULTER-----------------------
@@ -24,11 +28,11 @@ router.get("/detail/:id", productsController.productDetail); // vista de detalle
 router.get("/carrito", productsController.productCart);
 
 router.get("/create", productsController.newProduct); // vista de creación
-router.post("/", fileUpload.single("imagen") ,productsController.store); // lógica de creación
+router.post("/", fileUpload.single("imagen"), createEditProductMiddleware, productsController.store); // lógica de creación
 
 
 router.get("/edit/:id", productsController.editProduct); // vista de la edicion
-router.put("/:id",fileUpload.single("imagen"), productsController.updateProduct); // logica de la edicion
+router.put("/:id",fileUpload.single("imagen"), createEditProductMiddleware, productsController.updateProduct); // logica de la edicion
 
 
 router.delete('/delete/:id', productsController.destroy); // lógica de delete
