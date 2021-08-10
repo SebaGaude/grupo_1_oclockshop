@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head") %>
+
+<body>
+
+    <%- include("partials/header.ejs") %>
+    
+    <main class="main">
+        
+        <!-- Formulario de Envío de CV-->
+
+        <form action="" method="POST" class="form-login-register" enctype="multipart/form-data">
+                
+            <h1> 
+                ¿Querés formar parte del equipo O'Clock Shop?
+            </h1>
+
+            <h2> 
+                Completá tus datos y envianos tu CV
+            </h2>
+            <div id="error-nombre"></div>      
+            <div>
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+                <% if (locals.errors && errors.nombre) { %>
+                    <div class="errorMsg">
+                        <%= errors.nombre.msg %> 
+                    </div>
+                    <% } %>
+            </div>
+            </div>
+            
+            <div>
+                <input id="apellido" type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                <% if (locals.errors && errors.apellido) { %>
+                    <div class="errorMsg">
+                        <%= errors.apellido.msg %> 
+                    </div>
+                <% } %>
+            </div>
+            
+            <div>
+                <input id="email" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="errorMsg">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+            </div>
+            <div>
+                <label>Ingresá tu CV</label>
+                <input id="imagen" type="file" name="imagen">
+                <% if (locals.errors && errors.imagen) { %>
+                    <div class="errorMsg">
+                        <%= errors.imagen.msg %> 
+                    </div>
+                <% } %>
+            </div>      
+    
+            <!-- <div>
+                <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña">
+                <% if (locals.errors && errors.contraseña) { %>
+                    <div class="errorMsg">
+                        <%= errors.contraseña.msg %> 
+                    </div>
+                <% } %>
+            </div> -->
+            
+            <!--<div>
+                <input type="password" name="confirmar" placeholder="Confirmar contraseña">
+            </div> -->
+            
+            <!-- Botón "enviar"-->
+
+            <button type="submit" class="boton-crear-cuenta">ENVIAR</button>
+            
+            <!-- <div class="terminos-condiciones">
+                <input type="checkbox" name="nombre" class="checkbox">
+                <label>Al crear esta cuenta, acepto los <a href="/terminos" target="_blank"> Términos y Condiciones </a>  y la <a href="/privacidad" target="_blank"> Política de Privacidad </a> de la tienda.</label>
+            </div> -->
+                
+        </form>
+
+    </main>
+    <script src="../../js/validator.js"></script>
+<%- include("partials/footer.ejs") %>
+</html>

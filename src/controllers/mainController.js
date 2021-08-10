@@ -30,6 +30,10 @@ let mainController = {
     privacidad: function(req, res){
         res.render("privacidad");
     },
+    //mostrar formulario de "trabajá con nosotros"--------------------
+    workwithus: function(req, res){
+        res.render("workwithus");
+    },
     //mostrar la vista de categorías
     categories: function(req, res){
         let listadoCategorias = db.Categoria.findByPk(req.params.id);

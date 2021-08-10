@@ -22,5 +22,6 @@ router.get("/privacidad", mainController.privacidad);
 
 router.get("/categories/:id", mainController.categories);
 
+router.get("/workwithus", mainController.workwithus)
 
 module.exports = router;
