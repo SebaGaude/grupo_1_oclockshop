@@ -98,7 +98,7 @@ header div.top nav.top1 p.español-ingles{
 }
 .logo img{
     height: 100%;
-    margin-left: 15%;
+    margin-left: 35%;
 }
 
 .menu{
@@ -629,6 +629,14 @@ h3{
     justify-content: center;
     background-color: white;
     width: 100%;
+}
+
+#main-login-register{
+    background-color: #ebebeb;
+}
+
+#body-login-register{
+    background-color: #ebebeb;
 }
 
 .form-login-register{

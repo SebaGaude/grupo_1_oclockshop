@@ -3,62 +3,62 @@
 
 <%- include("partials/head") %>
 
-<body>
+<body id="body-login-register">
 
     <%- include("partials/header") %>
 
-    <main class="main">
+    <main class="main" id="main-login-register">
     
-    <!-- Formulario de Login -->
+        <!-- Formulario de Login -->
 
-    <form action="../users/login" method="POST" class="form-login-register">
+        <form action="../users/login" method="POST" class="form-login-register">
+                        
+            <h1> 
+                Ingresá a tu cuenta
+            </h1>
+
+            <h2> 
+                Completá con tus datos registrados
+            </h2>
+    
+            <div class="correo-contraseña">
+                <input type="email" name="email" placeholder="Correo electrónico"  value="<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="errorMsg">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+            </div>       
+
+            <div>
+                <input type="password" name="contraseña" placeholder="Contraseña">
+                <% if (locals.errors && errors.contraseña) { %>
+                    <div class="errorMsg">
+                        <%= errors.contraseña.msg %> 
+                    </div>
+                <% } %>
+            </div>
+            
+            <div class="recordar-contraseña">
+                <input for="recordar" type="checkbox" name="recordarme" class="checkbox1">
+                <label id="recordar">Recordarme</label>
+            </div>
+
+            <!-- Botón "continuar"-->
+            
+            <button type="submit" class="boton-crear-cuenta">CONTINUAR</button>
                     
-        <h1> 
-            Ingresá a tu cuenta
-        </h1>
+            <div class="recuperar-contraseña">
+                <p> <a href=""> ¿Olvidaste tu contraseña? </a></p>
+            </div>
 
-        <h2> 
-            Completá con tus datos registrados
-        </h2>
-  
-        <div class="correo-contraseña">
-            <input type="email" name="email" placeholder="Correo electrónico"  value="<%= locals.oldData ? oldData.email : null %>">
-            <% if (locals.errors && errors.email) { %>
-                <div class="errorMsg">
-                    <%= errors.email.msg %> 
-                </div>
-            <% } %>
-        </div>       
-
-        <div>
-            <input type="password" name="contraseña" placeholder="Contraseña">
-            <% if (locals.errors && errors.contraseña) { %>
-                <div class="errorMsg">
-                    <%= errors.contraseña.msg %> 
-                </div>
-            <% } %>
-        </div>
-        
-        <div class="recordar-contraseña">
-            <input for="recordar" type="checkbox" name="recordarme" class="checkbox1">
-            <label id="recordar">Recordarme</label>
-        </div>
-
-        <!-- Botón "continuar"-->
-        
-        <button type="submit" class="boton-crear-cuenta">CONTINUAR</button>
-                
-        <div class="recuperar-contraseña">
-            <p> <a href=""> ¿Olvidaste tu contraseña? </a></p>
-        </div>
-
-        <div class="registrar-cuenta">
-            <p>¿Todavía no tenés una cuenta?</p>
-        
-            <p><a href="./register"> ¡Registrate acá! </a></p>
-        </div>
-        
-    </form>
+            <div class="registrar-cuenta">
+                <p>¿Todavía no tenés una cuenta?</p>
+            
+                <p><a href="./register"> ¡Registrate acá! </a></p>
+            </div>
+            
+        </form>
     </main>   
 </body>   
 <%- include("partials/footer") %>
