@@ -8,28 +8,28 @@
     <%- include("partials/header") %>
 
     <main class="principal">
-       <div class="imagenes-verticales">
+       <!-- <div class="imagenes-verticales">
             <div class="imagen-pequeña">
-                <img src= "../../public/img/<%= product.imagen %> " alt="imagen 1">
-            </div>
+                <img src= "../../public/img/" alt="imagen 1">
+            </div> 
             <div class="imagen-pequeña"> 
-                <img src="../../img/<%= product.imagen %>" alt="imagen 2">
+                <img src="../../img/" alt="imagen 2">
+            </div> -->
+            <!-- <div class="imagen-pequeña">
+                <img src="../img/" alt="imagen 3">
             </div>
-            <div class="imagen-pequeña">
-                <img src="../img/<%= product.imagen %>" alt="imagen 3">
-            </div>
-        </div>
+        </div> --> 
         <div class="imagen-principal">
-            <img src="../img/<%= product.imagen %>" alt="imagen elegida">
+            <img src="../../img/<%= product.imagen %> " alt="imagen elegida">
         </div>
         <div class=descripcion>
             <h3><%= product.articulo %> </h3>  
-            <p class="main-characteristics"> <%= product.descripcion %> </p>Cronografo automatico - Diametro 44 mm
+            <p class="main-characteristics"> <%= product.descripcion %> </p>
             <div class="precios">
-                <p class="precio-original"><%= product.precio %> </p>
+                <!-- <p class="precio-original">$<%= product.precio %> </p> -->
                 <div class="descuento">
-                    <p class="precio-descuento"> <%= product.precio%></p> 
-                    <p class="discount"><%= product.descuento %> % OFF </p>
+                    <p class="precio-descuento">$<%= product.precio%></p> 
+                    <!-- <p class="discount"><%= product.descuento %> % OFF </p> -->
                 </div>    
             </div>
             <form action="/registro" method="GET">
@@ -71,7 +71,7 @@
             <p><%= product.descripcion %> </p>
         </div>
     </article> 
-    <div class="otros-productos">
+    <!-- <div class="otros-productos">
         <h4>Otros Productos</h4>
         <div class="otros-ofrecidos">
             <div class="otros">
@@ -93,7 +93,7 @@
                 <img src="../img/Tag-Heuer13.jpg" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 <%- include("partials/footer") %>
 </html>

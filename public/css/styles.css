@@ -447,8 +447,21 @@ footer p:hover{
     border: solid 1px rgba(158, 154, 154, 0.377);
     border-radius: 5px;
     margin: 2vh 0;
-    background-color: #D1D1D1;
-    color: #454545;
+    background-color: rgb(3, 3, 44);
+    color: white;
+
+}.descripcion h3{
+    color: rgb(255, 136, 0);
+
+    
+}
+
+.descripcion p{
+    color: white;
+    font-weight: bold;
+    margin-top: 10px 5px 5px;
+    text-align: justify;
+
 }
 
 .main-characteristics{
