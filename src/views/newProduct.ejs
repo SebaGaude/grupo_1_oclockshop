@@ -17,25 +17,27 @@
                             Alta de producto
                         </h1>
 
+                        <ul id="errorsCreate"></ul>
+
                         <div class="control-formulario">
                             <label class="preguntas-form"> Nombre del artículo </label>
-                            <input type="text" name="articulo" placeholder=" ej: Reloj suizo enchapado en oro" class="ticks">
+                            <input type="text" id="articulo" name="articulo" placeholder=" ej: Reloj suizo enchapado en oro" class="ticks">
                         </div>
 
                         <div class="control-formulario">
                             <label class="preguntas-form"> Descripcion del artiículo</label>
-                            <input type="text" name="descripcion" placeholder=" descripcion del articulo" class="ticks" >
+                            <input type="text" id="descripcion" name="descripcion" placeholder=" descripcion del articulo" class="ticks" >
                         </div>
 
                         <div class="control-formulario">
                             <label class="preguntas-form"> Imagen/es del producto </label>
-                            <input type="file" name="imagen" accept=".jpg, .png" class="clase-ecf" multiple>
+                            <input type="file" id="imagenProducto" name="imagen" accept=".jpg, .png" class="clase-ecf" multiple>
                         </div>
 
 
                         <div class="control-formulario">
                             <label class="preguntas-form"> A que categoría pertenece el artículo</label>
-                           <select name="categoria" class="ticks">
+                           <select id="categoria" name="categoria" class="ticks">
                                <% for (let i=0; i<categorias.length; i++)  {%>
                          
                                     <option value="<%=categorias[i].id %>">
@@ -46,7 +48,7 @@
                         </div>
                         <div class="control-formulario">
                             <label class="preguntas-form"> Ingrese cantidad en stock</label>
-                            <input type="number" name="stock" placeholder="cantidad..." class="ticks" >
+                            <input id="numero" type="number" name="stock" placeholder="cantidad..." class="ticks" >
                         </div>
                         <div class="control-formulario">
                             <label class="preguntas-form"> Ingrese la marca del articulo</label>
@@ -61,7 +63,7 @@
                         </div>
                         <div class="control-formulario">
                             <label class="preguntas-form">Ingrese el precio del articulo</label>
-                            <input type="text" name="precio" placeholder="$$$" class="ticks">
+                            <input id="precio" type="text" name="precio" placeholder="$$$" class="ticks">
                         </div>
                         <!-- Botón "enviar"-->
                         <div>
@@ -73,6 +75,7 @@
                 </form>
 
             </main>
+            <script src="../../js/validator.js"></script>
             <%- include("partials/footer") %>
 
 </html>

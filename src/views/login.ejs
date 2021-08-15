@@ -20,7 +20,7 @@
             <h2> 
                 Completá con tus datos registrados
             </h2>
-            <div id="errorLogin"></div>
+            <ul id="errorLogin"></ul>
             <div class="correo-contraseña">
                 <input class="login-input" type="email" id="email" name="email" placeholder="Correo electrónico"  value="<%= locals.oldData ? oldData.email : null %>">
                 <% if (locals.errors && errors.email) { %>

@@ -20,7 +20,7 @@
             <h2> 
                 Registrate completando tus datos
             </h2>
-            <div id="error-nombre"></div>      
+            <ul id="error-nombre"></ul>      
             <div>
                 <input class="register-input" id="nombre" type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                 <% if (locals.errors && errors.nombre) { %>

@@ -1,8 +1,8 @@
+// Validacion front register //
+
 window.addEventListener("load", function(){
 
     let form = document.querySelector(".form-login-register");
-
-    //let errorNombre = document.querySelector("#error-nombre")
 
     form.addEventListener("submit", function(e){
         let errors = [];
@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
         let imagen = document.querySelector("#imagen");
         let contraseña = document.querySelector("#contraseña");
 
-        //nombre.focus();
+        //nombre.focus
 
         if(nombre.value == ""){
             nombre.classList.add("is-invalid");
@@ -88,19 +88,18 @@ window.addEventListener("load", function(){
     })
 })
 
+// Validacion front login //
 
 window.addEventListener("load", function(){
 
     let form = document.querySelector(".form-login-register");
-
-    //let errorNombre = document.querySelector("#error-nombre")
 
     form.addEventListener("submit", function(e){
         let errorsLogin = [];
         let email = document.querySelector("#email");
         let contraseña = document.querySelector("#contraseña");
 
-        //nombre.focus();
+        //email.focus
 
         if(email.value == ""){
             email.classList.add("is-invalid");
@@ -126,8 +125,7 @@ window.addEventListener("load", function(){
         }
 
         //Determinar si hay o no errores - Mostrarlos al usuario
-        console.log(errorsLogin);
-        console.log(errorsLogin.length);
+
         if(errorsLogin.length > 0){
             e.preventDefault();
 
@@ -136,6 +134,96 @@ window.addEventListener("load", function(){
 
             for (let i = 0; i < errorsLogin.length; i++) {
                 messageError.innerHTML += `<li>${errorsLogin[i]}</li>`   
+            }
+
+        }else{
+            alert("Validación exitosa");
+            form.submit();
+        }
+    })
+})
+
+// Validacion front creación producto //
+
+window.addEventListener("load", function(){
+
+    let form = document.querySelector(".formulario-edicion-creacion");
+
+    form.addEventListener("submit", function(e){
+        let errorsCreate = [];
+        let articulo = document.querySelector("#articulo");
+        let descripcion = document.querySelector("#descripcion");
+        let imagenProducto = document.querySelector("#imagenProducto");
+        let categoria = document.querySelector("#categoria");
+        let numero = document.querySelector("#numero");
+        let precio = document.querySelector("#precio");
+
+        //email.focus
+
+        if(articulo.value == ""){
+            articulo.classList.add("is-invalid");
+            articulo.classList.remove("is-valid");
+            articulo.classList.remove("login-input");
+            errorsCreate.push("Debes ingresar un nombre para el articulo");  
+        }else{
+            articulo.classList.add("is-valid");
+            articulo.classList.remove("is-invalid");
+            articulo.classList.remove("login-input");
+            descripcion.focus();
+        }
+        if(descripcion.value == ""){
+            descripcion.classList.add("is-invalid");
+            descripcion.classList.remove("is-valid");
+            descripcion.classList.remove("login-input");
+            errorsCreate.push("Debes ingresar una descripción para el articulo");  
+        }else{
+            descripcion.classList.add("is-valid");
+            descripcion.classList.remove("is-invalid");
+            descripcion.classList.remove("login-input");
+            imagenProducto.focus();
+        }
+        if(imagenProducto.value == ""){
+            imagenProducto.classList.add("is-invalid");
+            imagenProducto.classList.remove("is-valid");
+            imagenProducto.classList.remove("login-input");
+            errorsCreate.push("Debes seleccionar una imagen para el articulo");  
+        }else{
+            imagenProducto.classList.add("is-valid");
+            imagenProducto.classList.remove("is-invalid");
+            imagenProducto.classList.remove("login-input");
+            numero.focus();
+        }
+        if(numero.value == ""){
+            numero.classList.add("is-invalid");
+            numero.classList.remove("is-valid");
+            numero.classList.remove("login-input");
+            errorsCreate.push("Debes ingresar una cantidad para el articulo");  
+        }else{
+            numero.classList.add("is-valid");
+            numero.classList.remove("is-invalid");
+            numero.classList.remove("login-input");
+            precio.focus();
+        }
+        if(precio.value == ""){
+            precio.classList.add("is-invalid");
+            precio.classList.remove("is-valid");
+            precio.classList.remove("login-input");
+            errorsCreate.push("Debes ingresar un precio para el articulo");  
+        }else{
+            precio.classList.add("is-valid");
+            precio.classList.remove("is-invalid");
+            precio.classList.remove("login-input");
+        }
+        //Determinar si hay o no errores - Mostrarlos al usuario
+        console.log(errorsCreate)
+        if(errorsCreate.length > 0){
+            e.preventDefault();
+
+            let messageError = document.querySelector("#errorsCreate");
+            messageError.innerHTML = "";
+
+            for (let i = 0; i < errorsCreate.length; i++) {
+                messageError.innerHTML += `<li>${errorsCreate[i]}</li>`   
             }
 
         }else{
