@@ -11,7 +11,7 @@
 
                 <!-- Formulario de Creacion de producto-->
                 <section class="contenedor-form-ec">
-                    <form action="/products" method="POST" class="formulario-edicion-creacion" enctype="multipart/form-data">
+                    <form action="/products" method="POST" class="formulario-edicion-creacion productsCreateForm" enctype="multipart/form-data">
 
                         <h1 class="titulo-new-edit">
                             Alta de producto
@@ -38,7 +38,8 @@
                         <div class="control-formulario">
                             <label class="preguntas-form"> A que categoría pertenece el artículo</label>
                            <select id="categoria" name="categoria" class="ticks">
-                               <% for (let i=0; i<categorias.length; i++)  {%>
+                                <option disabled selected value> -- Elegir una opción -- </option>
+                                <% for (let i=0; i<categorias.length; i++)  {%>
                          
                                     <option value="<%=categorias[i].id %>">
                                         <%=categorias[i].nombre%>
@@ -52,7 +53,8 @@
                         </div>
                         <div class="control-formulario">
                             <label class="preguntas-form"> Ingrese la marca del articulo</label>
-                            <select name="marca" class="ticks">
+                            <select id="marca" name="marca" class="ticks">
+                                <option disabled selected value> -- Elegir una opción -- </option>
                                 <% for (let i=0; i<marcas.length; i++)  {%>
                           
                                      <option value="<%=marcas[i].id %>">

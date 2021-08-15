@@ -21,26 +21,29 @@
                         Edicion de producto: <%= product.articulo %>
                     </h1>
 
+                    <ul id="errorsEdit"></ul>
+
                     <div class="control-formulario">
                         <label class="preguntas-form"> Nombre del artículo </label>
-                        <input type="text" name="articulo" value="<%= product.articulo %>" class="ticks">
+                        <input type="text" id="articulo" name="articulo" value="<%= product.articulo %>" class="ticks">
                     </div>
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese una nueva descripcion del artiículo si desea
                             modificarla</label>
-                        <input type="textarea" name="descripcion" value="<%= product.descripcion%>" class="ticks">
+                        <input type="textarea" id="descripcion" name="descripcion" value="<%= product.descripcion%>" class="ticks">
                     </div>
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Nueva/s imagen/es del producto </label>
-                        <input type="file" name="imagen" accept=".jpg, .png" multiple>
+                        <input type="file" id="imagenProducto" name="imagen" accept=".jpg, .png" multiple>
                     </div>
 
 
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese la nueva categoria si desea modificarla</label>
-                        <select name="categoria" class="ticks">
+                        <select id="categoria" name="categoria" class="ticks">
+                            <option disabled selected value> -- Elegir una opción -- </option>
                             <% for (let i=0; i<categorias.length; i++)  {%>
                       
                                 <% if (categorias[i].id == product.id_categoria){ %>
@@ -62,12 +65,13 @@
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese nueva cantidad en stock si asi lo desea</label>
-                        <input type="number" name="stock" placeholder="cantidad..." class="ticks">
+                        <input type="number" id="numero" name="stock" placeholder="cantidad..." class="ticks">
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form"> Ingrese nueva marca del articulo si desea
                             modificarlo</label>
-                            <select name="marca" class="ticks">
+                            <select id="marca" name="marca" class="ticks">
+                                <option disabled selected value> -- Elegir una opción -- </option>
                                 <% for (let i=0; i<marcas.length; i++)  {%>
                           
                                     <% if (marcas[i].id == product.id_marca){ %>
@@ -88,7 +92,7 @@
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form">Ingrese el nuevo precio del articulo si desea modificarla</label>
-                        <input type="text" name="precio" value="<%= product.precio %>" class="ticks">
+                        <input type="text" id="precio" name="precio" value="<%= product.precio %>" class="ticks">
                     </div>
 
                     <!-- Botones de edit y delete-->
@@ -104,6 +108,7 @@
                     <button type="submit" class="boton-reset">Borrar articulo</button>
                 </form>
             </main>
+            <script src="../../js/validator.js"></script>
             <%- include("partials/footer.ejs") %>
 
 </html>
