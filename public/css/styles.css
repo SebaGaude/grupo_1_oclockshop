@@ -312,7 +312,7 @@ a.botonera p{
     background-color: rgb(3, 3, 44);
     margin: 0 0 0 28.54%;
     position: absolute;
-    z-index: 2;
+    /*z-index: 2;*/
     opacity: 0;
 }
 
@@ -672,7 +672,18 @@ h3{
     border-radius: 5%;
 }
 
-.form-login-register div input{
+.login-input{
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #adadad;
+    
+}
+
+.register-input{
     font-family: Helvetica, sans-serif;
     padding: 5px;
     font-size: 12px;
@@ -1786,10 +1797,13 @@ section div ul li a{
 .logout{
     text-align: right;
     margin-top: 1vh;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .logout a{
     margin-right: 3vw;
+    width: 7%;
 }
 
 .container img{
@@ -1975,3 +1989,79 @@ section div ul li a{
 .article-container:hover div h3{
     opacity: 0.8;
 }
+
+/************************************* Configuraciones profile ************************************/
+
+.body-profile{
+    background-color: #ededed;
+}
+
+.profile{
+    margin-left: 6%;
+    margin-bottom: 31vh;
+    margin-right: 0;
+    width: 90%;
+}
+
+.profile h2{
+    margin-left: 0;
+    margin-right: 0;
+    width: 80%;
+}
+
+.profile p{
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+
+.formulario-edicion-creacion{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: rgb(3, 3, 44) solid 2px;
+}
+
+.formulario-edicion-creacion div{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.formulario-edicion-creacion img{
+    width: 40%;
+}
+.control-formulario input{
+    width: 70%;
+    margin-top: 1vh;
+}
+
+.preguntas-form{
+    text-align: left;
+    width: 70%;
+    margin-left: 16%;
+}
+
+
+.is-invalid{
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5%;
+    border: solid 3px #842029;
+    color: #842029;
+}
+
+.is-valid{
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5%;
+    border: solid 3px #198754;
+    color: #198754;
+}
+
+
+
+    

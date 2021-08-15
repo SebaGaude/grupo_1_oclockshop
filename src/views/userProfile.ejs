@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('partials/head'); %>
-<body>
-    <%- include('partials/header'); %>
-	
-	<!-- Container -->
-<div class="container">
-	<p class="logout"> 
-		<a href="/users/profile/edit/<%= user.id %>">Editar Perfil</a>
-		<a href="/users/logout">Logout</a>
-	</p>
-                    
-	<h2>Hola <%= user.nombre %>! </h2>
-	<img src="/img/users/<%= user.imagen %> ">
-	<p class="user-mail"><%= user.email %> </p>
-</div>
+	<%- include('partials/head'); %>
+	<body class="body-profile">
+		<%- include('partials/header'); %>
+		
+		<!-- Container -->
+		<div class="container">
+			<div>
+				<div class="logout"> 
+					<a href="/users/profile/edit/<%= user.id %>"><p>Editar Perfil</p></a>
+					<a href="/users/logout"><p>Logout</p></a>
+				</div>
+			</div>	
+			<div class="profile">
+				<h2>Hola <%= user.nombre %>! </h2>
+				<img src="/img/users/<%= user.imagen %> ">
+				<p class="user-mail"><%= user.email %> </p>
+			</div>
+		</div>
 
-	<!-- //Container -->
-	
-	<%- include('partials/footer'); %>
-</body>
+		<!-- //Container -->
+		
+		<%- include('partials/footer'); %>
+	</body>
 </html>
 
