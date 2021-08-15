@@ -68,7 +68,7 @@ header div.top nav.top1 p.español-ingles{
 .contact-us{
     box-sizing: border-box;
     width: 50%;
-    margin: 0 2%;
+    margin: 0.3% 2%;
 
 }
 
@@ -84,7 +84,14 @@ header div.top nav.top1 p.español-ingles{
 .contact-us a{
     text-decoration: none;
     color: white;
+    transition: 0.3s;
 }
+
+.contact-us a:hover{
+    color: rgb(255, 136, 0);
+    font-size: 1em;
+}
+
 .header1{
     display: flex;
     flex-wrap: wrap;
@@ -353,17 +360,25 @@ a.botonera p{
 /* ---------------------------------------Configuracion Footer----------------------------------------------*/
 footer{
     background-color: rgb(3, 3, 44);
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 2vh;
     border-bottom: solid 1vh rgb(3, 3, 44);
     width: 100%;
     box-sizing: border-box;
     color: white;
+    border-top: solid 4px rgb(4, 4, 192);
 }
 
 footer p{
     margin: 2vh 0;
+    transition: 0.3s;
 }
+
+footer p:hover{
+    color: rgb(255, 136, 0);
+    font-size: 1em;
+}
+
 
 .main-footer{
     display: flex;
@@ -381,7 +396,7 @@ footer p{
 
 .copyright p{
     width: 95%;
-    margin: 1vw;
+    margin: 1vw 2vh;
 }
 
 /* ----------------------------------------Fin Configuracion Footer---------------------------------------------- */
@@ -432,8 +447,21 @@ footer p{
     border: solid 1px rgba(158, 154, 154, 0.377);
     border-radius: 5px;
     margin: 2vh 0;
-    background-color: #D1D1D1;
-    color: #454545;
+    background-color: rgb(3, 3, 44);
+    color: white;
+
+}.descripcion h3{
+    color: rgb(255, 136, 0);
+
+    
+}
+
+.descripcion p{
+    color: white;
+    font-weight: bold;
+    margin-top: 10px 5px 5px;
+    text-align: justify;
+
 }
 
 .main-characteristics{
@@ -1022,14 +1050,14 @@ h2{
 }
 
 .quiz h3{
-    color: #525252;
+    color: rgb(3, 3, 44);
     font-size: 24px;
     margin-bottom: 4vh;
     font-weight: bold;
 }
 
 .quiz h4{
-    color: #525252;
+    color: rgb(3, 3, 44);
     font-size: 12px;
     margin-bottom: 5px;
     font-weight: normal;
@@ -1153,8 +1181,8 @@ section.vistos{
 }
 
 .contenedor-imagen-articulo h3{
-    background-color: #525252;
-    color: #ffffff;
+    background-color: rgba(255, 136, 0, 0.719);
+    color: rgb(3, 3, 44);
     font-size: 20px;
     margin: auto;
     position: absolute;
@@ -1486,7 +1514,7 @@ section div ul li a{
         width: 70%;
     }
     .mobile{
-         margin: 0.5vw;
+        margin: 0.5vw;
     }
     .sign-in{
         margin: 0;
@@ -1510,6 +1538,11 @@ section div ul li a{
         width: 25%;
     }
 }
+
+    /* Vista footer mobile */
+    footer{
+    font-size: 12px;
+    }
 
 /* TABLET */
 
@@ -1579,7 +1612,7 @@ section div ul li a{
         margin: 2vw;
     }
     h3{
-        font-size: 30px
+        font-size: 30px;
     }
     .main-characteristics{
         box-sizing: border-box;
@@ -1673,6 +1706,11 @@ section div ul li a{
     .logo{
         width: 8%;
     }
+
+    /* Vista desktop footer */
+    footer{
+        font-size: 14px;
+        }
 
     /* Configuracion desktop login/registro */
 
