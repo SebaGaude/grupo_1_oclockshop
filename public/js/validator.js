@@ -2,15 +2,7 @@ window.addEventListener("load", function(){
 
     let form = document.querySelector(".form-login-register");
 
-    
-    let errorNombre = document.querySelector("#error-nombre")
- 
-    //nombre.addEventListener("focus", function(){
-    //    nombre.classList.add("is-invalid");
-    //})
-
-
-    
+    //let errorNombre = document.querySelector("#error-nombre")
 
     form.addEventListener("submit", function(e){
         let errors = [];
@@ -79,12 +71,10 @@ window.addEventListener("load", function(){
         }
 
         //Determinar si hay o no errores - Mostrarlos al usuario
-        console.log(errors);
         if(errors.length > 0){
             e.preventDefault();
 
             let msjError = document.querySelector("#error-nombre");
-            //msjError.classList.add("alert-warning");
             msjError.innerHTML = "";
 
             for (let i = 0; i < errors.length; i++) {
@@ -95,11 +85,62 @@ window.addEventListener("load", function(){
             alert("Validación exitosa");
             form.submit();
         }
-
-
-
     })
+})
 
 
+window.addEventListener("load", function(){
 
+    let form = document.querySelector(".form-login-register");
+
+    //let errorNombre = document.querySelector("#error-nombre")
+
+    form.addEventListener("submit", function(e){
+        let errorsLogin = [];
+        let email = document.querySelector("#email");
+        let contraseña = document.querySelector("#contraseña");
+
+        //nombre.focus();
+
+        if(email.value == ""){
+            email.classList.add("is-invalid");
+            email.classList.remove("is-valid");
+            email.classList.remove("login-input");
+            errorsLogin.push("Debes ingresar un email");  
+        }else{
+            email.classList.add("is-valid");
+            email.classList.remove("is-invalid");
+            email.classList.remove("login-input");
+            contraseña.focus();
+        }
+        if(contraseña.value == ""){
+            contraseña.classList.add("is-invalid");
+            contraseña.classList.remove("is-valid");
+            contraseña.classList.remove("login-input");
+            errorsLogin.push("Debes ingresar una contraseña");  
+        }else{
+            contraseña.classList.add("is-valid");
+            contraseña.classList.remove("is-invalid");
+            contraseña.classList.remove("login-input");
+            contraseña.focus();
+        }
+
+        //Determinar si hay o no errores - Mostrarlos al usuario
+        console.log(errorsLogin);
+        console.log(errorsLogin.length);
+        if(errorsLogin.length > 0){
+            e.preventDefault();
+
+            let messageError = document.querySelector("#errorLogin");
+            messageError.innerHTML = "";
+
+            for (let i = 0; i < errorsLogin.length; i++) {
+                messageError.innerHTML += `<li>${errorsLogin[i]}</li>`   
+            }
+
+        }else{
+            alert("Validación exitosa");
+            form.submit();
+        }
+    })
 })
