@@ -55,6 +55,12 @@ let productsController = {
     
     store: function (req, res) {
 
+        let listadoCategorias = db.Categoria.findAll();
+        let listadorMarcas = db.Marca.findAll();
+        
+        let errors = validationResult(req);        
+        
+        if(errors.isEmpty()){
         db.Producto.create({
             
             articulo: req.body.articulo,
@@ -67,8 +73,20 @@ let productsController = {
         
         })
        
-        res.redirect("/");
-
+        res.redirect("/");}
+        else{
+            Promise.all([listadoCategorias, listadorMarcas])
+        
+            .then(function([categorias, marcas]){
+            
+            res.render("newProduct", {categorias , marcas,
+      
+            errors: errors.mapped(),
+                oldData: req.body
+            });
+        })
+     }
+            
     },
    
     editProduct: function(req, res){
@@ -88,6 +106,12 @@ let productsController = {
     },
    
     updateProduct: function(req, res){
+        
+        let listadoCategorias = db.Categoria.findAll();
+        let listadorMarcas = db.Marca.findAll();
+        let productoId = db.Producto.findByPk(req.params.id)
+        
+        
         let errors = validationResult(req);
         let image;
         if(errors.isEmpty()){
@@ -111,7 +135,22 @@ let productsController = {
             }).catch(e => console.log(e))
             
             return res.redirect("/");
+        } else {
+            
+            Promise.all([listadoCategorias, listadorMarcas, productoId])
+        
+            .then(function([categorias, marcas, product]){
+        
+            res.render("editProduct", {categorias, marcas, product,
+            
+            
+                errors: errors.mapped(),
+                oldData: req.body
+            });
+           })
         }
+    
+    
     },
 
     

@@ -21,17 +21,33 @@
 
                         <div class="control-formulario">
                             <label class="preguntas-form"> Nombre del artículo </label>
-                            <input type="text" id="articulo" name="articulo" placeholder="Reloj suizo enchapado en oro" class="ticks">
+                            <input type="text" id="articulo" name="articulo" placeholder=" ej: Reloj suizo enchapado en oro" value="<%= locals.oldData ? oldData.articulo : null %>" class="ticks">
+                            <% if (locals.errors && errors.articulo) { %>
+                                <div class="errorMsg">
+                                    <%= errors.articulo.msg %> 
+                                </div>
+                            <% } %>
                         </div>
 
                         <div class="control-formulario">
-                            <label class="preguntas-form"> Descripción del artículo</label>
-                            <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion del artículo" class="ticks" >
+                            <label class="preguntas-form"> Descripcion del artiículo</label>
+                            <input type="text" id="descripcion" name="descripcion" placeholder=" descripcion del articulo" value="<%= locals.oldData ? oldData.descripcion : null %>" class="ticks" >
+                            <% if (locals.errors && errors.descripcion) { %>
+                                <div class="errorMsg">
+                                    <%= errors.descripcion.msg %> 
+                                </div>
+                            <% } %>
+                        
                         </div>
 
                         <div class="control-formulario">
-                            <label class="preguntas-form"> Imagen del artículo </label>
-                            <input type="file" id="imagenProducto" name="imagen" accept=".jpg, .png" class="clase-ecf ticks" multiple>
+                            <label class="preguntas-form"> Imagen/es del producto </label>
+                            <input type="file" id="imagenProducto" name="imagen" accept=".jpg, .png" class="clase-ecf" multiple>
+                            <% if (locals.errors && errors.imagen) { %>
+                                <div class="errorMsg">
+                                    <%= errors.imagen.msg %>
+                                </div>
+                            <% } %>
                         </div>
 
 
@@ -77,7 +93,7 @@
                 </form>
 
             </main>
-            <script src="../../js/validator.js"></script>
+           <script src="../../js/validator.js"></script>
             <%- include("partials/footer") %>
 
 </html>
