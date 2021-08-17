@@ -30,7 +30,7 @@
                         </div>
 
                         <div class="control-formulario">
-                            <label class="preguntas-form"> Descripcion del artiículo</label>
+                            <label class="preguntas-form"> Descripción del artículo</label>
                             <input type="text" id="descripcion" name="descripcion" placeholder=" descripcion del articulo" value="<%= locals.oldData ? oldData.descripcion : null %>" class="ticks" >
                             <% if (locals.errors && errors.descripcion) { %>
                                 <div class="errorMsg">
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="control-formulario">
-                            <label class="preguntas-form"> Imagen/es del producto </label>
+                            <label class="preguntas-form"> Imagen del artículo </label>
                             <input type="file" id="imagenProducto" name="imagen" accept=".jpg, .png" class="clase-ecf" multiple>
                             <% if (locals.errors && errors.imagen) { %>
                                 <div class="errorMsg">
