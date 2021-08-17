@@ -657,6 +657,15 @@ h3{
     color: #454545;
 }
 
+.divBotonCrear{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 2%;
+    top: 22%;
+}
+
 /* -----------------------------------------Fin configuracion producto------------------------------------------------*/
 
 /* ----------------------------------------Estilo form register y login-----------------------------------------------*/
