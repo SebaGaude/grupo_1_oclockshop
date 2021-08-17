@@ -11,32 +11,51 @@
 
                 <!-- Formulario de Creacion de producto-->
                 <section class="contenedor-form-ec">
-                    <form action="/products" method="POST" class="formulario-edicion-creacion" enctype="multipart/form-data">
+                    <form action="/products" method="POST" class="formulario-edicion-creacion productsCreateForm" enctype="multipart/form-data">
 
                         <h1 class="titulo-new-edit">
                             Alta de producto
                         </h1>
 
+                        <ul id="errorsCreate"></ul>
+
                         <div class="control-formulario">
                             <label class="preguntas-form"> Nombre del artículo </label>
-                            <input type="text" name="articulo" placeholder=" ej: Reloj suizo enchapado en oro" class="ticks">
+                            <input type="text" id="articulo" name="articulo" placeholder=" ej: Reloj suizo enchapado en oro" value="<%= locals.oldData ? oldData.articulo : null %>" class="ticks">
+                            <% if (locals.errors && errors.articulo) { %>
+                                <div class="errorMsg">
+                                    <%= errors.articulo.msg %> 
+                                </div>
+                            <% } %>
                         </div>
 
                         <div class="control-formulario">
-                            <label class="preguntas-form"> Descripcion del artiículo</label>
-                            <input type="text" name="descripcion" placeholder=" descripcion del articulo" class="ticks" >
+                            <label class="preguntas-form"> Descripción del artículo</label>
+                            <input type="text" id="descripcion" name="descripcion" placeholder=" descripcion del articulo" value="<%= locals.oldData ? oldData.descripcion : null %>" class="ticks" >
+                            <% if (locals.errors && errors.descripcion) { %>
+                                <div class="errorMsg">
+                                    <%= errors.descripcion.msg %> 
+                                </div>
+                            <% } %>
+                        
                         </div>
 
                         <div class="control-formulario">
-                            <label class="preguntas-form"> Imagen/es del producto </label>
-                            <input type="file" name="imagen" accept=".jpg, .png" class="clase-ecf" multiple>
+                            <label class="preguntas-form"> Imagen del artículo </label>
+                            <input type="file" id="imagenProducto" name="imagen" accept=".jpg, .png" class="clase-ecf" multiple>
+                            <% if (locals.errors && errors.imagen) { %>
+                                <div class="errorMsg">
+                                    <%= errors.imagen.msg %>
+                                </div>
+                            <% } %>
                         </div>
 
 
                         <div class="control-formulario">
-                            <label class="preguntas-form"> A que categoría pertenece el artículo</label>
-                           <select name="categoria" class="ticks">
-                               <% for (let i=0; i<categorias.length; i++)  {%>
+                            <label class="preguntas-form"> Categoría del artículo</label>
+                           <select id="categoria" name="categoria" class="ticks">
+                                <option disabled selected value> -- Elegir una opción -- </option>
+                                <% for (let i=0; i<categorias.length; i++)  {%>
                          
                                     <option value="<%=categorias[i].id %>">
                                         <%=categorias[i].nombre%>
@@ -45,12 +64,13 @@
                           </select>
                         </div>
                         <div class="control-formulario">
-                            <label class="preguntas-form"> Ingrese cantidad en stock</label>
-                            <input type="number" name="stock" placeholder="cantidad..." class="ticks" >
+                            <label class="preguntas-form"> Cantidad del artículo</label>
+                            <input id="numero" type="number" name="stock" placeholder="Cantidad..." class="ticks" >
                         </div>
                         <div class="control-formulario">
-                            <label class="preguntas-form"> Ingrese la marca del articulo</label>
-                            <select name="marca" class="ticks">
+                            <label class="preguntas-form"> Marca del artículo</label>
+                            <select id="marca" name="marca" class="ticks">
+                                <option disabled selected value> -- Elegir una opción -- </option>
                                 <% for (let i=0; i<marcas.length; i++)  {%>
                           
                                      <option value="<%=marcas[i].id %>">
@@ -60,19 +80,20 @@
                            </select>                       
                         </div>
                         <div class="control-formulario">
-                            <label class="preguntas-form">Ingrese el precio del articulo</label>
-                            <input type="text" name="precio" placeholder="$$$" class="ticks">
+                            <label class="preguntas-form"> Precio del artículo</label>
+                            <input id="precio" type="text" name="precio" placeholder="$$$" class="ticks">
                         </div>
                         <!-- Botón "enviar"-->
                         <div>
-                            <button type="submit" class="boton-envio">Crear articulo</button>
-                            <button type="reset" class="boton-reset">Borrar todo</button>
+                            <button type="submit" class="newProductButton">Crear artículo</button>
+                            <button type="reset" class="deleteInfoButton">Borrar todo</button>
                         </div>
                 </section>
                 <!-- ----------- -->
                 </form>
 
             </main>
+           <script src="../../js/validator.js"></script>
             <%- include("partials/footer") %>
 
 </html>

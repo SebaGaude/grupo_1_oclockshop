@@ -319,7 +319,7 @@ a.botonera p{
     background-color: rgb(3, 3, 44);
     margin: 0 0 0 28.54%;
     position: absolute;
-    z-index: 2;
+    /*z-index: 2;*/
     opacity: 0;
 }
 
@@ -701,7 +701,18 @@ h3{
     border-radius: 5%;
 }
 
-.form-login-register div input{
+.login-input{
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #adadad;
+    
+}
+
+.register-input{
     font-family: Helvetica, sans-serif;
     padding: 5px;
     font-size: 12px;
@@ -860,7 +871,11 @@ h3{
 
 .control-formulario label {
     display: block;
-    width: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 3vh;
 }
 .preguntas-form {
     font-family: 'Ubuntu', sans-serif;
@@ -1407,13 +1422,32 @@ section div ul li a{
 
 /* ------------------------------------CONFIGURACION CREACION Y EDICION DE PRODUCTOS-------------------------------- */
 
+.formulario-edicion-creacion{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: white;   
+    width: 50%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color:rgb(255, 136, 0);
+    position: relative;
+    color: rgb(3, 3, 44);
+}
+
+.formulario-edicion-creacion h1{
+    background-color: rgb(255, 136, 0);
+    line-height: 20vh;
+    margin: 0;
+}
 
 .ticks {
-    width: 80%;
+    width: 71%;
+    border: rgb(3, 3, 44) 1px solid;
     border-radius: 5px;
-
-
 }
+
 .main_edit{
     /* flex-direction: column;
     align-items: center;
@@ -1429,8 +1463,27 @@ section div ul li a{
     text-align: center;
 }
 
+.deleteArticle{
+    width: 29%;
+    background-color:rgb(3, 3, 44);
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
 
+.deleteArticle:hover{
+    background-color:rgb(255, 136, 0);
+    color: rgb(3, 3, 44);
+    font-weight: bold;
+}
 
+.deletionForm{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-bottom: 3vh;
+}
 
 /*Gris claro: #D1D1D1
     - Gris medio: #9E9E9E
@@ -1734,15 +1787,66 @@ section div ul li a{
         transform: rotate(-360deg);
         transition: all 2s;
     }
-    .boton-envio {
-        max-width: 29%;
-        background-color: greenyellow;
-    }
-    .boton-reset {
-        max-width: 29%;
-        background-color:red;
 
+    .newProductButton {
+        max-width: 29%;
+        background-color:rgba(3, 3, 44);
+        border-radius: 5px;
+        color: rgb(255, 136, 0);
+        margin-bottom: 3vh;
+        border: none;
+        line-height: 4vh;
+        margin-top: 4vh;
     }
+
+    .newProductButton:hover{
+        background-color:rgb(255, 136, 0);
+        color: rgb(3, 3, 44);
+        font-weight: bold;
+    }
+
+    .deleteInfoButton {
+        max-width: 29%;
+        background-color:rgba(255, 136, 0);
+        border-radius: 5px;
+        color: rgb(3, 3, 44);
+        font-weight: bold;
+        margin-bottom: 3vh;
+        border: none;
+        line-height: 4vh;
+        margin-top: 4vh;
+    }
+
+    .deleteInfoButton:hover{
+        background-color:rgb(3, 3, 44);
+        color: rgb(255, 136, 0);
+        font-weight: normal;
+    }
+
+
+
+    .editProductButton {
+        max-width: 40%;
+        background-color:rgba(255, 136, 0);
+        border-radius: 5px;
+        color: rgb(3, 3, 44);
+        font-weight: bold;
+        margin-bottom: 3vh;
+        line-height: 5vh;
+        margin-top: 5vh;
+        border: none;
+    }
+
+    .editProductButton:hover{
+        background-color:rgb(3, 3, 44);
+        color: white;
+        font-weight: normal;
+    }
+
+    #categoria, #marca{
+        margin-top: 1vh;
+    }
+
     .botones {
         display: flex;
     }
@@ -1827,10 +1931,13 @@ section div ul li a{
 .logout{
     text-align: right;
     margin-top: 1vh;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .logout a{
     margin-right: 3vw;
+    width: 7%;
 }
 
 .container img{
@@ -2016,3 +2123,65 @@ section div ul li a{
 .article-container:hover div h3{
     opacity: 0.8;
 }
+
+/************************************* Configuraciones profile ************************************/
+
+.body-profile{
+    background-color: #ededed;
+}
+
+.profile{
+    margin-left: 6%;
+    margin-bottom: 31vh;
+    margin-right: 0;
+    width: 90%;
+}
+
+.profile h2{
+    margin-left: 0;
+    margin-right: 0;
+    width: 80%;
+}
+
+.profile p{
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+
+.formulario-edicion-creacion div{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.formulario-edicion-creacion img{
+    width: 40%;
+}
+.control-formulario input{
+    width: 70%;
+    margin-top: 1vh;
+}
+
+.is-invalid{
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5%;
+    border: solid 3px #842029;
+    color: #842029;
+}
+
+.is-valid{
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5%;
+    border: solid 3px #198754;
+    color: #198754;
+}
+
+
+
+    

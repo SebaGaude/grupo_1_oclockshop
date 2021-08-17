@@ -11,31 +11,25 @@
 
                 <!-- Formulario de edicion del usuario-->
 
-
+                <h1 class="titulo-new-edit">
+                    Hola <%= user.nombre + ' ' + user.apellido %>, aquí podes editar tu perfil!
+                </h1>
 
                 <form action="/users/profile/edit/<%= user.id %>?_method=PUT" method="POST"
                     class="formulario-edicion-creacion" enctype="multipart/form-data">
 
-                    <h1 class="titulo-new-edit">
-                        Hola, <%= user.nombre + ' ' + user.apellido %>, aquí podes editar tu perfil!
-                    </h1>
-
                     <div class="control-formulario">
                         <label class="preguntas-form"> Nombre </label>
-                        <input type="text" name="nombre" value="<%= user.nombre %>" class="ticks" required>
+                        <input type="text" name="nombre" value="<%= user.nombre %>" class="ticks" >
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form"> Apellido </label>
-                        <input type="text" name="apellido" value="<%= user.apellido %>" class="ticks" required>
+                        <input type="text" name="apellido" value="<%= user.apellido %>" class="ticks">
                     </div>
-
                     
                      <div class="control-formulario container">
                         <img src="/img/users/<%= user.imagen %> ">
-                        <!-- -------------------------------- -- -->
 
-
-                        <!-- ----------------------------- -->
                         <label class="preguntas-form"> Cambiar imágen del perfil </label>
                         <input type="file" name="imagen" accept=".jpg .png" value="<%= user.imagen %> ">
                         <% if (locals.errors && errors.imagen) { %>

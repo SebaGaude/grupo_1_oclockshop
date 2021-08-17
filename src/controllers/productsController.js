@@ -1,3 +1,4 @@
+const { validationResult } = require("express-validator");
 const db = require ("../database/models");
 
 
@@ -54,6 +55,12 @@ let productsController = {
     
     store: function (req, res) {
 
+        let listadoCategorias = db.Categoria.findAll();
+        let listadorMarcas = db.Marca.findAll();
+        
+        let errors = validationResult(req);        
+        
+        if(errors.isEmpty()){
         db.Producto.create({
             
             articulo: req.body.articulo,
@@ -66,8 +73,20 @@ let productsController = {
         
         })
        
-        res.redirect("/");
-
+        res.redirect("/");}
+        else{
+            Promise.all([listadoCategorias, listadorMarcas])
+        
+            .then(function([categorias, marcas]){
+            
+            res.render("newProduct", {categorias , marcas,
+      
+            errors: errors.mapped(),
+                oldData: req.body
+            });
+        })
+     }
+            
     },
    
     editProduct: function(req, res){
@@ -87,27 +106,51 @@ let productsController = {
     },
    
     updateProduct: function(req, res){
+        
+        let listadoCategorias = db.Categoria.findAll();
+        let listadorMarcas = db.Marca.findAll();
+        let productoId = db.Producto.findByPk(req.params.id)
+        
+        
+        let errors = validationResult(req);
         let image;
-        db.Producto.findByPk(req.params.id)
-          .then(producto => {
-              image = producto.imagen;
-              if (req.file) {
-                  image = req.file.filename;
-              }
-              db.Producto.update ({
-                 articulo: req.body.articulo,
-                 descripcion: req.body.descripcion,
-                 id_categoria: req.body.categoria,
-                 stock: req.body.stock,
-                 imagen: image,
-                 id_marca: req.body.marca,
-                 precio: req.body.precio
-              },{ where: {
-                   id: req.params.id}
-              });
-         }).catch(e => console.log(e))
-          
-         return res.redirect("/");
+        if(errors.isEmpty()){
+            db.Producto.findByPk(req.params.id)
+            .then(producto => {
+                image = producto.imagen;
+                if (req.file) {
+                    image = req.file.filename;
+                }
+                db.Producto.update ({
+                    articulo: req.body.articulo,
+                    descripcion: req.body.descripcion,
+                    id_categoria: req.body.categoria,
+                    stock: req.body.stock,
+                    imagen: image,
+                    id_marca: req.body.marca,
+                    precio: req.body.precio
+                },{ where: {
+                    id: req.params.id}
+                });
+            }).catch(e => console.log(e))
+            
+            return res.redirect("/");
+        } else {
+            
+            Promise.all([listadoCategorias, listadorMarcas, productoId])
+        
+            .then(function([categorias, marcas, product]){
+        
+            res.render("editProduct", {categorias, marcas, product,
+            
+            
+                errors: errors.mapped(),
+                oldData: req.body
+            });
+           })
+        }
+    
+    
     },
 
     
