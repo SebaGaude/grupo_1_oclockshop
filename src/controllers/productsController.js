@@ -90,7 +90,6 @@ let productsController = {
     updateProduct: function(req, res){
         let errors = validationResult(req);
         let image;
-        console.log(errors)
         if(errors.isEmpty()){
             db.Producto.findByPk(req.params.id)
             .then(producto => {
@@ -112,13 +111,7 @@ let productsController = {
             }).catch(e => console.log(e))
             
             return res.redirect("/");
-        } else {
-            let id = req.params.id
-            res.render("/edit/id", {
-                errors: errors.mapped(),
-                oldData: req.body
-            });
-           }
+        }
     },
 
     

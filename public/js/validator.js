@@ -67,10 +67,10 @@ window.addEventListener("load", function(){
             contraseña.classList.add("is-valid");
             contraseña.classList.remove("is-invalid");
             contraseña.classList.remove("register-input");
-            contraseña.focus();
         }
 
         //Determinar si hay o no errores - Mostrarlos al usuario
+        console.log(errors.length)
         if(errors.length > 0){
             e.preventDefault();
 
