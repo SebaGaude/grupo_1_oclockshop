@@ -688,6 +688,7 @@ h3{
     border-style: solid;
     border-color:whitesmoke;
     position: relative;
+    
 }
 
 .form-login-register h1{
@@ -837,11 +838,13 @@ h3{
     font-family: Helvetica, sans-serif;
     margin: auto;
 }
+.error{
+    border: solid 2px red;
+}
 .errorMsg{
-    color:#f3600b;
-    font-size: 13px;
+    color: white;
     font-weight: bold;
-    margin-top: 1px;
+
 }
 /* -------------------------------------Fin configuracion login/registro ------------------------------------------ */
 
