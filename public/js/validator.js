@@ -23,47 +23,35 @@ window.addEventListener("load", function(){
 
         if(nombre.value.length < 1){
             nombre.style.border = "solid 3px #842029";
-            nombre.style.color = "#842029";
-            errors.push("Completá tu nombre");  
-        }else{
-            nombre.style.border = "solid 3px #198754";
-            nombre.style.color = "#198754";
-            apellido.focus();
+            nombre.focus();
+            errors.push("Completá tu nombre");   
         }
         if(apellido.value.length < 1){
             apellido.style.border = "solid 3px #842029";
-            apellido.style.color = "#842029";
+            apellido.focus();
             errors.push("Completá tu apellido");  
-        }else{
-            email.focus();
         }
         if(email.value.length < 1){
             email.style.border = "solid 3px #842029";
-            email.style.color = "#842029";
+            email.focus();
             errors.push("Completá tu email");  
-        }else{
-            imagen.focus();
         }
         if(imagen.value.length < 1){
             imagen.style.border = "solid 3px #842029";
-            imagen.style.color = "#842029";
+            imagen.focus();
             errors.push("Elegí una imágen");  
-        }else{
-            contraseña.focus();
         }
         if(contraseña.value.length < 1){
             contraseña.style.border = "solid 3px #842029";
-            contraseña.style.color = "#842029";
-            errors.push("Ingresá una contraseña");  
-        }else{
             contraseña.focus();
+            errors.push("Ingresá una contraseña");  
         }
 
         //Determinar si hay o no errores - Mostrarlos al usuario
 
         if(errors.length > 0){
             e.preventDefault();
-            let msjError = document.querySelector("#error-nombre");
+            let msjError = document.querySelector("#msjError");
             //msjError.classList.add("alert-warning");
             msjError.innerHTML = "";
             for (let i = 0; i < errors.length; i++) {

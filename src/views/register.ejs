@@ -10,7 +10,7 @@
     <main class="main" id="main-login-register">
         
         <!-- Formulario de Registro-->
-
+      
         <form action="../users/register" method="POST" class="form-login-register" enctype="multipart/form-data">
                 
             <h1> 
@@ -20,9 +20,12 @@
             <h2> 
                 Registrate completando tus datos
             </h2>
-            <div id="error-nombre"></div>      
+     
             <div>
                 <input id="nombre" type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
                 <% if (locals.errors && errors.nombre) { %>
                     <div class="errorMsg">
                         <%= errors.nombre.msg %> 
@@ -33,6 +36,9 @@
             
             <div>
                 <input id="apellido" type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
                 <% if (locals.errors && errors.apellido) { %>
                     <div class="errorMsg">
                         <%= errors.apellido.msg %> 
@@ -42,6 +48,9 @@
             
             <div>
                 <input id="email" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
                 <% if (locals.errors && errors.email) { %>
                     <div class="errorMsg">
                         <%= errors.email.msg %> 
@@ -51,6 +60,9 @@
            <div>
                <label>Ingresá una foto</label>
                 <input id="imagen" type="file" name="imagen">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
                 <% if (locals.errors && errors.imagen) { %>
                     <div class="errorMsg">
                         <%= errors.imagen.msg %> 
@@ -60,6 +72,9 @@
     
             <div>
                 <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
                 <% if (locals.errors && errors.contraseña) { %>
                     <div class="errorMsg">
                         <%= errors.contraseña.msg %> 
@@ -72,8 +87,9 @@
             </div> -->
             
             <!-- Botón "enviar"-->
+            <p id="msjError"></p>
 
-            <button type="submit" class="boton-crear-cuenta">CREAR CUENTA</button>
+            <button type="submit" class="boton-crear-cuenta" id="enviar">CREAR CUENTA</button>
             
             <div class="terminos-condiciones">
                 <input type="checkbox" name="nombre" class="checkbox">
