@@ -7,6 +7,7 @@ const cookies = require("cookie-parser");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const recordameMiddleware = require('./middlewares/recordameMiddleware');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // middleware de aplicacion
+app.use(recordameMiddleware);
 app.use(userLoggedMiddleware);
 
 app.use(methodOverride('_method'));
