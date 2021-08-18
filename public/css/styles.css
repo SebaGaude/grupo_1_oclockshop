@@ -431,7 +431,8 @@ footer p:hover{
 }
 
 .imagen-principal{
-    width: 50%;
+    width: 35%;
+    height: auto;
 }
 
 .imagen-principal img{
@@ -497,6 +498,16 @@ footer p:hover{
     font-size: 20px;
     color: black;
     margin: 2vh 0 2vh 2vw;
+}
+
+.divBotonEditar{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.botonEditar{
+    margin-top: 4vh;
 }
 
 .discount{
@@ -644,6 +655,15 @@ h3{
     border-radius: 5px;
     background-color: #D1D1D1;
     color: #454545;
+}
+
+.divBotonCrear{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 2%;
+    top: 22%;
 }
 
 /* -----------------------------------------Fin configuracion producto------------------------------------------------*/
@@ -886,6 +906,8 @@ h3{
 .linea-input{
     display: flex;
     align-items: flex-start;
+    width: 80%;
+
 }
 
 .linea-input input{
@@ -901,10 +923,9 @@ h3{
 
 .formulario {
     padding: 20px 15px;
-    margin: 2%;
-    margin-top: 1%;
     width: 95%;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .control-formulario {
@@ -936,19 +957,18 @@ h3{
     margin-bottom: 1%;
 }
 
-.email {
+.quizEmail {
     width: 60%;
-    min-width: 300px;
+    width: 50%;
+    margin-top: 2vh;
 }
 
 .label-quiz {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 30px;
     line-height: 38px;
     font-weight: bold;
-    margin: 3%;
+    margin: 6vh auto 1vh auto;
     color:#525252;
-    
 }
 
 .clipboard {
@@ -996,12 +1016,27 @@ h3{
     width: 40%;
 }
 
+.round{
+    width: 
+    10%;
+}
+
+.divQuiz{
+    width: 90%;
+    margin: 3vh auto 3vh auto; 
+}
+
 @keyframes mensaje {
     0% {opacity: 50%;}
     25% {opacity: 100%;}
     50% {opacity: 50%;}
     100% {opacity: 0%;} 
 }
+
+.bodyQuiz{
+    background-color: #ebebeb;
+}
+
 
 /* --------------------------------------Fin configuraciones Quiz ------------------------------------------------*/ 
 /*--------------------------------------- Configuraciones index -------------------------------------------------*/
@@ -1893,9 +1928,10 @@ section div ul li a{
 
     .botones {
         display: flex;
+        justify-content: center;
     }
     .label-quiz {
-        width: 60%;
+        width: 80%;
         text-align: justify;
     }
     .mensaje-analizando {

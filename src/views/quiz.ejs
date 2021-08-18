@@ -3,7 +3,7 @@
 
 <%- include("partials/head") %>
 
-<body>
+<body class="bodyQuiz">
     <%- include("partials/header") %>
     <main>
         <section class="foto-reloj" alt="foto-reloj">
@@ -11,146 +11,146 @@
         </section>
         <section>
             <div class="label-quiz">
-                <label> Haz este quiz para que te podamos conocer y recomendarte los mejores relojes de acuerdo a tu
-                    personalidad</label>
+                <h1> Realiza este quiz para que te podamos conocer y recomendarte los mejores relojes de acuerdo a tu
+                    personalidad</h1>
             </div>
             <section>
                 <form class="formulario" action="/" method="GET">
-                    <div class="control-formulario">
+                    <div class="divQuiz">
                         <label class="preguntas-form">¿Usas reloj generalmente?</label>
                         <label class="aclaracion-pregunta">Por favor elige una opción</label>
                         <div class="linea-input">
-                            <input for="No" type="radio" name="reloj" value="reloj" class="ticks">
+                            <input for="No" type="radio" name="reloj" value="reloj" class="round">
                             <label id="No"> No </label>
                         </div>
                         <div class="linea-input">
-                            <input for="A-veces" type="radio" name="reloj" value="reloj" class="ticks">
+                            <input for="A-veces" type="radio" name="reloj" value="reloj" class="round">
                             <label id="A-veces"> A veces </label>
                         </div>
                         <div class="linea-input">
-                            <input for="Si" type="radio" name="reloj" value="reloj" class="ticks">
+                            <input for="Si" type="radio" name="reloj" value="reloj" class="round">
                             <label id="Si"> Si </label>
                         </div>
                     </div>
-                    <div class="control-formulario">
+                    <div class="divQuiz">
                         <label class="preguntas-form">¿Para qué usarías el reloj?</label>
                         <label class="aclaracion-pregunta">Por favor elige una opción</label>
                         <div class="linea-input">
-                            <input for="Todos-los-dias" type="radio" name="uso-reloj" value="uso-reloj" class="ticks">
+                            <input for="Todos-los-dias" type="radio" name="uso-reloj" value="uso-reloj" class="round">
                             <label id="Todos-los-dias"> Para ver la hora todos los dias </label>
                         </div>
                         <div class="linea-input">
-                            <input for="Deporte" type="radio" name="uso-reloj" value="uso-reloj" class="ticks">
+                            <input for="Deporte" type="radio" name="uso-reloj" value="uso-reloj" class="round">
                             <label id="Deporte"> Para hacer deporte </label>
                         </div>
                         <div class="linea-input">
-                            <input for="Ocasionalmente" type="radio" name="uso-reloj" value="uso-reloj" class="ticks">
+                            <input for="Ocasionalmente" type="radio" name="uso-reloj" value="uso-reloj" class="round">
                             <label id="Ocasionalmente"> Para lucir ocasionalmente </label>
                         </div>
                     </div>
-                    <div class="control-formulario">
+                    <div class="divQuiz">
                         <label class="preguntas-form">¿Que diseños te gustan más?</label>
                         <label class="aclaracion-pregunta">Podes elegir todas las que quieras</label>
                         <div class="linea-input">
-                            <input for="Diseños-grandes" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks">
+                            <input for="Diseños-grandes" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="round">
                             <label id="Diseños-grandes"> Diseños grandes </label>
                         </div>
                         <div class="linea-input">
-                            <input for="Diseños-pequeños" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks">
+                            <input for="Diseños-pequeños" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="round">
                             <label id="Diseños-pequeños"> Diseños pequeños </label>
                         </div>
                         <div class="linea-input">
-                            <input for="innovadores" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks">
+                            <input for="innovadores" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="round">
                             <label id="innovadores"> Formas innovadores </label>
                         </div>
                         <div class="linea-input">
-                            <input for="clasico" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks">
+                            <input for="clasico" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="round">
                             <label id="clasico"> Algo mas clasico </label>
                         </div>
                         <div class="linea-input">
-                            <input for="sin-preferencia" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="ticks">
+                            <input for="sin-preferencia" type="checkbox" name="diseño-reloj" value="diseño-reloj" class="round">
                             <label id="sin-preferencia"> No tengo preferencia </label>
                         </div>
                     </div>
-                    <div class="control-formulario">
+                    <div class="divQuiz">
                         <label class="preguntas-form">¿Qué colores te gustan?</label>
                         <label class="aclaracion-pregunta">Podes elegir todos las que quieras</label>
                         <div class="linea-input">
-                            <input for="brillantes" type="checkbox" name="color-reloj" value="color-reloj" class="ticks">
+                            <input for="brillantes" type="checkbox" name="color-reloj" value="color-reloj" class="round">
                             <label id="brillantes"> Brillantes</label>
                         </div>
                         <div class="linea-input">
-                            <input for="neutro" type="checkbox" name="color-reloj" value="color-reloj" class="ticks">
+                            <input for="neutro" type="checkbox" name="color-reloj" value="color-reloj" class="round">
                             <label id="neutro"> Neutro </label>
                         </div>
                         <div class="linea-input">
-                            <input for="negro" type="checkbox" name="color-reloj" value="color-reloj" class="ticks">
+                            <input for="negro" type="checkbox" name="color-reloj" value="color-reloj" class="round">
                             <label id="negro"> Negro </label>
                         </div>
                         <div class="linea-input">
-                            <input for="blanco" type="checkbox" name="color-reloj" value="color-reloj" class="ticks">
+                            <input for="blanco" type="checkbox" name="color-reloj" value="color-reloj" class="round">
                             <label id="blanco"> Blanco </label>
                         </div>
                         <div class="linea-input">
-                            <input for="no-preference" type="checkbox" name="color-reloj" value="color-reloj" class="ticks">
+                            <input for="no-preference" type="checkbox" name="color-reloj" value="color-reloj" class="round">
                             <label id="no-preference"> No tengo preferencia </label>
                         </div>
                     </div>    
-                    <div class="control-formulario">
+                    <div class="divQuiz">
                         <label class="preguntas-form">¿Qué materiales te gustan?</label>
                         <label class="aclaracion-pregunta">Podes elegir todos las que quieras</label>
                         <div class="linea-input">
-                            <input for="metal" type="checkbox" name="material-reloj" value="material-reloj" class="ticks">
+                            <input for="metal" type="checkbox" name="material-reloj" value="material-reloj" class="round">
                             <label id="metal"> Metal </label>
                         </div>
                         <div class="linea-input">
-                            <input for="cuero" type="checkbox" name="material-reloj" value="material-reloj" class="ticks">
+                            <input for="cuero" type="checkbox" name="material-reloj" value="material-reloj" class="round">
                             <label id="cuero"> Cuero </label>
                         </div>
                         <div class="linea-input">
-                            <input for="crystal" type="checkbox" name="material-reloj" value="material-reloj" class="ticks">
+                            <input for="crystal" type="checkbox" name="material-reloj" value="material-reloj" class="round">
                             <label id="crystal"> Crystal </label>
                         </div>
                         <div class="linea-input">
-                            <input for="plastico" type="checkbox" name="material-reloj" value="material-reloj" class="ticks">
+                            <input for="plastico" type="checkbox" name="material-reloj" value="material-reloj" class="round">
                             <label id="plastico"> Plastico </label>
                         </div>
                         <div class="linea-input">
-                            <input for="sin-preferencia" type="checkbox" name="material-reloj" value="material-reloj" class="ticks">
+                            <input for="sin-preferencia" type="checkbox" name="material-reloj" value="material-reloj" class="round">
                             <label id="sin-preferencia"> No tengo preferencia </label>
                         </div>
                     </div>
-                    <div class="control-formulario">
+                    <div class="divQuiz">
                         <label class="preguntas-form">¿Cuánto dinero estas dispuesto a gastar en un reloj?</label>
                         <label class="aclaracion-pregunta">Por favor escoge un rango</label>
                         <div class="linea-input">
-                            <input for="menos-de" type="radio" name="rango-precio" value="rango-precio" class="ticks">
+                            <input for="menos-de" type="radio" name="rango-precio" value="rango-precio" class="round">
                             <label id="menos-de"> Menos de $5000</label>
                         </div>
                         <div class="linea-input">
-                            <input for="entre" type="radio" name="rango-precio" value="rango-precio" class="ticks">
+                            <input for="entre" type="radio" name="rango-precio" value="rango-precio" class="round">
                             <label id="entre"> Entre $5000 y$10000 </label>
                         </div>
                         <div class="linea-input">
-                            <input for="mas-de" type="radio" name="rango-precio" value="rango-precio" class="ticks">
+                            <input for="mas-de" type="radio" name="rango-precio" value="rango-precio" class="round">
                             <label id="mas-de"> Mas de $10000</label>
                         </div>
                     </div>
-                    <div class="control-formulario">
+                    <div class="divQuiz">
                         <label class="preguntas-form">¿Querés que te enviemos el resultado por e-mail?</label>
                         <label class="aclaracion-pregunta">Ademas podremos avisarte cuando alguno de tus relojes este en
                             oferta</label>
-                        <input type="email" name="email" placeholder="Escribe tu email aqui" class="email">
+                        <input type="email" name="email" placeholder="Escribe tu email aqui" class="quizEmail">
                     </div>
                     <div class="botones">
-                        <button type="submit" class="boton-envio">OBTENER RESULTADOS</button>
-                        <button type="reset" class="boton-reset">Comenzar de nuevo</button>
+                        <button type="submit" class="newProductButton">OBTENER RESULTADOS</button>
+                        <!-- <button type="reset" class="boton-reset">Comenzar de nuevo</button> -->
                     </div>
                 </section>
-                <aside>
-                    <img src="/img/clipboard.jpg" alt="clipboard" class="clipboard">
+                <!-- <aside>
+                 <img src="/img/clipboard.jpg" alt="clipboard" class="clipboard">
                     <img src="/img/relojes-quiz.jpg" alt="relojes-quiz" class="relojes-quiz">
-                </aside>
+                </aside> -->
         </form>
         </section>
     </main>

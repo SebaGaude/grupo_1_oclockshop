@@ -2,16 +2,16 @@ const db = require ("../database/models");
 
 function recordameMiddleware (req, res, next){
     next();
-    
-    if(req.cookies.recordame != undefined && req.session.usuarioLogueado == undefined){
-        let usersDatabase = db.Usuario.findOne({
+    console.log(req.cookies)
+    if(req.cookies != undefined && req.session.usuarioLogueado == undefined){
+        db.Usuario.findOne({
             where: {email : req.cookies.recordame}
         })
-        .then(
-            usuarioALoguearse = usersDatabase
-        )
+        .then(function(usersDatabase){
+            req.session.usuarioLogueado = usersDatabase
+        })
     }
-    req.session.usuarioLogueado =  usuarioALoguearse;
+    res.locals.usuarioLogueado =  req.session.usuarioLogueado;
 }
 
 module.exports = recordameMiddleware;

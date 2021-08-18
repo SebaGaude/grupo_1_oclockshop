@@ -10,6 +10,11 @@
 
     <section>
         <h2 class="titulo-categ second"> PRODUCTOS </h2>
+        <% if (locals.isLogged && locals.usuarioLogueado.perfil == 'administrador') { %>
+        <form class="divBotonCrear" action="/products/create" method="GET">
+            <a href="" class="aEditar"><button class="botonEditar">Crear Producto</button></a>  
+        </form>
+        <% } %>
         <div class="all-products">
             <% for( let i = 0; i< productos.length; i++ ) { %>
             

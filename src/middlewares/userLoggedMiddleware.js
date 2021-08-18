@@ -4,12 +4,13 @@
 function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;
 
-	// let emailInCookie = req.cookies.recordame;
-	// let userFromCookie = User.findByField('email', emailInCookie);
-
-	// if (userFromCookie) {
-	// 	req.session.userLogged = userFromCookie;
-	// }
+	if (req.cookies) {
+		let emailInCookie = req.cookies.recordame;
+		var userFromCookie = User.findOne('email', emailInCookie);
+	}
+	if (userFromCookie) {
+		req.session.usuarioLogueado = userFromCookie;
+	}
 
 	if (req.session.usuarioLogueado) {
 		res.locals.isLogged = true;
