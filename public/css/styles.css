@@ -748,7 +748,7 @@ h3{
     position: relative;
 }
 
-.try.succes input{
+.try.success input{
     border-radius: 5px;
     border: solid 3px #2ecc76;
 }
@@ -757,7 +757,7 @@ h3{
     border: solid 3px #e74e3c;
 }
 
-.try.succes i.fa-check-circle{
+.try.success i.fa-check-circle{
     visibility: visible;
     color: #2ecc76;
 }

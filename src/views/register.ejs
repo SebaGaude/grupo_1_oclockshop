@@ -21,7 +21,7 @@
                 Registrate completando tus datos
             </h2>
             <ul id="error-nombre"></ul>      
-            <div class="try succes">
+            <div class="try">
                 <input class="register-input" id="nombre" type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                 <% if (locals.errors && errors.nombre) { %>
                     <div class="errorMsg">
@@ -34,7 +34,7 @@
             </div>
             </div>
             
-            <div class="try error2">
+            <div class="try">
                 <input class="register-input" id="apellido" type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
                 <% if (locals.errors && errors.apellido) { %>
                     <div class="errorMsg">
@@ -58,7 +58,7 @@
                 <small>Erro message</small>
             </div>
            <div class="try">
-               <label>Ingresá una foto</label>
+               <!-- <label>Ingresá una foto</label> -->
                 <input class="register-input" id="imagen" type="file" name="imagen">
                 <% if (locals.errors && errors.imagen) { %>
                     <div class="errorMsg">
