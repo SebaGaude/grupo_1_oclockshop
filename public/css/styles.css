@@ -719,8 +719,52 @@ h3{
     border-radius: 5%;
     border-style: solid;
     border-width: 1px;
-    border-color: #adadad;
-    
+    border-color: #adadad; 
+}
+
+.try{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.try.succes input{
+    border-radius: 5px;
+    border: solid 3px #2ecc76;
+}
+.try.error2 input{
+    border-radius: 5px;
+    border: solid 3px #e74e3c;
+}
+
+.try.succes i.fa-check-circle{
+    visibility: visible;
+    color: #2ecc76;
+}
+
+.try.error2 i.fa-exclamation-circle{
+    visibility: visible;
+    color: #e74e3c;
+}
+
+.try i{
+    visibility: hidden;  
+    position: absolute;
+    top: 14px;
+    right: -400px;
+}
+
+.try.error2 small{
+    visibility: visible;
+    color: #520d05;
+}
+
+.try small{
+    visibility: hidden;
+    position: absolute;
+    font-weight: bold;
+    padding-top: 3px;
+    margin-left: 5px;
 }
 
 .form-login-register input:hover{
