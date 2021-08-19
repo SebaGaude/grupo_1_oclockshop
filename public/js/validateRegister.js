@@ -163,7 +163,7 @@ function checkInputs(){
     }
     
     function isPassword(contraseña){
-        return /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-].test(contraseña);
+        return /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/.test(contraseña);
     }
 
 
