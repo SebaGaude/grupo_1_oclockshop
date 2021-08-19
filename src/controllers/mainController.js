@@ -34,6 +34,10 @@ let mainController = {
     workwithus: function(req, res){
         res.render("workwithus");
     },
+    //mostrar formulario de ayuda--------------------
+    help: function(req, res){
+        res.render("help");
+    },
     //mostrar la vista de categorías
     categories: function(req, res){
         let listadoCategorias = db.Categoria.findByPk(req.params.id);
