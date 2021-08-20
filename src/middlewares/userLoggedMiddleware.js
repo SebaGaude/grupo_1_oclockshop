@@ -8,6 +8,7 @@ function userLoggedMiddleware(req, res, next) {
 		let emailInCookie = req.cookies.recordame;
 		var userFromCookie = User.findOne('email', emailInCookie);
 	}
+	
 	if (userFromCookie) {
 		req.session.usuarioLogueado = userFromCookie;
 	}

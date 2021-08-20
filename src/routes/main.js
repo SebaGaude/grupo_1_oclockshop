@@ -24,4 +24,6 @@ router.get("/categories/:id", mainController.categories);
 
 router.get("/workwithus", mainController.workwithus)
 
+router.get("/help", mainController.help)
+
 module.exports = router;

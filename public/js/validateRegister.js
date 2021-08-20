@@ -122,7 +122,7 @@ function checkInputs(){
     }
     if(emailUsuario === ""){
         setErrorFor(email, "Debes completar tu email")
-    }else if(! isEmail(emailUsuario)){
+    }else if(!isEmail(emailUsuario)){
         setErrorFor(email, "Completa un formato válido de email")
     }else{
         setSuccessFor(email);
@@ -134,13 +134,11 @@ function checkInputs(){
     }
     if(contraUsuario === ""){
         setErrorFor(contraseña, "Debes elegir una contraseña")
-    }else if(! isPassword(contraUsuario)){
+    }else if(!isPassword(contraUsuario)){
         setErrorFor(contraseña, "La contraseña debe tener como minimo 8 caracteres, incluyendo una mayuscula, una minuscula, un numero y alguno de los siguientes caracteres #?!@$%^&*-")
     }else{
         setSuccessFor(contraseña);
     }
-    
-    
 
     function setErrorFor(input, message){
         const tryDiv = input.parentElement; // .try class from div
@@ -159,7 +157,7 @@ function checkInputs(){
     }
 
     function isEmail(email){
-        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+        return /\S+@\S+\.\S+/.test(email);
     }
     
     function isPassword(contraseña){
