@@ -1236,6 +1236,7 @@ section.vistos{
 }
 
 .contenedor-articulo{
+    display: flex;
     position: relative;
     transition: all 450ms;
     width: 100%;

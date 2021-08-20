@@ -63,7 +63,7 @@
                 <i class="fas fa-box"></i>
                 <p>Devolución gratis dentro de los 30 dias</p>
             </div>
-            <% if (locals.isLogged && locals.usuarioLogueado.perfil == 'administrador') { %>
+            <% if (locals.isLogged && locals.usuarioLogueado.perfil == 'Administrador') { %>
             <form class="divBotonEditar" action="/products/edit/<%= product.id %>" method="GET">
                 <a href="" class="aEditar"><button class="botonEditar">Editar Producto</button></a>  
             </form>
