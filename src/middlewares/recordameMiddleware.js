@@ -2,7 +2,6 @@ const db = require ("../database/models");
 
 function recordameMiddleware (req, res, next){
     next();
-    console.log(req.cookies)
     if(req.cookies != undefined && req.session.usuarioLogueado == undefined){
         db.Usuario.findOne({
             where: {email : req.cookies.recordame}
