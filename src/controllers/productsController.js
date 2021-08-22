@@ -113,6 +113,7 @@ let productsController = {
         
         
         let errors = validationResult(req);
+    
         let image;
         if(errors.isEmpty()){
             db.Producto.findByPk(req.params.id)
@@ -142,7 +143,6 @@ let productsController = {
             .then(function([categorias, marcas, product]){
         
             res.render("editProduct", {categorias, marcas, product,
-            
             
                 errors: errors.mapped(),
                 oldData: req.body

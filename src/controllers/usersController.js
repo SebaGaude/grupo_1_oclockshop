@@ -22,7 +22,6 @@ let usersControllers = {
     processRegister: function(req, res){
         
         let errors = validationResult(req);
-
        if(errors.isEmpty()){
            
                 db.Usuario.create({

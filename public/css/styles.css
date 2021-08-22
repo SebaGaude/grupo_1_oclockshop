@@ -896,7 +896,7 @@ h3{
     border: solid 2px red;
 }
 .errorMsg{
-    color: white;
+    color: rgb(3, 3, 44);
     font-weight: bold;
 
 }
