@@ -180,9 +180,9 @@ let productsController = {
             for(let i = 0; i < productos.length; i++){
                 if (productos[i].articulo.toLowerCase().includes(searched.toLowerCase())){
                     searchedProducts.push(productos[i])
-                }}
+                }};  
 
-                res.render("search",{categorias, marcas, searchedProducts, productos})
+                res.render("search",{categorias, marcas, searchedProducts, productos, searched})
         })
 
     }
