@@ -16,21 +16,23 @@ const storage = multer.diskStorage({
 })
 const fileUpload = multer({ storage: storage });
 
-router.get("/", productsController.products); // vista listado de productos
+router.get("/", productsController.products); // todos los productos
 
-router.get("/detail/:id", productsController.productDetail); // vista de detalle
+router.get("/search", productsController.search); // buscar productos
+
+router.get("/create", productsController.newProduct); // vista de creación
+
+router.get("/:id", productsController.productDetail); // detalle de un producto
 
 router.get("/carrito", productsController.productCart);
 
-router.get("/create", productsController.newProduct); // vista de creación
-router.post("/", fileUpload.single("imagen") ,productsController.store); // lógica de creación
-
+router.post("/", fileUpload.single("imagen") ,productsController.store); // crear de un producto
 
 router.get("/edit/:id", productsController.editProduct); // vista de la edicion
-router.put("/:id", productsController.updateProduct); // logica de la edicion
 
+router.put("/update/:id", productsController.updateProduct); // logica de la edicion************
 
-router.delete('/delete/:id', productsController.destroy); // lógica de delete
+router.delete('/delete/:id', productsController.destroy); // eliminar un producto
 
 
 module.exports = router;

@@ -1,8 +1,15 @@
+const db = require ("../database/models");
+
 let mainController = {
     //mostrar página principal----------------------
     index: function (req, res){
-        res.render("index");
+        db.Categoria
+        .findAll()
+        .then(categorias =>{
+            return res.render("index", {categorias})
+        })     
     },
+
     //mostrar formulario de login----------------------
     login: function(req, res){
         res.render("login");
@@ -15,6 +22,38 @@ let mainController = {
     quiz: function(req, res){
         res.render("quiz");
     },
+    //mostrar terminos y condiciones----------------------
+    terminos: function(req, res){
+        res.render("terminos");
+    },
+    //mostrar politica de privacidad----------------------
+    privacidad: function(req, res){
+        res.render("privacidad");
+    },
+    //mostrar formulario de "trabajá con nosotros"--------------------
+    workwithus: function(req, res){
+        res.render("workwithus");
+    },
+    //mostrar formulario de ayuda--------------------
+    help: function(req, res){
+        res.render("help");
+    },
+    //mostrar la vista de categorías
+    categories: function(req, res){
+        let listadoCategorias = db.Categoria.findByPk(req.params.id);
+        let listadorMarcas = db.Marca.findAll();
+        let listadoProductos = db.Producto.findAll();
+
+        Promise.all([listadoCategorias, listadorMarcas, listadoProductos])
+        
+        .then(function([categorias, marcas, productos]){
+        
+            res.render("categories", {categorias, marcas, productos});
+            
+        })   
+
+    }
+
 };
 
 module.exports = mainController;
