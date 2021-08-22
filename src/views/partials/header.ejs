@@ -18,8 +18,8 @@
                 <a href="/"><img src="/img/Logo_OclockShop_transparente.png" alt="Logo OclockShop"></a>
             </nav>
             <nav class="menu">
-                <form action="/resultados-de-busqueda" method="GET" class="busqueda">
-                    <input type="text" placeholder="Buscar productos, marcas..." class="busqueda-input">
+                <form action="/products/search" method="GET" class="busqueda">
+                    <input type="text" placeholder="Buscar productos, marcas..." class="busqueda-input" name="search">
                     <button><i class="fas fa-search"></i></button>
                 </form>
                 <nav class="mobile">
@@ -35,10 +35,7 @@
         <nav class="desplegable">
             <nav class="fijo">
                 <a class="botonera" href="../../products"><p>Productos</p></a>
-                <a class="botonera categoria" href="/#categ-id">
-                    <p>Categorías</p>
-                </a>                
-            
+                <a class="botonera categoria" href="/#categ-id"><p>Categorías</p></a>                
             </nav>
             <nav class="carrito">
                 <% if (locals.isLogged) { %>
@@ -66,10 +63,11 @@
             <nav class="desplegable-front">
                 <div class="div-desplegable">
                     <ul class="list-desplegable">
-                        <a href="" class="desplegable-li"><li>Digital</li></a>
-                        <a href="" class="desplegable-li"><li>Analogico</li></a>
-                        <a href="" class="desplegable-li"><li>Smart</li></a>
-                        <a href="" class="desplegable-li"><li>Lujo</li></a>
+                        <a href="../categories/1" class="desplegable-li"><li>Analogico</li></a>
+                        <a href="../categories/2" class="desplegable-li"><li>Digital</li></a>
+                        <a href="../categories/3" class="desplegable-li"><li>Lujo</li></a>
+                        <a href="../categories/4" class="desplegable-li"><li>Smart</li></a>
+
                     </ul>
                 </div>
             </nav>

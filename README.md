@@ -24,6 +24,11 @@ Edad: 39,
 Residencia: Buenos Aires - Argentina,
 Ocupación: Ingeniero en Informática y estudiante en Digital House,
 ---
+DATOS USUARIO ADMINISTRADOR - CON ACCESOS A LA EDICION Y CREACION DE PRODUCTOS:
+
+Nombre: Administrador Oclocksop
+mail: admin@oclockshop.com
+password: Adminoclock1!
 
 -------------------------------------------------------------------------------------
 Link al proyecto en Trello, aplicación que utilizamos para el seguimiento de las tareas:

@@ -113,6 +113,7 @@ let productsController = {
         
         
         let errors = validationResult(req);
+    
         let image;
         if(errors.isEmpty()){
             db.Producto.findByPk(req.params.id)
@@ -143,7 +144,6 @@ let productsController = {
         
             res.render("editProduct", {categorias, marcas, product,
             
-            
                 errors: errors.mapped(),
                 oldData: req.body
             });
@@ -162,7 +162,31 @@ let productsController = {
       
          })
     return res.redirect('/');
-}
+    },
+
+    search: function(req, res){
+        let searched = req.query.search;
+        let searchedProducts = []
+
+        let listadoCategorias = db.Categoria.findAll();
+        let listadoMarcas = db.Marca.findAll();
+        let listadoProductos = db.Producto.findAll();
+
+
+
+        Promise.all([listadoCategorias, listadoMarcas, listadoProductos])
+
+        .then(function([categorias, marcas, productos]){
+            for(let i = 0; i < productos.length; i++){
+                if (productos[i].articulo.toLowerCase().includes(searched.toLowerCase())){
+                    searchedProducts.push(productos[i])
+                }};  
+
+                res.render("search",{categorias, marcas, searchedProducts, productos, searched})
+        })
+
+    }
+
 
 
 };

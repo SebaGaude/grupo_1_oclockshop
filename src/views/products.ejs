@@ -10,7 +10,7 @@
 
     <section>
         <h2 class="titulo-categ second"> PRODUCTOS </h2>
-        <% if (locals.isLogged && locals.usuarioLogueado.perfil == 'administrador') { %>
+        <% if (locals.isLogged && locals.usuarioLogueado.perfil == 'Administrador') { %>
         <form class="divBotonCrear" action="/products/create" method="GET">
             <a href="" class="aEditar"><button class="botonEditar">Crear Producto</button></a>  
         </form>
