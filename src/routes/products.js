@@ -37,6 +37,7 @@ router.put("/:id",fileUpload.single("imagen"), createEditProductMiddleware, prod
 
 router.delete('/delete/:id', productsController.destroy); // lógica de delete
 
+router.get("/search", productsController.search)
 
 
 module.exports = router;

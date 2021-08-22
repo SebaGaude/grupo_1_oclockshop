@@ -267,6 +267,7 @@ a.botonera p{
     justify-content: center;
     width: 25%;
     margin-left: 10%;
+    align-items: center;
 }
 
 .carrito a{
@@ -276,6 +277,7 @@ a.botonera p{
 
 .carrito p{
     text-align: center;
+    line-height: 4vh;
 }
 
 .carro{
@@ -310,7 +312,7 @@ a.botonera p{
     width: 40px;
     border-radius: 100%;
 }
-.registration .sign-in{
+.registration, .sign-in{
     width: 50%;
 }
 
@@ -734,6 +736,7 @@ h3{
 
 .register-input{
     font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
     padding: 5px;
     font-size: 12px;
     border-radius: 5%;
@@ -788,10 +791,12 @@ h3{
 }
 
 .form-login-register input:hover{
+    box-sizing: border-box;
     border: solid 2px rgb(255, 136, 0);
 }
 
 .form-login-register input:focus-within{
+    box-sizing: border-box;
     border: solid 2px rgb(255, 136, 0);
 }
 
