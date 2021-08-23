@@ -2168,6 +2168,8 @@ section div ul li a{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+   
+    
 }
 
 .article-container{
@@ -2190,6 +2192,7 @@ section div ul li a{
 
 .articles{
     width: 30vw;
+    
 }
 
 .img-container img{
@@ -2200,7 +2203,6 @@ section div ul li a{
     margin: auto;
     border-radius: 5px;
 }
-
 
 .img-container h3{
     background-color: #525252;
