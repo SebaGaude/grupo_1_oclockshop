@@ -26,6 +26,7 @@ router.get("/", productsController.products); // vista listado de productos
 router.get("/detail/:id", productsController.productDetail); // vista de detalle
 
 router.get("/carrito", productsController.productCart);
+//router.post("/detail/:id", productsController.carrito) // logica de agregado de producto al carrito
 
 router.get("/create", productsController.newProduct); // vista de creación
 router.post("/", fileUpload.single("imagen"), createEditProductMiddleware, productsController.store); // lógica de creación
@@ -37,7 +38,8 @@ router.put("/:id",fileUpload.single("imagen"), createEditProductMiddleware, prod
 
 router.delete('/delete/:id', productsController.destroy); // lógica de delete
 
-router.get("/search", productsController.search)
+router.get("/search", productsController.search) // logica de barra de busqueda
+
 
 
 module.exports = router;

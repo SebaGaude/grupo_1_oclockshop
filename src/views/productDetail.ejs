@@ -32,7 +32,7 @@
                     <!-- <p class="discount"><%= product.descuento %> % OFF </p> -->
                 </div>    
             </div>
-            <form action="/registro" method="GET">
+            <form action="/products/detail/<%= product.id %>" method="POST">
                 <label for="cantidad">Seleccione la cantidad:</label>
                 <select name="cantidad" id="cantidad" class="cantidad-desp">
                     <option value="1">1</option>

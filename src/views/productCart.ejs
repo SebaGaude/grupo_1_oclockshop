@@ -12,41 +12,46 @@
             <div class="titulo">CARRITO DE COMPRAS</div>
             <div class="contenedorNav"> <!-- para listados se arma con NAV + UL + LI -->
                 <ul class="nombreProducto">
-                    <li><a href="#">Nombre Producto</a></li>
-                </ul>
-                <ul class="atributosProducto">
-                    <li><a href="#">Precio</a></li>
-                    <li><a href="#">Cantidad</a></li>
-                    <li><a href="#">Subtotal</a></li>
+                    <p>Nombre del Producto</p>
+                    <p>Imagen del Producto</p>
+                    <p>Precio</p>
+                    <p>Cantidad</p>
+                    <p>Subtotal</p>
+                    <p class="eliminarCarrito"></p>
                 </ul>
             </div>
-            <div class="articulos">
-                <div class="articulo1">
-                <img class="imagenReloj"src="/img/reloj1.jpg">                    
-                        <div class="tablet">
-                        <div class="precioDesc">Modelo Reloj</div>
-                        <div class="precios">$6.770</div>
-                        <div class="desc">cantidad</div>
-                        <div class="desc">$$$$$$</div>
-                        <div class="eliminarCarrito">
-                            <i class="fas fa-trash-alt"></i>
+                <div class="articulos">
+                    <%# if( !boughtProduct ) { %>
+                        <div class="articulo1">
+                            <img class="imagenReloj"src="">                    
+                            <p class="tablet"></p>
+                            <p class="precioDesc"></p>
+                            <p class="precios"></p>
+                            <p class="desc"></p>
+                            <p class="desc"></p>
+                            <p class="eliminarCarrito">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
                         </div>
-                    </div>    
+                    <%# } else { %>
+                        <%# for( let i = 0; i < boughtProduct.length; i++ ) { %>
+                            <div class="articulo-carrito">
+                                <div class="detalle-producto-carrito">
+                                    <p class="config-detalle-carrito"><%# boughtProduct[i].articulo %></p>
+                                    <div>
+                                        <img class="imagenReloj config-detalle-carrito"src="../../public/img/<%# boughtProduct[i].imagen %>">                    
+                                    </div> 
+                                    <p class="precios config-detalle-carrito"> $<%# boughtProduct[i].precio %></p>
+                                    <p class="desc config-detalle-carrito"> <%# cantidad %></p>
+                                    <p class="desc config-detalle-carrito">$<%# boughtProduct[i].precio * cantidad %></p>
+                                    <div class="eliminarCarrito">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        <%# } %> 
+                    <%# } %>
                 </div>
-                <div class="articulo2">
-                        <img class="imagenReloj" src="/img/reloj1.jpg">                    
-                        <div class="tablet">
-                        <div class="precioDesc">Modelo Reloj</div>
-                        <div class="precios">$6.770</div>
-                        <div class="desc">cantidad</div>
-                        <div class="desc">$$$$$$</div>
-                        <div class="eliminarCarrito">
-                            <i class="fas fa-trash-alt"></i>
-                        </div>
-                    </div>
-                        
-                </div>
-                    </div>
 
                    <div class="detalleIVA">
                        <div class="bordeIzquierdo"></div>

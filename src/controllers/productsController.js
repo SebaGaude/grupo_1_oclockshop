@@ -1,9 +1,8 @@
 const { validationResult } = require("express-validator");
 const db = require ("../database/models");
 
-
 let productsController = {
-  
+    
     products: function (req, res) {
         let listadoCategorias = db.Categoria.findAll();
         let listadoMarcas = db.Marca.findAll();
@@ -185,7 +184,41 @@ let productsController = {
                 res.render("search",{categorias, marcas, searchedProducts, productos, searched})
         })
 
-    }
+    },
+
+
+    /*carrito: function(req, res){
+        let addedProduct = req.params.id;
+        let foundProduct = []
+        let boughtProduct = []
+
+        let cantidad = req.body.cantidad        
+
+        let listadoCategorias = db.Categoria.findAll();
+        let listadoMarcas = db.Marca.findAll();
+        let listadoProductos = db.Producto.findAll();
+
+        Promise.all([listadoCategorias, listadoMarcas, listadoProductos])
+
+        .then(function([categorias, marcas, productos]){
+            foundProduct = productos.find(item => item.id == addedProduct)
+
+            if(boughtProduct == ""){
+                boughtProduct.push(foundProduct)
+            };*/
+
+            /*for(let i = 0; i < boughtProduct.length; i++){
+
+                if(boughtProduct.id != addedProduct){
+                    boughtProduct.push(foundProduct)
+            }};*/
+
+
+                //res.send(cantidad)
+                //console.log(boughtProduct)
+                /*res.render("productCart",{categorias, marcas, productos, boughtProduct, cantidad}) 
+        })
+    }*/
 
 
 
