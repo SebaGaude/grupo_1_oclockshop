@@ -7,6 +7,7 @@ const cookies = require("cookie-parser");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const cors = require("cors");
 
 const app = express();
 
@@ -14,6 +15,7 @@ const app = express();
 const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
 app.use(session( {secret: "Mensaje secreto", resave: false, saveUninitialized: true} ));
+app.use(cors());
 
 
 app.set("view engine", "ejs");
