@@ -77,11 +77,20 @@
                                 
                                  <%} %>
                        </select>         
-                    
+                       <% if (locals.errors && errors.categoria) { %>
+                        <div class="errorMsg">
+                            <%= errors.categoria.msg %> 
+                        </div>
+                        <% } %>
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form"> Cantidad del artículo </label>
                         <input type="number" id="numero" name="stock" placeholder="cantidad..." value="<%= product.stock%>" class="ticks">
+                        <% if (locals.errors && errors.stock) { %>
+                            <div class="errorMsg">
+                                <%= errors.stock.msg %> 
+                            </div>
+                        <% } %>
                     </div>
                     <div class="control-formulario">
                         <label class="preguntas-form"> Marca del artículo</label>
@@ -104,10 +113,20 @@
                                     
                                      <%} %>
                            </select>         
-                    </div>
+                           <% if (locals.errors && errors.marca) { %>
+                            <div class="errorMsg">
+                                <%= errors.marca.msg %> 
+                            </div>
+                            <% } %>
+                        </div>
                     <div class="control-formulario">
                         <label class="preguntas-form"> Precio del artículo</label>
                         <input type="text" id="precio" name="precio" value="<%= product.precio %>" class="ticks">
+                        <% if (locals.errors && errors.precio) { %>
+                            <div class="errorMsg">
+                                <%= errors.precio.msg %> 
+                            </div>
+                        <% } %>
                     </div>
 
                     <!-- Botones de edit y delete-->

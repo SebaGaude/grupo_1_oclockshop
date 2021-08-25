@@ -30,11 +30,11 @@ router.get("/carrito", productsController.productCart);
 router.post("/detail/:id", productsController.carrito) // logica de agregado de producto al carrito
 
 router.get("/create", adminMiddleware, productsController.newProduct); // vista de creación
-router.post("/", fileUpload.single("imagen"), createEditProductMiddleware, productsController.store); // lógica de creación
+router.post("/", fileUpload.single("imagen"), createEditProductMiddleware, adminMiddleware, productsController.store); // lógica de creación
 
 
 router.get("/edit/:id", adminMiddleware, productsController.editProduct); // vista de la edicion
-router.put("/:id",fileUpload.single("imagen"), createEditProductMiddleware, productsController.updateProduct); // logica de la edicion
+router.put("/:id",fileUpload.single("imagen"), createEditProductMiddleware, adminMiddleware, productsController.updateProduct); // logica de la edicion
 
 
 router.delete('/delete/:id', productsController.destroy); // lógica de delete

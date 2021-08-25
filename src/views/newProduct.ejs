@@ -60,28 +60,47 @@
                                     <option value="<%=categorias[i].id %>">
                                         <%=categorias[i].nombre%>
                                     </option>
-                                    <%} %>
-                          </select>
+                                <%} %>
+                            </select>
+                                <% if (locals.errors && errors.categoria) { %>
+                                    <div class="errorMsg">
+                                        <%= errors.categoria.msg %> 
+                                    </div>
+                                <% } %>
                         </div>
                         <div class="control-formulario">
                             <label class="preguntas-form"> Cantidad del artículo</label>
                             <input id="numero" type="number" name="stock" placeholder="Cantidad..." class="ticks" >
+                            <% if (locals.errors && errors.stock) { %>
+                                <div class="errorMsg">
+                                    <%= errors.stock.msg %> 
+                                </div>
+                            <% } %>
                         </div>
                         <div class="control-formulario">
                             <label class="preguntas-form"> Marca del artículo</label>
                             <select id="marca" name="marca" class="ticks">
                                 <option disabled selected value> -- Elegir una opción -- </option>
                                 <% for (let i=0; i<marcas.length; i++)  {%>
-                          
-                                     <option value="<%=marcas[i].id %>">
-                                         <%=marcas[i].nombre%>
-                                     </option>
-                                     <%} %>
-                           </select>                       
+                                    <option value="<%=marcas[i].id %>">
+                                        <%=marcas[i].nombre%>
+                                    </option>
+                                <%} %>
+                           </select>
+                           <% if (locals.errors && errors.marca) { %>
+                            <div class="errorMsg">
+                                <%= errors.marca.msg %> 
+                            </div>
+                            <% } %>                       
                         </div>
                         <div class="control-formulario">
                             <label class="preguntas-form"> Precio del artículo</label>
                             <input id="precio" type="text" name="precio" placeholder="$$$" class="ticks">
+                            <% if (locals.errors && errors.precio) { %>
+                                <div class="errorMsg">
+                                    <%= errors.precio.msg %> 
+                                </div>
+                            <% } %>
                         </div>
                         <!-- Botón "enviar"-->
                         <div>
