@@ -2,13 +2,15 @@ const db = require ("../database/models");
 
 function recordameMiddleware (req, res, next){
     next();
-    if(req.cookies != undefined && req.session.usuarioLogueado == undefined){
-        db.Usuario.findOne({
-            where: {email : req.cookies.recordame}
-        })
-        .then(function(usersDatabase){
-            req.session.usuarioLogueado = usersDatabase
-        })
+    if (req.cookies.recordame){
+        if(req.cookies != undefined && req.session.usuarioLogueado == undefined){
+            db.Usuario.findOne({
+                where: {email : req.cookies.recordame}
+            })
+            .then(function(usersDatabase){
+                req.session.usuarioLogueado = usersDatabase
+            })
+        }
     }
     res.locals.usuarioLogueado =  req.session.usuarioLogueado;
 }
