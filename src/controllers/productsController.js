@@ -221,7 +221,7 @@ let productsController = {
                 imagen: foundProduct.imagen,
                 cantidad: cantidad,
             }
-            
+
             carrito.push(boughtProduct)
 
             carrito = JSON.stringify(carrito, null, 4);
@@ -229,6 +229,17 @@ let productsController = {
 
             res.redirect("/")
         })
+    },
+
+    destroyItemCarrito: function (req, res){
+        let eliminado = fs.readFileSync(path.join(__dirname, "../data/carrito.json"), { encoding: "utf-8" });
+        eliminado = JSON.parse(eliminado);
+        let eliminaProducto = eliminado.filter(elimina => elimina.id != req.params.id)
+        eliminaProducto = JSON.stringify(eliminaProducto, null, 4);
+
+        fs.writeFileSync(path.join(__dirname, "../data/carrito.json"), eliminaProducto);
+        
+        res.redirect('/products/carrito');
     }
 
 

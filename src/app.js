@@ -21,7 +21,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // middleware de aplicacion
-app.use(recordameMiddleware);
+//app.use(recordameMiddleware);
 app.use(userLoggedMiddleware);
 
 app.use(methodOverride('_method'));

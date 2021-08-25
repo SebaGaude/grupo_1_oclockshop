@@ -31,9 +31,12 @@
                             <p class="precios config-detalle-carrito"> $<%= carrito[i].precio %></p>
                             <p class="desc config-detalle-carrito"> <%= carrito[i].cantidad %></p>
                             <p class="desc config-detalle-carrito">$<%= carrito[i].precio * carrito[i].cantidad %></p>
-                            <div class="eliminarCarrito">
-                                <i class="fas fa-trash-alt"></i>
-                            </div>
+                            
+                            <form class="form-carrito" action="/products/carrito/delete/<%= carrito[i].id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="eliminarCarrito">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </form>
                         </div>           
                     </div>
                 <% } %>

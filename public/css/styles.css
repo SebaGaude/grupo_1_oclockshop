@@ -1215,7 +1215,7 @@ h2{
 }
 
 .titulo-categ{
-    margin: 2vh 0 1vh 3vw;
+    margin: 8vh 0 5vh 3vw;
     text-align: left;
     color: rgb(3, 3, 44);
 }
@@ -1477,6 +1477,7 @@ section.vistos{
     align-items: center;
     text-align: center;
     width: 20%;
+    border-color: transparent;
 }
 
 .config-detalle-carrito{
@@ -2296,6 +2297,7 @@ section div ul li a{
     border: solid 5px rgb(255, 136, 0);
     padding: 5%;
     border-radius: 5px;
+    background-color: white;
 }
 
 .hola{
@@ -2336,4 +2338,16 @@ section div ul li a{
 
 .carrito-register:hover{
     box-shadow: 3px 3px 5px rgb(3, 3, 44);
+}
+
+
+.busqueda-vacia{
+    margin-top: 10vh;
+    margin-bottom: 30vh;
+}
+
+.form-carrito{
+ width: 20%;
+ display: flex;
+ align-items: center;
 }
