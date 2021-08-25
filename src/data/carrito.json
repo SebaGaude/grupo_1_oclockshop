@@ -1,0 +1,16 @@
+[
+    {
+        "id": 5,
+        "articulo": "Tag Heuer Formula 1",
+        "precio": "50000.00",
+        "imagen": "product-1629735224468.jpg",
+        "cantidad": "1"
+    },
+    {
+        "id": 4,
+        "articulo": "Sky-Dweller",
+        "precio": "1200.00",
+        "imagen": "product-1629735202942.jpg",
+        "cantidad": "1"
+    }
+]

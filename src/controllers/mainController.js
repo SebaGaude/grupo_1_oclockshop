@@ -52,6 +52,10 @@ let mainController = {
             
         })   
 
+    },
+
+    cartLogin: function(req, res){
+        res.render("cartLogin")
     }
 
 };
