@@ -7,10 +7,17 @@
         "cantidad": "1"
     },
     {
-        "id": 4,
-        "articulo": "Sky-Dweller",
-        "precio": "1200.00",
-        "imagen": "product-1629735202942.jpg",
+        "id": 3,
+        "articulo": "Oyster Perpetual 41",
+        "precio": "1000.00",
+        "imagen": "product-1629735178000.jpg",
+        "cantidad": "1"
+    },
+    {
+        "id": 15,
+        "articulo": "Lacoste 12.12",
+        "precio": "22000.00",
+        "imagen": "product-1629734934784.jpg",
         "cantidad": "1"
     }
 ]

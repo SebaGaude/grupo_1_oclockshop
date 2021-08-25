@@ -12,6 +12,11 @@
         <h2 class="titulo-categ second"> Resultados de Busqueda para "<%= searched %>" </h2>
 
         <div class="all-products">
+            <% if(searchedProducts == ""){ %>
+                <div class="busqueda-vacia">
+                    <h3> No se encontraron resultados para tu busqueda </h3>
+                </div>
+            <% } else { %>
             <% for( let i = 0; i< searchedProducts.length; i++ ) { %>
                         
             <div class="articulos articles">          
@@ -31,7 +36,7 @@
                     </div>
                 </div>         
             </div>
-            <% } %>
+            <% } }%>
         </div>
     </section>
 
