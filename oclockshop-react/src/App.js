@@ -2,6 +2,8 @@ import './App.css';
 import Header from './components/Header';
 import CarouselOclock from './components/CorouselOclock';
 import Products from './components/Products';
+import Dashboard from './components/Dashboard';
+
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
       <Header/>
       <CarouselOclock/>
       <Products/>
-      
+      <Dashboard/>
      
     </div>
   );

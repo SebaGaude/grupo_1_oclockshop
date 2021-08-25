@@ -38,10 +38,11 @@ class Products extends Component {
                 <h2>Listado de productos</h2>
                 { isLoading && <h4>Cargando...</h4> }
                 { products.map(oneProduct => {
+                    console.log(oneProduct.imagen)
                     return(
                         <div key= {oneProduct.id} >
                             <h3> { oneProduct.articulo } </h3>
-                            <img src={oneProduct.imagen} alt="oneProduct" />
+                            <img src={oneProduct.imagen} />
                         </div>
                     )
                 })}
