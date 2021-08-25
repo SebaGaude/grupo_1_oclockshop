@@ -20,38 +20,24 @@
                     <p class="eliminarCarrito"></p>
                 </ul>
             </div>
-                <div class="articulos">
-                    <%# if( !boughtProduct ) { %>
-                        <div class="articulo1">
-                            <img class="imagenReloj"src="">                    
-                            <p class="tablet"></p>
-                            <p class="precioDesc"></p>
-                            <p class="precios"></p>
-                            <p class="desc"></p>
-                            <p class="desc"></p>
-                            <p class="eliminarCarrito">
+            <div class="articulos">
+                <% for( let i = 0; i < carrito.length; i++ ) { %>
+                    <div class="articulo-carrito">
+                        <div class="detalle-producto-carrito">
+                            <p class="config-detalle-carrito"><%= carrito[i].articulo %></p>
+                            <div>
+                                <img class="imagenReloj config-detalle-carrito" src="../../public/img/<%= carrito[i].imagen %>">                    
+                            </div> 
+                            <p class="precios config-detalle-carrito"> $<%= carrito[i].precio %></p>
+                            <p class="desc config-detalle-carrito"> <%= carrito[i].cantidad %></p>
+                            <p class="desc config-detalle-carrito">$<%= carrito[i].precio * carrito[i].cantidad %></p>
+                            <div class="eliminarCarrito">
                                 <i class="fas fa-trash-alt"></i>
                             </div>
-                        </div>
-                    <%# } else { %>
-                        <%# for( let i = 0; i < boughtProduct.length; i++ ) { %>
-                            <div class="articulo-carrito">
-                                <div class="detalle-producto-carrito">
-                                    <p class="config-detalle-carrito"><%# boughtProduct[i].articulo %></p>
-                                    <div>
-                                        <img class="imagenReloj config-detalle-carrito"src="../../public/img/<%# boughtProduct[i].imagen %>">                    
-                                    </div> 
-                                    <p class="precios config-detalle-carrito"> $<%# boughtProduct[i].precio %></p>
-                                    <p class="desc config-detalle-carrito"> <%# cantidad %></p>
-                                    <p class="desc config-detalle-carrito">$<%# boughtProduct[i].precio * cantidad %></p>
-                                    <div class="eliminarCarrito">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        <%# } %> 
-                    <%# } %>
-                </div>
+                        </div>           
+                    </div>
+                <% } %>
+            </div>
 
                    <div class="detalleIVA">
                        <div class="bordeIzquierdo"></div>

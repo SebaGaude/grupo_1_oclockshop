@@ -8,17 +8,7 @@
     <%- include("partials/header") %>
 
     <main class="principal">
-       <!-- <div class="imagenes-verticales">
-            <div class="imagen-pequeña">
-                <img src= "../../public/img/" alt="imagen 1">
-            </div> 
-            <div class="imagen-pequeña"> 
-                <img src="../../img/" alt="imagen 2">
-            </div> -->
-            <!-- <div class="imagen-pequeña">
-                <img src="../img/" alt="imagen 3">
-            </div>
-        </div> --> 
+
         <div class="imagen-principal">
             <img src="../../img/<%= product.imagen %> " alt="imagen elegida">
         </div>
@@ -32,29 +22,56 @@
                     <!-- <p class="discount"><%= product.descuento %> % OFF </p> -->
                 </div>    
             </div>
-            <form action="/products/detail/<%= product.id %>" method="POST">
-                <label for="cantidad">Seleccione la cantidad:</label>
-                <select name="cantidad" id="cantidad" class="cantidad-desp">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <div class="comprar">
-                    <label for="comprar"></label>
-                    <button type="submit" id="comprar">COMPRAR ¡YA!</button>
-                </div>
-                <div class="agregar-carrito">
-                    <label for="carrito"></label>
-                    <button type="submit" id="carrito">AGREGAR AL CARRITO</button>
-                </div>
-            </form>
+            <% if (locals.isLogged) { %>
+                <form action="/products/detail/<%= product.id %>" method="POST">
+                    <label for="cantidad">Seleccione la cantidad:</label>
+                    <select name="cantidad" id="cantidad" class="cantidad-desp">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <div class="comprar">
+                        <label for="comprar"></label>
+                        <button type="submit" id="comprar">COMPRAR ¡YA!</button>
+                    </div>
+                    <div class="agregar-carrito">
+                        <label for="carrito"></label>
+                        <button type="submit" id="carrito">AGREGAR AL CARRITO</button>
+                    </div>
+                </form>
+            <% } else { %>
+                <form action="../../cartLogin" method="GET">
+                    <label for="cantidad">Seleccione la cantidad:</label>
+                    <select name="cantidad" id="cantidad" class="cantidad-desp">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <div class="comprar">
+                        <label for="comprar"></label>
+                        <button type="submit" id="comprar">COMPRAR ¡YA!</button>
+                    </div>
+                    <div class="agregar-carrito">
+                        <label for="carrito"></label>
+                        <button type="submit" id="carrito">AGREGAR AL CARRITO</button>
+                    </div>
+                </form>
+            <% } %>
+
             <div class="envio">
                 <a href=""><i class="fas fa-truck"></i>
                 <p>Elige tu dirección de envío.</p></a>
@@ -76,29 +93,7 @@
             <p><%= product.descripcion %> </p>
         </div>
     </article> 
-    <!-- <div class="otros-productos">
-        <h4>Otros Productos</h4>
-        <div class="otros-ofrecidos">
-            <div class="otros">
-                <img src="../img/Tag-Heuer11.jpg" alt="">
-            </div>
-            <div class="otros"> 
-                <img src="../img/Tag-Heuer12.jpg" alt="">
-            </div>
-            <div class="otros">
-                <img src="../img/Tag-Heuer13.jpg" alt="">
-            </div>
-            <div class="otros">
-                <img src="../img/Tag-Heuer11.jpg" alt="">
-            </div>
-            <div class="otros"> 
-                <img src="../img/Tag-Heuer12.jpg" alt="">
-            </div>
-            <div class="otros">
-                <img src="../img/Tag-Heuer13.jpg" alt="">
-            </div>
-        </div>
-    </div> -->
+
 </body>
 <%- include("partials/footer") %>
 </html>

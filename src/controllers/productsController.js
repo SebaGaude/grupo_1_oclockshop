@@ -1,5 +1,8 @@
 const { validationResult } = require("express-validator");
 const db = require ("../database/models");
+const fs = require("fs")
+const path = require("path")
+
 
 let productsController = {
     
@@ -34,7 +37,12 @@ let productsController = {
     },
 
     productCart: function (req, res) {
-        res.render("productCart");
+        let carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carrito.json"), { encoding: "utf-8" });
+        let carrito
+        if (carritoDatabase == ""){
+            carrito = []
+            } else {carrito = JSON.parse(carritoDatabase)}
+        res.render("productCart", {carrito});
     },
 
     newProduct: function (req, res) {
@@ -187,12 +195,15 @@ let productsController = {
     },
 
 
-    /*carrito: function(req, res){
+    carrito: function(req, res){
         let addedProduct = req.params.id;
         let foundProduct = []
-        let boughtProduct = []
-
-        let cantidad = req.body.cantidad        
+        let cantidad = req.body.cantidad
+        let carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carrito.json"), { encoding: "utf-8" });
+        let carrito;
+        if (carritoDatabase == ""){
+            carrito = []
+            } else {carrito = JSON.parse(carritoDatabase)}
 
         let listadoCategorias = db.Categoria.findAll();
         let listadoMarcas = db.Marca.findAll();
@@ -202,24 +213,23 @@ let productsController = {
 
         .then(function([categorias, marcas, productos]){
             foundProduct = productos.find(item => item.id == addedProduct)
+            
+            let boughtProduct = {
+                id: foundProduct.id,
+                articulo: foundProduct.articulo,
+                precio: foundProduct.precio,
+                imagen: foundProduct.imagen,
+                cantidad: cantidad,
+            }
+            
+            carrito.push(boughtProduct)
 
-            if(boughtProduct == ""){
-                boughtProduct.push(foundProduct)
-            };*/
+            carrito = JSON.stringify(carrito, null, 4);
+            fs.writeFileSync(path.join(__dirname, "../data/carrito.json"), carrito);
 
-            /*for(let i = 0; i < boughtProduct.length; i++){
-
-                if(boughtProduct.id != addedProduct){
-                    boughtProduct.push(foundProduct)
-            }};*/
-
-
-                //res.send(cantidad)
-                //console.log(boughtProduct)
-                /*res.render("productCart",{categorias, marcas, productos, boughtProduct, cantidad}) 
+            res.redirect("/")
         })
-    }*/
-
+    }
 
 
 };

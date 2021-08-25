@@ -55,9 +55,15 @@
                             </a>
                         </div>
                         <% } %>
+                        <% if (!locals.isLogged) { %>
                             <div class="carro">
-                                <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
+                                <a href="../../cartLogin"><i class="fas fa-shopping-cart"></i></a>
                             </div>
+                        <% } else { %>
+                            <div class="carro">
+                                <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        <% } %>
                 </nav>
             </nav>
             <nav class="desplegable-front">

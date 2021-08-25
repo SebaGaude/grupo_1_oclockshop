@@ -2168,15 +2168,12 @@ section div ul li a{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-   
-    
 }
 
 .article-container{
-    width: 30vw;
+    width: 22vw;
     position: relative;
     transition: all 450ms;
-    width: 100%;
     align-self: center;
     background-color: white;
     display: flex;
@@ -2191,7 +2188,7 @@ section div ul li a{
 }
 
 .articles{
-    width: 30vw;
+    width: 22vw;
     
 }
 
@@ -2290,3 +2287,53 @@ section div ul li a{
     color: #198754;
 }
 
+
+
+.cuadro{
+    width: 30%;
+    text-align: center;
+    margin: 16vh auto ;
+    border: solid 5px rgb(255, 136, 0);
+    padding: 5%;
+    border-radius: 5px;
+}
+
+.hola{
+    margin: 0;
+}
+
+.mensaje{
+    margin: 0 auto 5vh auto;
+    color: black;
+    width: 80%;
+}
+
+.carrito-login{
+    margin-bottom: 3vh;
+    background-color: rgb(3, 3, 44);
+    border: none;
+    width: 70%;
+    line-height: 5vh;
+    border-radius: 5px;
+    color: rgb(255, 136, 0);
+    font-weight: 500;
+}
+
+.carrito-login:hover{
+    box-shadow: 3px 3px 5px rgb(255, 136, 0);
+}
+
+.carrito-register{
+    margin-bottom: 3vh;
+    background-color: rgb(255, 136, 0);
+    border: none;
+    width: 70%;
+    line-height: 5vh;
+    border-radius: 5px;
+    color: rgb(3, 3, 44);
+    font-weight: 700;
+}
+
+.carrito-register:hover{
+    box-shadow: 3px 3px 5px rgb(3, 3, 44);
+}
