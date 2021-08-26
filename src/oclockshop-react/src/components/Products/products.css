@@ -1,0 +1,13 @@
+.images{
+    max-width: 20vw;
+}
+
+.img{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: solid 1px black;
+}
+.h2{
+    display: inline;
+    text-align: center;
+}
