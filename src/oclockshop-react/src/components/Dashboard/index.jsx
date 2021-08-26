@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./dashboard.css";
 
 class Dashboard extends Component {
 
@@ -35,15 +36,12 @@ class Dashboard extends Component {
     render() {
         const {isLoading, totalProducts} = this.state;
         return(
-            <div className="img">
-                <h2 className="h2">Listado de productos</h2>
+            <div className="totalProds">
+                <h2>Total de productos</h2>
                 { isLoading && <h4>Cargando...</h4> }
                 { 
-                    <div>
-                    <h3> { totalProducts } </h3>
-                    </div>
+                    <h3> { totalProducts } </h3>  
                 }
-
             </div>
         )
     }
