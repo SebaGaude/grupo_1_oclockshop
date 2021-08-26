@@ -241,7 +241,7 @@ let productsController = {
             fs.writeFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), carrito);
             
             //res.send((req.session.usuarioLogueado.id).toString())
-            res.render("productcart", {carritoUsuario})
+            res.redirect("index")
         })
     },
 
