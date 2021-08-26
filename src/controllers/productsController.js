@@ -2,6 +2,7 @@ const { validationResult } = require("express-validator");
 const db = require ("../database/models");
 const fs = require("fs")
 const path = require("path")
+const usersController = require("../controllers/usersController");
 
 
 let productsController = {
@@ -197,21 +198,32 @@ let productsController = {
 
     carrito: function(req, res){
         let addedProduct = req.params.id;
-        let foundProduct = []
-        let cantidad = req.body.cantidad
-        let carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carrito.json"), { encoding: "utf-8" });
+        let cantidad = req.body.cantidad; 
+        let carritoUsuario = "carritoId" + (req.session.usuarioLogueado.id).toString() + ".json";
+        let carritoDatabase;
         let carrito;
+        let foundProduct = [];
+
+        if(!path.join(__dirname, "../data/carritos/" + carritoUsuario)){
+            fs.appendFile(path.join(__dirname, "../data/carritos/" + carritoUsuario), "", function (err) {
+                if (err) throw err;
+                console.log('Saved!')})
+            }
+
+        carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), { encoding: "utf-8" });
+
         if (carritoDatabase == ""){
             carrito = []
-            } else {carrito = JSON.parse(carritoDatabase)}
+        } else {carrito = JSON.parse(carritoDatabase)}
 
-        let listadoCategorias = db.Categoria.findAll();
-        let listadoMarcas = db.Marca.findAll();
+        
         let listadoProductos = db.Producto.findAll();
 
-        Promise.all([listadoCategorias, listadoMarcas, listadoProductos])
+        Promise.all([listadoProductos])
 
-        .then(function([categorias, marcas, productos]){
+        .then(function([productos]){
+
+
             foundProduct = productos.find(item => item.id == addedProduct)
             
             let boughtProduct = {
@@ -224,9 +236,11 @@ let productsController = {
 
             carrito.push(boughtProduct)
 
-            carrito = JSON.stringify(carrito, null, 4);
-            fs.writeFileSync(path.join(__dirname, "../data/carrito.json"), carrito);
 
+            carrito = JSON.stringify(carrito, null, 4);
+            fs.writeFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), carrito);
+            
+            //res.send((req.session.usuarioLogueado.id).toString())
             res.redirect("/")
         })
     },

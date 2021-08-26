@@ -1,0 +1,37 @@
+[
+    {
+        "id": 3,
+        "articulo": "Oyster Perpetual 41",
+        "precio": "1000.00",
+        "imagen": "product-1629735178000.jpg",
+        "cantidad": "1"
+    },
+    {
+        "id": 10,
+        "articulo": "Tressa Digital Touch Pinot",
+        "precio": "2000.00",
+        "imagen": "product-1629735076971.jpg",
+        "cantidad": "1"
+    },
+    {
+        "id": 3,
+        "articulo": "Oyster Perpetual 41",
+        "precio": "1000.00",
+        "imagen": "product-1629735178000.jpg",
+        "cantidad": "1"
+    },
+    {
+        "id": 10,
+        "articulo": "Tressa Digital Touch Pinot",
+        "precio": "2000.00",
+        "imagen": "product-1629735076971.jpg",
+        "cantidad": "1"
+    },
+    {
+        "id": 5,
+        "articulo": "Tag Heuer Formula 1",
+        "precio": "50000.00",
+        "imagen": "product-1629735224468.jpg",
+        "cantidad": "1"
+    }
+]
