@@ -47,7 +47,7 @@
             </div>
             
             <div class="try"> 
-                <input class="register-input" id="email" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                <input class="register-input" id="email" type="text" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
                 <% if (locals.errors && errors.email) { %>
                     <div class="errorMsg">
                         <%= errors.email.msg %> 

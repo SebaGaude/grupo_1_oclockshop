@@ -20,30 +20,33 @@
             <h2> 
                 Completá con tus datos registrados
             </h2>
-            <ul id="errorLogin"></ul>
-            <div class="correo-contraseña">
-                <input class="login-input" type="email" id="email" name="email" placeholder="Correo electrónico"  value="<%= locals.oldData ? oldData.email : null %>">
-                <% if (locals.errors && errors.email) { %>
-                    <div class="errorMsg">
-                        <%= errors.email.msg %> 
-                    </div>
-                <% } %>
-            </div>       
-
-            <div>
+            <!-- <ul id="errorLogin"></ul> -->
+            <div class="try">
+                    <input class="login-input" type="text" id="email" name="email" placeholder="Correo electrónico"  value="<%= locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="errorMsg">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>    
+            </div>
+            <div class="try">
                 <input class="login-input" type="password" id="contraseña" name="contraseña" placeholder="Contraseña">
                 <% if (locals.errors && errors.contraseña) { %>
                     <div class="errorMsg">
                         <%= errors.contraseña.msg %> 
                     </div>
                 <% } %>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>    
             </div>
-            
             <div class="recordar-contraseña">
                 <input for="recordar" type="checkbox" name="recordarme" class="checkbox1">
                 <label id="recordar">Recordarme</label>
             </div>
-
             <!-- Botón "continuar"-->
             
             <button type="submit" class="boton-crear-cuenta">CONTINUAR</button>
