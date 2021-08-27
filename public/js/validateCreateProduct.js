@@ -1,6 +1,6 @@
-const form = document.querySelector("#create-edit-form");
+const form = document.querySelector(".form-login-register");
 const articulo = document.querySelector("#articulo");
-const descripcion = document.querySelector("#descripcion")
+const descripcion = document.querySelector("#descripcion");
 const imagenProducto = document.querySelector("#imagenProducto");
 const categoria = document.querySelector("#categoria");
 const numero = document.querySelector("#numero");
@@ -14,80 +14,87 @@ form.addEventListener("submit", (e)=>{
 
 
 
-function checkInputs(){
-    //get the values from the inputs
-    const articulo = articulo.value.trim();
-    const descripcion = descripcion.value.trim();
-    const imagenProducto = imagenProducto.value.trim();
-    const categoria = categoria.value.trim();
-    const numero = numero.value.trim();
-    const marca = marca.value.trim();
-    const precio = precio.value.trim();
-    const errors = []
-    
-    if(articulo === ""){
-        setErrorFor(articulo, "Debes completar el nombre del articulo")
-        errors.push("error en articulo");
-    }else{
-        setSuccessFor(articulo);
-    }
-    if(descripcion === ""){
-        setErrorFor(descripcion, "Debes completar una descripción")
-        errors.push("error en descripcion");
-    }else{
-        setSuccessFor(descripcion);
-    }
-    if(imagenProducto === ""){
-        setErrorFor(imagenProducto, "Debes elegir una imágen de producto")
-        errors.push("error en imagen");
-    }else{
-        setSuccessFor(imagen);
-    }
-    if(categoria === ""){
-        setErrorFor(categoria, "Debes completar una categoría")
-        errors.push("error en categoria");
-    }else{
-        setSuccessFor(categoria);
-    }
-    if(numero === ""){
-        setErrorFor(numero, "Debes completar el stock del producto")
-        errors.push("error en stock");
-    }else{
-        setSuccessFor(numero);
-    }
-    if(marca === ""){
-        setErrorFor(marca, "Debes completar la marca del producto")
-        errors.push("error en marca");
-    }else{
-        setSuccessFor(marca);
-    }
-    if(precio === ""){
-        setErrorFor(precio, "Debes completar el precio del producto")
-        errors.push("error en precio");
-    }else{
-        setSuccessFor(precio);
-    }
-    
-    function setErrorFor(input, message){
-        const tryDiv = input.parentElement; // .try class from div
-        const small = tryDiv.querySelector("small");
+    function checkInputs(){
+        //get the values from the inputs
+        const nombreArticulo = articulo.value.trim();
+        const descripcionArticulo = descripcion.value.trim();
+        const unaImagenProducto = imagenProducto.value.trim();
+        const categoriaProducto = categoria.value.trim();
+        const numeroStock = numero.value.trim();
+        const marcaArticulo = marca.value.trim();
+        const precioArticulo = precio.value.trim();
+        const errors = []
         
-        //add error message inside small tag
-        small.innerText = message;
+        if(nombreArticulo === ""){
+            setErrorFor(articulo, "Debes completar el nombre")
+            errors.push("error en nombreArticulo");
+        }else{
+            setSuccessFor(articulo);
+        }
+        if(descripcionArticulo === ""){
+            setErrorFor(descripcion, "Debes completar una descripcion")
+            errors.push("error en descripcionArticulo");
+        }else{
+            setSuccessFor(descripcion);
+        }
+        if(unaImagenProducto === ""){
+            setErrorFor(imagenProducto, "Debes elegir una imágen")
+            errors.push("error en unaImagenProducto");
+        }else{
+            setSuccessFor(imagenProducto);
+        }
+        if(categoriaProducto === ""){
+            setErrorFor(categoria, "Debes elegir una categoría")
+            errors.push("error en categoriaProducto");
+        }else{
+            setSuccessFor(categoria);
+        }
+        if(numeroStock === ""){
+            setErrorFor(numero, "Debes completar el stock")
+            errors.push("error en password");
+        }else{
+            setSuccessFor(numero);
+        }
+        if(marcaArticulo === ""){
+            setErrorFor(marca, "Debes elegir una marca")
+            errors.push("error en marcaArticulo");
+        }else{
+            setSuccessFor(marca);
+        }
+        if(precioArticulo === ""){
+            setErrorFor(precio, "Debes elegir un precio")
+            errors.push("error en precioArticulo");
+        }else{
+            setSuccessFor(precio);
+        }
         
-        // add error class
-        tryDiv.className = "try error2"
-    }
-    
-    function setSuccessFor(input){
-        const tryDiv = input.parentElement;
-        tryDiv.className = "try success"
-    }
-    if (errors.length > 0 ){
-        e.preventDefault();
-    }  
-}   
+        function setErrorFor(input, message){
+            const tryDiv = input.parentElement; // .try class from div
+            const small = tryDiv.querySelector("small");
+            
+            //add error message inside small tag
+            small.innerText = message;
+            
+            // add error class
+            tryDiv.className = "try error2"
+        }
+        
+        function setSuccessFor(input){
+            const tryDiv = input.parentElement;
+            tryDiv.className = "try success"
+        }
+
+        if (errors.length > 0 ){
+            e.preventDefault();
+        }  
+    }   
 });
+
+
+
+
+
+
 // // Validacion front creación producto //
 
 // window.addEventListener("load", function(){
