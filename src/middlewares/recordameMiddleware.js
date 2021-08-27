@@ -1,7 +1,6 @@
 const db = require ("../database/models");
 
 function recordameMiddleware (req, res, next){
-    next();
     if (req.cookies != undefined && req.cookies.recordame){
         if(req.cookies != undefined && req.session.usuarioLogueado == undefined){
             db.Usuario.findOne({
@@ -13,6 +12,7 @@ function recordameMiddleware (req, res, next){
         }
     }
     res.locals.usuarioLogueado =  req.session.usuarioLogueado;
+    next();
 }
 
 module.exports = recordameMiddleware;

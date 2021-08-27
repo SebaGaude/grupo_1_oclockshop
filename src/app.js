@@ -24,13 +24,14 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // middleware de aplicacion
-app.use(recordameMiddleware);
-app.use(userLoggedMiddleware);
 
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use(cookies());
+app.use(recordameMiddleware);
+app.use(userLoggedMiddleware);
+
 
 app.use("/", routesMain);
 app.use("/products", routesProducts);

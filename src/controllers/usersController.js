@@ -75,7 +75,7 @@ let usersControllers = {
                     res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000 })
                     }
                 
-                    res.render('userProfile', {user})
+                    res.redirect('/users/profile')
 
                 });
     

@@ -2,7 +2,6 @@ const { validationResult } = require("express-validator");
 const db = require ("../database/models");
 const fs = require("fs")
 const path = require("path")
-const usersController = require("../controllers/usersController");
 
 
 let productsController = {
@@ -37,14 +36,6 @@ let productsController = {
         })
     },
 
-    productCart: function (req, res) {
-        let carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carrito.json"), { encoding: "utf-8" });
-        let carrito
-        if (carritoDatabase == ""){
-            carrito = []
-            } else {carrito = JSON.parse(carritoDatabase)}
-        res.render("productCart", {carrito});
-    },
 
     newProduct: function (req, res) {
         
@@ -204,12 +195,13 @@ let productsController = {
         let carrito;
         let foundProduct = [];
 
-        if(!path.join(__dirname, "../data/carritos/" + carritoUsuario)){
-            fs.appendFile(path.join(__dirname, "../data/carritos/" + carritoUsuario), "", function (err) {
+
+        if(!path.join(__dirname, "../data/carritos/" + carritoUsuario) == false){
+            fs.appendFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), "", function (err) {
                 if (err) throw err;
                 console.log('Saved!')})
             }
-
+            
         carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), { encoding: "utf-8" });
 
         if (carritoDatabase == ""){
@@ -240,21 +232,32 @@ let productsController = {
             carrito = JSON.stringify(carrito, null, 4);
             fs.writeFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), carrito);
             
-            //res.send((req.session.usuarioLogueado.id).toString())
             res.redirect("/")
         })
     },
 
     destroyItemCarrito: function (req, res){
-        let eliminado = fs.readFileSync(path.join(__dirname, "../data/carrito.json"), { encoding: "utf-8" });
+        let carritoUsuario = "carritoId" + (req.session.usuarioLogueado.id).toString() + ".json";
+        let eliminado = fs.readFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), { encoding: "utf-8" });
         eliminado = JSON.parse(eliminado);
         let eliminaProducto = eliminado.filter(elimina => elimina.id != req.params.id)
         eliminaProducto = JSON.stringify(eliminaProducto, null, 4);
 
-        fs.writeFileSync(path.join(__dirname, "../data/carrito.json"), eliminaProducto);
+        fs.writeFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), eliminaProducto);
+        
         
         res.redirect('/products/carrito');
-    }
+    },
+    
+    productCart: function (req, res) {
+        let carritoUsuario = "carritoId" + (req.session.usuarioLogueado.id).toString() + ".json";
+        let carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), { encoding: "utf-8" });
+        let carrito
+        if (carritoDatabase == ""){
+            carrito = []
+            } else {carrito = JSON.parse(carritoDatabase)}
+        res.render("productCart", {carrito});
+    },
 
 
 };

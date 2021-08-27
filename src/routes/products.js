@@ -28,7 +28,7 @@ router.get("/detail/:id", productsController.productDetail); // vista de detalle
 
 router.get("/carrito", productsController.productCart);
 router.post("/detail/:id", productsController.carrito) // logica de agregado de producto al carrito
-router.delete("/carrito/delete/:id", productsController.destroyItemCarrito) // logica de agregado de producto al carrito
+router.delete("/carrito/delete/:id", productsController.destroyItemCarrito) // logica de borrado de producto del carrito
 
 
 router.get("/create", adminMiddleware, productsController.newProduct); // vista de creación

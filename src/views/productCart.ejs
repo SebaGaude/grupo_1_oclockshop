@@ -21,18 +21,18 @@
                 </ul>
             </div>
             <div class="articulos">
-                <% for( let i = 0; i < carritoUsuario.length; i++ ) { %>
+                <% for( let i = 0; i < carrito.length; i++ ) { %>
                     <div class="articulo-carrito">
                         <div class="detalle-producto-carrito">
-                            <p class="config-detalle-carrito"><%= carritoUsuario[i].articulo %></p>
+                            <p class="config-detalle-carrito"><%= carrito[i].articulo %></p>
                             <div>
-                                <img class="imagenReloj config-detalle-carrito" src="../../public/img/<%= carritoUsuario[i].imagen %>">                    
+                                <img class="imagenReloj config-detalle-carrito" src="../../img/<%= carrito[i].imagen %>">                    
                             </div> 
-                            <p class="precios config-detalle-carrito"> $<%= carritoUsuario[i].precio %></p>
-                            <p class="desc config-detalle-carrito"> <%= carritoUsuario[i].cantidad %></p>
-                            <p class="desc config-detalle-carrito">$<%= carritoUsuario[i].precio * carritoUsuario[i].cantidad %></p>
+                            <p class="precios config-detalle-carrito"> $<%= carrito[i].precio %></p>
+                            <p class="desc config-detalle-carrito"> <%= carrito[i].cantidad %></p>
+                            <p class="desc config-detalle-carrito">$<%= carrito[i].precio * carrito[i].cantidad %></p>
                             
-                            <form class="form-carrito" action="/products/carrito/delete/<%= carritoUsuario[i].id %>?_method=DELETE" method="POST">
+                            <form class="form-carrito" action="/products/carrito/delete/<%= carrito[i].id %>?_method=DELETE" method="POST">
                                 <button type="submit" class="eliminarCarrito">
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
