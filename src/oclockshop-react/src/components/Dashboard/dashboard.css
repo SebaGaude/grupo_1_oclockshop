@@ -1,0 +1,36 @@
+.totalProds{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    color:rgb(255, 136, 0);
+    border: solid 1px black;
+}
+.totalProds>*:first-child{
+    flex-direction: column;
+    width: 700px;
+    height: 100px;
+    align-self: stretch;
+    align-items: center;  
+}
+.totalProds>*:second-child{
+    flex-direction: column;
+    width: 300px;
+}
+.totalProds h2{
+    border: solid 0px black;
+    border-radius: 10px;
+    padding: auto;
+    margin: 0%;
+    background-color: blue;
+
+}
+.totalProds h3{
+    border: solid 0px black;
+    border-radius: 10px;
+    padding: auto;
+    margin: 0%;
+    background-color: blue;
+
+}

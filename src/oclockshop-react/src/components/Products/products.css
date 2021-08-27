@@ -1,0 +1,20 @@
+.images{
+    max-width: 20vw;
+ 
+}
+
+.img{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+   
+    
+}
+
+
+.h2{
+    display: block;
+    text-align: center;
+    color: red;
+}
