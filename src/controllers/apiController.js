@@ -8,7 +8,6 @@ let productsController = {
         db.Producto
         .findAll()
         .then(products => {
-            console.log(products)
             return res.status(200).json({
                 totalProducts: products.length,
                 data: products.map(oneProduct => {
@@ -128,7 +127,18 @@ let productsController = {
         .then(busqueda => {
             return res.status(200).json(busqueda);
         })
-    }
+    },
+
+    marcas: function (req, res) {
+        db.Marcas
+            .findAll()
+            .then(marca =>{
+                return res.status(200).json({
+                totalMarcas: marca.length,
+                status: 200,
+            });    
+        })  
+    },
 };
 
 module.exports = productsController;

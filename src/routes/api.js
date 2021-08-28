@@ -34,5 +34,7 @@ router.put("/productos/update/:id", apiController.updateProduct); // logica de l
 
 router.delete('/productos/delete/:id', apiController.destroy); // eliminar un producto
 
+router.get('/productos/marcas', apiController.marcas); // todas las marcas
+
 
 module.exports = router;
