@@ -1,5 +1,6 @@
 import React from 'react';
-import foto from '../assets/images/jordan-walke.png';
+import foto from '../../assets/images/jordan-walke.png';
+import "./topBar.css";
 
 function TopBar(){
     return(
