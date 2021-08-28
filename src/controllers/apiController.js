@@ -130,12 +130,22 @@ let productsController = {
     },
 
     marcas: function (req, res) {
-        db.Marcas
-            .findAll()
-            .then(marca =>{
-                return res.status(200).json({
-                totalMarcas: marca.length,
-                status: 200,
+        db.Marca
+        .findAll()
+        .then(marca =>{
+            return res.status(200).json({
+            totalMarcas: marca.length,
+            status: 200,
+            });    
+        })  
+    },
+    usuarios: function (req, res) {
+        db.Usuario
+        .findAll()
+        .then(usuario =>{
+            return res.status(200).json({
+            totalUsuarios: usuario.length,
+            status: 200,
             });    
         })  
     },
