@@ -1,19 +1,24 @@
-import './App.css';
-import Header from './components/Header';
+import React from 'react';
+import './assets/css/app.css';
+/*import Header from './components/Header';
 import CarouselOclock from './components/CorouselOclock';
 import Products from './components/Products';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/Dashboard';*/
+import SideBar from './components/SideBar';
+import ContentWrapper from './components/ContentWrapper';
 
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <CarouselOclock/>
-      <Dashboard/>
-      <Products/>
+    
+      <React.Fragment>
+      	<div id="wrapper">
+          <SideBar />
+          <ContentWrapper />
+        </div>
+    </React.Fragment>
      
-    </div>
+    
   );
 }
 
