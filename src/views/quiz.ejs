@@ -140,7 +140,7 @@
                         <label class="preguntas-form">¿Querés que te enviemos el resultado por e-mail?</label>
                         <label class="aclaracion-pregunta">Ademas podremos avisarte cuando alguno de tus relojes este en
                             oferta</label>
-                        <input type="email" name="email" placeholder="Escribe tu email aqui" class="quizEmail">
+                        <input type="email" name="email" placeholder="Escribe tu email aqui" class="quizEmail" required>
                     </div>
                     <div class="botones">
                         <button type="submit" class="newProductButton">OBTENER RESULTADOS</button>
@@ -155,6 +155,7 @@
         </section>
     </main>
     <script src="../../js/front.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
 <%- include("partials/footer") %>
 </body>
 
