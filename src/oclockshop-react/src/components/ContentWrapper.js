@@ -2,6 +2,8 @@ import React from 'react';
 import ContentRowTop from './ContentRowTop';
 import Footer from './Footer';
 import Header from "./Header";
+import Products from "./Products"
+
 function ContentWrapper(){
     return (
         <React.Fragment>
@@ -11,6 +13,7 @@ function ContentWrapper(){
                 <div id="content">
                     <Header />
                     <ContentRowTop />
+                    <Products />
                     <Footer />
                 </div>
             </div>    

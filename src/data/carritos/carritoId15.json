@@ -1,0 +1,16 @@
+[
+    {
+        "id": 9,
+        "articulo": "Casio A159GED-1",
+        "precio": "30000.00",
+        "imagen": "product-1629651003885.jpg",
+        "cantidad": "1"
+    },
+    {
+        "id": 1,
+        "articulo": "Apple Watch Series 6",
+        "precio": "70000.00",
+        "imagen": "product-1629567752118.png",
+        "cantidad": "1"
+    }
+]

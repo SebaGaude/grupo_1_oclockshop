@@ -34,7 +34,11 @@ router.put("/productos/update/:id", apiController.updateProduct); // logica de l
 
 router.delete('/productos/delete/:id', apiController.destroy); // eliminar un producto
 
-router.get('/productos/marcas', apiController.marcas); // todas las marcas
+router.get('/marcas', apiController.marcas); // total de marcas
+
+router.get('/usuarios', apiController.usuarios); // total de usuarios
+
+router.get('/ultimoProducto', apiController.ultimoProducto); // todas las marcas
 
 
 module.exports = router;

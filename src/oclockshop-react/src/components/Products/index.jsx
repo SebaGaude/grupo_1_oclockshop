@@ -16,7 +16,6 @@ class Products extends Component {
         const getData = async() => {
             let response = await fetch("http://localhost:3050/api/productos");
             let data = await response.json();
-            console.log(data);
             return data;     
         }
 
@@ -25,7 +24,7 @@ class Products extends Component {
                 products: data.data, 
                 isLoading: false
             })
-            console.log(data);
+            
         });
     };
 
@@ -42,9 +41,11 @@ class Products extends Component {
                 <div className="img">
                 { products.map(oneProduct => {
                     return(
-                        <div key={oneProduct.id} >
-                            <h3> { oneProduct.articulo } </h3>
+                        <div key={oneProduct.dataValues.id} >
                             <img className="images" src={oneProduct.imagen} alt="imagen" />
+                            
+                            <h3> {oneProduct.dataValues.articulo} </h3>
+                            
                         </div>
                     )
                 })}
