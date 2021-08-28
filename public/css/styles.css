@@ -2379,15 +2379,6 @@ section div ul li a{
 
 /*------------------------------------- Configuracion Carrusel -------------------------------------------*/
 
-/*
-.imagenes-carrusel{
-    width: 70%;
-    position: relative;
-    left: 15%;
-    top: auto;
-    bottom: auto;
-}
-
 @keyframes tonext {
     75% {
       left: 0;
@@ -2403,7 +2394,7 @@ section div ul li a{
     }
   }
   
-@keyframes tostart {
+  @keyframes tostart {
     75% {
       left: 0;
     }
@@ -2416,9 +2407,9 @@ section div ul li a{
     99% {
       left: 0;
     }
-}
+  }
   
-@keyframes snap {
+  @keyframes snap {
     96% {
       scroll-snap-align: center;
     }
@@ -2431,40 +2422,42 @@ section div ul li a{
     100% {
       scroll-snap-align: center;
     }
-}
+  }
   
   
-*{
+  * {
     box-sizing: border-box;
-    scrollbar-color: transparent transparent;*/ /* thumb and track color */
-    /*scrollbar-width: 0px;
-}
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+  }
   
-*::-webkit-scrollbar {
+  *::-webkit-scrollbar {
     width: 0;
-}
+  }
   
-*::-webkit-scrollbar-track {
+  *::-webkit-scrollbar-track {
     background: transparent;
-}
+  }
   
-*::-webkit-scrollbar-thumb {
+  *::-webkit-scrollbar-thumb {
     background: transparent;
     border: none;
-}
+  }
   
-* {
+  * {
     -ms-overflow-style: none;
-}
+  }
+  
+  .carousel__slide, .carousel__snapper {
+    margin: 0;
+    padding: 0;
+  }
   
   .carousel {
     position: relative;
-    top: 70%;
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
-    z-index: 0;
-    height: 77vh;
-    margin-top: 4%;
+    height: 50vh;
   }
   
   .carousel__viewport {
@@ -2478,21 +2471,46 @@ section div ul li a{
     counter-reset: item;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    height: 50vh;
+
   }
   
   .carousel__slide {
     position: relative;
     flex: 0 0 100%;
-    width: 100%;
-    counter-increment: item;
-  }*/
+    width: 60%;
+    background-image: url(../img/Carrusel/Carrusel_5ok.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 90%;
+  }
   
-  /*.carousel__slide:nth-child(even) {
-    background-color: #99f;
-  }*/
-  /*
+  .carousel__slide:nth-child(2) {
+    background-image: url(../img/Carrusel/Carrusel_2ok.png);
+  }
+  
+  .carousel__slide:nth-child(3) {
+    background-image: url(../img/Carrusel/Carrusel_3ok.png);
+  }
+
+  .carousel__slide:nth-child(4) {
+    background-image: url(../img/Carrusel/Carrusel_4ok.png);
+  }
+
+  .carousel__slide:nth-child(5) {
+    background-image: url(../img/Carrusel/Carrusel_5ok.png);
+  }
+
+  .carousel__slide:nth-child(6) {
+    background-image: url(../img/Carrusel/Carrusel_6ok.png);
+  }
+
+  .carousel__slide:nth-child(7) {
+    background-image: url(../img/Carrusel/Carrusel_7ok.png);
+  }
+  
   .carousel__slide:before {
-    content: counter(item);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2510,12 +2528,28 @@ section div ul li a{
     scroll-snap-align: center;
   }
   
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.carousel__navigation-list{
+      width: 40%;
+  }
+
+  .carousel__navigation-item{
+      width: 7%;
+  }
+
   @media (hover: hover) {
     .carousel__snapper {
       animation-name: tonext, snap;
+      animation-delay: 0;
       animation-timing-function: ease;
-      animation-duration: 3s;
+      animation-duration: 4s;
       animation-iteration-count: infinite;
+      animation-play-state: running;
     }
   
     .carousel__slide:last-child .carousel__snapper {
@@ -2527,11 +2561,6 @@ section div ul li a{
     .carousel__snapper {
       animation-name: none;
     }
-  }
-  
-  .carousel:hover .carousel__snapper,
-  .carousel:focus-within .carousel__snapper {
-    animation-name: none;
   }
   
   .carousel__navigation {
@@ -2547,6 +2576,11 @@ section div ul li a{
     display: inline-block;
   }
   
+.carousel__navigation-list{
+    position: relative;
+    bottom: 2vh;
+}
+
   .carousel__navigation-button {
     display: inline-block;
     width: 1.5rem;
@@ -2556,7 +2590,7 @@ section div ul li a{
     border: 0.25rem solid transparent;
     border-radius: 50%;
     font-size: 0;
-    transition: transform 0.1s;
+    transition: transform 0.2s;
   }
   
   .carousel::before,
@@ -2564,8 +2598,7 @@ section div ul li a{
   .carousel__prev,
   .carousel__next {
     position: absolute;
-    top: 0;
-    margin-top: 18%;
+    top: 50%;
     width: 4rem;
     height: 4rem;
     transform: translateY(-50%);
@@ -2576,12 +2609,12 @@ section div ul li a{
   
   .carousel::before,
   .carousel__prev {
-    left: 10%;
+    left: 5rem;
   }
   
   .carousel::after,
   .carousel__next {
-    right: 10%;
+    right: 5rem;
   }
   
   .carousel::before,
@@ -2606,5 +2639,3 @@ section div ul li a{
   .carousel::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
   }
-
-*/
