@@ -7,7 +7,7 @@ function userLoggedMiddleware(req, res, next) {
 
 	res.locals.isLogged = false;
 
-	if (req.cookies) {
+	if (req.cookies && req.cookies.recordame) {
 		let emailInCookie = req.cookies.recordame;
 		db.Usuario.findOne({
 			where: {email: emailInCookie}

@@ -77,7 +77,8 @@ let productsController = {
    
     updateProduct: function(req, res){
         let image;
-        db.Producto.findByPk(req.params.id)
+        db.Producto
+        .findByPk(req.params.id)
         .then(product => {
             image = product.imagen;
             if (req.file) {
@@ -149,6 +150,24 @@ let productsController = {
             });    
         })  
     },
+    ultimoProducto: function (req, res) {
+
+        db.Producto.max("id").then(function(productoId){
+            console.log(productoId)
+            db.Producto.findByPk(productoId).then(function(ultimoProducto){
+                return res.status(200).json({
+                    ultimoProd: ultimoProducto
+    
+                    })
+    
+            })
+
+        })
+        
+    }
 };
 
 module.exports = productsController;
+
+
+
