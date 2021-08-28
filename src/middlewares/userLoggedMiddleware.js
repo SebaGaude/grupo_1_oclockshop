@@ -23,10 +23,6 @@ function userLoggedMiddleware(req, res, next) {
 	}
 return next();
 }
-
-
-	
-
 /*	if (userFromCookie) {
 		req.session.usuarioLogueado = userFromCookie;
 	}
