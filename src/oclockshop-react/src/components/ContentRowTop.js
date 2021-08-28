@@ -2,6 +2,7 @@ import React from 'react';
 import imagenFondo from '../assets/images/product-1629567752118.png'
 import CardArticulos from './cardArticulos';
 import CardMarcas from './CardMarcas';
+import CardUsuarios from './CardUsuarios';
 
 function ContentRowTop(){
     return(
@@ -53,9 +54,7 @@ function ContentRowTop(){
 								<div className="card-body">
 									<div className="row no-gutters align-items-center">
 										<div className="col mr-2">
-											<div className="text-xs font-weight-bold text-warning text-uppercase mb-1">Total marcas
-											</div>
-											<div className="h5 mb-0 font-weight-bold text-gray-800">49</div>
+											<CardUsuarios />
 										</div>
 										<div className="col-auto">
 											<i className="fas fa-user fa-2x text-gray-300"></i>
