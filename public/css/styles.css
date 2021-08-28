@@ -100,6 +100,15 @@ header div.top nav.top1 p.español-ingles{
 
 }
 
+.header1-login{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(3, 3, 44);
+    border-bottom-color: rgb(4, 4, 192);
+    border-bottom-style: solid;
+}
+
 .logo{
     width: 15%;
 }
@@ -369,6 +378,18 @@ footer{
     box-sizing: border-box;
     color: white;
     border-top: solid 4px rgb(4, 4, 192);
+}
+
+.footer-login{
+    background-color: rgb(3, 3, 44);
+    font-size: 14px;
+    margin-top: 2vh;
+    border-bottom: solid 1vh rgb(3, 3, 44);
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-top: solid 4px rgb(4, 4, 192);
+    padding-bottom: 15vw;
 }
 
 footer p{
@@ -746,6 +767,7 @@ h3{
 }
 
 .try{
+    color:rgb(3, 3, 44);
     margin-bottom: 10px;
     padding-bottom: 20px;
     position: relative;
@@ -774,17 +796,17 @@ h3{
     visibility: hidden;  
     position: absolute;
     top: 14px;
-    right: -625px;
+    right: -45vw;
 }
 
 .try.error2 small{
     visibility: visible;
-    color: white;
+    color:rgb(3, 3, 44);
 }
 
-.try small{
+.try small{    
     visibility: hidden;
-    position: absolute;
+    /* position: absolute; */
     font-weight: bold;
     padding-top: 3px;
     margin-left: 5px;

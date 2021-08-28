@@ -20,7 +20,7 @@
             <h2> 
                 Registrate completando tus datos
             </h2>
-            <ul id="error-nombre"></ul>      
+
             <div class="try">
                 <input class="register-input" id="nombre" type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                 <% if (locals.errors && errors.nombre) { %>
@@ -31,7 +31,6 @@
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
-            </div>
             </div>
             
             <div class="try">
@@ -47,7 +46,7 @@
             </div>
             
             <div class="try"> 
-                <input class="register-input" id="email" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                <input class="register-input" id="email" type="text" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
                 <% if (locals.errors && errors.email) { %>
                     <div class="errorMsg">
                         <%= errors.email.msg %> 
@@ -55,9 +54,10 @@
                 <% } %>
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small>Erro message</small>
+                <small>Error message</small>
             </div>
-           <div class="try">
+
+            <div class="try">
                <!-- <label>Ingresá una foto</label> -->
                 <input class="register-input" id="imagen" type="file" name="imagen">
                 <% if (locals.errors && errors.imagen) { %>
@@ -67,7 +67,7 @@
                 <% } %>
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small>Erro message</small>
+                <small>Error message</small>
             </div>      
     
             <div class="try">
@@ -76,32 +76,20 @@
                     <div class="errorMsg">
                         <%= errors.contraseña.msg %> 
                     </div>
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Erro message</small>
                 <% } %>
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small>Erro message</small>
+                <small>Error message</small>
             </div> 
             
-            <!-- <div class="try">
-                <input type="password" name="confirmar" placeholder="Confirmar contraseña">
-            </div>  -->
-            
-             <!-- Botón "enviar" -->
-            <p id="msjError"></p>
-
+        
             <button type="submit" class="boton-crear-cuenta" id="enviar">CREAR CUENTA</button>
             
-            <!-- <div class="terminos-condiciones">
-                <input class="register-input" type="checkbox" name="nombre" class="checkbox">
-                <label>Al crear esta cuenta, acepto los <a href="/terminos" target="_blank"> Términos y Condiciones </a>  y la <a href="/privacidad" target="_blank"> Política de Privacidad </a> de la tienda.</label>
-            </div> -->
                 
         </form>
 
     </main>
-    <script src="../../js/validateRegister.js"></script>
+</body>
+<script src="../../js/validateRegister.js"></script>
 <%- include("partials/footer.ejs") %>
 </html> 

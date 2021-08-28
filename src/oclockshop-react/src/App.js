@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <Header/>
       <CarouselOclock/>
-      <Products/>
       <Dashboard/>
+      <Products/>
      
     </div>
   );

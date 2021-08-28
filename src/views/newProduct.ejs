@@ -1,118 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("partials/head") %>
+    <%- include("partials/head") %>
 
     <body>
 
         <%- include("partials/header") %>
 
-            <main class="main">
+        <main class="main">
 
-                <!-- Formulario de Creacion de producto-->
-                <section class="contenedor-form-ec">
-                    <form action="/products" method="POST" class="formulario-edicion-creacion productsCreateForm" enctype="multipart/form-data">
+            <!-- Formulario de Creacion de producto-->
 
-                        <h1 class="titulo-new-edit">
-                            Alta de producto
-                        </h1>
+                <form action="/products" method="POST" class="form-login-register" enctype="multipart/form-data">
 
-                        <ul id="errorsCreate"></ul>
+                    <h1 class="titulo-new-edit">
+                        Alta de producto
+                    </h1>
 
-                        <div class="control-formulario">
-                            <label class="preguntas-form"> Nombre del artículo </label>
-                            <input type="text" id="articulo" name="articulo" placeholder=" ej: Reloj suizo enchapado en oro" value="<%= locals.oldData ? oldData.articulo : null %>" class="ticks">
-                            <% if (locals.errors && errors.articulo) { %>
-                                <div class="errorMsg">
-                                    <%= errors.articulo.msg %> 
-                                </div>
-                            <% } %>
-                        </div>
-
-                        <div class="control-formulario">
-                            <label class="preguntas-form"> Descripción del artículo</label>
-                            <input type="text" id="descripcion" name="descripcion" placeholder=" descripcion del articulo" value="<%= locals.oldData ? oldData.descripcion : null %>" class="ticks" >
-                            <% if (locals.errors && errors.descripcion) { %>
-                                <div class="errorMsg">
-                                    <%= errors.descripcion.msg %> 
-                                </div>
-                            <% } %>
-                        
-                        </div>
-
-                        <div class="control-formulario">
-                            <label class="preguntas-form"> Imagen del artículo </label>
-                            <input type="file" id="imagenProducto" name="imagen" accept=".jpg, .png" class="clase-ecf" multiple>
-                            <% if (locals.errors && errors.imagen) { %>
-                                <div class="errorMsg">
-                                    <%= errors.imagen.msg %>
-                                </div>
-                            <% } %>
-                        </div>
-
-
-                        <div class="control-formulario">
-                            <label class="preguntas-form"> Categoría del artículo</label>
-                           <select id="categoria" name="categoria" class="ticks">
-                                <option disabled selected value> -- Elegir una opción -- </option>
-                                <% for (let i=0; i<categorias.length; i++)  {%>
-                         
-                                    <option value="<%=categorias[i].id %>">
-                                        <%=categorias[i].nombre%>
-                                    </option>
-                                <%} %>
-                            </select>
-                                <% if (locals.errors && errors.categoria) { %>
-                                    <div class="errorMsg">
-                                        <%= errors.categoria.msg %> 
-                                    </div>
-                                <% } %>
-                        </div>
-                        <div class="control-formulario">
-                            <label class="preguntas-form"> Cantidad del artículo</label>
-                            <input id="numero" type="number" name="stock" placeholder="Cantidad..." class="ticks" >
-                            <% if (locals.errors && errors.stock) { %>
-                                <div class="errorMsg">
-                                    <%= errors.stock.msg %> 
-                                </div>
-                            <% } %>
-                        </div>
-                        <div class="control-formulario">
-                            <label class="preguntas-form"> Marca del artículo</label>
-                            <select id="marca" name="marca" class="ticks">
-                                <option disabled selected value> -- Elegir una opción -- </option>
-                                <% for (let i=0; i<marcas.length; i++)  {%>
-                                    <option value="<%=marcas[i].id %>">
-                                        <%=marcas[i].nombre%>
-                                    </option>
-                                <%} %>
-                           </select>
-                           <% if (locals.errors && errors.marca) { %>
+                    <!-- <label class="preguntas-form"> Nombre del artículo </label> -->
+                    <div class="try">
+                        <input type="text" id="articulo" name="articulo" placeholder= "Nombre del producto" value="<%= locals.oldData ? oldData.articulo : null %>" class="register-input">
+                        <% if (locals.errors && errors.articulo) { %>
                             <div class="errorMsg">
-                                <%= errors.marca.msg %> 
+                                <%= errors.articulo.msg %>
                             </div>
-                            <% } %>                       
-                        </div>
-                        <div class="control-formulario">
-                            <label class="preguntas-form"> Precio del artículo</label>
-                            <input id="precio" type="text" name="precio" placeholder="$$$" class="ticks">
-                            <% if (locals.errors && errors.precio) { %>
-                                <div class="errorMsg">
-                                    <%= errors.precio.msg %> 
-                                </div>
-                            <% } %>
-                        </div>
-                        <!-- Botón "enviar"-->
-                        <div>
-                            <button type="submit" class="newProductButton">Crear artículo</button>
-                            <button type="reset" class="deleteInfoButton">Borrar todo</button>
-                        </div>
-                </section>
-                <!-- ----------- -->
+                        <% } %>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                    </div>
+ 
+                    <div class="try">
+                        <!-- <label class="preguntas-form"> Descripción del artículo</label> -->
+                        <input type="text" id="descripcion" name="descripcion"
+                            placeholder=" descripcion del articulo"
+                            value="<%= locals.oldData ? oldData.descripcion : null %>" class="register-input">
+                        <% if (locals.errors && errors.descripcion) { %>
+                            <div class="errorMsg">
+                                <%= errors.descripcion.msg %>
+                            </div>
+                        <% } %>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                    </div>
+                    
+
+                    <!-- <div class="control-formulario"> -->
+                    <div class="try">
+                        <!-- <label class="preguntas-form"> Imagen del artículo </label> -->
+                        <input type="file" id="imagenProducto" name="imagen" accept=".jpg, .png"
+                            class="register-input" multiple>
+                        <% if (locals.errors && errors.imagen) { %>
+                            <div class="errorMsg">
+                                <%= errors.imagen.msg %>
+                            </div>
+                        <% } %>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                    </div>
+
+                    <div class="try">
+                        <!-- <label class="preguntas-form"> Categoría del artículo</label> -->
+                        <select id="categoria" name="categoria" class="register-input">
+                            <option disabled selected value> -- Elegir una opción -- </option>
+                            <% for (let i=0; i<categorias.length; i++) {%>
+                                <option value="<%=categorias[i].id %>">
+                                    <%=categorias[i].nombre%>
+                                </option>
+                                <%} %>
+                        </select>
+                        <% if (locals.errors && errors.categoria) { %>
+                            <div class="errorMsg">
+                                <%= errors.categoria.msg %>
+                            </div>
+                        <% } %>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                    </div>
+
+                    <div class="try">  
+                        <!-- <label class="preguntas-form"> Cantidad del artículo</label> -->
+                        <input id="numero" type="number" name="stock" placeholder="Cantidad..." class="register-input">
+                        <% if (locals.errors && errors.stock) { %>
+                            <div class="errorMsg">
+                                <%= errors.stock.msg %>
+                            </div>
+                        <% } %>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>                      
+                    </div>
+
+                    <div class="try">
+                        <!-- <label class="preguntas-form"> Marca del artículo</label> -->
+                        <select id="marca" name="marca" class="register-input">
+                            <option disabled selected value> -- Elegir una opción -- </option>
+                            <% for (let i=0; i<marcas.length; i++) {%>
+                                <option value="<%=marcas[i].id %>">
+                                    <%=marcas[i].nombre%>
+                                </option>
+                                <%} %>
+                        </select>
+                        <% if (locals.errors && errors.marca) { %>
+                            <div class="errorMsg">
+                                <%= errors.marca.msg %>
+                            </div>
+                        <% } %>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                    </div>
+
+                    <div class="try">
+                        <!-- <label class="preguntas-form"> Precio del artículo</label> -->
+                        <input id="precio" type="text" name="precio" placeholder="$$$" class="register-input">
+                        <% if (locals.errors && errors.precio) { %>
+                            <div class="errorMsg">
+                                <%= errors.precio.msg %>
+                            </div>
+                        <% } %>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                    </div>
+                    <!-- Botón "enviar"-->
+                    <div>
+                        <button type="submit" class="newProductButton">Crear artículo</button>
+                        <button type="reset" class="deleteInfoButton">Borrar todo</button>
+                    </div>
+                    
                 </form>
-
-            </main>
-           <script src="../../js/validateCreateProduct.js"></script>
-            <%- include("partials/footer") %>
-
+        </main>
+    </body>
+    <script src="../../js/validateCreateProduct.js"></script>
+    <%- include("partials/footer") %>
 </html>

@@ -134,6 +134,7 @@ let usersControllers = {
 		req.session.destroy(); /*borra todo lo que esta en SESSION*/
 		res.redirect('/');
 	}
+    
 
 
 };

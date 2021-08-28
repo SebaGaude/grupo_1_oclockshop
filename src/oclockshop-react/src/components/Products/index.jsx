@@ -36,9 +36,10 @@ class Products extends Component {
     render() {
         const {isLoading, products} = this.state;
         return(
-            <div className="img">
+            <div>
                 <h2 className="h2">Listado de productos</h2>
                 { isLoading && <h4>Cargando...</h4> }
+                <div className="img">
                 { products.map(oneProduct => {
                     return(
                         <div key={oneProduct.id} >
@@ -47,6 +48,7 @@ class Products extends Component {
                         </div>
                     )
                 })}
+                </div>
 
             </div>
         )
