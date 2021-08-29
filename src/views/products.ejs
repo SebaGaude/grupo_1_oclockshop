@@ -15,13 +15,13 @@
             <a href="" class="aEditar"><button class="botonEditar">Crear Producto</button></a>  
         </form>
         <% } %>
-        <div class="all-products">
+        <div class="articulos">
             <% for( let i = 0; i< productos.length; i++ ) { %>
             
             
-            <div class="articulos articles">          
-                 <div class="article-container" >     
-                    <div class="img-container">
+            <!-- <div class="articulos articles">           -->
+                <div class="contenedor-articulo" >     
+                    <div class="contenedor-imagen-articulo">
                         <a href="./products/detail/<%=productos[i].id  %> "><h3><%=productos[i].articulo%> </h3></a>
                         <img src="./img/<%=productos[i].imagen  %> " alt="">
                     </div>           
@@ -35,7 +35,7 @@
                         <p class="precio-oferta"><%= productos[i].precio %></p>
                     </div>
                 </div>          
-            </div>
+            <!-- </div> -->
             <% } %>
         </div>
     </section>

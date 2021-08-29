@@ -38,6 +38,10 @@ let mainController = {
     help: function(req, res){
         res.render("help");
     },
+    //mostrar vista de "conocénos"--------------------
+    aboutus: function(req, res){
+        res.render("aboutus");
+    },
     //mostrar la vista de categorías
     categories: function(req, res){
         let listadoCategorias = db.Categoria.findByPk(req.params.id);

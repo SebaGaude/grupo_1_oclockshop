@@ -26,6 +26,8 @@ router.get("/workwithus", mainController.workwithus)
 
 router.get("/help", mainController.help)
 
+router.get("/aboutus", mainController.aboutus)
+
 router.get("/cartLogin", mainController.cartLogin)
 
 module.exports = router;
