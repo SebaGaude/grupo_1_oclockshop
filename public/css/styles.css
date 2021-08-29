@@ -1237,7 +1237,7 @@ h2{
 }
 
 .titulo-categ{
-    margin: 0 0 2vh 3vw;
+    margin: 2vh 0 2vh 3vw;
     text-align: left;
     color: rgb(3, 3, 44);
 }
@@ -1406,6 +1406,13 @@ section.vistos{
     border-right: 1vw solid #ebebeb;
 }
 
+.cant-products-carrito{
+    width: 2%;
+}
+
+.subtotalCarrito{
+    font-size: 18px;
+}
 .div-aside{
     border: 4px solid #ebebeb;
     height: 25vh;
@@ -1512,7 +1519,7 @@ section.vistos{
     line-height: 4.5vh;
     color: rgb(3, 3, 44);
     font-weight: bold;
-    margin-top: 8vh;
+    margin-top: 2vh;
 }
 
 .eliminar-producto-carrito{

@@ -1,21 +1,5 @@
 [
     {
-        "id": 2,
-        "articulo": "Datejust 36",
-        "precio": "10000.00",
-        "imagen": "product-1629735146746.jpg",
-        "descripcion": "Este Oyster Perpetual Datejust 36 en Acero Oystersteel presenta una esfera verde oliva, motivo «palmeras» y un brazalete Oyster",
-        "cantidad": "1"
-    },
-    {
-        "id": 4,
-        "articulo": "Sky-Dweller",
-        "precio": "1200.00",
-        "imagen": "product-1629735202942.jpg",
-        "descripcion": "Oyster Perpetual Sky-Dweller en Oro amarillo de 18 quilates con esfera color negro vivo y brazalete Oysterflex.",
-        "cantidad": "1"
-    },
-    {
         "id": 6,
         "articulo": "Tag Heuer Monaco Titan",
         "precio": "10000.00",
@@ -24,11 +8,27 @@
         "cantidad": "1"
     },
     {
-        "id": 10,
-        "articulo": "Tressa Digital Touch Pinot",
-        "precio": "2000.00",
-        "imagen": "product-1629735076971.jpg",
-        "descripcion": "Reloj Tressa Digital Touch , Malla Tejida Con Cierre Imán. Modelo Pinot. Display Negro Dígitos verdes",
+        "id": 14,
+        "articulo": "Blackinjelly",
+        "precio": "12000.00",
+        "imagen": "product-1629734917238.jpg",
+        "descripcion": "Futuristic BLACKINJELLY viene con caja y correa en tono cremoso semitransparente. La peculiar estructura de la correa la hace casi invisible. Si miras detrás de los componentes de la esfera negra verás el corazón del reloj.",
+        "cantidad": "1"
+    },
+    {
+        "id": 2,
+        "articulo": "Datejust 36",
+        "precio": "10000.00",
+        "imagen": "product-1629735146746.jpg",
+        "descripcion": "Este Oyster Perpetual Datejust 36 en Acero Oystersteel presenta una esfera verde oliva, motivo «palmeras» y un brazalete Oyster",
+        "cantidad": "1"
+    },
+    {
+        "id": 3,
+        "articulo": "Oyster Perpetual 41",
+        "precio": "1000.00",
+        "imagen": "product-1629735178000.jpg",
+        "descripcion": "Oyster Perpetual 41 con una esfera plateada y un brazalete Oyster.",
         "cantidad": "1"
     }
 ]
