@@ -3,64 +3,53 @@
     
 <%- include("partials/head") %>
 
-<body>
+<body class="body-carrito">
 
     <%- include("partials/header") %> 
 
     <main class="main">
         <section>
-            <div class="titulo">CARRITO DE COMPRAS</div>
-            <div class="contenedorNav"> <!-- para listados se arma con NAV + UL + LI -->
-                <ul class="nombreProducto">
-                    <p>Nombre del Producto</p>
-                    <p>Imagen del Producto</p>
-                    <p>Precio</p>
-                    <p>Cantidad</p>
-                    <p>Subtotal</p>
-                    <p class="eliminarCarrito"></p>
-                </ul>
-            </div>
-            <div class="articulos">
-                <% for( let i = 0; i < carrito.length; i++ ) { %>
-                    <div class="articulo-carrito">
-                        <div class="detalle-producto-carrito">
-                            <p class="config-detalle-carrito"><%= carrito[i].articulo %></p>
-                            <div>
+            <h2 class="titulo">CARRITO DE COMPRAS</h2>
+            <main class="main-carrito">
+                <div class="articulos">
+                    <% if(carrito.length == 0){ %>
+                        <h3 class="sin-compras">Aun no has agregado nada al carrito</h3>
+                    <% } else { %>
+                    <% for( let i = 0; i < carrito.length; i++ ) { %>
+                        <div class="producto-completo-carrito">
+                            <div class="imagen-producto-carrito">
                                 <img class="imagenReloj config-detalle-carrito" src="../../img/<%= carrito[i].imagen %>">                    
-                            </div> 
-                            <p class="precios config-detalle-carrito"> $<%= carrito[i].precio %></p>
-                            <p class="desc config-detalle-carrito"> <%= carrito[i].cantidad %></p>
-                            <p class="desc config-detalle-carrito">$<%= carrito[i].precio * carrito[i].cantidad %></p>
-                            
-                            <form class="form-carrito" action="/products/carrito/delete/<%= carrito[i].id %>?_method=DELETE" method="POST">
-                                <button type="submit" class="eliminarCarrito">
-                                    <i class="fas fa-trash-alt"></i>
-                                </button>
-                            </form>
-                        </div>           
-                    </div>
-                <% } %>
-            </div>
+                            </div>
+                            <div class="detalles-carrito">                                 
+                                <p class="config-detalle-carrito descripcion-producto-carrito"><b><%= carrito[i].articulo %></b> - <%= carrito[i].descripcion %></p>
+                                <p class="precio-carrito config-detalle-carrito"> $<%= carrito[i].precio %></p>
+                                <p class="stock">En Stock</p>
+                                <p class="desc config-detalle-carrito"> Cant: <%= carrito[i].cantidad %></p>
+                                <form class="form-carrito" action="/products/carrito/delete/<%= carrito[i].id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="eliminarCarrito">
+                                        <i class="fas fa-trash-alt"></i>
+                                        <p class="eliminar-producto-carrito">Eliminar Producto</p>
+                                    </button>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    <% } %><% } %> 
+                </div>
+                <aside class="aside-carrito">
+                    <div class="div-aside">
+                        <p>Subtotal (  productos)</p>
+                        
+                        <form>
+                            <button class="boton-compra">Realizar la compra</button>
+                        </form>
 
-                   <div class="detalleIVA">
-                       <div class="bordeIzquierdo"></div>
-                       <div class="detalle">
-                           <div class="IVA">IVA</div>
-                           <div class="TOTAL">total</div>
-                       </div>
-                   </div> <!--cierre detalleCompra-->
-                   
-             <!--reutilice codigo para el total-->
-
-                   <div class="detalleCompra">
-                    <div class="bordeIzquierdo"></div>
-                    <div class="detalle">
-                        <div class="IVA">TOTAL</div>
-                        <div class="TOTAL">total</div>
                     </div>
-                </div> <!--cierre detalleCompra-->
-                <div class="botonComprar">
-                <button class="btnComprar" type="submit">COMPRAR</button> 
+                    <div class="div-aside oferta-productos">
+                        <p>Productos que puedan interesarte</p>
+                    </div>
+                </aside>
+            </main>
         </section>
     </main>
 <%- include("partials/footer") %>
