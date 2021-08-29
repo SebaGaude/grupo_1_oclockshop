@@ -19,26 +19,26 @@ class UltimoProducto extends Component {
         }
 
         getData().then(data => {
+            console.log(this.state)
             this.setState({ 
-                ultimoProducto: data, 
+                ultimoProducto: data.data, 
                 isLoading: false
             })
         });
     };
 
-    componentDidUpdate(){
+    componentDidUpdate(){   
 
     };
     
     render() {
-
         const {isLoading, ultimoProducto} = this.state;
         return(
-            <div className="card-body">
+            <div className="card-body"> 
 				<div className="text-center">
-					<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src="{ultimoProducto.ultimoProd.imagen}" alt=" Star Wars - Mandalorian "/>
+					<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src="{ultimoProducto.imagen}" alt="imagen"/>
 				</div>
-				<p>asas</p>
+				<p>{ultimoProducto.articulo} hola</p>
 				<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
 			</div>
         )
