@@ -202,11 +202,11 @@ let productsController = {
                 console.log('Saved!')})
             }
             
-        carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), { encoding: "utf-8" });
+        /*carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), { encoding: "utf-8" });
 
         if (carritoDatabase == ""){
             carrito = []
-        } else {carrito = JSON.parse(carritoDatabase)}
+        } else {carrito = JSON.parse(carritoDatabase)}*/
 
         
         let listadoProductos = db.Producto.findAll();
@@ -214,7 +214,11 @@ let productsController = {
         Promise.all([listadoProductos])
 
         .then(function([productos]){
+            carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), { encoding: "utf-8" });
 
+        if (carritoDatabase == ""){
+            carrito = []
+        } else {carrito = JSON.parse(carritoDatabase)}
 
             foundProduct = productos.find(item => item.id == addedProduct)
             
@@ -233,7 +237,7 @@ let productsController = {
             carrito = JSON.stringify(carrito, null, 4);
             fs.writeFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), carrito);
             
-            res.redirect("/")
+            res.redirect("/products/carrito")
         })
     },
 
