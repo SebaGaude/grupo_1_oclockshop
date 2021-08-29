@@ -22,5 +22,13 @@
         "imagen": "product-1629735202942.jpg",
         "descripcion": "Oyster Perpetual Sky-Dweller en Oro amarillo de 18 quilates con esfera color negro vivo y brazalete Oysterflex.",
         "cantidad": "1"
+    },
+    {
+        "id": 2,
+        "articulo": "Datejust 36",
+        "precio": "10000.00",
+        "imagen": "product-1629651149258.jpg",
+        "descripcion": "Este Oyster Perpetual Datejust 36 en Acero Oystersteel presenta una esfera verde oliva, motivo «palmeras» y un brazalete Oyster",
+        "cantidad": "1"
     }
 ]

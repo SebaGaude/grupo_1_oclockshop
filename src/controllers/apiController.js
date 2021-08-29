@@ -156,15 +156,42 @@ let productsController = {
             console.log(productoId)
             db.Producto.findByPk(productoId).then(function(ultimoProducto){
                 return res.status(200).json({
-                    ultimoProd: ultimoProducto
-    
+                    hola: ultimoProducto,
+                    status: 200,
                     })
     
             })
 
         })
+    
         
+    },
+
+    ultimoProducto2: function (req, res) {
+
+        
+         db.Producto.max("id")
+        .then(function(productoId){
+            console.log(productoId)
+            db.Producto.findAll()
+            .then(ultimo => { console.log(ultimo)
+                return res.status(200).json({
+                    
+                    data: ultimo.filter(oneProduct =>
+                        oneProduct.id==productoId
+                       
+                            
+                        
+                    ),
+                    
+                    status: 200
+                }); 
+                
+            })
+
+        })
     }
+    
 };
 
 module.exports = productsController;
