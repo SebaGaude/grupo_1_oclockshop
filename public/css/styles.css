@@ -745,6 +745,39 @@ h3{
     border-radius: 5%;
 }
 
+.form-extras{
+    font-family: 'Ubuntu', sans-serif;
+    background: whitesmoke;
+    width: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 15px;
+    border-style: solid;
+    border-color:rgb(255, 136, 0);
+    position: relative;
+}
+
+.form-extras h1{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;  
+    color: #000000;
+}
+
+.form-extras h2{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin: auto;
+    color: rgba(0, 0, 0, 0.658);
+}
+
+.form-extras div{
+    font-family: Helvetica, sans-serif;
+    width: 95%;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5%;
+}
+
 .login-input{
     font-family: Helvetica, sans-serif;
     padding: 5px;
@@ -1229,7 +1262,7 @@ h2{
     transition: all 0.3s;
     text-align: center;
     box-sizing: border-box;
-    width: 20%;
+    max-width: 80%;
 }
 
 .categorias div{
@@ -1724,11 +1757,18 @@ section.vistos{
     .link-quiz{
         margin-top: 30px;
     }
-    .contenedor-articulo{
+    .categorias img{
+        width: 100%;
+    }
+    
+    .categorias{
         max-width: 80%;
     }
-    .categorias p{
-        width: 25%;
+    .quiz{
+        display: none;
+    }
+    .carousel{
+        display: none;
     }
 }
 
@@ -1853,11 +1893,18 @@ section.vistos{
     .contenedor-articulo{
         max-width: 40%;
     }
-    .categorias p{
-        width: 25%;
+    .categorias{
+        max-width: 40%;
     }
+    
     .categorias img{
-        width: 80%;
+        width: 100%;
+    }
+    .quiz{
+        display: none;
+    }
+    .carousel{
+        display: none;
     }
 
     /* Vista tablet carrito */
@@ -1971,8 +2018,6 @@ section.vistos{
         font-weight: normal;
     }
 
-
-
     .editProductButton {
         max-width: 40%;
         background-color:rgba(255, 136, 0);
@@ -2033,7 +2078,7 @@ section.vistos{
         max-width: 22%;
     }
     .categorias{
-        width: 25%;
+        max-width: 25%;
     }
 
     /* Vista desktop carrito */
@@ -2665,4 +2710,8 @@ ol, li {
   
 .carousel::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.nuestro-equipo-flex{
+    display: flex;
 }

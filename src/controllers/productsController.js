@@ -18,11 +18,10 @@ let productsController = {
             res.render("products", {categorias, marcas, productos});
         
         })
-          
 
     },
     productDetail: function (req, res) {
-       
+    
         let listadoCategorias = db.Categoria.findAll();
         let listadorMarcas = db.Marca.findAll();
         let productoId = db.Producto.findByPk(req.params.id)
@@ -71,7 +70,7 @@ let productsController = {
             precio: req.body.precio
         
         })
-       
+    
         res.redirect("/");}
         else{
             Promise.all([listadoCategorias, listadorMarcas])
@@ -79,15 +78,15 @@ let productsController = {
             .then(function([categorias, marcas]){
             
             res.render("newProduct", {categorias , marcas,
-      
+    
             errors: errors.mapped(),
                 oldData: req.body
             });
         })
-     }
+        }
             
     },
-   
+
     editProduct: function(req, res){
         
         let listadoCategorias = db.Categoria.findAll();
@@ -103,7 +102,7 @@ let productsController = {
         })   
         
     },
-   
+
     updateProduct: function(req, res){
         
         let listadoCategorias = db.Categoria.findAll();
@@ -146,7 +145,7 @@ let productsController = {
                 errors: errors.mapped(),
                 oldData: req.body
             });
-           })
+            })
         }
     
     
@@ -158,8 +157,8 @@ let productsController = {
         db.Producto.destroy ({
             where: {
                 id: req.params.id}
-      
-         })
+    
+        })
     return res.redirect('/');
     },
 
@@ -223,7 +222,6 @@ let productsController = {
                 articulo: foundProduct.articulo,
                 precio: foundProduct.precio,
                 imagen: foundProduct.imagen,
-                descripcion: foundProduct.descripcion,
                 cantidad: cantidad,
             }
 
