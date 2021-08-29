@@ -1,26 +1,26 @@
 import React, {Component} from "react";
 
-class CardUsuarios extends Component {
+class UltimoProducto extends Component {
 
     constructor(){
         super();
         this.state = {
 
             isLoading: true,
-            totalUsuarios: []
+            ultimoProducto: []
         }
     }
 
     componentDidMount(){
         const getData = async() => {
-            let response = await fetch("http://localhost:3050/api/usuarios");
+            let response = await fetch("http://localhost:3050/api/ultimoProducto");
             let data = await response.json();
             return data;     
         }
 
         getData().then(data => {
             this.setState({ 
-                totalUsuarios: data.totalUsuarios, 
+                ultimoProducto: data, 
                 isLoading: false
             })
         });
@@ -31,18 +31,19 @@ class CardUsuarios extends Component {
     };
     
     render() {
-        const {isLoading, totalUsuarios} = this.state;
+
+        const {isLoading, ultimoProducto} = this.state;
         return(
-            <div className="totalProds">
-                <h2>Total usuarios</h2>
-                { isLoading && <h4>Cargando...</h4> }
-                
-                <div className="h5 mb-0 font-weight-bold text-gray-800">{totalUsuarios}</div>
-                
-            </div>
+            <div className="card-body">
+				<div className="text-center">
+					<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src="{ultimoProducto.ultimoProd.imagen}" alt=" Star Wars - Mandalorian "/>
+				</div>
+				<p>{ultimoProducto.ultimoProd.articulo}</p>
+				<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+			</div>
         )
     }
 };
 
 
-export default CardUsuarios;
+export default UltimoProducto;

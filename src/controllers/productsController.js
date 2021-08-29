@@ -223,6 +223,7 @@ let productsController = {
                 articulo: foundProduct.articulo,
                 precio: foundProduct.precio,
                 imagen: foundProduct.imagen,
+                descripcion: foundProduct.descripcion,
                 cantidad: cantidad,
             }
 

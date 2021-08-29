@@ -1207,7 +1207,8 @@ h2{
 }
 
 .contenedor-categ{
-    margin-top: 5vh;
+    margin-top: 4vh;
+    margin-bottom: 5vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1227,7 +1228,6 @@ h2{
     margin: 1vh 0px;
     transition: all 0.3s;
     text-align: center;
-    border-bottom: white 2px solid;
     box-sizing: border-box;
     width: 20%;
 }
@@ -1237,7 +1237,7 @@ h2{
 }
 
 .titulo-categ{
-    margin: 8vh 0 5vh 3vw;
+    margin: 0 0 2vh 3vw;
     text-align: left;
     color: rgb(3, 3, 44);
 }
@@ -1387,11 +1387,80 @@ section.vistos{
 
 /*-----------------------------------------------Configuracion Carrito----------------------------------------------*/
 
-.detalleIVA{
+.main-carrito{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    background-color: #9E9E9E;
+    background-color: #ebebeb;
+    border: white solid 1px;
+}
+
+.aside-carrito{
+    width: 25%;
+    text-align: center;
+    border-right: 1vw solid #ebebeb;
+}
+
+.div-aside{
+    border: 4px solid #ebebeb;
+    height: 25vh;
+    background-color: white;
+}
+.oferta-productos{
+    height: 60vh;
+}
+
+.oferta-productos p{
+    width: 80%;
+    margin: 1vw;
+}
+
+.body-carrito{
+    background-color: #ebebeb;
+}
+
+.producto-completo-carrito{
+    display: flex;
+    box-sizing: border-box;
+    border: 4px solid #ebebeb;
+    border-left: 1vw solid #ebebeb;
+}
+
+.descripcion-producto-carrito{
+    text-align: justify;
+    margin: 2vh 0;
+}
+
+.imagen-producto-carrito{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.imagen-producto-carrito img{
+    width: 60%;
+    margin: auto 
+}
+
+.detalles-carrito{
+    width: 70%;
+    margin-left: 3%;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 16px;
+}
+
+.precio-carrito{
+    font-weight: bold;
+}
+
+.stock{
+    color: rgb(5, 105, 5);
+    font-size: 14px;
+    margin: 1vh 0;
+}
+
+.sin-compras{
+    line-height: 30vh;
 }
 
 .detalleCompra{
@@ -1417,81 +1486,44 @@ section.vistos{
     display: flex;
     justify-content: space-around;
 }
-.IVA{
-    width: 100%;
-    height: 100%;
-}
 
-.bordeIzquierdo{
-    width: 10px;
+.config-detalle-carrito{
+    margin: 1vh 0;
+    font-size: 16px;
 }
-
-.botonComprar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-/*Articulos----------------------------*/
 
 .articulos{
-    background-color: #ebebeb;
+    background-color: white;
     width: 100%;
 }
 
-.articulo1{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    border-bottom: 2px solid #454545;
-    flex-direction: column;
+.boton-compra{
+    background-color: rgb(255, 136, 0);
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+    line-height: 4.5vh;
+    color: rgb(3, 3, 44);
+    font-weight: bold;
+    margin-top: 8vh;
 }
 
-.articulo2{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    border-bottom: 2px solid #454545;
-    flex-direction: column;
+.eliminar-producto-carrito{
+    font-size: 12px;
+    color: rgb(255, 136, 0);
+    margin: 1vh 0;
 }
-
 .precioDesc{
     font-size: 18px;
 }
 
+.fa-trash-alt{
+    width: 10%;
+    color: rgb(255, 136, 0) ;
+}
+
 .precios{
     font-size: 18px;
-}
-
-.colorLetra{
-    color:darkgrey;
-}
-
-.IVA {
-    text-align: center;
-    color:white;
-    background-color:#D1D1D1 ;
-}
-
-.TOTAL{
-    text-align: center;
-    color:white;
-}
-
-.btnComprar{
-    margin-top: 15px;   
-    margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    width: 50%;
-    background-color: #9E9E9E;
-    color: black;  
 }
 
 .eliminarCarrito{
@@ -1500,28 +1532,18 @@ section.vistos{
     text-align: center;
     width: 20%;
     border-color: transparent;
-}
-
-.config-detalle-carrito{
-    text-align: center;
-}
-
-section div ul li { /*con esto saque el icono*/
-    list-style-type: none;
-}
-
-section div ul li a{
-    text-decoration:none;
-    color: #000;
-    font-size: 16px;
+    background-color: white;
+    margin: 1vh 0;
 }
 
 .titulo{
-    width: 90%;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    background-color: #ebebeb;
+    margin: 0;
 }
 
 .tablet{
@@ -2369,7 +2391,6 @@ section div ul li a{
 }
 
 .form-carrito{
- width: 20%;
  display: flex;
  align-items: center;
 }
@@ -2394,7 +2415,7 @@ section div ul li a{
     }
   }
   
-  @keyframes tostart {
+@keyframes tostart {
     75% {
       left: 0;
     }
@@ -2407,9 +2428,9 @@ section div ul li a{
     99% {
       left: 0;
     }
-  }
+}
   
-  @keyframes snap {
+@keyframes snap {
     96% {
       scroll-snap-align: center;
     }
@@ -2422,45 +2443,44 @@ section div ul li a{
     100% {
       scroll-snap-align: center;
     }
-  }
+} 
   
-  
-  * {
+* {
     box-sizing: border-box;
     scrollbar-color: transparent transparent; /* thumb and track color */
     scrollbar-width: 0px;
-  }
+}
   
-  *::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 0;
-  }
+}
   
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: transparent;
-  }
+}
   
-  *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background: transparent;
     border: none;
-  }
+}
   
-  * {
+* {
     -ms-overflow-style: none;
-  }
+}
   
-  .carousel__slide, .carousel__snapper {
+.carousel__slide, .carousel__snapper {
     margin: 0;
     padding: 0;
-  }
+}
   
-  .carousel {
+.carousel {
     position: relative;
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
     height: 50vh;
-  }
+}
   
-  .carousel__viewport {
+.carousel__viewport {
     position: absolute;
     top: 0;
     right: 0;
@@ -2472,10 +2492,9 @@ section div ul li a{
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     height: 50vh;
-
-  }
+}
   
-  .carousel__slide {
+.carousel__slide {
     position: relative;
     flex: 0 0 100%;
     width: 60%;
@@ -2484,65 +2503,65 @@ section div ul li a{
     background-position-x: center;
     background-position-y: center;
     background-size: 90%;
-  }
+}
   
-  .carousel__slide:nth-child(2) {
+.carousel__slide:nth-child(2) {
     background-image: url(../img/Carrusel/Carrusel_2ok.png);
-  }
+}
   
-  .carousel__slide:nth-child(3) {
+.carousel__slide:nth-child(3) {
     background-image: url(../img/Carrusel/Carrusel_3ok.png);
-  }
+}
 
-  .carousel__slide:nth-child(4) {
+.carousel__slide:nth-child(4) {
     background-image: url(../img/Carrusel/Carrusel_4ok.png);
-  }
+}
 
-  .carousel__slide:nth-child(5) {
+.carousel__slide:nth-child(5) {
     background-image: url(../img/Carrusel/Carrusel_5ok.png);
-  }
+}
 
-  .carousel__slide:nth-child(6) {
+.carousel__slide:nth-child(6) {
     background-image: url(../img/Carrusel/Carrusel_6ok.png);
-  }
+}
 
-  .carousel__slide:nth-child(7) {
+.carousel__slide:nth-child(7) {
     background-image: url(../img/Carrusel/Carrusel_7ok.png);
-  }
+}
   
-  .carousel__slide:before {
+.carousel__slide:before {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%,-40%,70px);
     color: #fff;
     font-size: 2em;
-  }
+}
   
-  .carousel__snapper {
+.carousel__snapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     scroll-snap-align: center;
-  }
+}
   
-  ol, li {
+ol, li {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
+}
 
 .carousel__navigation-list{
       width: 40%;
-  }
+}
 
-  .carousel__navigation-item{
+.carousel__navigation-item{
       width: 7%;
-  }
+}
 
-  @media (hover: hover) {
+@media (hover: hover) {
     .carousel__snapper {
       animation-name: tonext, snap;
       animation-delay: 0;
@@ -2554,34 +2573,35 @@ section div ul li a{
   
     .carousel__slide:last-child .carousel__snapper {
       animation-name: tostart, snap;
+      opacity: 0;
     }
-  }
+}
   
-  @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
     .carousel__snapper {
       animation-name: none;
     }
-  }
+}
   
-  .carousel__navigation {
+.carousel__navigation {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     text-align: center;
-  }
+}
   
-  .carousel__navigation-list,
-  .carousel__navigation-item {
+.carousel__navigation-list,
+.carousel__navigation-item {
     display: inline-block;
-  }
+}
   
 .carousel__navigation-list{
     position: relative;
     bottom: 2vh;
 }
 
-  .carousel__navigation-button {
+.carousel__navigation-button {
     display: inline-block;
     width: 1.5rem;
     height: 1.5rem;
@@ -2591,12 +2611,12 @@ section div ul li a{
     border-radius: 50%;
     font-size: 0;
     transition: transform 0.2s;
-  }
+}
   
-  .carousel::before,
-  .carousel::after,
-  .carousel__prev,
-  .carousel__next {
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
     position: absolute;
     top: 50%;
     width: 4rem;
@@ -2605,20 +2625,20 @@ section div ul li a{
     border-radius: 50%;
     font-size: 0;
     outline: 0;
-  }
+}
   
-  .carousel::before,
-  .carousel__prev {
+.carousel::before,
+.carousel__prev {
     left: 5rem;
-  }
+}
   
-  .carousel::after,
-  .carousel__next {
+.carousel::after,
+.carousel__next {
     right: 5rem;
-  }
+}
   
-  .carousel::before,
-  .carousel::after {
+.carousel::before,
+.carousel::after {
     content: '';
     z-index: 1;
     background-color: #333;
@@ -2630,12 +2650,12 @@ section div ul li a{
     line-height: 4rem;
     text-align: center;
     pointer-events: none;
-  }
+}
   
-  .carousel::before {
+.carousel::before {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-  }
+}
   
-  .carousel::after {
+.carousel::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-  }
+}
