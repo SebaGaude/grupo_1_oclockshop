@@ -1,5 +1,6 @@
 import React from 'react';
 import CardArticulos from './cardArticulos';
+import CardCategorias from './CardCategorias';
 import CardMarcas from './CardMarcas';
 import CardUsuarios from './CardUsuarios';
 import UltimoProducto from './UltimoProducto';
@@ -93,11 +94,11 @@ function ContentRowTop(){
 										<div className="col-lg-6 mb-4">
 											<div className="card bg-dark text-white shadow">
 												<div className="card-body">
-													Acción
+												<CardCategorias />
 												</div>
 											</div>
 										</div>
-										<div className="col-lg-6 mb-4">
+										{/* <div className="col-lg-6 mb-4">
 											<div className="card bg-dark text-white shadow">
 												<div className="card-body">
 													Animación
@@ -159,7 +160,7 @@ function ContentRowTop(){
 													Musical
 												</div>
 											</div>
-										</div>
+										</div> */}
 
 									</div>
 								</div>

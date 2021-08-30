@@ -8,7 +8,7 @@ class CardCategorias extends Component {
         this.state = {
 
             isLoading: true,
-            products: []
+            categorias: []
         }
     }
 
@@ -16,12 +16,14 @@ class CardCategorias extends Component {
         const getData = async() => {
             let response = await fetch("http://localhost:3050/api/categorias");
             let data = await response.json();
+            console.log
             return data;     
         }
 
         getData().then(data => {
+            
             this.setState({ 
-                products: data.data, 
+                categorias: data.data, 
                 isLoading: false
             })
             
@@ -33,18 +35,17 @@ class CardCategorias extends Component {
     };
     
     render() {
-        const {isLoading, products} = this.state;
+        const {isLoading, categorias} = this.state;
         return(
             <div>
-                <h2 className="h2">Listado de productos</h2>
+                <h2 className="h2">Listado de categorias</h2>
                 { isLoading && <h4>Cargando...</h4> }
                 <div className="img">
-                { products.map(oneProduct => {
+                { categorias.map( unaCategoria=> {
                     return(
-                        <div key={oneProduct.dataValues.id} >
-                            <img className="images" src={oneProduct.imagen} alt="imagen" />
+                        <div key={unaCategoria.dataValues.id} >
                             
-                            <h3> {oneProduct.dataValues.articulo} </h3>
+                            <h3> {unaCategoria.dataValues.nombre} </h3>
                             
                         </div>
                     )

@@ -170,19 +170,6 @@ let productsController = {
     ultimoProducto2: function (req, res) {
 
         
-<<<<<<< HEAD
-    },
-    ultimoProducto2: function (req, res) {
-
-        db.Producto.max("id").then(function(productoId){
-            console.log(productoId)
-            db.Producto.findAll()
-            .then(ultimoProducto =>{
-                return res.status(200).json({
-                    ultimoProducto: ultimoProducto.filter(producto => producto.id == productoId) 
-                    })
-            })  
-=======
          db.Producto.max("id")
         .then(function(productoId){
             console.log(productoId)
@@ -202,7 +189,22 @@ let productsController = {
                 
             })
 
->>>>>>> 7d67f91941724abfacae690f8586ff99f0ab5fa5
+        })
+    },
+    categorias:  function (req, res) {
+        db.Categoria
+        .findAll()
+        .then(categorias => {
+            return res.status(200).json({
+                // totalProducts: products.length,
+                data: categorias.map(unaCategoria => {
+                    return{
+                        ...unaCategoria
+                        // imagen: "http://localhost:3050/img/"+oneProduct.imagen
+                    }
+                }),
+                status: 200
+            }); 
         })
     }
     
