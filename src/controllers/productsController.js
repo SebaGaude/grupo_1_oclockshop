@@ -230,20 +230,11 @@ let productsController = {
             carrito = JSON.stringify(carrito, null, 4);
             fs.writeFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), carrito);
 
-            
-            
-        })
-        .then(function(){
-
-            res.locals.carritoCompras = false;
-
-            if (carrito) {
-                res.locals.carritoCompras = true;
-                res.locals.carrito = req.session.usuarioLogueado;
-            }
             res.redirect("/products/carrito")
 
+            
         })
+
     },
 
     destroyItemCarrito: function (req, res){

@@ -15,7 +15,6 @@ class CardCategorias extends Component {
         const getData = async() => {
             let response = await fetch("http://localhost:3050/api/categorias");
             let data = await response.json();
-            console.log
             return data;     
         }
 
@@ -38,22 +37,24 @@ class CardCategorias extends Component {
         return(
             <div>
                 { isLoading && <h4>Cargando...</h4> }
-                <div className="img">
-                { categorias.map( unaCategoria=> {
-                    return(
-                        <div key={unaCategoria.dataValues.id} >
-                            <div className="col-lg-6 mb-4">
-								<div className="card bg-dark text-white shadow">
-									<div className="card-body">
-                                        <h3> {unaCategoria.dataValues.nombre} </h3>
+                        { categorias.map( unaCategoria=> {
+                        return(
+                            <div className="card-body">
+                                <div className="row">
+                                    <div className="col-lg-6 mb-4">
+                                        <div className="card bg-dark text-white shadow">
+                                            <div className="card-body">
+                                                <div className="img">
+                                                    <div key={unaCategoria.dataValues.id} >
+                                                        <p> {unaCategoria.dataValues.nombre} </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-								</div>
+                                </div>
 							</div>
-                        </div>
-                    )
-                })}
-                </div>
-
+                        )})}
             </div>
         )
     }
