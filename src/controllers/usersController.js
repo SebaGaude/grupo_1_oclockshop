@@ -133,6 +133,7 @@ let usersControllers = {
 		res.clearCookie('userEmail');
 		req.session.destroy(); /*borra todo lo que esta en SESSION*/
 		res.redirect('/');
+        console.log(req.session)
 	}
     
 
