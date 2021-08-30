@@ -1,13 +1,5 @@
 [
     {
-        "id": 6,
-        "articulo": "Tag Heuer Monaco Titan",
-        "precio": "10000.00",
-        "imagen": "product-1629735243129.jpg",
-        "descripcion": "Este TAG Heuer Monaco Grey Titanium es un cronógrafo limitado a 500 unidades. Un modelo deportivo, discreto y ligero. Infundido con una atrevida modernidad, esta vez en un material sorprendente y llamativo, el titanio, este Monaco presenta una vívida y br",
-        "cantidad": "1"
-    },
-    {
         "id": 14,
         "articulo": "Blackinjelly",
         "precio": "12000.00",
@@ -24,11 +16,11 @@
         "cantidad": "1"
     },
     {
-        "id": 3,
-        "articulo": "Oyster Perpetual 41",
-        "precio": "1000.00",
-        "imagen": "product-1629735178000.jpg",
-        "descripcion": "Oyster Perpetual 41 con una esfera plateada y un brazalete Oyster.",
+        "id": 2,
+        "articulo": "Datejust 36",
+        "precio": "10000.00",
+        "imagen": "product-1629735146746.jpg",
+        "descripcion": "Este Oyster Perpetual Datejust 36 en Acero Oystersteel presenta una esfera verde oliva, motivo «palmeras» y un brazalete Oyster",
         "cantidad": "1"
     },
     {

@@ -34,8 +34,8 @@ class UltimoProducto extends Component {
     };
     
     render() {
-
         const {isLoading, ultimoProducto} = this.state;
+        console.log(this.state)
         return(
             <div className="card-body">
                  { isLoading && <h4>Cargando...</h4> }
