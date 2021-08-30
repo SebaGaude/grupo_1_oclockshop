@@ -12,5 +12,29 @@
         "precio": "70000.00",
         "imagen": "product-1629567752118.png",
         "cantidad": "1"
+    },
+    {
+        "id": 2,
+        "articulo": "Datejust 36",
+        "precio": "10000.00",
+        "imagen": "product-1629651149258.jpg",
+        "descripcion": "Este Oyster Perpetual Datejust 36 en Acero Oystersteel presenta una esfera verde oliva, motivo «palmeras» y un brazalete Oyster",
+        "cantidad": "1"
+    },
+    {
+        "id": 4,
+        "articulo": "Sky-Dweller",
+        "precio": "1200.00",
+        "imagen": "product-1629651182798.jpg",
+        "descripcion": "Oyster Perpetual Sky-Dweller en Oro amarillo de 18 quilates con esfera color negro vivo y brazalete Oysterflex.",
+        "cantidad": "1"
+    },
+    {
+        "id": 15,
+        "articulo": "Lacoste 12.12",
+        "precio": "22000.00",
+        "imagen": "product-1629651605181.jpg",
+        "descripcion": "La familia de relojes Lacoste.12.12 rinde tributo al carácter distintivo del polo L.12.12 y a su espíritu deportivo. El moderno diseño de la caja y las esferas es un homenaje a la historia de la marca a través de sus correas de silicona con textura de pet",
+        "cantidad": "1"
     }
 ]

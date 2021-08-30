@@ -72,7 +72,7 @@ let usersControllers = {
                     req.session.usuarioLogueado =  user;
                 
                     if(req.body.recordarme){
-                    res.cookie("recordame", usuarioALoguearse.email, { maxAge: 60000 })
+                    res.cookie("recordame", usuarioALoguearse.email, { maxAge: 10*10*60000 })
                     }
                 
                     res.redirect('/users/profile')
@@ -133,6 +133,7 @@ let usersControllers = {
 		res.clearCookie('userEmail');
 		req.session.destroy(); /*borra todo lo que esta en SESSION*/
 		res.redirect('/');
+        console.log(req.session)
 	}
     
 
