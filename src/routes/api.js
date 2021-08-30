@@ -40,5 +40,6 @@ router.get('/usuarios', apiController.usuarios); // total de usuarios
 
 router.get('/ultimoProducto', apiController.ultimoProducto2); // ultimo producto
 
+router.get('/ultimoProducto', apiController.ultimoProducto2); // todas las marcas
 
 module.exports = router;
