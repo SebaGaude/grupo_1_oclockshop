@@ -11,7 +11,7 @@
         
         <!-- Formulario de Envío de CV-->
 
-        <form action="/" method="GET" class="form-login-register" enctype="multipart/form-data">
+        <form action="/" method="GET" class="form-extras" enctype="multipart/form-data">
                 
             <h1> 
                 ¿Querés formar parte del equipo O'Clock Shop?
@@ -41,7 +41,7 @@
             </div>
             
             <div>
-                <input id="email" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                <input class="email-workwitus" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>" required>
                 <% if (locals.errors && errors.email) { %>
                     <div class="errorMsg">
                         <%= errors.email.msg %> 
@@ -50,7 +50,7 @@
             </div>
             <div>
                 <label>Ingresá tu CV</label>
-                <input id="imagen" type="file" name="imagen">
+                <input id="imagen" type="file" name="imagen" required>
                 <% if (locals.errors && errors.imagen) { %>
                     <div class="errorMsg">
                         <%= errors.imagen.msg %> 
@@ -83,6 +83,6 @@
         </form>
 
     </main>
-    <script src="../../js/validator.js"></script>
+    <script src="../../js/validateWorkWithUs.js"></script>
 <%- include("partials/footer.ejs") %>
 </html>

@@ -156,7 +156,7 @@ let productsController = {
             console.log(productoId)
             db.Producto.findByPk(productoId).then(function(ultimoProducto){
                 return res.status(200).json({
-                    hola: ultimoProducto,
+                    data: ultimoProducto,
                     status: 200,
                     })
     

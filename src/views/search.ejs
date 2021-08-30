@@ -19,9 +19,8 @@
             <% } else { %>
             <% for( let i = 0; i< searchedProducts.length; i++ ) { %>
                         
-            <div class="articulos articles">          
-                <div class="article-container" >    
-                    <div class="img-container">
+                <div class="contenedor-articulo" >    
+                    <div class="contenedor-imagen-articulo">
                         <a href="../products/detail/<%=searchedProducts[i].id  %> "><h3><%=searchedProducts[i].articulo%> </h3></a>
                         <img src="../img/<%=searchedProducts[i].imagen  %> " alt="<%= searchedProducts[i].articulo %>">
                     </div>           
@@ -35,7 +34,7 @@
                         <p class="precio-oferta"><%= searchedProducts[i].precio %></p>
                     </div>
                 </div>         
-            </div>
+            
             <% } }%>
         </div>
     </section>
