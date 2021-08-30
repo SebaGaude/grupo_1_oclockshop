@@ -21,6 +21,7 @@ class UltimoProducto extends Component {
         }
 
         getData().then(data => {
+            console.log(this.state)
             this.setState({ 
                 ultimoProducto: data,
                 isLoading: false
@@ -34,7 +35,6 @@ class UltimoProducto extends Component {
     };
     
     render() {
-
         const {isLoading, ultimoProducto} = this.state;
         console.log(this.state)
         return(

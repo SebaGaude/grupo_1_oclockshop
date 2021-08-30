@@ -190,6 +190,22 @@ let productsController = {
             })
 
         })
+    },
+    categorias:  function (req, res) {
+        db.Categoria
+        .findAll()
+        .then(categorias => {
+            return res.status(200).json({
+                // totalProducts: products.length,
+                data: categorias.map(unaCategoria => {
+                    return{
+                        ...unaCategoria
+                        // imagen: "http://localhost:3050/img/"+oneProduct.imagen
+                    }
+                }),
+                status: 200
+            }); 
+        })
     }
     
 };
