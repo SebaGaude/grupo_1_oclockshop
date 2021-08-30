@@ -7,9 +7,9 @@ function Header(){
           <nav className="main-navbar">
               <img src={logo} alt="logo" className="logo" />
               <ul>
-                  <li><a href="/">Productos</a></li>
+                  <li><a href="/">Ver Productos</a></li>
                   <li><a href="/">Categorías</a></li>
-                  <li><a href="/">Volver al inicio</a></li>
+                  <li><a href="http://localhost:3050/">Volver al inicio</a></li>
               </ul>
           </nav>
           
