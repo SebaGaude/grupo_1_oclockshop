@@ -35,6 +35,7 @@ class Products extends Component {
     
     render() {
         const {isLoading, products} = this.state;
+        console.log(this.state)
         return(
             <div>
                 <h2 className="h2">Listado de productos</h2>

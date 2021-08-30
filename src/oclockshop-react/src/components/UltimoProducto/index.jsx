@@ -36,13 +36,14 @@ class UltimoProducto extends Component {
     render() {
 
         const {isLoading, ultimoProducto} = this.state;
+        console.log(this.state)
         return(
             <div className="card-body">
                  { isLoading && <h4>Cargando...</h4> }
 				<div className="text-center">
 					<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={ultimoProducto.imagen} alt=" Star Wars - Mandalorian "/>
 				</div>
-				<p>{ultimoProducto.articulo}</p>
+				<p>{ultimoProducto.hola.articulo}</p>
 				<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
 			</div>
         )
