@@ -164,6 +164,18 @@ let productsController = {
 
         })
         
+    },
+    ultimoProducto2: function (req, res) {
+
+        db.Producto.max("id").then(function(productoId){
+            console.log(productoId)
+            db.Producto.findAll()
+            .then(ultimoProducto =>{
+                return res.status(200).json({
+                    ultimoProducto: ultimoProducto.filter(producto => producto.id == productoId) 
+                    })
+            })  
+        })
     }
 };
 
