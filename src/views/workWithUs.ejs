@@ -41,7 +41,7 @@
             </div>
             
             <div>
-                <input id="email" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                <input class="email-workwitus" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>" required>
                 <% if (locals.errors && errors.email) { %>
                     <div class="errorMsg">
                         <%= errors.email.msg %> 
@@ -50,7 +50,7 @@
             </div>
             <div>
                 <label>Ingresá tu CV</label>
-                <input id="imagen" type="file" name="imagen">
+                <input id="imagen" type="file" name="imagen" required>
                 <% if (locals.errors && errors.imagen) { %>
                     <div class="errorMsg">
                         <%= errors.imagen.msg %> 

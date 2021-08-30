@@ -41,7 +41,7 @@
             </div>
             
             <div>
-                <input id="email" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>">
+                <input class="email-ayuda" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>" required>
                 <% if (locals.errors && errors.email) { %>
                     <div class="errorMsg">
                         <%= errors.email.msg %> 
@@ -49,7 +49,7 @@
                 <% } %>
             </div>
             <div>
-                <textarea id="consulta" name="consulta" rows="4" cols="50"> Escribí tu consulta en este campo...
+                <textarea id="consulta" name="consulta" rows="4" cols="50" required> Escribí tu consulta en este campo...
                 </textarea>
             </div>      
             
