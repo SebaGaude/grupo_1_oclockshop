@@ -7,7 +7,7 @@ class UltimoProducto extends Component {
         this.state = {
 
             isLoading: true,
-            ultimoProducto: []
+            ultimoProducto: ""
         }
     }
 
@@ -21,8 +21,8 @@ class UltimoProducto extends Component {
         }
 
         getData().then(data => {
-            this.setState({ 
-                ultimoProducto: data,
+           this.setState({ 
+                ultimoProducto: data.data,
                 isLoading: false
                 
             })

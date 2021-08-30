@@ -38,8 +38,8 @@ router.get('/marcas', apiController.marcas); // total de marcas
 
 router.get('/usuarios', apiController.usuarios); // total de usuarios
 
-//router.get('/ultimoProducto', apiController.ultimoProducto); // todas las marcas
+router.get('/ultimoProducto', apiController.ultimoProducto); // todas las marcas
 
-router.get('/ultimoProducto', apiController.ultimoProducto2); // todas las marcas
+//router.get('/ultimoProducto', apiController.ultimoProducto2); // todas las marcas
 
 module.exports = router;
