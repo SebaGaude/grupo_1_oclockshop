@@ -1,16 +1,5 @@
 [
     {
-<<<<<<< HEAD
-=======
-        "id": 14,
-        "articulo": "Blackinjelly",
-        "precio": "12000.00",
-        "imagen": "product-1629734917238.jpg",
-        "descripcion": "Futuristic BLACKINJELLY viene con caja y correa en tono cremoso semitransparente. La peculiar estructura de la correa la hace casi invisible. Si miras detrás de los componentes de la esfera negra verás el corazón del reloj.",
-        "cantidad": "1"
-    },
-    {
->>>>>>> 437e16caac45b984634aec34bc50502d46bdbedc
         "id": 2,
         "articulo": "Datejust 36",
         "precio": "10000.00",
@@ -19,7 +8,6 @@
         "cantidad": "1"
     },
     {
-<<<<<<< HEAD
         "id": 1,
         "articulo": "Apple Watch Series 6",
         "precio": "70000.00",
@@ -33,21 +21,6 @@
         "precio": "1200.00",
         "imagen": "product-1629735202942.jpg",
         "descripcion": "Oyster Perpetual Sky-Dweller en Oro amarillo de 18 quilates con esfera color negro vivo y brazalete Oysterflex.",
-=======
-        "id": 2,
-        "articulo": "Datejust 36",
-        "precio": "10000.00",
-        "imagen": "product-1629735146746.jpg",
-        "descripcion": "Este Oyster Perpetual Datejust 36 en Acero Oystersteel presenta una esfera verde oliva, motivo «palmeras» y un brazalete Oyster",
-        "cantidad": "1"
-    },
-    {
-        "id": 2,
-        "articulo": "Datejust 36",
-        "precio": "10000.00",
-        "imagen": "product-1629651149258.jpg",
-        "descripcion": "Este Oyster Perpetual Datejust 36 en Acero Oystersteel presenta una esfera verde oliva, motivo «palmeras» y un brazalete Oyster",
->>>>>>> 437e16caac45b984634aec34bc50502d46bdbedc
         "cantidad": "1"
     }
 ]
