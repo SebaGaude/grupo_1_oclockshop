@@ -56,9 +56,6 @@
                             </a>
                         </div>
                         <% } %>
-                        <% if (locals.isLogged && locals.usuarioLogueado.perfil){ %>
-                            <a class="botonera" href="http://localhost:3000/"><p>Ir al dashboard</p></a>
-                        <% } %>
                         <% if (!locals.isLogged) { %>
                             <div class="carro">
                                 <a href="../../cartLogin"><i class="fas fa-shopping-cart"></i></a>
@@ -81,7 +78,7 @@
                     </ul>
                 </div>
             </nav>
-            <% if (locals.isLogged) { %>
+            <% if (locals.isLogged && locals.usuarioLogueado.perfil) { %>
                 <nav class="dashboard">
                     <div class="irAlDashboard">
                         <ul class="ulDashboard">

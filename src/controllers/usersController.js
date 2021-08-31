@@ -72,7 +72,7 @@ let usersControllers = {
                     req.session.usuarioLogueado =  user;
                 
                     if(req.body.recordarme){
-                    res.cookie("recordame", usuarioALoguearse.email, { maxAge: 10*10*60000 })
+                        res.cookie("recordame", usuarioALoguearse.email, { maxAge: 10*10*60000 })
                     }
                 
                     res.redirect('/users/profile')
@@ -99,9 +99,9 @@ let usersControllers = {
     },
 
     updateProfile: function(req, res){
-                let image;
-                db.Usuario.findByPk(req.params.id)
-          .then(usuario => {
+            let image;
+            db.Usuario.findByPk(req.params.id)
+            .then(usuario => {
               image = usuario.imagen;
               if (req.file) {
                   image = req.file.filename;
