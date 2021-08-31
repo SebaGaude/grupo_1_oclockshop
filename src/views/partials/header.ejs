@@ -41,8 +41,8 @@
                 <% if (locals.isLogged) { %>
                     <div class="header-user">
                         <img src="/img/users/<%= locals.usuarioLogueado.imagen %>"  class="imagen-header">
-                        <a href="/users/profile"> Hola,  <%= locals.usuarioLogueado.nombre %></a>
-                        <!-- <a class="botonera" href="http://localhost:3000/"><p>Ir al dashboard</p></a> -->
+                        <a  class="pUser" href="/users/profile"><p>Hola <%= locals.usuarioLogueado.nombre %></p></a>
+                        
                     </div>
                     <% } else { %>
                         <div class="registration">
@@ -81,6 +81,16 @@
                     </ul>
                 </div>
             </nav>
+            <% if (locals.isLogged) { %>
+                <nav class="dashboard">
+                    <div class="irAlDashboard">
+                        <ul class="ulDashboard">
+                            <a class="botonera" href="http://localhost:3000/"><li class="liDashboard">Ir al dashboard</li></a>
+                            <a href="/users/logout"><li class="liDashboard">Logout</li></a>
+                        </ul>
+                    </div>
+                </nav>
+            <% } %>
             <script src="../../js/header.js"></script>
     </header>
 </html>

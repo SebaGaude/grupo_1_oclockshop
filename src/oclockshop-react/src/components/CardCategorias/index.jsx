@@ -46,7 +46,7 @@ class CardCategorias extends Component {
                                         <div className="card bg-dark text-white shadow">
                                             <div className="card-body">
                                                 <div className="img">
-                                                    <div key={unaCategoria.dataValues.id} >
+                                                    <div >
                                                         <p> {unaCategoria.dataValues.nombre} </p>
                                                         <p> hola </p>
                                                     </div>
@@ -55,7 +55,7 @@ class CardCategorias extends Component {
                                         </div>
                                     </div>
                                 </div>
-							</div>
+								</div>
                         )})}
             </div>
         )

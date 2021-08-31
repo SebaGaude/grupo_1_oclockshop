@@ -40,12 +40,7 @@ function ContentRowTop(){
 							<div className="card border-left-success shadow h-100 py-2">
 								<div className="card-body">
 									<div className="row no-gutters align-items-center">
-										<div className="col mr-2">
-											<CardMarcas />
-										</div>
-										<div className="col-auto">
-											<i className="fas fa-award fa-2x text-gray-300"></i>
-										</div>
+										<CardMarcas />
 									</div>
 								</div>
 							</div>

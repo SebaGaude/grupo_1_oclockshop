@@ -251,8 +251,10 @@ header div.top nav.top1 p.español-ingles{
 .fijo{
     display: flex;
     justify-content: flex-start;
+    box-sizing: border-box;
     width: 45%;
     margin-left: 7.5%;
+    line-height: inherit;
 }
 
 .fijo a{
@@ -312,6 +314,7 @@ a.botonera p{
 
 .header-user {
     display: flex;
+    align-items: center;
 }
 .header-user a {
     text-align: center;
@@ -329,6 +332,15 @@ a.botonera p{
     width: 18%;
     background-color: rgb(3, 3, 44);
     margin: 0 0 0 28.54%;
+    position: absolute;
+    /*z-index: 2;*/
+    opacity: 0;
+}
+
+.dashboard{
+    width: 16.7%;
+    background-color: rgb(3, 3, 44);
+    margin-left: 71.91%;
     position: absolute;
     /*z-index: 2;*/
     opacity: 0;
@@ -356,7 +368,6 @@ a.botonera p{
     color: white;
 }
 
-
 .list-desplegable a li:hover{
     background-color: rgba(255, 136, 0, 0.884);
     box-sizing: border-box;
@@ -365,6 +376,39 @@ a.botonera p{
     font-weight: 700;
 }
 
+
+.dashboard div.irAlDashboard ul.ulDashboard{
+    margin: 0;
+    border-top: 10px solid rgb(3, 3, 44);
+    border-bottom: 10px solid rgb(3, 3, 44);
+    padding: 0
+}
+
+.dashboard div.irAlDashboard ul.ulDashboard a li.liDashboard{
+    list-style-type: none;
+    padding: 0;
+    line-height: 4vh;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.dashboard div.irAlDashboard ul.ulDashboard a{
+    text-decoration: none;
+    color: white;
+}
+
+.ulDashboard a li:hover{
+    background-color: rgba(255, 136, 0, 0.884);
+    box-sizing: border-box;
+    border: rgb(255, 136, 0) solid 1px;
+    color: rgb(3, 3, 44);
+    font-weight: 700;
+}
+
+.pUser:hover{
+    background-color: rgb(255, 136, 0);
+}
 
 /* ---------------------------------------Fin Configuracion Header-------------------------------------------*/
 
