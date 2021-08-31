@@ -124,13 +124,15 @@ let usersControllers = {
         db.Usuario.destroy ({
             where: {id: req.params.id}
         })
-        res.clearCookie('userEmail');
+        res.localstorage.clear()
+        res.clearCookie('recordame');
+        req.logout()
 		req.session.destroy(); /*borra todo lo que esta en SESSION*/
         res.redirect('/');
     },
  
     logout: function(req, res){
-		res.clearCookie('userEmail');
+		res.clearCookie('recordame');
 		req.session.destroy(); /*borra todo lo que esta en SESSION*/
 		res.redirect('/');
         console.log(req.session)

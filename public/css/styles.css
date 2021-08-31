@@ -2761,7 +2761,7 @@ ol, li {
 /* Three columns side by side */
 .column {
     float: left;
-    width: 33.3%;
+    width: 20%;
     margin-bottom: 16px;
     padding: 0 8px;
   }
@@ -2770,6 +2770,13 @@ ol, li {
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 930px) {
+    .column {
+      width: 40%;
       display: block;
     }
   }
@@ -2792,7 +2799,7 @@ ol, li {
   }
   
   .title {
-    color: grey;
+    color: rgb(4, 4, 192);
   }
   
   .button {
@@ -2801,17 +2808,36 @@ ol, li {
     display: inline-block;
     padding: 8px;
     color: white;
-    background-color: #000;
+    background-color: rgb(3, 3, 44);
     text-align: center;
     cursor: pointer;
     width: 100%;
+    transition: 0.3s;
   }
   
   .button:hover {
-    background-color: #555;
+    background-color: rgba(255, 136, 0);
   }
 
 
 .nuestro-equipo-flex{
     display: flex;
+}
+
+.sobre-oclock{
+    width: 90%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo-nuestro-equipo{
+    color: rgb(3, 3, 44);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    }
+
+.equipo-nombre{
+    color: rgba(255, 136, 0);
 }
