@@ -18,11 +18,10 @@ let productsController = {
             res.render("products", {categorias, marcas, productos});
         
         })
-          
 
     },
     productDetail: function (req, res) {
-       
+    
         let listadoCategorias = db.Categoria.findAll();
         let listadorMarcas = db.Marca.findAll();
         let productoId = db.Producto.findByPk(req.params.id)
@@ -71,7 +70,7 @@ let productsController = {
             precio: req.body.precio
         
         })
-       
+    
         res.redirect("/");}
         else{
             Promise.all([listadoCategorias, listadorMarcas])
@@ -79,15 +78,15 @@ let productsController = {
             .then(function([categorias, marcas]){
             
             res.render("newProduct", {categorias , marcas,
-      
+    
             errors: errors.mapped(),
                 oldData: req.body
             });
         })
-     }
+        }
             
     },
-   
+
     editProduct: function(req, res){
         
         let listadoCategorias = db.Categoria.findAll();
@@ -97,13 +96,13 @@ let productsController = {
         Promise.all([listadoCategorias, listadorMarcas, productoId])
         
         .then(function([categorias, marcas, product]){
-        
+            
             res.render("editProduct", {categorias, marcas, product});
             
         })   
         
     },
-   
+
     updateProduct: function(req, res){
         
         let listadoCategorias = db.Categoria.findAll();
@@ -146,7 +145,7 @@ let productsController = {
                 errors: errors.mapped(),
                 oldData: req.body
             });
-           })
+            })
         }
     
     
@@ -158,8 +157,8 @@ let productsController = {
         db.Producto.destroy ({
             where: {
                 id: req.params.id}
-      
-         })
+    
+        })
     return res.redirect('/');
     },
 
@@ -202,16 +201,19 @@ let productsController = {
                 console.log('Saved!')})
             }
             
+        carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), { encoding: "utf-8" });
+
+        if (carritoDatabase == ""){
+            carrito = []
+        } else {carrito = JSON.parse(carritoDatabase)}
+
+        
         let listadoProductos = db.Producto.findAll();
 
         Promise.all([listadoProductos])
 
         .then(function([productos]){
-            carritoDatabase = fs.readFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), { encoding: "utf-8" });
 
-        if (carritoDatabase == ""){
-            carrito = []
-        } else {carrito = JSON.parse(carritoDatabase)}
 
             foundProduct = productos.find(item => item.id == addedProduct)
             
@@ -220,7 +222,6 @@ let productsController = {
                 articulo: foundProduct.articulo,
                 precio: foundProduct.precio,
                 imagen: foundProduct.imagen,
-                descripcion: foundProduct.descripcion,
                 cantidad: cantidad,
             }
 

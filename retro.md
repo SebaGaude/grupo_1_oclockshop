@@ -74,3 +74,15 @@ Sprint 6
 4. Hacer menos: obviar asuntos no indicados específicamente en las instrucciones del sprint, pero que guardan relación con la integridad del proyecto.
 
 5. Dejar de hacer: dejar ciertas tareas para futuros sprints, dado que esto puede provocar la acumulación de trabajo para la etapa final del proyecto.
+---
+Sprint 7
+---
+1. Comenzar a hacer: dividir tareas y aspectos finales del proyecto. Resolver errores pendientes de sprints pasados.
+
+2. Hacer más: revisar funcionamiento completo de la página, para cerrar el proyecto de manera satisfactoria.
+
+3. Continuar haciendo: trabajar en equipo con "pair coding" (método utilizado a lo largo de la cursada) para abarcar detalles finales hasta la presentación del proyecto.
+
+4. Hacer menos: avanzar con el desarrollo del sprint sin tener -muchas veces- tareas asignadas por cada miembro del equipo. Si bien el trabajo colaborativo en simultáneo ayuda, podríamos avanzar más rápidamente si ciertas tareas nos las distribuimos entre todos.
+
+5. Dejar de hacer: desatender aspectos de sprints pasados que se van relacionando con los nuevos. Esto, muchas veces, provoca errores en el funcionamiento integral del proyecto.
