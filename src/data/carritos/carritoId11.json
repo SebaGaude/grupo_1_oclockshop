@@ -5,5 +5,12 @@
         "precio": "2000.00",
         "imagen": "product-1629735020057.jpg",
         "cantidad": "1"
+    },
+    {
+        "id": 12,
+        "articulo": "Spot Time Black",
+        "precio": "5000.00",
+        "imagen": "product-1629734884049.jpg",
+        "cantidad": "1"
     }
 ]
