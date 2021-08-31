@@ -34,7 +34,7 @@ class CardCategorias extends Component {
     
     render() {
         const {isLoading, categorias} = this.state;
-        console.log(this.state)
+        
         return(
             <div>
                 { isLoading && <h4>Cargando...</h4> }
@@ -48,6 +48,7 @@ class CardCategorias extends Component {
                                                 <div className="img">
                                                     <div >
                                                         <p> {unaCategoria.dataValues.nombre} </p>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>

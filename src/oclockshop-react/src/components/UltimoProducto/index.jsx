@@ -12,11 +12,9 @@ class UltimoProducto extends Component {
     }
 
     componentDidMount(){
-        console.log('me estoy renderizando')
         const getData = async() => {
             let response = await fetch("http://localhost:3050/api/ultimoProducto");
             let data = await response.json();
-            console.log(data)
             return data;     
         }
 
@@ -35,8 +33,6 @@ class UltimoProducto extends Component {
     
     render() {
         const {isLoading, ultimoProducto} = this.state;
-        console.log(ultimoProducto)
-        console.log(this.state)
         return(
             <div className="card-body">
                  { isLoading && <h4>Cargando...</h4> }

@@ -167,30 +167,6 @@ let productsController = {
         
     },
 
-    ultimoProducto2: function (req, res) {
-
-        
-         db.Producto.max("id")
-        .then(function(productoId){
-            console.log(productoId)
-            db.Producto.findAll()
-            .then(ultimo => { console.log(ultimo)
-                return res.status(200).json({
-                    
-                    data: ultimo.filter(oneProduct =>
-                        oneProduct.id==productoId
-                       
-                            
-                        
-                    ),
-                    
-                    status: 200
-                }); 
-                
-            })
-
-        })
-    },
     categorias:  function (req, res) {
         /*let producto = db.Producto.findAll()      
         const array = []
@@ -216,21 +192,107 @@ let productsController = {
         .findAll()
         .then(categorias => {
             return res.status(200).json({
-                // totalProducts: products.length,
                 data: categorias.map(unaCategoria => {
                     return{
                         ...unaCategoria
-                        // imagen: "http://localhost:3050/img/"+oneProduct.imagen
                     }
                 }),
                 status: 200
             }); 
         })
     }
-    
-};
+
+}
 
 module.exports = productsController;
 
 
 
+
+
+
+
+
+// db.Producto
+// .count({ where: 
+//     {'id_categoria': {[Op.eq]: 1}},
+//  })
+ 
+// .then(analogicos => {
+//     return res.status(200).json({
+//                 analogicos: analogicos,
+//                 status: 200
+//     })
+        
+// }) 
+
+
+
+
+
+
+// db.Producto
+// .findAll()
+// .then(function(producto){
+//         const contadorAnalogico = 0;
+//         const contadorDigital = 0;
+//         let contadorLujo = 0;
+//         let contadorSmart = 0;
+//         for (let i = 0; i < producto.length; i++) {
+//             if(producto.id_categoria == 1){
+//                    return contadorAnalogico ++;
+//             }else if(producto.id_categoria == 2){
+//                     contadorDigital ++;
+//             }else if(producto.id_categoria == 3){
+//                 contadorLujo +=1;
+//             }else if(producto.id_categoria == 4){
+//                 contadorSmart +=1;
+//             }
+//             return res.status(200).json({
+//                 analogicos: contadorAnalogico,
+//                 digitales: contadorDigital,
+//                 lujo: contadorLujo,
+//                 smart: contadorSmart
+//             })
+//         }
+// })
+
+// }
+
+// let listadoCategoria1;
+// let listadoCategoria2;
+// let listadoCategoria3;
+// let listadoCategoria4;
+// let productos = db.Producto.findAll();
+
+// Promise.all([productos])
+
+// .then(function([product]){
+//     for (let i = 0; i < product.length; i++) {
+//         if(product.id_categoria == 1){
+//             listadoCategoria1++
+//         }
+//         if(product.id_categoria == 2){
+//             listadoCategoria2++
+//         }
+//         if(product.id_categoria == 3){
+//             listadoCategoria3++
+//         }
+//         if(product.id_categoria == 4){
+//             listadoCategoria4++
+//         }  
+//     }
+//     return res.status(200).json({
+//         data1: listadoCategoria1,
+//         data2: listadoCategoria2,
+//         data3: listadoCategoria3,
+//         data4: listadoCategoria4,
+//         status: 200,
+//         })
+
+
+
+
+    
+// })   
+// }   
