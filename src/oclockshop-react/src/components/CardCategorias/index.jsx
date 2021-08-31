@@ -1,7 +1,10 @@
 import React, {Component} from "react";
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d8ff4286b6d5298a7c91af65a91c4c3498428e45
 class CardCategorias extends Component {
 
     constructor(){
@@ -48,7 +51,7 @@ class CardCategorias extends Component {
                                         <div className="card bg-dark text-white shadow">
                                             <div className="card-body">
                                                 <div className="img">
-                                                    <div key={unaCategoria.dataValues.id} >
+                                                    <div >
                                                         <p> {unaCategoria.dataValues.nombre} </p>
                                                         
                                                     </div>
@@ -57,7 +60,7 @@ class CardCategorias extends Component {
                                         </div>
                                     </div>
                                 </div>
-							</div>
+								</div>
                         )})}
             </div>
         )

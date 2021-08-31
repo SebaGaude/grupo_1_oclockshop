@@ -96,7 +96,7 @@ let productsController = {
         Promise.all([listadoCategorias, listadorMarcas, productoId])
         
         .then(function([categorias, marcas, product]){
-        
+            
             res.render("editProduct", {categorias, marcas, product});
             
         })   

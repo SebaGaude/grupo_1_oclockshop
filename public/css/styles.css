@@ -251,8 +251,10 @@ header div.top nav.top1 p.español-ingles{
 .fijo{
     display: flex;
     justify-content: flex-start;
+    box-sizing: border-box;
     width: 45%;
     margin-left: 7.5%;
+    line-height: inherit;
 }
 
 .fijo a{
@@ -312,6 +314,7 @@ a.botonera p{
 
 .header-user {
     display: flex;
+    align-items: center;
 }
 .header-user a {
     text-align: center;
@@ -329,6 +332,15 @@ a.botonera p{
     width: 18%;
     background-color: rgb(3, 3, 44);
     margin: 0 0 0 28.54%;
+    position: absolute;
+    /*z-index: 2;*/
+    opacity: 0;
+}
+
+.dashboard{
+    width: 16.7%;
+    background-color: rgb(3, 3, 44);
+    margin-left: 71.91%;
     position: absolute;
     /*z-index: 2;*/
     opacity: 0;
@@ -356,7 +368,6 @@ a.botonera p{
     color: white;
 }
 
-
 .list-desplegable a li:hover{
     background-color: rgba(255, 136, 0, 0.884);
     box-sizing: border-box;
@@ -365,6 +376,39 @@ a.botonera p{
     font-weight: 700;
 }
 
+
+.dashboard div.irAlDashboard ul.ulDashboard{
+    margin: 0;
+    border-top: 10px solid rgb(3, 3, 44);
+    border-bottom: 10px solid rgb(3, 3, 44);
+    padding: 0
+}
+
+.dashboard div.irAlDashboard ul.ulDashboard a li.liDashboard{
+    list-style-type: none;
+    padding: 0;
+    line-height: 4vh;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.dashboard div.irAlDashboard ul.ulDashboard a{
+    text-decoration: none;
+    color: white;
+}
+
+.ulDashboard a li:hover{
+    background-color: rgba(255, 136, 0, 0.884);
+    box-sizing: border-box;
+    border: rgb(255, 136, 0) solid 1px;
+    color: rgb(3, 3, 44);
+    font-weight: 700;
+}
+
+.pUser:hover{
+    background-color: rgb(255, 136, 0);
+}
 
 /* ---------------------------------------Fin Configuracion Header-------------------------------------------*/
 
@@ -1545,7 +1589,7 @@ section.vistos{
     line-height: 4.5vh;
     color: rgb(3, 3, 44);
     font-weight: bold;
-    margin-top: 8vh;
+    margin-top: 2vh;
 }
 
 .eliminar-producto-carrito{
@@ -2664,7 +2708,7 @@ ol, li {
     font-size: 0;
     transition: transform 0.2s;
 }
-  
+/*   
 .carousel::before,
 .carousel::after,
 .carousel__prev,
@@ -2703,21 +2747,21 @@ ol, li {
     text-align: center;
     pointer-events: none;
 }
-  
+ 
 .carousel::before {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
 }
   
 .carousel::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-}
+}*/
 
 /* Reglas de estilo Nuestro Equipo */
 
 /* Three columns side by side */
 .column {
     float: left;
-    width: 33.3%;
+    width: 20%;
     margin-bottom: 16px;
     padding: 0 8px;
   }
@@ -2726,6 +2770,13 @@ ol, li {
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 930px) {
+    .column {
+      width: 40%;
       display: block;
     }
   }
@@ -2748,7 +2799,7 @@ ol, li {
   }
   
   .title {
-    color: grey;
+    color: rgb(4, 4, 192);
   }
   
   .button {
@@ -2757,17 +2808,36 @@ ol, li {
     display: inline-block;
     padding: 8px;
     color: white;
-    background-color: #000;
+    background-color: rgb(3, 3, 44);
     text-align: center;
     cursor: pointer;
     width: 100%;
+    transition: 0.3s;
   }
   
   .button:hover {
-    background-color: #555;
+    background-color: rgba(255, 136, 0);
   }
 
 
 .nuestro-equipo-flex{
     display: flex;
+}
+
+.sobre-oclock{
+    width: 90%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo-nuestro-equipo{
+    color: rgb(3, 3, 44);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    }
+
+.equipo-nombre{
+    color: rgba(255, 136, 0);
 }

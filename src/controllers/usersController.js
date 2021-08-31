@@ -72,7 +72,7 @@ let usersControllers = {
                     req.session.usuarioLogueado =  user;
                 
                     if(req.body.recordarme){
-                    res.cookie("recordame", usuarioALoguearse.email, { maxAge: 10*10*60000 })
+                        res.cookie("recordame", usuarioALoguearse.email, { maxAge: 10*10*60000 })
                     }
                 
                     res.redirect('/users/profile')
@@ -99,9 +99,9 @@ let usersControllers = {
     },
 
     updateProfile: function(req, res){
-                let image;
-                db.Usuario.findByPk(req.params.id)
-          .then(usuario => {
+            let image;
+            db.Usuario.findByPk(req.params.id)
+            .then(usuario => {
               image = usuario.imagen;
               if (req.file) {
                   image = req.file.filename;
@@ -124,13 +124,15 @@ let usersControllers = {
         db.Usuario.destroy ({
             where: {id: req.params.id}
         })
-        res.clearCookie('userEmail');
+        res.localstorage.clear()
+        res.clearCookie('recordame');
+        req.logout()
 		req.session.destroy(); /*borra todo lo que esta en SESSION*/
         res.redirect('/');
     },
  
     logout: function(req, res){
-		res.clearCookie('userEmail');
+		res.clearCookie('recordame');
 		req.session.destroy(); /*borra todo lo que esta en SESSION*/
 		res.redirect('/');
         console.log(req.session)

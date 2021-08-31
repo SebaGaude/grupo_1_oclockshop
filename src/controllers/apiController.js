@@ -168,6 +168,26 @@ let productsController = {
     },
 
     categorias:  function (req, res) {
+        /*let producto = db.Producto.findAll()      
+        const array = []
+
+        Promise.all([producto])
+        producto
+        .then(product => {
+            console.log(product)
+            for(let i = 0; i < product.length; i++){
+                let suma = db.Producto.count({where: {id_categoria: [i+1]}});
+                console.log(suma)
+                array.push(suma)
+            } return res.status(200).json({
+                data: array.map(prodCate =>{
+                    return {prodCate}
+                }),
+                status: 200 
+            })
+        })*/
+
+
         db.Categoria
         .findAll()
         .then(categorias => {

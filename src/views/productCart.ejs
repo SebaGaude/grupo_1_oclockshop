@@ -38,8 +38,16 @@
                 </div>
                 <aside class="aside-carrito">
                     <div class="div-aside">
-                        <p>Subtotal (  productos)</p>
-                        
+                        <% if (carrito.length == 0) {%> 
+                            <p><b>Subtotal</b> ( 0 productos)</p>
+                        <%} else { %>
+                            <% let cant = 0;
+                               let suma = 0
+                            for (let i = 0; i < carrito.length; i++){
+                                cant = Number(cant) + Number(carrito[i].cantidad);
+                                suma = Number(suma) + Number(carrito[i].precio) %>
+                            <% } %> <p><b>Subtotal</b> (<%= cant %> productos):</p> <p><b>$<%= suma %></b></p>
+                            <% } %>
                         <form>
                             <button class="boton-compra">Realizar la compra</button>
                         </form>
