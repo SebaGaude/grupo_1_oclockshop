@@ -96,7 +96,7 @@ let productsController = {
         Promise.all([listadoCategorias, listadorMarcas, productoId])
         
         .then(function([categorias, marcas, product]){
-        
+            
             res.render("editProduct", {categorias, marcas, product});
             
         })   
@@ -230,15 +230,10 @@ let productsController = {
 
             carrito = JSON.stringify(carrito, null, 4);
             fs.writeFileSync(path.join(__dirname, "../data/carritos/" + carritoUsuario), carrito);
-<<<<<<< HEAD
-            
-            res.redirect("/")
-=======
 
             res.redirect("/products/carrito")
 
             
->>>>>>> 437e16caac45b984634aec34bc50502d46bdbedc
         })
 
     },
