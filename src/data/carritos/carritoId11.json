@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "id": 1,
         "articulo": "Apple Watch Series 6",
         "precio": "70000.00",
@@ -13,6 +14,12 @@
         "precio": "1200.00",
         "imagen": "product-1629735202942.jpg",
         "descripcion": "Oyster Perpetual Sky-Dweller en Oro amarillo de 18 quilates con esfera color negro vivo y brazalete Oysterflex.",
+=======
+        "id": 7,
+        "articulo": "Casio G-6900-1",
+        "precio": "2000.00",
+        "imagen": "product-1629735020057.jpg",
+>>>>>>> c5428faac2702827cb22825c6a8d5fc09908a89a
         "cantidad": "1"
     },
     {
