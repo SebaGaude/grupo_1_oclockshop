@@ -16,7 +16,6 @@ class Products extends Component {
         const getData = async() => {
             let response = await fetch("http://localhost:3050/api/productos");
             let data = await response.json();
-            console.log(data)
             return data;     
         }
 
@@ -35,7 +34,6 @@ class Products extends Component {
     
     render() {
         const {isLoading, products} = this.state;
-        console.log(this.state)
         return(
             <div>
                 <h2 className="h2">Listado de productos</h2>
