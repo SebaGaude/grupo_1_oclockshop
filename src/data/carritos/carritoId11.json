@@ -1,26 +1,16 @@
 [
     {
-        "id": 2,
-        "articulo": "Datejust 36",
-        "precio": "10000.00",
-        "imagen": "product-1629735146746.jpg",
-        "descripcion": "Este Oyster Perpetual Datejust 36 en Acero Oystersteel presenta una esfera verde oliva, motivo «palmeras» y un brazalete Oyster",
+        "id": 7,
+        "articulo": "Casio G-6900-1",
+        "precio": "2000.00",
+        "imagen": "product-1629735020057.jpg",
         "cantidad": "1"
     },
     {
-        "id": 1,
-        "articulo": "Apple Watch Series 6",
-        "precio": "70000.00",
-        "imagen": "product-1629567752118.png",
-        "descripcion": "Mide tu nivel de oxígeno en la sangre con una app y un sensor revolucionarios. Y no pierdas de vista los datos de tus entrenamientos en la mejorada pantalla Retina siempre activa. Con el Apple Watch Series 6, podrás llevar una vida más saludable, más acti",
-        "cantidad": "1"
-    },
-    {
-        "id": 4,
-        "articulo": "Sky-Dweller",
-        "precio": "1200.00",
-        "imagen": "product-1629735202942.jpg",
-        "descripcion": "Oyster Perpetual Sky-Dweller en Oro amarillo de 18 quilates con esfera color negro vivo y brazalete Oysterflex.",
+        "id": 12,
+        "articulo": "Spot Time Black",
+        "precio": "5000.00",
+        "imagen": "product-1629734884049.jpg",
         "cantidad": "1"
     },
     {

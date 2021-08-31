@@ -1314,7 +1314,7 @@ h2{
 }
 
 .titulo-categ{
-    margin: 0 0 2vh 3vw;
+    margin: 3vh 0 2vh 3vw;
     text-align: left;
     color: rgb(3, 3, 44);
 }
@@ -1420,8 +1420,8 @@ section.vistos{
     color: rgb(3, 3, 44);
     font-size: 16px;
     padding: 5px;
-    width: 17px;
-    height: 17px;
+    width: 27px;
+    height: 27px;
     border: 1px solid rgb(3, 3, 44);
     background-color: #FFF;
     border-radius: 50%;
@@ -1429,6 +1429,7 @@ section.vistos{
     transition: 0.3s;
     right: 25px;
     top: -15px;
+    size: 20px;
 }
 
 .icono-articulo i{
@@ -2196,7 +2197,6 @@ section.vistos{
 
 .user-mail{
     margin-left: 2vw;
-    margin-bottom: 20vh;
 }
 
 .terminos{
@@ -2373,21 +2373,30 @@ section.vistos{
 /************************************* Configuraciones profile ************************************/
 
 .body-profile{
-    background-color: #ededed;
+    background-color: white;
 }
 
 .profile{
-    margin: auto;
-    margin-left: 45%;
-    margin-bottom: 31vh;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
     width: 90%;
+    border: rgb(255, 136, 0) solid 2px;
+    width: 40%;
+    border-radius: 5px;
+    padding: 60px 0;
+    text-align: center;
+    background-color: #ededed;
+    color: rgb(3, 3, 44);
+
 }
 
 .profile h2{
     margin-left: 0;
     margin-right: 0;
-    width: 80%;
+    text-align: center;
+    width: 100%;
+    color: rgb(3, 3, 44);
 }
 
 .profile p{
@@ -2396,6 +2405,23 @@ section.vistos{
 
 }
 
+.button-profile{
+    padding: 8px 3px;
+    background-color: rgb(3, 3, 44);
+    text-align: center;
+    color: rgb(255, 136, 0);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-profile p{
+    margin: 0;
+}
+
+.profile img{
+    width: 40%;
+}
 
 .formulario-edicion-creacion div{
     margin-left: auto;
