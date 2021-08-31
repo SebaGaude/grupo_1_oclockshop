@@ -22,5 +22,12 @@
         "imagen": "product-1629735202942.jpg",
         "descripcion": "Oyster Perpetual Sky-Dweller en Oro amarillo de 18 quilates con esfera color negro vivo y brazalete Oysterflex.",
         "cantidad": "1"
+    },
+    {
+        "id": 12,
+        "articulo": "Spot Time Black",
+        "precio": "5000.00",
+        "imagen": "product-1629734884049.jpg",
+        "cantidad": "1"
     }
 ]
