@@ -22,5 +22,19 @@
         "imagen": "product-1629735202942.jpg",
         "descripcion": "Oyster Perpetual Sky-Dweller en Oro amarillo de 18 quilates con esfera color negro vivo y brazalete Oysterflex.",
         "cantidad": "1"
+    },
+    {
+        "id": 11,
+        "articulo": "Gucci Ya114103",
+        "precio": "35000.00",
+        "imagen": "product-1629735114885.jpg",
+        "cantidad": "1"
+    },
+    {
+        "id": 9,
+        "articulo": "Casio A159GED-1",
+        "precio": "30000.00",
+        "imagen": "product-1629735057306.jpg",
+        "cantidad": "1"
     }
 ]

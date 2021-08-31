@@ -2377,7 +2377,8 @@ section.vistos{
 }
 
 .profile{
-    margin-left: 6%;
+    margin: auto;
+    margin-left: 45%;
     margin-bottom: 31vh;
     margin-right: 0;
     width: 90%;
