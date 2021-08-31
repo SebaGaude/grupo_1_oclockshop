@@ -48,7 +48,6 @@ class CardCategorias extends Component {
                                                 <div className="img">
                                                     <div >
                                                         <p> {unaCategoria.dataValues.nombre} </p>
-                                                        <p> hola </p>
                                                     </div>
                                                 </div>
                                             </div>
