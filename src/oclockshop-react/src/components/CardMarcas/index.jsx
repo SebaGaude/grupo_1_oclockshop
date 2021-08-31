@@ -36,9 +36,14 @@ class CardMarcas extends Component {
             <div className="totalProds">
                 <h2>Total marcas</h2>
                 { isLoading && <h4>Cargando...</h4> }
-                
-                <div className="h5 mb-0 font-weight-bold text-gray-800">{totalMarcas}</div>
-                
+                        <div className="col mr-2">
+                            <div className="h5 mb-0 font-weight-bold text-gray-800">
+                                {totalMarcas}
+                            </div>
+                            <div className="col-auto">
+                                <i className="fas fa-award fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
             </div>
         )
     }
